@@ -77,7 +77,7 @@
                 </div>
                 <div class="produtos_view">
                     <?php
-                        /* $sql = "SELECT * FROM produtos";
+                        $sql = "SELECT * FROM produtos";
                         $consulta = $conexao->query($sql);
                         while($dados = $consulta->fetch_assoc()){
                             ?>
@@ -97,7 +97,7 @@
                                     </div>
                                 </div>
                             <?php
-                        } */
+                        }
                     ?>
                 </div>
             </div>
