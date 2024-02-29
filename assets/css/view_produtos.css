@@ -3,6 +3,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    margin-top: 10%;
 }
 .localizacao_pagina{
     width: 100%;
