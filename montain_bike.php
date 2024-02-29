@@ -1,5 +1,7 @@
 <?php
     require('painel/conecta.php');
+    require('painel/request.php');
+    echo api_request('get_all_products','GET');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -74,7 +76,7 @@
 
                 </div>
                 <div class="produtos_view">
-                    <?php 
+                    <?php
                         $sql = "SELECT * FROM produtos";
                         $consulta = $conexao->query($sql);
                         while($dados = $consulta->fetch_assoc()){
