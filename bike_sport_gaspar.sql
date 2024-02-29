@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28/02/2024 às 23:34
+-- Tempo de geração: 29/02/2024 às 01:13
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -77,7 +77,9 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `valor`, `categoria`, `qnt_estoque`, `tipo`, `modelo`, `cor`, `marca`, `peso`, `altura`, `largura`, `comprimento`, `especificacoes`, `tamanho_P`, `tamanho_M`, `tamanho_G`, `tamnho_GG`, `img`) VALUES
-(1, '', '', 0.00, '', 0, '', '', '', '', 0, 0, 0, 0, '', b'0', b'0', b'0', b'0', 'b80370ea742461bceca3f58f8363539f.png');
+(1, 'Bicicleta Seminova', 'produto de altíssima qualidade .....', 10000.00, 'montain bike', 1, 'bike', 'Specialized Diverge S-Works 2020', 'preta', 'marca:(...)', 10, 10, 10, 10, 'especificações: (...)', b'1', b'1', b'1', b'1', 'c6016b180583b6a8889d3a289eb8932b.png'),
+(128, 'Tênis 2', 'asdasd', 10000.00, 'montain bike', 3, 'bike', 'modelo teste', 'preto', 'marca teste', 10, 11, 12, 13, 'especificações teste', b'1', b'1', b'1', b'1', '2.png'),
+(129, 'tenis 3', 'asdasdas', 10000.00, 'montain bike', 4, 'bike', 'asdasd', 'asdasd', 'asdasd', 10, 10, 10, 10, 'qweqweqwe', b'1', b'1', b'1', b'1', '3.png');
 
 --
 -- Índices para tabelas despejadas
@@ -109,7 +111,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `codigo` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `codigo` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -27,8 +27,6 @@
     //?Verificando de o banco foi conectado com sucesso ou não
     if(mysqli_connect_errno()){
         echo "ERRO DE CONEXÃO";
-    }else{
-        echo "BANCO CONECTADO";
     }
 
 ?>
