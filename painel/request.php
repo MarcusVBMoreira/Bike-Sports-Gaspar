@@ -1,12 +1,12 @@
 <?php
 
-    require('conecta.php');
-
-
     //! Verificando se está logado em uma sessão
 
+<<<<<<< HEAD
     
     $img = $_FILES['imagem_produto'];
+=======
+>>>>>>> e7f7d61a18a21cc4bc7afdae3a1e1a9564ea22de
 
     //! Fazendo Uploud da imagem, salvando ela na pasta do site e enviando o nome para o banco de dados
 
