@@ -29,7 +29,41 @@
     </head>
     <body>
         <!-- espaço pra colocar o header quando estiver pronto -->
-
+        <header>
+            <nav class="nav-1">
+                <a href="#" class="logo">Logo</a>
+                <div class="pesquisar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <input type="submit" value="Pesquisar">
+                </div>
+                <ul class="nav-list-1">
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <nav class="nav-2">
+                <div class="categorias">
+                    <i class="fa-solid fa-list"></i>
+                    <h2>categorias</h2>
+                </div>
+                <ul class="nav-list-2">
+                    <li>
+                        <a href="">Bike</a>
+                        <ul class="dropdown">
+                            <li><a href="">Montain Bike</a></li>
+                            <li><a href="">Eletric Bike</a></li>
+                            <li><a href="">Road Bike</a></li>
+                            <li><a href="">Simple Bike</a></li>
+                        </ul>
+                    </li>|
+                    <li><a href="">Acessorios</a></li>|
+                    <li><a href="">Roupas</a></li>|
+                    <li><a href="">Ferramentas</a></li>|
+                    <li><a href="">Nutrição</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <div class="container_produtos">
             <div class="localizacao_pagina">
