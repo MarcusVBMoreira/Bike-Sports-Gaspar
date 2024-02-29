@@ -6,24 +6,24 @@
     //! Verificando se está logado em uma sessão
 
 
-    //$nome = $_POST['nome'];
-    //$descricao = $_POST[''];
-    //$valor = $_POST[''];
-    //$categoria = $_POST[''];
-    //$qnt_estoque = $_POST[''];
-    //$tipo = $_POST[''];
-    //$modelo = $_POST[''];
-    //$cor = $_POST[''];
-    //$marca = $_POST[''];
-    //$peso = $_POST[''];
-    //$altura = $_POST[''];
-    //$largura = $_POST[''];
-    //$comprimento = $_POST[''];
-    //$especificacoes = $_POST[''];
-    //$tamanho_P = $_POST[''];
-    //$tamanho_M = $_POST[''];
-    //$tamanho_G = $_POST[''];
-    //$tamanho_GG = $_POST[''];
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $valor = $_POST['valor'];
+    $categoria = $_POST['categoria'];
+    $qnt_estoque = $_POST['qnt_estoque'];
+    $tipo = $_POST['tipo'];
+    $modelo = $_POST['modelo'];
+    $cor = $_POST['cor'];
+    $marca = $_POST['marca'];
+    $peso = $_POST['peso'];
+    $altura = $_POST['altura'];
+    $largura = $_POST['largura'];
+    $comprimento = $_POST['comprimento'];
+    $especificacoes = $_POST['especificacoes'];
+    $tamanho_P = $_POST['tamanho_P'];
+    $tamanho_M = $_POST['tamanho_M'];
+    $tamanho_G = $_POST['tamanho_G'];
+    $tamanho_GG = $_POST['tamanho_GG'];
 
 
     $img = $_FILES['imagem_produto'];
@@ -42,13 +42,13 @@
 
 
         //* Enviando os dados do produto
-        //$sql = "INSERT INTO produtos (nome, descricao, valor, categoria, qnt_estoque, tipo, modelo, cor, marca, peso, altura, largura, comprimento, especificacoes, tamanho_P, 
-        //tamanho_M, tamanho_G, tamanho_GG, img) 
-        //VALUES ('$nome', '$descricao', '$valor', '$categoria', '$qnt_estoque', '$tipo', '$modelo', '$cor', '$marca', '$peso', '$altura', '$largura', '$comprimento', 
-        //'$especificacoes', '$tamanho_P', '$tamanho_M', '$tamanho_G', '$tamanho_GG', '$img')";
+        $sql = "INSERT INTO produtos (nome, descricao, valor, categoria, qnt_estoque, tipo, modelo, cor, marca, peso, altura, largura, comprimento, especificacoes, tamanho_P, 
+        tamanho_M, tamanho_G, tamanho_GG, img) 
+        VALUES ('$nome', '$descricao', '$valor', '$categoria', '$qnt_estoque', '$tipo', '$modelo', '$cor', '$marca', '$peso', '$altura', '$largura', '$comprimento', 
+        '$especificacoes', '$tamanho_P', '$tamanho_M', '$tamanho_G', '$tamanho_GG', '$img')";
 
         //* SOMENTE TESTE
-        $sql = "INSERT INTO produtos (img) VALUES ('$nome_imagem')";
+        //$sql = "INSERT INTO produtos (img) VALUES ('$nome_imagem')";
 
         $conexao->query($sql);
         echo "Castrado com sucesso";
