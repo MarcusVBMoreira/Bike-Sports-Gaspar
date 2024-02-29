@@ -9,6 +9,7 @@
 
     <!-- !LINK CSS! -->
     <link rel="stylesheet" href="assets/css/header_footer.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 
     <!-- !FAVICON! -->
 
@@ -22,8 +23,10 @@
     <header>
         <nav class="nav-1">
             <a href="#" class="logo">Logo</a>
-            <input type="text" placeholder="Pesquisar...">
-            <input type="submit" value="Pesquisar">
+            <div class="pesquisar">
+                <input type="text" placeholder="Pesquisar...">
+                <input type="submit" value="Pesquisar">
+            </div>
             <ul class="nav-list-1">
                 <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
@@ -36,7 +39,15 @@
                 <h2>categorias</h2>
             </div>
             <ul class="nav-list-2">
-                <li><a href="">Bike</a></li>|
+                <li>
+                    <a href="">Bike</a>
+                    <ul class="dropdown">
+                        <li><a href="">Montain Bike</a></li>
+                        <li><a href="">Eletric Bike</a></li>
+                        <li><a href="">Road Bike</a></li>
+                        <li><a href="">Simple Bike</a></li>
+                    </ul>
+                </li>|
                 <li><a href="">Acessorios</a></li>|
                 <li><a href="">Roupas</a></li>|
                 <li><a href="">Ferramentas</a></li>|
@@ -45,7 +56,36 @@
         </nav>
     </header>
     <main class="main-banner">
+        <div class="slider">
+            <div class="slides">
+                <!-- Radio Buttons -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="" id="radio2">
+                <input type="radio" name="" id="radio3">
+                <!-- Slide Imagens -->
+                <div class="slide first">
+                    <img src="assets/img/banner-1.png" alt="banner bike 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/banner-2.png" alt="banner bike 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/banner-3.png" alt="banner bike 3">
+                </div>
+                <!-- Navigation Auto -->
+                <div class="navigation-auto">
 
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Espaço para a area de destaque -->
+
+
+
+    <!-- Espaço para a area de manutenção e etc... -->
+
+<script src="assets/js/banner_rotate.js"></script>
 </body>
 </html>
