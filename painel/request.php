@@ -1,12 +1,6 @@
 <?php
 
-    //! Verificando se está logado em uma sessão
-
-<<<<<<< HEAD
-    
     $img = $_FILES['imagem_produto'];
-=======
->>>>>>> e7f7d61a18a21cc4bc7afdae3a1e1a9564ea22de
 
     //! Fazendo Uploud da imagem, salvando ela na pasta do site e enviando o nome para o banco de dados
 
@@ -49,13 +43,14 @@
         if($_POST['tamanho_P'] == 'on'){
             $tamanho_P = '1';
         }
-    else{
-        if(isset($_POST['tamanho_P'])){
-            $tamanho_P = '0';
-        }
-    }
         echo "Checkbox marcada </br>";
         echo "valor: " . $tamanho_P;
+    }else{
+        $tamanho_P = '0';
+        echo "Checkbox Não marcada </br>";
+        echo "valor: " . $tamanho_P;
     }
+
+    //header('location: ../'); //!PARA NAVEGAR PARA OUTRA PÁGINA!
 
 ?>
