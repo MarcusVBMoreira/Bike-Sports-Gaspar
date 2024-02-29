@@ -5,7 +5,7 @@
 
     //! Verificando se está logado em uma sessão
 
-
+    
     $img = $_FILES['imagem_produto'];
 
     //! Fazendo Uploud da imagem, salvando ela na pasta do site e enviando o nome para o banco de dados
@@ -43,6 +43,19 @@
         $response = curl_exec($client);//envia a requisição para a api e retorna a resposta
     
         return json_decode($response, true);//true para retornar atraves de um array associativo
+    }
+
+    if(isset($_POST['tamanho_P'])){
+        if($_POST['tamanho_P'] == 'on'){
+            $tamanho_P = '1';
+        }
+    else{
+        if(isset($_POST['tamanho_P'])){
+            $tamanho_P = '0';
+        }
+    }
+        echo "Checkbox marcada </br>";
+        echo "valor: " . $tamanho_P;
     }
 
 ?>
