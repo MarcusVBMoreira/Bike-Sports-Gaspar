@@ -43,12 +43,12 @@
         if($_POST['tamanho_P'] == 'on'){
             $tamanho_P = '1';
         }
-        echo "Checkbox marcada </br>";
-        echo "valor: " . $tamanho_P;
+        //echo "Checkbox marcada </br>";
+        //echo "valor: " . $tamanho_P;
     }else{
         $tamanho_P = '0';
-        echo "Checkbox Não marcada </br>";
-        echo "valor: " . $tamanho_P;
+        //echo "Checkbox Não marcada </br>";
+        //echo "valor: " . $tamanho_P;
     }
 
     //header('location: ../'); //!PARA NAVEGAR PARA OUTRA PÁGINA!
