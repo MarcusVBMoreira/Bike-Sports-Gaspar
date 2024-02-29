@@ -1,7 +1,7 @@
 <?php
     require('painel/conecta.php');
     require('painel/request.php');
-    $produtos = api_request('get_all_products','GET');
+    echo api_request('get_all_products','GET');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -76,7 +76,7 @@
 
                 </div>
                 <div class="produtos_view">
-                    <?php if count($clients <= 0) :
+                    <?php
                         /* $sql = "SELECT * FROM produtos";
                         $consulta = $conexao->query($sql);
                         while($dados = $consulta->fetch_assoc()){
@@ -98,7 +98,6 @@
                                 </div>
                             <?php
                         } */
-
                     ?>
                 </div>
             </div>
