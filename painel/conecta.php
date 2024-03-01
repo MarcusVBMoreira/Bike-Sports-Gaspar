@@ -1,7 +1,7 @@
 <?php
     //*CONEXÃO COM A API*
     
-    define("API_BASE_URL","http://localhost/bike-sports-gaspar/api/");
+    //define("API_BASE_URL","http://localhost/bike-sports-gaspar/api/");
 
     //*CONEXÃO DO SITE COM O BANDO DE DADOS*
 
@@ -15,7 +15,7 @@
 
     //!----------------------------------------------------------!/
 
-    /* //?Coneão com maquina local
+    //?Coneão com maquina local
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
@@ -30,6 +30,6 @@
     //?Verificando de o banco foi conectado com sucesso ou não
     if(mysqli_connect_errno()){
         echo "ERRO DE CONEXÃO";
-    } */
+    }
 
 ?>
