@@ -69,8 +69,8 @@
                 </ul>
             </nav>
         </header>
-        <section class="view_container">
-            <div class="container_produtos">
+        <div class="container_produtos">
+            <div>
                 <div class="localizacao_pagina">
 
                 </div>
@@ -105,6 +105,6 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </body>
 </html>
