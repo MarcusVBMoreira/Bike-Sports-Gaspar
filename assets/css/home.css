@@ -39,17 +39,18 @@
 
 .row-categ{
     display: flex;
-    justify-content: space-between; 
+    gap: 10px;
 }
 
-.manu,.seminovas{
-    width: 64%;
-    
+.manu img, .seminovas img{
+    width: 100%;
 }
 
-.nutri,.outlet{
-    width: 34%;
+.nutri img,.outlet img{
+    width: 100%;
 }
+
+
 
 
 
