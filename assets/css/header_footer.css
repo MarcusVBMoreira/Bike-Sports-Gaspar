@@ -61,9 +61,9 @@ header{
     font-weight: 600;
 }
 
-.nav-1 input[type="text"]{
+.nav-1 .pesquisa{
     width: 400px;
-    height: 42px;
+    height: 50px;
     padding: 10px;
     border: 1px solid #000;
 }
