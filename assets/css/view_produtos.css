@@ -1,8 +1,9 @@
 /* !VIEW PRODUTOS! */
 .container_produtos{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 10%;
 }
 .localizacao_pagina{
@@ -57,7 +58,7 @@
 .btn_comprar:hover{
     background-color: green;
 }
-.view_container{
+.aaa{
     width: 100%;
     display: flex;
     flex-direction: column;
