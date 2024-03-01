@@ -8,37 +8,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
         <!-- !RESET CSS! -->
         <link rel="stylesheet" href="assets/css/reset.css">
-
-        <!-- !LINK CSS HEADER_FOOTER! -->
-        <link rel="stylesheet" href="assets/css/header_footer.css">
-
-        <!-- !LINK CSS VIEW_PRODUTOS ! -->
-        <link rel="stylesheet" href="assets/css/view_produtos.css">
-
-        <!-- !LINK CSS PADRAO! -->
+        <!-- Links CSS -->
         <link rel="stylesheet" href="assets/css/padrao.css">
-
-        <!-- !FAVICON! -->
-
-
-        <!-- !LINK FONTAWESOME! -->
+        <link rel="stylesheet" href="assets/css/header_footer.css">
+        <link rel="stylesheet" href="assets/css/view_produtos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
         <title>Sport Gaspar</title>
-    </head>
+  </head>
     <body>
         <!-- espaço pra colocar o header quando estiver pronto -->
         <header>
             <nav class="nav-1">
-                <a href="#" class="logo">Logo</a>
+                <a href="index.php" class="logo">Logo</a>
                 <div class="pesquisar">
-                    <input type="text" placeholder="Pesquisar...">
+                    <input type="text" class="pesquisa" placeholder="Pesquisar...">
                     <input type="submit" value="Pesquisar">
                 </div>
                 <ul class="nav-list-1">
@@ -70,9 +57,9 @@
             </nav>
         </header>
         <div class="container_produtos">
-            <div>
-                <div class="localizacao_pagina">
-
+            <div class="view_container">
+                <div class="localizacao_pagina"> <!-- TODO: Adicionar futuramente o link de bicicletas -->
+                    <div><a href="index.php">pagina inicial</a><h3>></h3><h2>bicicletas</h2></div>
                 </div>
                 <div class="view_produtos">
                     <div class="filtros">
@@ -86,7 +73,7 @@
                                 ?>
                                     <div class="produto">
                                         <div class="img_produto">
-                                            <a href="infos_produto?codigo=<?php echo $dados['codigo']; ?>" style="width: 100%;"><img src="upload/imagem_produtos/<?php echo($dados['img']); ?>" style="width: 100%; border-radius: 5%;" class="produto_img"></a>
+                                            <a href="infos_produto.php?codigo=<?php echo $dados['codigo']; ?>" style="width: 100%;"><img src="upload/imagem_produtos/<?php echo($dados['img']); ?>" style="width: 100%; border-radius: 5%;" class="produto_img"></a>
                                         </div>
                                         <div class="nome_produto">
                                             <h3><?php echo $dados['nome']; ?></h3>
@@ -95,9 +82,9 @@
                                         <div class="valor_produto">
                                             <h1><?php echo $dados['valor']; ?></h1>
                                         </div>
-                                        <div class="btn_comprar">
-                                            <a href="infos_produto?codigo=<?php echo $dados['codigo']; ?>" class="comprar_btn">COMPRAR</a>
-                                        </div>
+                                        <a href="infos_produto.php?codigo=<?php echo $dados['codigo']; ?>" class="btn_comprar">
+                                            COMPRAR
+                                        </a>
                                     </div>
                                 <?php
                             }

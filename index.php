@@ -17,7 +17,7 @@
   <body>
     <header>
       <nav class="nav-1">
-          <a href="#" class="logo">Logo</a>
+          <a href="index.php" class="logo">Logo</a>
           <div class="pesquisar">
               <input type="text" class="pesquisa" placeholder="Pesquisar...">
               <input type="submit" value="Pesquisar">
@@ -89,7 +89,7 @@
               <img src="assets/img/manutencao.jpg" alt="">
             </a>
             <a href="" class="nutri">
-              <img src="assets/img/nutri.jpg" >
+              <img src="assets/img/nutri.jpg" alt="">
             </a>
           </div>
           <div class="row-categ">
