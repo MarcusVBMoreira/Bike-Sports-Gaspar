@@ -8,7 +8,7 @@
     <body>
 
         <!-- !SOMENTE TESTE PARA ENVIAR A IMAGEM! -->
-        <form action="painel/request.php" method="POST" enctype="multipart/form-data" class="" id="">
+        <form action="painel/novo_produto.php" method="POST" enctype="multipart/form-data" class="" id="">
             <div>
                 <div>
                     <p>nome</p>
@@ -80,11 +80,11 @@
                 </div>
                 <div>
                     <p>tamanho GG</p>
-                    <input type="checkbox" name="tamanho_GG" id="" class="" >
+                    <input type="checkbox" name="tamanho_GG" id="tamanho_GG" class="" >
                 </div>
                 <div>
                     <p>imagem</p>
-                    <input type="file" name="imagem_produto" id="imagem_produto" value="" >
+                    <input type="file" name="img" id="imagem_produto" value="" >
                 </div>
                 <div>
                     <button type="submit" class="">Adicionar</button>
