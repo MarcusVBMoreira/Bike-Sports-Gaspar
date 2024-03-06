@@ -19,7 +19,7 @@
   <body>
     <header>
       <nav class="nav-1">
-        <a href="index.php" class="logo"><img src="assets/img/logoBSG-preto-menor.png"></img></a>
+        <a href="index.php" class="logo"><img src="assets/img/logoBSG-preto-menor.png"></a>
         <div class="pesquisar">
             <input type="text" class="pesquisa" placeholder="Pesquisar...">
             <input type="submit" value="Pesquisar">
@@ -37,7 +37,7 @@
         </div>
         <ul class="nav-list-2">
             <li>
-                <a href="">Bike</a>
+                <a href="">Bicicletas</a>
                 <ul class="dropdown">
                     <li><a href="montain_bike.php">Montain Bike</a></li>
                     <li><a href="">Eletric Bike</a></li>
@@ -46,13 +46,14 @@
                 </ul> 
             </li>
             <li><a href="">Acessorios</a></li>
-            <li><a href="">Roupas</a></li>
+            <li><a href="">Vestuario</a></li>
             <li><a href="">Ferramentas</a></li>
-            <li><a href="">Nutrição</a></li>
+            <li><a href="">Componentes</a></li>
+            <li><a href="">Suplementos</a></li>
         </ul>
       </nav>
     </header>
-    <main class="main-banner">
+    <!-- <main class="main-banner">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
@@ -73,17 +74,15 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    </main>
+      </div> -->
+    <!-- </main>
     <div class="container">
-      <!-- Espaço para a area de destaque -->
       <section id="section-destaques">
         <div class="destaques">
           <h1>Destaques</h1>
         </div>
       </section>
       
-      <!-- Espaço para a area de manutenção e etc... -->
       <section class="section-categs">
         <div class="box-categ">
           <div class="row-categ">
@@ -109,7 +108,7 @@
       <h1>Bike Sport Gaspar</h1>
       <div class="line"></div>
       <p>&copy; Code Track</p>
-    </footer>
+    </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/banner_rotate.js"></script>
   </body>
