@@ -15,17 +15,17 @@ header{
 }
 .info-list{
     display: flex;
-    list-style: none; 
+    list-style: none;
     gap: 20px;
 }
 .info-list-2{
     display: flex;
-    list-style: none; 
+    list-style: none;
     gap: 20px;
 }
 .info-list-2 a{
     color: var(--Preto-Cor);
-    text-decoration: none;    
+    text-decoration: none;
 }
 .info-list-2 a:hover{
     border-bottom: 1px solid var(--Preto-Cor);
@@ -104,8 +104,8 @@ header{
 }
 .categorias h2{
     text-transform: uppercase;
-    font-size: 18px; 
-    color: var(--Branco-Cor);   
+    font-size: 18px;
+    color: var(--Branco-Cor);
 }
 .categorias:hover{
     color: var(--Branco-Cor);
@@ -138,36 +138,73 @@ header{
 .nav-list-2 a:hover{
     opacity: .9;
 }
-.nav-list-2 ul.dropdown li{
+
+/* Bike Dropdown */
+.nav-list-2 ul.bike-dropdown li{
     display: flex;
     justify-content: start;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
 }
-.nav-list-2 ul.dropdown{
+.nav-list-2 ul.bike-dropdown{
     background-color: var(--Branco-Cor);
     position: absolute;
     z-index: 999;
     display: none;
-    border-radius: 2px;
+    border-radius: 1px;
     width: 16%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
     padding: 1%;
 }
-.nav-list-2 ul.dropdown li:hover{
+.nav-list-2 ul.bike-dropdown li:hover{
     background-color: #dfdfdf;
 }
 
-.dropdown a{
+.bike-dropdown a{
     color: var(--Preto-Cor);
 }
-.nav-list-2 li:hover ul.dropdown{
+.nav-list-2 li:hover ul.bike-dropdown{
     display: block;
     flex-direction: column;
     gap: 20px;
 }
-.dropdown li a{
+.bike-dropdown li a{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+/* Acessorios Dropdown */
+.nav-list-2 ul.container-ace-dropdown ul.ace-dropdown li{
+    display: flex;
+    justify-content: start;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+.nav-list-2 ul.container-ace-dropdown{
+    background-color: var(--Branco-Cor);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 1px;
+    width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    height: 500px;
+}
+
+.container-ace-dropdown a{
+    color: var(--Preto-Cor);
+    font-size: 12px;
+}
+
+.nav-list-2 li:hover ul.container-ace-dropdown{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 20px;
+}
+
+.nav-list-2 ul.container-ace-dropdown ul.ace-dropdown li:hover{
+    background-color: #dfdfdf;
 }
