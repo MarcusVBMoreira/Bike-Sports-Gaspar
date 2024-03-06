@@ -40,12 +40,9 @@
           </div>
         </div>
       </section>
-    </div>
-    <footer>
-      <h1>Bike Sport Gaspar</h1>
-      <div class="line"></div>
-      <p>&copy; Code Track</p>
-    </footer> -->
-    
+    </div>-->
+    <?php
+      require('assets/components/footer.php');
+    ?>
   </body>
 </html>

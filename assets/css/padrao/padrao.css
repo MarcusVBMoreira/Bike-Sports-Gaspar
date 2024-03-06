@@ -13,33 +13,37 @@
 /* !FONTES! */
 @font-face {
     font-family: Michroma;
-    src: url(../fonts/Michroma/Michroma.ttf);
+    src: url(../../fonts/Michroma/Michroma.ttf);
 }
 
 @font-face {
+    font-family: inter-light;
+    src: url(../../fonts/inter/normal/Inter-Light-BETA.ttf);
+}
+@font-face {
     font-family: inter-regular;
-    src: url(../fonts/inter/normal/Inter-Regular.ttf);
+    src: url(../../fonts/inter/normal/Inter-Regular.ttf);
 }
 @font-face {
     font-family: inter-bold;
-    src: url(../fonts/inter/normal/Inter-Bold.ttf);
+    src: url(../../fonts/inter/normal/Inter-Bold.ttf);
 }
 @font-face {
     font-family: inter-black;
-    src: url(../fonts/inter/normal/Inter-Black.ttf);
+    src: url(../../fonts/inter/normal/Inter-Black.ttf);
 }
 
 @font-face {
     font-family: inter-regular-italic;
-    src: url(../fonts/inter/italic/Inter-Italic.ttf);
+    src: url(../../fonts/inter/italic/Inter-Italic.ttf);
 }
 @font-face {
     font-family: inter-bold-italic;
-    src: url(../fonts/inter/italic/Inter-BoldItalic.ttf);
+    src: url(../../fonts/inter/italic/Inter-BoldItalic.ttf);
 }
 @font-face {
     font-family: inter-black-italic;
-    src: url(../fonts/inter/italic/Inter-UI-BlackItalic.ttf);
+    src: url(../../fonts/inter/italic/Inter-UI-BlackItalic.ttf);
 }
 
 a, p,button{
@@ -49,13 +53,27 @@ a, p,button{
 
 .h1, h2, h3, h4, h5, h6{
     font-family: Michroma;
+    color: var(--Preto-Cor);
+}
+
+.light{
+    font-family: inter-light;
+}
+.regular{
+    font-family: inter-regular;
+}
+.bold{
+    font-family: inter-bold;
+}
+.black{
+    font-family: inter-black;
 }
 
 
 /* !HTML E BODY! */
 body{
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: var(--Preto-Cor);
     overflow-x: hidden;
 }
 
