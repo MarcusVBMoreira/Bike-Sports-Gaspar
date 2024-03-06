@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php
-      //require('assets/components/header.php');
+      require('assets/components/header.php');
     ?>
     <?php
       require('assets/components/main-banner.php');
