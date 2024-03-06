@@ -1,109 +1,87 @@
-/* Infos */
-.infos{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 35px;
-    background-color: #eeeeee;
-}
-
-a{
-    font-family: Arial, Helvetica, sans-serif;
+/* !CORES! */
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
 }
 
 header{
     width: 100%;
 }
-
 .info-list{
     display: flex;
     list-style: none; 
     gap: 20px;
 }
-
 .info-list-2{
     display: flex;
     list-style: none; 
     gap: 20px;
 }
-
 .info-list-2 a{
-    color: #000;
+    color: var(--Preto-Cor);
     text-decoration: none;    
 }
-
 .info-list-2 a:hover{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--Preto-Cor);
 }
-
 .info-list li{
     display: flex;
     gap: 10px;
 }
-
 
 /* Navbar-1 */
 .nav-1{
     display: flex;
     width: 100%;
     height: 70px;
-    background-color: #000000;
+    background-color: var(--Preto-Cor);
     justify-content: space-around;
     align-items: center;
-    border-bottom: solid 1px #dfdfdf;
+    border-bottom: solid 1px var(--Branco-Cor);
 }
-
 .nav-1 .logo{
     display: flex;
     width: 4%;
 }
-
 .nav-1 .logo img{
     width: 100%;
 }
-
-
 .nav-list-1{
     display: flex;
     list-style: none;
     gap: 40px;
 }
-
 .pesquisar{
     width: 30%;
-    background-color: #fff;
+    background-color: var(--Branco-Cor);
     border-radius: 5px;
     cursor: pointer;
 }
-
 .pesquisar:focus{
     border: #dd690a 1px solid;
 }
-
 .pesquisar i{
     cursor: pointer;
 }
-
 .pesquisa{
     background-color: transparent;
     border: none;
     width: 90%;
     padding: 15px 20px;
 }
-
 .pesquisa:focus{
     outline: none;
 }
-
-.pesquisa::placeholder{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .nav-list-1 a{
-    color: #000;
+    color: var(--Preto-Cor);
     font-size: 25px;
-    color: #f1f1f1;
+    color: var(--CinzaClaro-Cor);
 }
 
 /* Navbar-2 */
@@ -112,31 +90,27 @@ header{
     justify-content: space-between;
     width: 100%;
     max-height: 100px;
-    background-color: #000000;
+    background-color: var(--Preto-Cor);
 }
-
 .categorias{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #dd690a;
+    background-color: var(--Laranja-Cor);
     color: #f5f5f5;
     padding: 10px;
     padding-right: 40px;
 }
-
 .categorias h2{
     text-transform: uppercase;
-    font-size: 20px; 
-    color: #fff;   
+    font-size: 18px; 
+    color: var(--Branco-Cor);   
 }
-
 .categorias:hover{
-    color: #f1f1f1;
+    color: var(--Branco-Cor);
     cursor: pointer;
 }
-
 .nav-list-2{
     display: flex;
     list-style: none;
@@ -144,7 +118,6 @@ header{
     align-items: center;
     width: 100%;
 }
-
 .nav-list-2 li{
     display: inline-block;
     align-items: center;
@@ -152,22 +125,19 @@ header{
     width: 20%;
     justify-content: center;
 }
-
 .nav-list-2 a{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    color: #f1f1f1;
+    color: var(--Branco-Cor);
     padding: 8%;
     display: inline-block;
     display: flex;
     justify-content: center;
 }
-
 .nav-list-2 a:hover{
     opacity: .9;
 }
-
 .nav-list-2 ul.dropdown li{
     display: flex;
     justify-content: start;
@@ -175,9 +145,8 @@ header{
     cursor: pointer;
     width: 100%;
 }
-
 .nav-list-2 ul.dropdown{
-    background-color: #ffffff;
+    background-color: var(--Branco-Cor);
     position: absolute;
     z-index: 999;
     display: none;
@@ -185,15 +154,13 @@ header{
     width: 16%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
     padding: 1%;
 }
-
 .nav-list-2 ul.dropdown li:hover{
     background-color: #dfdfdf;
 }
 
 .dropdown a{
-    color: #000;
+    color: var(--Preto-Cor);
 }
-
 .nav-list-2 li:hover ul.dropdown{
     display: block;
     flex-direction: column;
@@ -203,39 +170,4 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-/* Footer */
-footer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 130px;
-    justify-content: center;
-    background-color: #dd690a;
-    border-radius: 10px 10px 0 0;
-}
-
-footer h1{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    font-weight: 500;
-    width: 100%;
-    margin-left: 5%;
-}
-
-.line{
-    width: 90%;
-    height: 1px;
-    background-color: #616161;
-    margin: 10px auto;
-}
-
-footer p{
-    color: #ffffff;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    margin-left: 5%;
 }

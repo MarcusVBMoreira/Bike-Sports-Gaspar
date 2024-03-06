@@ -1,0 +1,70 @@
+/* !CORES! */
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+/* !FONTES! */
+@font-face {
+    font-family: Michroma;
+    src: url(../fonts/Michroma/Michroma.ttf);
+}
+
+@font-face {
+    font-family: inter-regular;
+    src: url(../fonts/inter/normal/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: inter-bold;
+    src: url(../fonts/inter/normal/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: inter-black;
+    src: url(../fonts/inter/normal/Inter-Black.ttf);
+}
+
+@font-face {
+    font-family: inter-regular-italic;
+    src: url(../fonts/inter/italic/Inter-Italic.ttf);
+}
+@font-face {
+    font-family: inter-bold-italic;
+    src: url(../fonts/inter/italic/Inter-BoldItalic.ttf);
+}
+@font-face {
+    font-family: inter-black-italic;
+    src: url(../fonts/inter/italic/Inter-UI-BlackItalic.ttf);
+}
+
+a, p,button{
+    font-family: inter-regular;
+    color: var(--Preto-Cor);
+}
+
+.h1, h2, h3, h4, h5, h6{
+    font-family: Michroma;
+}
+
+
+/* !HTML E BODY! */
+body{
+    width: 100%;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+}
+
+/* 
+.container{
+    width: 85%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+*/
