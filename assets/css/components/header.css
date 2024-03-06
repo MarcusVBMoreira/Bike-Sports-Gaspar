@@ -190,7 +190,7 @@ header{
     display: none;
     border-radius: 1px;
     width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
-    height: 500px;
+    justify-content: space-around;
 }
 
 .container-ace-dropdown a{
@@ -201,7 +201,6 @@ header{
 .nav-list-2 li:hover ul.container-ace-dropdown{
     display: flex;
     flex-direction: row;
-    gap: 100px;
     padding: 20px;
 }
 

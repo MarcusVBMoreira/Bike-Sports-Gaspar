@@ -74,7 +74,7 @@
                                 <li><a href="">Porta celular</a></li>
                                 <li><a href="">Bolsa</a></li>
                                 <li><a href="">Remendos</a></li>
-                                <li><a href="">Válvula presta</a></li>
+                                <li><a href="">Válvula presta </a></li>
                             </ul>
                         </ul> 
                     </li>
