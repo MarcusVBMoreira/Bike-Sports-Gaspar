@@ -78,6 +78,9 @@ header{
 .pesquisa:focus{
     outline: none;
 }
+.pesquisa::placeholder{
+    font-family: inter-regular;
+}
 .nav-list-1 a{
     color: var(--Preto-Cor);
     font-size: 25px;
@@ -154,6 +157,7 @@ header{
     display: none;
     border-radius: 1px;
     width: 16%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    max-height: 500px;
     padding: 1%;
 }
 .nav-list-2 ul.bike-dropdown li:hover{
@@ -162,6 +166,7 @@ header{
 
 .bike-dropdown a{
     color: var(--Preto-Cor);
+    font-size: 12px;
 }
 .nav-list-2 li:hover ul.bike-dropdown{
     display: block;
@@ -190,6 +195,7 @@ header{
     display: none;
     border-radius: 1px;
     width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    max-height: 500px;
     justify-content: space-around;
 }
 
@@ -206,4 +212,45 @@ header{
 
 .nav-list-2 ul.container-ace-dropdown ul.ace-dropdown li:hover{
     background-color: #dfdfdf;
+}
+/* Vestuario Dropdown */
+.nav-list-2 ul.vest-dropdown li{
+    display: flex;
+    justify-content: start;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: space-around;
+}
+.nav-list-2 ul.vest-dropdown{
+    background-color: var(--Branco-Cor);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 1px;
+    width: 20%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    max-height: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: space-around;
+    padding: 1%;
+}
+.nav-list-2 ul.vest-dropdown li:hover{
+    background-color: #dfdfdf;
+}
+
+.vest-dropdown a{
+    color: var(--Preto-Cor);
+    font-size: 12px;
+}
+.nav-list-2 li:hover ul.vest-dropdown{
+    display: flex;
+    gap: 20px;
+}
+.vest-dropdown li a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

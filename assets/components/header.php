@@ -28,57 +28,74 @@
                     <li>
                         <a href="">Bicicletas</a>
                         <ul class="bike-dropdown">
-                            <li><a href="montain_bike.php">ARO 29</a></li>
-                            <li><a href="">ARO 26</a></li>
-                            <li><a href="">ARO 24</a></li>
-                            <li><a href="">ARO 20</a></li>
-                            <li><a href="">ARO 16</a></li>
-                            <li><a href="">ARO 12</a></li>
-                            <li><a href="">Bicicleta de Equilibrio</a></li>
+                            <li><a href="montain_bike.php"  class="light">ARO 29</a></li>
+                            <li><a href="" class="light">ARO 26</a></li>
+                            <li><a href="" class="light">ARO 24</a></li>
+                            <li><a href="" class="light">ARO 20</a></li>
+                            <li><a href="" class="light">ARO 16</a></li>
+                            <li><a href="" class="light">ARO 12</a></li>
+                            <li><a href="" class="light">Bicicleta de Equilibrio</a></li>
                         </ul> 
                     </li>
                     <li>
                         <a href="">Acessorios</a>
                         <ul class="container-ace-dropdown">
                             <ul class="ace-dropdown">
-                                <li><a href="">Farol</a></li>
-                                <li><a href="">Lanterna</a></li>
-                                <li><a href="">Suporte de farol</a></li>
-                                <li><a href="">Suporte ciclo computador</a></li>
-                                <li><a href="">Suporte caramanhola</a></li>
-                                <li><a href="">Retrovisor</a></li>
-                                <li><a href="">Caramanhola</a></li>
-                                <li><a href="">Capacete</a></li>
-                                <li><a href="">Oculos</a></li>
-                                <li><a href="">Co2</a></li>
+                                <li><a href="" class="light">Adesivos</a></li>
+                                <li><a href="" class="light">Bar end</a></li>
+                                <li><a href="" class="light">Bomba de Ar</a></li>
+                                <li><a href="" class="light">Bolsa</a></li>
+                                <li><a href="" class="light">Buzinas</a></li>
+                                <li><a href="" class="light">Cadeado</a></li>
+                                <li><a href="" class="light">Cadeirinhas</a></li>
+                                <li><a href="" class="light">Câmeras</a></li>
+                                <li><a href="" class="light">Capacetes</a></li>
+                                <li><a href="" class="light">Caramanhola</a></li>
                             </ul>
                             <ul class="ace-dropdown">
-                                <li><a href="">Buzinas</a></li>
-                                <li><a href="">Bolsas</a></li>
-                                <li><a href="">Descanso</a></li>
-                                <li><a href="">Cadeado</a></li>
-                                <li><a href="">Pneus</a></li>
-                                <li><a href="">Câmeras</a></li>
-                                <li><a href="">Líquido tubeless</a></li>
-                                <li><a href="">Bomba de ar</a></li>
-                                <li><a href="">Cestos</a></li>
-                                <li><a href="">Cadeirinhas</a></li>
+                                <li><a href="" class="light">Co2</a></li>
+                                <li><a href="" class="light">Cestos</a></li>
+                                <li><a href="" class="light">Descanso</a></li>
+                                <li><a href="" class="light">Farol</a></li>
+                                <li><a href="" class="light">Lanterna</a></li>
+                                <li><a href="" class="light">Líquido tubeless</a></li>
+                                <li><a href="" class="light">Óculos</a></li>
+                                <li><a href="" class="light">Paralamas</a></li>
+                                <li><a href="" class="light">Pneus</a></li>
+                                <li><a href="" class="light">Porta celular</a></li>
                             </ul>
                             <ul class="ace-dropdown">
-                                <li><a href="">Suporte para carro</a></li>
-                                <li><a href="">Suporte para bike</a></li>
-                                <li><a href="">Adesivos</a></li>
-                                <li><a href="">Bar end</a></li>
-                                <li><a href="">Roda lateral</a></li>
-                                <li><a href="">Paralamas</a></li>
-                                <li><a href="">Porta celular</a></li>
-                                <li><a href="">Bolsa</a></li>
-                                <li><a href="">Remendos</a></li>
-                                <li><a href="">Válvula presta </a></li>
+                                <li><a href="" class="light">Remendos</a></li>
+                                <li><a href="" class="light">Retrovisor</a></li>
+                                <li><a href="" class="light">Roda lateral</a></li>
+                                <li><a href="" class="light">Suporte caramanhola</a></li>
+                                <li><a href="" class="light">Suporte ciclo computador</a></li>
+                                <li><a href="" class="light">Suporte de farol</a></li>
+                                <li><a href="" class="light">Suporte para bike</a></li>
+                                <li><a href="" class="light">Suporte para carro</a></li>
+                                <li><a href="" class="light">Suporte de Farol</a></li>
+                                <li><a href="" class="light">Válvula presta </a></li>
                             </ul>
                         </ul> 
                     </li>
-                    <li><a href="">Vestuario</a></li>
+                    <li>
+                        <a href="">Vestuario</a>
+                        <ul class="vest-dropdown">
+                            <li><a href="montain_bike.php"  class="light">Bala clava</a></li>
+                            <li><a href="" class="light">Bota</a></li>
+                            <li><a href="" class="light">Bretelles</a></li>
+                            <li><a href="" class="light">Camisa</a></li>
+                            <li><a href="" class="light">Luvas</a></li>
+                            <li><a href="" class="light">Macaquinhos</a></li>
+                            <li><a href="" class="light">Manguito</a></li>
+                            <li><a href="" class="light">Mochila hidratação</a></li>
+                            <li><a href="" class="light">Meias</a></li>
+                            <li><a href="" class="light">Pernito</a></li>
+                            <li><a href="" class="light">Sapatilhas</a></li>
+                            <li><a href="" class="light">Segunda Pele</a></li>
+                            <li><a href="" class="light">Shots</a></li>
+                        </ul> 
+                    </li>
                     <li><a href="">Ferramentas</a></li>
                     <li><a href="">Componentes</a></li>
                     <li><a href="">Suplementos</a></li>
