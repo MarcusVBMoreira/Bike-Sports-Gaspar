@@ -8,7 +8,14 @@
     <body>
         <header>
             <nav class="nav-1">
-                <a href="index.php" class="logo"><img src="assets/img/logoBSG-branco-menor.png" alt="Logo Bike Sport Gaspar"></a>
+                <div class="mob-log">
+                    <a href="index.php" class="logo"><img src="assets/img/logoBSG-branco-menor.png" alt="Logo Bike Sport Gaspar"></a>
+                    <div class="mobile-menu" onclick="menu_clicou()">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
                 <div class="pesquisar">
                     <input type="text" class="pesquisa" placeholder="Pesquisar" >
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -19,14 +26,13 @@
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
-            <nav class="nav-2">
-                <div class="categorias">
-                    <i class="fa-solid fa-list"></i>
-                    <h2>categorias</h2>
-                </div>
-                <ul class="nav-list-2">
+            <nav class="nav-2" id="nav-2">
+                <ul class="nav-list-2" id="nav-list-2">
+                    <div class="categorias">
+                        <a href="">Bikes Magazines</a>
+                    </div>
                     <li>
-                        <a href="">Bicicletas</a>
+                        <a href="">Bicicletas<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="bike-dropdown">
                             <li><a href="montain_bike.php"  class="light">ARO 29</a></li>
                             <li><a href="" class="light">ARO 26</a></li>
@@ -38,7 +44,7 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Acessorios</a>
+                        <a href="">Acessorios<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="container-ace-dropdown">
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Adesivos</a></li>
@@ -90,7 +96,7 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Vestuario</a>
+                        <a href="">Vestuario<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="container-vest-dropdown">
                             <ul class="vest-dropdown">
                                 <li><a href="montain_bike.php"  class="light">Bala clava</a></li>
@@ -119,7 +125,7 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Ferramentas</a>
+                        <a href="">Ferramentas<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="container-fer-dropdown">
                             <ul class="fer-dropdown">
                                 <li><a href="" class="light">Alicate de corte cabo de aço</a></li>
@@ -141,7 +147,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Componentes</a>
+                        <a href="">Componentes<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="container-comp-dropdown">
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Abraçadeiras</a></li>
@@ -190,7 +196,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Suplementos</a>
+                        <a href="">Suplementos<i class="fa-solid fa-angle-down"></i></a>
                         <ul class="sup-dropdown">
                             <li><a href="" class="light">Creatina</a></li>
                             <li><a href="" class="light">Pre treino</a></li>
@@ -200,5 +206,6 @@
                 </ul>
             </nav>
         </header>
+        <script src="assets/js/mobile-menu.js"></script>
     </body>
 </html>

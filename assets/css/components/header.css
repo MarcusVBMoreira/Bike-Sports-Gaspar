@@ -3,6 +3,7 @@
     --Preto-Cor: #000;
     --Branco-Cor: #FFF;
     --CinzaClaro-Cor: #DFDFDF;
+    --CinzaEscuro-Cor: #a8a8a8;
     --Verde-Cor: #9CCC3C;
     --Amarelo-Cor: #F2EA01;
     --Vermelho-Cor: #E72526;
@@ -12,27 +13,8 @@
 
 header{
     width: 100%;
-}
-.info-list{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-.info-list-2{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-.info-list-2 a{
-    color: var(--Preto-Cor);
-    text-decoration: none;
-}
-.info-list-2 a:hover{
-    border-bottom: 1px solid var(--Preto-Cor);
-}
-.info-list li{
-    display: flex;
-    gap: 10px;
+    position: fixed;
+    z-index: 999;
 }
 
 /* Navbar-1 */
@@ -45,20 +27,36 @@ header{
     align-items: center;
     border-bottom: solid 1px var(--Branco-Cor);
 }
-.nav-1 .logo{
-    display: flex;
-    width: 4%;
+
+.container-contatos{
+    display: none;
 }
-.nav-1 .logo img{
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mob-log{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-1 .mob-log .logo{
+    display: flex;
+    width: 20%;
+}
+.nav-1 .mob-log .logo img{
     width: 100%;
 }
 .nav-list-1{
     display: flex;
+    width: 30%;
+    justify-content: space-evenly;
     list-style: none;
-    gap: 40px;
 }
 .pesquisar{
-    width: 30%;
+    width: 40%;
     background-color: var(--Branco-Cor);
     border-radius: 5px;
     cursor: pointer;
@@ -68,12 +66,17 @@ header{
 }
 .pesquisar i{
     cursor: pointer;
+    transition: .5s ease;
+}
+.pesquisar i:hover{
+    color: var(--CinzaEscuro-Cor);
 }
 .pesquisa{
     background-color: transparent;
     border: none;
     width: 90%;
-    padding: 15px 20px;
+    padding: 10px 20px;
+    font-family: inter-regular;
 }
 .pesquisa:focus{
     outline: none;
@@ -102,13 +105,14 @@ header{
     gap: 10px;
     background-color: var(--Laranja-Cor);
     color: #f5f5f5;
-    padding: 10px;
-    padding-right: 40px;
+    padding: 5px 22px 5px 20px;
 }
-.categorias h2{
+.categorias a{
     text-transform: uppercase;
+    text-align: center;
     font-size: 18px;
     color: var(--Branco-Cor);
+    font-family: Michroma;
 }
 .categorias:hover{
     color: var(--Branco-Cor);
@@ -124,7 +128,6 @@ header{
 .nav-list-2 li{
     display: inline-block;
     align-items: center;
-    height: 100%;
     width: 20%;
     justify-content: center;
 }
@@ -147,6 +150,7 @@ header{
     display: flex;
     justify-content: start;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
     width: 100%;
 }
@@ -282,7 +286,6 @@ header{
 }
 
 /* Ferramentas dropdown */
-
 .nav-list-2 ul.container-fer-dropdown ul.fer-dropdown li{
     display: flex;
     justify-content: start;
@@ -403,6 +406,11 @@ header{
     cursor: pointer;
     width: 100%;
 }
+
+.nav-list-2 i{
+    display: none;
+}
+
 .nav-list-2 ul.sup-dropdown{
     background-color: var(--Branco-Cor);
     position: absolute;
@@ -460,4 +468,126 @@ header{
     width: 1px;
     background-color: var(--Preto-Cor);
     margin: 3px; 
+}
+
+.nav-list-2 .container-contatos .contatos a{
+    padding: 0%;
+}
+
+/* ---------Responsivo Header--------- */
+/* --------------1050px-------------- */
+@media screen and (max-width: 1050px){
+    .nav-list-2 a{
+        font-size: 12px;
+    }
+}
+/* -------------850px-------------- */
+@media screen and (max-width: 850px){
+    .categorias{
+        width: 100%;
+        height: 30px;
+        background-color: var(--Laranja-Cor);
+    }
+
+    .nav-list-2{
+        position: fixed;
+        background: #000;
+        justify-content: start;
+        padding: 2%;
+        width: 40vw;
+        height: 100vh;
+        flex-direction: column;
+        left: 0;
+    }
+    
+    .nav-list-2 .container-contatos .contatos a i{
+        font-size: 40px;
+    }
+    
+    .nav-list-2 li{
+        display: flex;
+        padding: 1%;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .nav-list-2 li a{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .nav-list-2 li a i{
+        display: flex;
+    }
+    
+    .nav-2{
+        display: none;
+        height: 100%;
+        right: 0;
+    }
+
+    .nav-2.active{
+        display: flex;
+    }
+    
+    .nav-list-2.active{
+        display: flex;
+        transition: 2s move1;
+        
+    }
+    
+    @keyframes move1 {
+        0%{
+            left: 20%;
+        }
+        100%{
+            left: 0;
+        }
+    }
+    
+    .nav-1{
+        justify-content: space-between;
+    }
+    
+    .nav-list-1{
+        justify-content: space-evenly;
+        width: 30%;
+    }
+    
+    .nav-list-1 i{
+        font-size: 22px;
+    }
+    
+    .mob-log{
+        display: flex;
+        width: 200px;
+        justify-content: space-evenly;
+    }
+    
+    .mobile-menu{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .mobile-menu div {
+        width: 32px;
+        height: 2px;
+        background: #fff;
+        margin: 8px;
+        transition: 0.3s;
+    }
+    
+    .nav-list-2 li:hover ul.sup-dropdown,
+    .nav-list-2 li:hover ul.container-ace-dropdown,
+    .nav-list-2 li:hover ul.container-vest-dropdown,
+    .nav-list-2 li:hover ul.container-fer-dropdown,
+    .nav-list-2 li:hover ul.container-comp-dropdown,
+    .nav-list-2 li:hover ul.bike-dropdown{
+        display: none;
+    }
+    
+    .nav-1 .pesquisar{
+        display: none;
+    }
 }
