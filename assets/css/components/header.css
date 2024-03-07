@@ -186,17 +186,27 @@ header{
     cursor: pointer;
     width: 100%;
     height: auto;
+    justify-content: center;
 }
 
 .nav-list-2 ul.container-ace-dropdown{
     background-color: var(--Branco-Cor);
     position: absolute;
     z-index: 999;
+    left: 0;
     display: none;
     border-radius: 1px;
-    width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    width: 100%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
     max-height: 500px;
     justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+}
+.ace-dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
 }
 
 .container-ace-dropdown a{
@@ -208,6 +218,7 @@ header{
     display: flex;
     flex-direction: row;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-list-2 ul.container-ace-dropdown ul.ace-dropdown li:hover{

@@ -46,6 +46,8 @@
                                 <li><a href="" class="light">Bomba de Ar</a></li>
                                 <li><a href="" class="light">Bolsa</a></li>
                                 <li><a href="" class="light">Buzinas</a></li>
+                            </ul>
+                            <ul class="ace-dropdown">
                                 <li><a href="" class="light">Cadeado</a></li>
                                 <li><a href="" class="light">Cadeirinhas</a></li>
                                 <li><a href="" class="light">Câmeras</a></li>
@@ -58,6 +60,8 @@
                                 <li><a href="" class="light">Descanso</a></li>
                                 <li><a href="" class="light">Farol</a></li>
                                 <li><a href="" class="light">Lanterna</a></li>
+                            </ul>
+                            <ul class="ace-dropdown">
                                 <li><a href="" class="light">Líquido tubeless</a></li>
                                 <li><a href="" class="light">Óculos</a></li>
                                 <li><a href="" class="light">Paralamas</a></li>
@@ -70,6 +74,8 @@
                                 <li><a href="" class="light">Roda lateral</a></li>
                                 <li><a href="" class="light">Suporte caramanhola</a></li>
                                 <li><a href="" class="light">Suporte ciclo computador</a></li>
+                            </ul>
+                            <ul class="ace-dropdown">
                                 <li><a href="" class="light">Suporte de farol</a></li>
                                 <li><a href="" class="light">Suporte para bike</a></li>
                                 <li><a href="" class="light">Suporte para carro</a></li>
