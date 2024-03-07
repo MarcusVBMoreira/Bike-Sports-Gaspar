@@ -491,14 +491,28 @@ header{
 
     .nav-list-2{
         position: fixed;
-        background: #000;
+        background-color: var(--Preto-Cor);
         justify-content: start;
         padding: 2%;
         width: 40vw;
         height: 100vh;
         flex-direction: column;
         left: 0;
+        animation: move 1.5s;
     }
+    @keyframes move {
+        0%{
+            left: -20%;
+        }
+        100%{
+            left: 0;
+        }
+    }
+
+    .menu-responsivo.active{
+        display: flex;
+    }
+
     
     .nav-list-2 .container-contatos .contatos a i{
         font-size: 40px;
@@ -524,26 +538,16 @@ header{
     .nav-2{
         display: none;
         height: 100%;
-        right: 0;
     }
-
+    
     .nav-2.active{
         display: flex;
     }
-    
+
     .nav-list-2.active{
         display: flex;
-        transition: 2s move1;
         
-    }
-    
-    @keyframes move1 {
-        0%{
-            left: 20%;
-        }
-        100%{
-            left: 0;
-        }
+        
     }
     
     .nav-1{
