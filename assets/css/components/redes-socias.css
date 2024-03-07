@@ -1,0 +1,94 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+/* Contact */
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#contato h1{
+    color: var(--Verde-Cor);
+    font-size: 30px;
+    font-family: Michroma;
+}
+.container-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.icon-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-contact i{
+    display: flex;
+    width: 80px;
+    font-size: 50px;
+    color: #7c7c7c;
+    transition: .5s ease;
+    justify-content: center;
+}
+
+.contacts a{
+    text-decoration: none;
+}
+
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-instagram:hover{
+    color: #e92b74;
+}
+.fa-whatsapp:hover{
+    color: #10e033;
+}
+.fa-linkedin:hover{
+    color: #4e61af;
+}
+.fa-envelope:hover{
+    color: #f13918;
+}
+
+
+/* *CELULAR* */
+@media screen and (max-width: 480px) {
+    .icon-contact i{
+        width: 50px;
+    }
+}
+
+/* *TABLET* */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    
+}
+
+/* *NOOTBOOK* */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    
+}
+
+/* *COMPUTADOR* */
+@media screen and (min-width: 1023px){
+    
+}
