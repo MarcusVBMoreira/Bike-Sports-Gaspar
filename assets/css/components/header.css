@@ -544,10 +544,20 @@ header{
         display: flex;
     }
 
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+  
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+  
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
     .nav-list-2.active{
         display: flex;
-        
-        
     }
     
     .nav-1{
