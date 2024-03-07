@@ -8,12 +8,12 @@
     <body>
         <header>
             <nav class="nav-1">
-                <div class="mob-log">
+                <div class="mob-log" id="mob-lob">
                     <a href="index.php" class="logo"><img src="assets/img/logoBSG-branco-menor.png" alt="Logo Bike Sport Gaspar"></a>
-                    <div class="mobile-menu" id="mobile-menu" onclick="menu_clicou()">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
+                    <div class="mobile-menu" onclick="menu_clicou()">
+                        <div class="line1" id="line1"></div>
+                        <div class="line2" id="line2"></div>
+                        <div class="line3" id="line3"></div>
                     </div>
                 </div>
                 <div class="pesquisar">

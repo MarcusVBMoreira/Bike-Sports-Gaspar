@@ -544,15 +544,15 @@ header{
         display: flex;
     }
 
-    .mobile-menu.active .line1 {
+    .line1.active {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
   
-    .mobile-menu.active .line2 {
+    .line2.active {
         opacity: 0;
     }
   
-    .mobile-menu.active .line3 {
+    .line3.active {
         transform: rotate(45deg) translate(-5px, -7px);
     }
 
