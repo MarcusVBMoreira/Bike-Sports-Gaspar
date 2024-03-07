@@ -12,8 +12,8 @@
 }
 
 .produto{
-    width: 25%;
-    height: 500px;
+    width: 40%;
+    height: 550px;
     display: flex;
     flex-direction: column;
     background-color: var(--Branco-Cor);
@@ -36,7 +36,7 @@
     padding: 1%;
 }
 .nome_produto .bold{
-    font-size: 25px;
+    font-size: 18px;
 }
 .valor_produto{
     display: flex;
@@ -89,4 +89,86 @@
 }
 .fa-heart{
     font-size: 30px;
+    cursor: pointer;
+}
+.fa-star{
+    cursor: pointer;
+}
+
+
+/* *CELULAR* */
+@media screen and (max-width: 480px) {
+    .produto{
+        width: 48%;
+        height: 280px;
+    }
+    .fa-heart{
+        font-size: 20px;
+    }
+    .nome_produto .bold{
+        font-size: 10px;
+    }
+    .nome_produto p{
+        font-size: 10px;
+    }
+    .fa-star{
+        font-size: 12px;
+    }
+    .valor_produto .bold{
+        font-size: 12px;
+    }
+    .ver-mais p{
+        font-size: 9px;
+    }
+    .btn_comprar{
+        font-size: 16px;
+    }
+}
+
+/* *TABLET* */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .produto{
+        width: 48%;
+        height: 400px;
+    }
+    .fa-heart{
+        font-size: 20px;
+    }
+    .nome_produto .bold{
+        font-size: 15px;
+    }
+    .nome_produto p{
+        font-size: 10px;
+    }
+    .fa-star{
+        font-size: 12px;
+    }
+    .valor_produto .bold{
+        font-size: 18px;
+    }
+    .ver-mais p{
+        font-size: 12px;
+    }
+    .btn_comprar{
+        font-size: 20px;
+    }
+}
+
+/* *NOOTBOOK* */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .produto{
+        width: 48%;
+        height: 450px;
+    }
+    .btn_comprar{
+        padding: 6%;
+    }
+}
+
+/* *COMPUTADOR* */
+@media screen and (min-width: 1023px){
+    .produto{
+        width: 30%;
+        height: 500px;
+    }
 }
