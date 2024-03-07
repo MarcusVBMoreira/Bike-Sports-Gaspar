@@ -7,7 +7,7 @@
     </head>
     <body>
         <footer>
-            <h1>Bike Sport Gaspar</h1>
+            <h1 class="bold">Bike Sport Gaspar</h1>
             <div class="line"></div>
             <div class="footer_infos">
                 <h2>Horário de funcionamento</h2>
