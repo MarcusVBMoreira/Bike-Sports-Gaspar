@@ -14,6 +14,9 @@
     ?>
     <div class="container">
       <?php
+        require('assets/components/card-produto.php');
+      ?>
+      <?php
       require('assets/components/redes-sociais.php');
       ?>
     </div>
