@@ -1,0 +1,33 @@
+/* !CORES! */
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --Cinza-Cor: #969696;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.pop-up{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 70px;
+    height: 70px;
+    background-color: #10e033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.pop-up i{
+    font-size: 40px;
+}
+.pop-up i:hover{
+    color: #fff;
+}

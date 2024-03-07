@@ -16,7 +16,9 @@
     <?php
       require('assets/components/produtos-home.php');
     ?>
-    
+    <?php
+      require('assets/components/btn-whats.php');
+    ?>
     <?php
       require('assets/components/redes-sociais.php');
     ?>
