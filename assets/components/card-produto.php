@@ -13,12 +13,22 @@
             while($dados = $consulta->fetch_assoc()){
                 ?>
                 <div class="produto">
+                    <div class="coracao">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                     <div class="img_produto">
                         <a href="infos_produto.php?codigo=<?php echo $dados['codigo']; ?>" style="width: 100%;"><img src="upload/imagem_produtos/<?php echo($dados['img']); ?>" style="width: 100%; border-radius: 5%;" class="produto_img"></a>
                     </div>
                     <div class="nome_produto">
                         <p class="bold"><?php echo $dados['nome']; ?></p>
                         <p class="regular">(cod. <?php echo $dados['codigo']; ?>)</p>
+                    </div>
+                    <div class="avaliacao">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
                     <div class="valor_produto">
                         <p class="bold">R$ <?php echo $dados['valor']; ?></p>

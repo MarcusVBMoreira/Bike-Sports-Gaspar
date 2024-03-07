@@ -12,7 +12,7 @@
 }
 
 .produto{
-    width: 30%;
+    width: 25%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -81,4 +81,12 @@
 }
 .ver-mais p a{
     text-decoration: underline;
+}
+.coracao{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.fa-heart{
+    font-size: 30px;
 }
