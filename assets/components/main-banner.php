@@ -29,6 +29,17 @@
         height: 450px;
         z-index: 0;
       }
+      .carousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media screen  and (max-width: 480px){
+        .carousel-inner{
+          width: 80%;
+        }
+      }
+
     </style>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -15,6 +15,8 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    width: 100%;
+    margin: 2% 0 2% 0;
 }
 #contato h1{
     color: var(--Verde-Cor);
@@ -75,6 +77,15 @@
 @media screen and (max-width: 480px) {
     .icon-contact i{
         width: 50px;
+    }
+    .container-contact{
+        width: 100%;
+    }
+    .contacts{
+        justify-content: space-around;
+    }
+    #contato h1{
+        font-size: 28px;
     }
 }
 
