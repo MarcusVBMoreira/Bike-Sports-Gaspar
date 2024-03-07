@@ -13,21 +13,22 @@
 
 .pop-up{
     position: fixed;
-    bottom: 5%;
-    right: 5%;
-    width: 70px;
-    height: 70px;
+    bottom: 4%;
+    right: 4%;
+    width: 60px;
+    height: 60px;
     background-color: #10e033;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 1%;
     border-radius: 50%;
-    transition: 0.5s;
 }
 .pop-up i{
     font-size: 40px;
+    color: var(--Branco-Cor);
 }
+
 .pop-up i:hover{
-    color: #fff;
+    color: var(--Branco-Cor);
 }
