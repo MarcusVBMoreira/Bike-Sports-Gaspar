@@ -7,12 +7,15 @@
   </head>
   <body>
     <?php
-      //require('assets/components/header.php');
+      require('assets/components/header.php');
     ?>
     <?php
       require('assets/components/main-banner.php');
     ?>
     <div class="container">
+      <?php
+        require('assets/components/card-produto.php');
+      ?>
       <?php
       require('assets/components/redes-sociais.php');
       ?>
