@@ -47,6 +47,7 @@
                                 <li><a href="" class="light">Bolsa</a></li>
                                 <li><a href="" class="light">Buzinas</a></li>
                             </ul>
+                            <div class="line-ace"></div>
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Cadeado</a></li>
                                 <li><a href="" class="light">Cadeirinhas</a></li>
@@ -54,6 +55,7 @@
                                 <li><a href="" class="light">Capacetes</a></li>
                                 <li><a href="" class="light">Caramanhola</a></li>
                             </ul>
+                            <div class="line-ace"></div>
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Co2</a></li>
                                 <li><a href="" class="light">Cestos</a></li>
@@ -61,6 +63,7 @@
                                 <li><a href="" class="light">Farol</a></li>
                                 <li><a href="" class="light">Lanterna</a></li>
                             </ul>
+                            <div class="line-ace"></div>
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Líquido tubeless</a></li>
                                 <li><a href="" class="light">Óculos</a></li>
@@ -68,6 +71,7 @@
                                 <li><a href="" class="light">Pneus</a></li>
                                 <li><a href="" class="light">Porta celular</a></li>
                             </ul>
+                            <div class="line-ace"></div>
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Remendos</a></li>
                                 <li><a href="" class="light">Retrovisor</a></li>
@@ -75,6 +79,7 @@
                                 <li><a href="" class="light">Suporte caramanhola</a></li>
                                 <li><a href="" class="light">Suporte ciclo computador</a></li>
                             </ul>
+                            <div class="line-ace"></div>
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Suporte de farol</a></li>
                                 <li><a href="" class="light">Suporte para bike</a></li>
@@ -86,20 +91,32 @@
                     </li>
                     <li>
                         <a href="">Vestuario</a>
-                        <ul class="vest-dropdown">
-                            <li><a href="montain_bike.php"  class="light">Bala clava</a></li>
-                            <li><a href="" class="light">Bota</a></li>
-                            <li><a href="" class="light">Bretelles</a></li>
-                            <li><a href="" class="light">Camisa</a></li>
-                            <li><a href="" class="light">Luvas</a></li>
-                            <li><a href="" class="light">Macaquinhos</a></li>
-                            <li><a href="" class="light">Manguito</a></li>
-                            <li><a href="" class="light">Mochila hidratação</a></li>
-                            <li><a href="" class="light">Meias</a></li>
-                            <li><a href="" class="light">Pernito</a></li>
-                            <li><a href="" class="light">Sapatilhas</a></li>
-                            <li><a href="" class="light">Segunda Pele</a></li>
-                            <li><a href="" class="light">Shots</a></li>
+                        <ul class="container-vest-dropdown">
+                            <ul class="vest-dropdown">
+                                <li><a href="montain_bike.php"  class="light">Bala clava</a></li>
+                                <li><a href="" class="light">Bota</a></li>
+                                <li><a href="" class="light">Bretelles</a></li>
+                                <li><a href="" class="light">Camisa</a></li>
+                            </ul>
+                            <div class="line-vest"></div>
+                            <ul class="vest-dropdown">
+                                <li><a href="" class="light">Luvas</a></li>
+                                <li><a href="" class="light">Macaquinhos</a></li>
+                                <li><a href="" class="light">Manguito</a></li>
+                            </ul>
+                            <div class="line-vest"></div>
+                            <ul class="vest-dropdown">
+                                <li><a href="" class="light">Mochila hidratação</a></li>
+                                <li><a href="" class="light">Meias</a></li>
+                                <li><a href="" class="light">Pernito</a></li>
+                            </ul>
+                            <div class="line-vest"></div>
+                            <ul class="vest-dropdown">
+                                <li><a href="" class="light">Sapatilhas</a></li>
+                                <li><a href="" class="light">Segunda Pele</a></li>
+                                <li><a href="" class="light">Shots</a></li>
+                                <a href=""></a>
+                            </ul>
                         </ul> 
                     </li>
                     <li><a href="">Ferramentas</a></li>

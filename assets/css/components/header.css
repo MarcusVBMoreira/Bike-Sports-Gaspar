@@ -187,6 +187,7 @@ header{
     width: 100%;
     height: auto;
     justify-content: center;
+    text-align: center;
 }
 
 .nav-list-2 ul.container-ace-dropdown{
@@ -225,27 +226,26 @@ header{
     background-color: #dfdfdf;
 }
 /* Vestuario Dropdown */
-.nav-list-2 ul.vest-dropdown li{
+.nav-list-2 ul.container-vest-dropdown ul.vest-dropdown li{
     display: flex;
     justify-content: start;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
+    padding: 20px;
+    text-align: center;
     align-items: space-around;
 }
-.nav-list-2 ul.vest-dropdown{
+.nav-list-2 ul.container-vest-dropdown{
     background-color: var(--Branco-Cor);
     position: absolute;
     z-index: 999;
     display: none;
     border-radius: 1px;
-    width: 20%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
     max-height: 500px;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-items: space-around;
+    align-items: center;
     padding: 1%;
 }
 .nav-list-2 ul.vest-dropdown li:hover{
@@ -256,12 +256,31 @@ header{
     color: var(--Preto-Cor);
     font-size: 12px;
 }
-.nav-list-2 li:hover ul.vest-dropdown{
+.nav-list-2 li:hover ul.container-vest-dropdown{
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    padding: 20px;
+    flex-wrap: wrap;
 }
+
 .vest-dropdown li a{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+/* lines */
+.line-ace{
+    height: 200px;
+    width: 1px;
+    background-color: var(--Preto-Cor);
+    margin: 5px auto;
+}
+
+.line-vest{
+    height: 250px;
+    width: 1px;
+    background-color: var(--Preto-Cor);
+    margin: 5px auto;
 }
