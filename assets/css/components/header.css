@@ -198,7 +198,7 @@ header{
     display: none;
     border-radius: 1px;
     width: 100%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
-    max-height: 500px;
+    height: 300px;
     justify-content: space-around;
     align-items: center;
     justify-content: center;
@@ -232,21 +232,31 @@ header{
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    padding: 20px;
+    height: auto;
+    justify-content: center;
     text-align: center;
-    align-items: space-around;
 }
+
+.container-vest-dropdown{
+    display: flex;
+}
+
+.vest-dropdown{
+    width: 100%;
+}
+
 .nav-list-2 ul.container-vest-dropdown{
     background-color: var(--Branco-Cor);
     position: absolute;
     z-index: 999;
+    left: 0;
     display: none;
     border-radius: 1px;
-    width: 50%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
-    max-height: 500px;
-    flex-direction: column;
+    width: 100%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
+    height: 300px;
+    justify-content: space-around;
     align-items: center;
-    padding: 1%;
+    justify-content: center;
 }
 .nav-list-2 ul.vest-dropdown li:hover{
     background-color: #dfdfdf;
@@ -258,9 +268,6 @@ header{
 }
 .nav-list-2 li:hover ul.container-vest-dropdown{
     display: flex;
-    flex-direction: row;
-    padding: 20px;
-    flex-wrap: wrap;
 }
 
 .vest-dropdown li a{
@@ -279,7 +286,7 @@ header{
 }
 
 .line-vest{
-    height: 250px;
+    height: 200px;
     width: 1px;
     background-color: var(--Preto-Cor);
     margin: 5px auto;

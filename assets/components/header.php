@@ -115,7 +115,6 @@
                                 <li><a href="" class="light">Sapatilhas</a></li>
                                 <li><a href="" class="light">Segunda Pele</a></li>
                                 <li><a href="" class="light">Shots</a></li>
-                                <a href=""></a>
                             </ul>
                         </ul> 
                     </li>
