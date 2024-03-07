@@ -118,9 +118,85 @@
                             </ul>
                         </ul> 
                     </li>
-                    <li><a href="">Ferramentas</a></li>
-                    <li><a href="">Componentes</a></li>
-                    <li><a href="">Suplementos</a></li>
+                    <li>
+                        <a href="">Ferramentas</a>
+                        <ul class="container-fer-dropdown">
+                            <ul class="fer-dropdown">
+                                <li><a href="" class="light">Alicate de corte cabo de aço</a></li>
+                                <li><a href="" class="light">Canivete</a></li>
+                                <li><a href="" class="light">Chave de corrente</a></li>
+                            </ul>
+                            <div class="line-fer"></div>
+                            <ul class="fer-dropdown">
+                                <li><a href="" class="light">Chave de pedal</a></li>
+                                <li><a href="" class="light">Chave de Raio</a></li>
+                                <li><a href="" class="light">Espátula</a></li>
+                            </ul>
+                            <div class="line-fer"></div>
+                            <ul class="fer-dropdown">
+                                <li><a href="" class="light">Extrator cassete</a></li>
+                                <li><a href="" class="light">Extrator mov. Central</a></li>
+                                <li><a href="" class="light">Extrator Pedivela</a></li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Componentes</a>
+                        <ul class="container-comp-dropdown">
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Abraçadeiras</a></li>
+                                <li><a href="" class="light">Aros</a></li>
+                                <li><a href="" class="light">Blocagens</a></li>
+                                <li><a href="" class="light">Caixa direção</a></li>
+                                <li><a href="" class="light">Cabo aço</a></li>
+                            </ul>
+                            <div class="comp-fer"></div>
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Cambio dianteiro</a></li>
+                                <li><a href="" class="light">Cambio traseiro</a></li>
+                                <li><a href="" class="light">Canotes</a></li>
+                                <li><a href="" class="light">Cassete</a></li>
+                                <li><a href="" class="light">Conduites</a></li>
+                            </ul>
+                            <div class="comp-fer"></div>
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Coroas</a></li>
+                                <li><a href="" class="light">Corrente</a></li>
+                                <li><a href="" class="light">Cubos</a></li>
+                                <li><a href="" class="light">Ezy fire</a></li>
+                                <li><a href="" class="light">Fita guidão</a></li>
+                            </ul>
+                            <div class="comp-fer"></div>
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Garfo</a></li>
+                                <li><a href="" class="light">Gancheira freios</a></li>
+                                <li><a href="" class="light">Guidão</a></li>
+                                <li><a href="" class="light">Manetes</a></li>
+                            </ul>
+                            <div class="comp-fer"></div>
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Movimento central</a></li>
+                                <li><a href="" class="light">Niples</a></li>
+                                <li><a href="" class="light">Pedivelas </a></li>
+                                <li><a href="" class="light">Rap fire</a></li>
+                            </ul>
+                            <div class="comp-fer"></div>
+                            <ul class="comp-dropdown">
+                                <li><a href="" class="light">Raios</a></li>
+                                <li><a href="" class="light">Rolamentos</a></li>
+                                <li><a href="" class="light">Selim</a></li>
+                                <li><a href="" class="light">Suspensão</a></li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Suplementos</a>
+                        <ul class="sup-dropdown">
+                            <li><a href="" class="light">Creatina</a></li>
+                            <li><a href="" class="light">Pre treino</a></li>
+                            <li><a href="" class="light">Sachê carbom</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
