@@ -32,8 +32,11 @@
                         <a href="">Bikes Magazines</a>
                     </div>
                     <li>
-                        <a href="">Bicicletas<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="bike-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Bicicletas</a>
+                            <i class="fa-solid fa-angle-right" id="seta-bike" onclick="bike_dropdown()"></i>
+                        </div>
+                        <ul class="bike-dropdown" id="bike">
                             <li><a href="montain_bike.php"  class="light">ARO 29</a></li>
                             <li><a href="" class="light">ARO 26</a></li>
                             <li><a href="" class="light">ARO 24</a></li>
@@ -44,8 +47,11 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Acessorios<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="container-ace-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Acessorios</a>
+                            <i class="fa-solid fa-angle-right" id="seta-ace" onclick="ace_dropdown()"></i>
+                        </div>
+                        <ul class="container-ace-dropdown" id="ace">
                             <ul class="ace-dropdown">
                                 <li><a href="" class="light">Adesivos</a></li>
                                 <li><a href="" class="light">Bar end</a></li>
@@ -96,8 +102,11 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Vestuario<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="container-vest-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Vestuario</a>
+                            <i class="fa-solid fa-angle-right" id="seta-vest" onclick="vest_dropdown()"></i>
+                        </div>
+                        <ul class="container-vest-dropdown" id="vest">
                             <ul class="vest-dropdown">
                                 <li><a href="montain_bike.php"  class="light">Bala clava</a></li>
                                 <li><a href="" class="light">Bota</a></li>
@@ -125,8 +134,11 @@
                         </ul> 
                     </li>
                     <li>
-                        <a href="">Ferramentas<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="container-fer-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Ferramentas</a>
+                            <i class="fa-solid fa-angle-right" id="seta-fer" onclick="fer_dropdown()"></i>
+                        </div>
+                        <ul class="container-fer-dropdown" id="fer">
                             <ul class="fer-dropdown">
                                 <li><a href="" class="light">Alicate de corte cabo de aço</a></li>
                                 <li><a href="" class="light">Canivete</a></li>
@@ -147,8 +159,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Componentes<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="container-comp-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Componentes</a>
+                            <i class="fa-solid fa-angle-right" id="seta-comp" onclick="comp_dropdown()"></i>
+                        </div>
+                        <ul class="container-comp-dropdown" id="comp">
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Abraçadeiras</a></li>
                                 <li><a href="" class="light">Aros</a></li>
@@ -156,7 +171,7 @@
                                 <li><a href="" class="light">Caixa direção</a></li>
                                 <li><a href="" class="light">Cabo aço</a></li>
                             </ul>
-                            <div class="comp-fer"></div>
+                            <div class="line-comp"></div>
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Cambio dianteiro</a></li>
                                 <li><a href="" class="light">Cambio traseiro</a></li>
@@ -164,7 +179,7 @@
                                 <li><a href="" class="light">Cassete</a></li>
                                 <li><a href="" class="light">Conduites</a></li>
                             </ul>
-                            <div class="comp-fer"></div>
+                            <div class="line-comp"></div>
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Coroas</a></li>
                                 <li><a href="" class="light">Corrente</a></li>
@@ -172,21 +187,21 @@
                                 <li><a href="" class="light">Ezy fire</a></li>
                                 <li><a href="" class="light">Fita guidão</a></li>
                             </ul>
-                            <div class="comp-fer"></div>
+                            <div class="line-comp"></div>
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Garfo</a></li>
                                 <li><a href="" class="light">Gancheira freios</a></li>
                                 <li><a href="" class="light">Guidão</a></li>
                                 <li><a href="" class="light">Manetes</a></li>
                             </ul>
-                            <div class="comp-fer"></div>
+                            <div class="line-comp"></div>
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Movimento central</a></li>
                                 <li><a href="" class="light">Niples</a></li>
                                 <li><a href="" class="light">Pedivelas </a></li>
                                 <li><a href="" class="light">Rap fire</a></li>
                             </ul>
-                            <div class="comp-fer"></div>
+                            <div class="line-comp"></div>
                             <ul class="comp-dropdown">
                                 <li><a href="" class="light">Raios</a></li>
                                 <li><a href="" class="light">Rolamentos</a></li>
@@ -196,8 +211,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Suplementos<i class="fa-solid fa-angle-down"></i></a>
-                        <ul class="sup-dropdown">
+                        <div class="nome-categoria">
+                            <a href="">Suplementos</a>
+                            <i class="fa-solid fa-angle-right" id="seta-sup" onclick="sup_dropdown()"></i>
+                        </div>
+                        <ul class="sup-dropdown" id="sup">
                             <li><a href="" class="light">Creatina</a></li>
                             <li><a href="" class="light">Pre treino</a></li>
                             <li><a href="" class="light">Sachê carbom</a></li>

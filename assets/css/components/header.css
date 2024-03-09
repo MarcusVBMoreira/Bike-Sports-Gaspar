@@ -465,7 +465,7 @@ header{
     margin: 3px; 
 }
 
-.comp-fer{
+.line-comp{
     height: 250px;
     width: 1px;
     background-color: var(--Preto-Cor);
@@ -474,6 +474,23 @@ header{
 
 .nav-list-2 .container-contatos .contatos a{
     padding: 0%;
+}
+
+.nav-list-1 li a i.fa-heart,
+.nav-list-1 li a i.fa-user,
+.nav-list-1 li a i.fa-cart-shopping{
+    transition: 0.5s;
+}
+.nav-list-1 li a i.fa-heart:hover{
+    color: #E72526;
+}
+
+.nav-list-1 li a i.fa-user:hover{
+    color: #00C1EC;
+}
+
+.nav-list-1 li a i.fa-cart-shopping:hover{
+    color: #F2EA01;
 }
 
 /* ---------Responsivo Header--------- */
@@ -497,10 +514,11 @@ header{
         justify-content: start;
         padding: 2%;
         width: 40vw;
-        height: 100vh;
+        height: 92%;
         flex-direction: column;
         left: 0;
         animation: move 1.5s;
+        overflow-x: hidden;
     }
     @keyframes move {
         0%{
@@ -511,9 +529,6 @@ header{
         }
     }
 
-    .menu-responsivo.active{
-        display: flex;
-    }
 
     
     .nav-list-2 .container-contatos .contatos a i{
@@ -523,18 +538,25 @@ header{
     .nav-list-2 li{
         display: flex;
         padding: 1%;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
+        flex-direction: column;
     }
     
     .nav-list-2 li a{
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 80%;
+        align-items: center;
+    }
+
+    .fa-solid{
+        font-size: 20px;
     }
     
-    .nav-list-2 li a i{
+    .nav-list-2 li i{
         display: flex;
+        color: var(--Branco-Cor);
     }
     
     .nav-2{
@@ -602,8 +624,77 @@ header{
     .nav-list-2 li:hover ul.bike-dropdown{
         display: none;
     }
+
+    .nav-list-2 li:hover ul.bike-dropdown.active,
+    .nav-list-2 li:hover ul.sup-dropdown.active{
+        display: flex;
+        position: relative;
+        width: 100%;
+        max-height: none;
+        padding: 4%;
+    }
+    .bike-dropdown li a,
+    .sup-dropdown li a{
+        padding: 0;
+    }
+
+    .nav-list-2 li:hover ul.container-ace-dropdown.active,
+    .nav-list-2 li:hover ul.container-vest-dropdown.active,
+    .nav-list-2 li:hover ul.container-fer-dropdown.active,
+    .nav-list-2 li:hover ul.container-comp-dropdown.active{
+        display: flex;
+        position: relative;
+        width: 100%;
+        max-height: none;
+        padding: 4%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
     
+
+    .line-ace,
+    .line-vest,
+    .line-fer,
+    .line-comp{
+        display: none;
+    }
+    .ace-dropdown,
+    .vest-dropdown,
+    .fer-dropdown,
+    .comp-dropdown{
+        width: 100%;
+    }
+    .ace-dropdown li a,
+    .vest-dropdown li a,
+    .fer-dropdown li a,
+    .comp-dropdown li a{
+        padding: 4%;
+    }
+
+    .bike-dropdown li a, 
+    .ace-dropdown li a,
+    .vest-dropdown li a,
+    .fer-dropdown li a,
+    .comp-dropdown li a,
+    .sup-dropdown li a{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
     .nav-1 .pesquisar{
         display: none;
+    }
+
+    .nome-categoria{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 450px){
+    .nav-list-2{
+        width: 60vw;
     }
 }

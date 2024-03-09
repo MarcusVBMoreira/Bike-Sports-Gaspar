@@ -38,10 +38,17 @@
         align-items: center;
       }
       /* ---------Responsivo Header--------- */
+      @media screen  and (max-width: 850px){
+        main{
+          padding-top: 70px;
+        }
+      }
       @media screen  and (max-width: 480px){
         .carousel-inner{
           width: 80%;
-          padding-top: 150px;
+        }
+        main{
+          padding-top: 100px;
         }
       }
 
