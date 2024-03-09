@@ -95,7 +95,7 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-height: 100px;
+    height: 60px;
     background-color: var(--Preto-Cor);
 }
 .categorias{
@@ -105,12 +105,14 @@ header{
     gap: 10px;
     background-color: var(--Laranja-Cor);
     color: #f5f5f5;
-    padding: 5px 22px 5px 20px;
+    padding: 0px 22px 0px 20px;
+    height: 100%;
 }
 .categorias a{
     text-transform: uppercase;
     text-align: center;
-    font-size: 18px;
+    font-size: 16
+    px;
     color: var(--Branco-Cor);
     font-family: Michroma;
 }
