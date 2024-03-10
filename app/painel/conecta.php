@@ -1,7 +1,5 @@
 <?php
     //*CONEXÃO COM A API*
-    
-    //define("API_BASE_URL","http://localhost/bike-sports-gaspar/api/");
 
     //*CONEXÃO DO SITE COM O BANDO DE DADOS*
 

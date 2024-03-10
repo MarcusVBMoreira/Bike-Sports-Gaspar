@@ -11,11 +11,12 @@
         <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <!-- !RESET CSS! -->
-        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/reset/reset.css">
         <!-- Links CSS -->
-        <link rel="stylesheet" href="assets/css/padrao.css">
-        <link rel="stylesheet" href="assets/css/header_footer.css">
-        <link rel="stylesheet" href="assets/css/view_produtos.css">
+        <link rel="stylesheet" href="assets/css/padrao/padrao.css">
+        <link rel="stylesheet" href="assets/css/components/header.css">
+        <link rel="stylesheet" href="assets/css/components/footer.css">
+        <link rel="stylesheet" href="assets/css/pages/view_produtos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Sport Gaspar</title>
   </head>

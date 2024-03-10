@@ -21,6 +21,16 @@ if(!$api_response->check_method($_SERVER['REQUEST_METHOD'])){
 
 // ===============================================================
 // SET REQUEST METHOD & GET PARAMS FROM REQUISITION
+$api_response->set_method($_SERVER['REQUEST_METHOD']);
+$params = null;
+
+if($api_response->get_method() == 'GET'){
+    $api_response->set_endpoint($_GET['endpoint']);
+    $params = $_GET;
+}else if($api_response->get_method() == 'POST'){
+    $api_response->set_endpoint($_POST['endpoint']);
+    $params = $_POST;
+}
 
 
 // ===============================================================
@@ -28,15 +38,16 @@ if(!$api_response->check_method($_SERVER['REQUEST_METHOD'])){
 $api_logic = new Api_logic($api_response->get_endpoint(), $params);
 
 // ===============================================================
-// CHECK IF ENDPOINT EXISTS INSIDE api_logic.php FILE
+// CHECK IF ENDPOINT EXISTS
 if(!$api_logic->check_endpoint()){
     $api_response->api_request_error('ENDPOINT DOES NOT EXIST: ' . $api_response->get_endpoint());
 }
 
-// REQUEST TO THE API_LOGIC
+// REQUEST TO THE ENDPOINT ON API_LOGIC
 $result = $api_logic->{$api_response->get_endpoint()}();//executa o método correspondente ao endpoint
 $api_response->add_to_data('data', $result);
 
 $api_response->send_response();
 // $api_response->send_api_status();
+
 
