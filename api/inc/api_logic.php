@@ -341,6 +341,20 @@ class Api_logic{
             'results' => $results
         ];
     }
+    // ===============================================================
 
+
+    // TESTE DE CONSULTAS DOS PRODUTOS
+    public function get_all_products_aro29(){
+
+        $db = new database();
+        $results = $db->EXE_QUERY('SELECT * FROM produtos WHERE categoria = "aro29" ');
+
+        return [
+            'status' => 'SUCCESS',
+            'message' => 'API RUNNING OK',
+            'results' =>  $results
+        ];
+    }
 
 }

@@ -16,6 +16,14 @@ header{
     position: fixed;
     z-index: 999;
 }
+.space{
+    height: 130px;
+}
+@media screen  and (max-width: 850px){
+    .space{
+      height: 70px;
+    }
+}
 
 /* Navbar-1 */
 .nav-1{
