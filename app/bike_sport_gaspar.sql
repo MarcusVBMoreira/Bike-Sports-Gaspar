@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/03/2024 às 21:32
+-- Tempo de geração: 13/03/2024 às 22:21
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -30,18 +30,27 @@ SET time_zone = "+00:00";
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
+  `CPF` int(11) NOT NULL,
   `sobrenome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `data_nascimento` date NOT NULL
+  `data_nascimento` date NOT NULL,
+  `telefone` int(11) NOT NULL,
+  `CEP` varchar(255) NOT NULL,
+  `estado` varchar(255) NOT NULL,
+  `cidade` varchar(255) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `bairro` varchar(255) NOT NULL,
+  `numero` varchar(255) NOT NULL,
+  `complemento` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `clientes`
 --
 
-INSERT INTO `clientes` (`id`, `nome`, `sobrenome`, `email`, `senha`, `data_nascimento`) VALUES
-(1, 'asd', 'asd', 'asd', 'asd', '0000-00-00');
+INSERT INTO `clientes` (`id`, `nome`, `CPF`, `sobrenome`, `email`, `senha`, `data_nascimento`, `telefone`, `CEP`, `estado`, `cidade`, `rua`, `bairro`, `numero`, `complemento`) VALUES
+(1, 'asd', 'asd', 0, 'asd', 'asd', '0000-00-00', 0, 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd');
 
 -- --------------------------------------------------------
 

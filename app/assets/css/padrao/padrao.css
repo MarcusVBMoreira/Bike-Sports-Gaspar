@@ -79,6 +79,9 @@ body{
     width: 100%;
     background-color: var(--Preto-Cor);
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
