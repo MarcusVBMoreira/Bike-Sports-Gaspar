@@ -10,6 +10,7 @@
     --Laranja-Cor: #F24701;
 }
 
+
 /* !FONTES! */
 @font-face {
     font-family: Michroma;
@@ -74,6 +75,7 @@ a, p,button{
 }
 
 
+
 /* !HTML E BODY! */
 body{
     width: 100%;
@@ -88,4 +90,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+i{
+    cursor: pointer;
 }

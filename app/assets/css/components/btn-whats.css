@@ -13,19 +13,19 @@
 
 .pop-up{
     position: fixed;
-    bottom: 5%;
-    right: 5%;
-    width: 70px;
-    height: 70px;
+    bottom: 1%;
+    right: 1%;
+    width: 60px;
+    height: 60px;
     background-color: #10e033;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1%;
+    padding: 2%;
     border-radius: 50%;
 }
 .pop-up i{
-    font-size: 50px;
+    font-size: 40px;
     color: var(--Branco-Cor);
 }
 
