@@ -53,13 +53,12 @@
     align-items: center;
 }
 .btn_comprar{
-    height: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2%;
     width: 92%;
-    padding: 10%;
+    padding:  5%;
     text-align: center;
     background-color: orangered;
     border-radius: 10px;

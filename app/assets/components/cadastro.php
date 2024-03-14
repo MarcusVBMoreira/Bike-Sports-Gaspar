@@ -44,7 +44,7 @@
                     <button type="submit" class="btn_entrar bold">Cadastrar</button>
                 </form>
                 <div class="cadastro_login">
-                    <p class="regular">Já tem cadastro? <a href="cadastro.php" class="bold">Entrar</a></p>
+                    <p class="regular">Já tem cadastro? <a href="login.php" class="bold">Entrar</a></p>
                 </div>
             </div>
         </div>
