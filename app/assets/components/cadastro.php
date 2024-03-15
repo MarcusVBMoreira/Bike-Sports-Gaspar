@@ -17,28 +17,22 @@
                 <form action="" class="forms_login">
                     <div class="components_forms">
                         <div class="item_forms">
-                            <label for="nome" class="regular">Nome:</label>
-                            <input type="text" name="nome" id="nome" class="regular">
+                            <input type="text" placeholder="E-mail" name="nome" id="nome" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="CPF" class="regular">Senha:</label>
-                            <input type="password" name="CPF" id="CPF" class="regular">
+                            <input type="text" placeholder="Sobrenome" name="CPF" id="CPF" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="telefone" class="regular">Telefone:</label>
-                            <input type="tel" name="telefone" id="telefone" class="regular">
+                            <input type="tel" placeholder="Telefone" name="telefone" id="telefone" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="email" class="regular">E-mail:</label>
-                            <input type="email" name="email" id="email" class="regular">
+                            <input type="email" placeholder="E-mail" name="email" id="email" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="senha" class="regular">Senha:</label>
-                            <input type="password" name="senha" id="senha" class="regular">
+                            <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="confirmar_senha" class="regular">Confirmar senha:</label>
-                            <input type="password" name="confirmar_senha" id="confirmar_senha" class="regular">
+                            <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
                         </div>
                     </div>
                     <button type="submit" class="btn_entrar bold">Cadastrar</button>

@@ -17,12 +17,10 @@
                 <form action="" class="forms_login">
                     <div class="components_forms">
                         <div class="item_forms">
-                            <label for="email" class="regular">E-mail:</label>
-                            <input type="email" name="email" id="email" class="regular">
+                            <input type="email" placeholder="E-mail" name="email" id="email" class="regular">
                         </div>
                         <div class="item_forms">
-                            <label for="senha" class="regular">Senha:</label>
-                            <input type="password" name="senha" id="senha" class="regular">
+                            <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
                         </div>
                     </div>
                     <button type="submit" class="btn_entrar bold">Entrar</button>

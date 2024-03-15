@@ -3,11 +3,16 @@
     --Preto-Cor: #000;
     --Branco-Cor: #FFF;
     --CinzaClaro-Cor: #DFDFDF;
+    --CinzaEscuro-Cor: #949494;
     --Verde-Cor: #9CCC3C;
     --Amarelo-Cor: #F2EA01;
     --Vermelho-Cor: #E72526;
     --Azul-Cor: #00C1EC;
     --Laranja-Cor: #F24701;
+}
+
+body{
+    overflow-y: hidden;
 }
 
 .container{
@@ -24,6 +29,7 @@
     width: 70%;
 }
 .login_container, .cadastro_container{
+    width: 50%;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
     display: flex;
@@ -84,16 +90,16 @@
     align-items: center;
     gap: 5px;
 }
-.item_forms label{
-    width: 100%;
-    display: flex;
-    font-size: 20px;
-}
 .item_forms input{
     width: 100%;
     padding: 1.5%;
-    border-radius: 5px;
-    border: solid 1px;
+    border: none;
+    border-bottom: 2px solid var(--Preto-Cor);
+    transition: .5s ease;
+}
+.item_forms input:focus{
+    outline: none;
+    border-color: var(--Laranja-Cor);
 }
 .forms_login button{
     width: 200px;
@@ -103,7 +109,10 @@
     font-size: 20px;
     border-radius: 10px;
     border: none;
-    box-shadow: 0px 0px 8px var(--Preto-Cor);
+    box-shadow: 4px 4px 0px 0px var(--CinzaEscuro-Cor);
+}
+.forms_login button:active{
+    box-shadow: 2px 2px 0px 0px var(--CinzaEscuro-Cor);
 }
 .cadastro_login{
     display: flex;
