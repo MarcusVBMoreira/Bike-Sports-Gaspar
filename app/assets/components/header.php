@@ -22,8 +22,8 @@
                 </div>
                 <ul class="nav-list-1">
                     <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
             <nav class="nav-2" id="nav-2">
