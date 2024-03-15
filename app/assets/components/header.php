@@ -48,7 +48,7 @@
                     </li>
                     <li>
                         <div class="nome-categoria">
-                            <a href="view-produtos.php?tipo=acessorios">Acessorios</a>
+                            <a href="view-produtos.php?pagina=acessorios">Acessorios</a>
                             <i class="fa-solid fa-angle-right" id="seta-ace" onclick="ace_dropdown()"></i>
                         </div>
                         <ul class="container-ace-dropdown" id="ace">
@@ -216,6 +216,7 @@
                             <i class="fa-solid fa-angle-right" id="seta-sup" onclick="sup_dropdown()"></i>
                         </div>
                         <ul class="sup-dropdown" id="sup">
+                            <li class="li-responsivo"><a href="view-produtos.php?pagina=suplementos" class="light">Suplementos</a></li>
                             <li><a href="view-produtos.php?pagina=creatina" class="light">Creatina</a></li>
                             <li><a href="view-produtos.php?pagina=pre_treino" class="light">Pre treino</a></li>
                             <li><a href="view-produtos.php?pagina=sache_carbom" class="light">Sachê carbom</a></li>

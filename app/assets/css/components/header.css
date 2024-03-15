@@ -289,6 +289,10 @@ header{
     justify-content: space-around;
 }
 
+.li-responsivo a{
+    display: none;
+}
+
 .vest-dropdown li a{
     width: 100%;
     display: flex;
@@ -501,6 +505,7 @@ header{
     color: #F2EA01;
 }
 
+
 /* ---------Responsivo Header--------- */
 /* --------------1050px-------------- */
 @media screen and (max-width: 1050px){
@@ -699,6 +704,10 @@ header{
         display: flex;
         width: 100%;
         align-items: center;
+    }
+
+    .li-responsivo{
+        display: flex;
     }
 }
 @media screen and (max-width: 450px){
