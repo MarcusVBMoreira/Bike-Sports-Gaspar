@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="assets/css/components/login_cadastro.css">
     </head>
     <body>
-        <div class="container">
-            <div class="login_cadastro_container">
+        <div class="container_cadastro">
+            <div class="cadastro_container">
                 <div class="header_login_cadastro">
                     <div class="logo_login_cadastro">
                         <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
@@ -48,10 +48,5 @@
                 </div>
             </div>
         </div>
-        <style>
-            .container{
-                height: 150vh;
-            }
-        </style>
     </body>
 </html>

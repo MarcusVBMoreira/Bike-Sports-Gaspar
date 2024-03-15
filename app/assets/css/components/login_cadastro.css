@@ -17,8 +17,13 @@
     align-items: center;
     justify-content: center;
 }
-.login_cadastro_container{
+.login_container{
     width: 100%;
+}
+.cadastro_container{
+    width: 70%;
+}
+.login_container, .cadastro_container{
     background-color: var(--Branco-Cor);
     border-radius: 10px;
     display: flex;
@@ -109,6 +114,13 @@
 }
 .cadastro_login a{
     text-decoration: underline;
+}
+.container_cadastro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
 }
 
 @media screen and (max-width: 800px) {

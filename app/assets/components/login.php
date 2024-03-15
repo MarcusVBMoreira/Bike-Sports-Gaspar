@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="login_cadastro_container">
+            <div class="login_container">
                 <div class="header_login_cadastro">
                     <div class="logo_login_cadastro">
                         <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
