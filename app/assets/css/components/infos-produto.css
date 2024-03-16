@@ -1,0 +1,230 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --Branco-50-Cor:#C4C4C4;
+    --CinzaClaro-Cor: #DFDFDF;
+    --CinzaEscuro-Cor: #a8a8a8;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.localizacao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+.localizacao div{
+    color: var(--Branco-Cor);
+}
+.produtos_geral{
+    width: 100%;
+    height: 450px;
+    background-color: var(--Branco-Cor);
+    display: flex;
+    border-radius: 10px;
+    padding: 2%;
+    justify-content: space-between;
+}
+.head_produto{
+    width: 48%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.corpo_produto{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nome_produto{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Preto-Cor);
+    font-size: 1.5em;
+}
+.cod_produto{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.cor_produto{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cor_produto ul{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.cor_produto ul li{
+    padding: 2.5%;
+    margin: 0.5px;
+    border-radius: 50%;
+    border: solid 1px var(--Branco-Cor);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cor_produto ul li:hover{
+    border: solid 1px var(--Preto-Cor);
+}
+.cor1{
+    background-color: var(--Verde-Cor);
+}
+.cor2{
+    background-color: var(--Vermelho-Cor);
+}
+.tamanho_produto ul{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.tamanho_produto ul li{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: var(--CinzaClaro-Cor);
+    border: solid 1px var(--Branco-Cor);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tamanho_produto ul li:hover{
+    background-color: var(--CinzaEscuro-Cor);
+    border: solid 1px var(--Preto-Cor);
+}
+.tamanho_produto{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+.valor_produto{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+.botoes{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+}
+.compra{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_add_carrinho{
+    padding: 2.5%;
+    border-radius: 10px;
+    background-color: var(--Laranja-Cor);
+    color: var(--Branco-Cor);
+    font-size: 18px;
+    border: none;
+}
+.frete{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_frete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input_frete{
+    padding: 4%;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+.input_calcular{
+    padding: 2%;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--Preto-Cor);
+    color: var(--Branco-Cor);
+    font-size: 18px;
+}
+.produtos_infos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    gap: 20px;
+}
+.produtos_infos ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.produtos_infos ul li{
+    color: var(--Branco-Cor);
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0.5%;
+}
+.produtos_infos ul li:hover .row_verde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid 1px var(--Verde-Cor);
+    animation: row_verde 2.5s;
+}
+@keyframes row_verde {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.produtos_infos .row_verde.active{
+    width: 100%;
+    border: solid 1px var(--Verde-Cor);
+}
+.produtos_infos ul li:hover .row_verde.active{
+    animation: row_verde 0s;
+}
+.produtos_infos ul .row{
+    height: 25px;
+    border: solid 1.5px var(--Branco-Cor);
+}
+.descricao{
+    display: none;
+}
+.medidas{
+    display: none;
+}
+.descricao.active , .medidas.active{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--Branco-Cor);
+    font-size: 20px;
+    padding: 2%;
+}

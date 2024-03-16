@@ -95,3 +95,7 @@ body{
 i{
     cursor: pointer;
 }
+
+img{
+    width: 100%;
+}
