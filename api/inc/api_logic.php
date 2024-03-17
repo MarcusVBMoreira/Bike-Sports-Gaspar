@@ -363,4 +363,24 @@ class Api_logic{
         ];
     }
 
+    public function get_products_filter(){
+        $sql = "SELECT * FROM produtos";
+
+        if(key_exists('tipo',$this->params)){
+            $sql .= " WHERE tipo = '" .$this->params['tipo']. "'";
+        }
+        if(key_exists('categoria',$this->params)){
+            $sql .= " WHERE categoria = '" .$this->params['categoria']. "'";
+        }
+
+        $db = new database();
+        $results = $db->EXE_QUERY($sql);
+
+        return [
+            'status' => 'SUCCESS',
+            'message' => 'API RUNNING OK',
+            'results' =>  $results
+        ];
+    }
+
 }

@@ -3,11 +3,11 @@
   require('inc/api_functions.php');
   require('inc/functions.php');
 
-  $produto = $_GET['pagina'];
-  
-  $get_produtos = 'get_all_products_'. $produto;
-
-  $results = api_request($get_produtos, 'GET');
+  if(key_exists('tipo',$_GET)){
+    $results = api_request('get_products_filter', 'GET',['tipo' => $_GET['tipo']]);
+  }elseif(key_exists('categoria',$_GET)){
+    $results = api_request('get_products_filter', 'GET',['categoria' => $_GET['categoria']]);
+  }
 
   if($results['data']['status'] == 'SUCCESS'){
     $produtos = $results['data']['results'];
