@@ -11,10 +11,6 @@
     --Laranja-Cor: #F24701;
 }
 
-body{
-    overflow-y: hidden;
-}
-
 .container{
     display: flex;
     width: 60%;
