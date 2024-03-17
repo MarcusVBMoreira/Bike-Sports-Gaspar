@@ -30,7 +30,7 @@
                         <p class="bold">R$ <?= $p['valor'] ?></p>
                     </div>
                     <div class="botao_comprar">
-                        <a href="infos_produto.php?codigo=<?= $p['codigo'] ?>" class="btn_comprar bold">Comprar</a>
+                        <a href="infos-produto.php?codigo=<?= $p['codigo'] ?>" class="btn_comprar bold">Comprar</a>
                     </div>
                     <div class="ver-mais">
                         <p>Veja mais em: <a href="">bicicletas</a></p>

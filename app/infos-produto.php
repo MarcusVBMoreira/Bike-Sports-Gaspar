@@ -1,8 +1,15 @@
-<?php 
-  require('inc/config.php');
-  require('inc/api_functions.php');
-  require('inc/functions.php');
+<?php
+require ('inc/config.php');
+require ('inc/api_functions.php');
+require ('inc/functions.php');
 
+$results = api_request('get_product_by','GET',['codigo' => $_GET['codigo']]);
+
+if($results['data']['status'] == 'SUCCESS'){
+    $produto = $results['data']['results']['0'];
+}else{
+    $produto = [];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
