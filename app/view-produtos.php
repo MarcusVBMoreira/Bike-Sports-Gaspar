@@ -3,10 +3,17 @@
   require('inc/api_functions.php');
   require('inc/functions.php');
 
-  if(key_exists('tipo',$_GET)){
-    $results = api_request('get_products_filter', 'GET',['tipo' => $_GET['tipo']]);
-  }elseif(key_exists('categoria',$_GET)){
+  if(isset($_GET['tipo'])){
+    $tipo = $_GET['tipo'];
+  }
+  if(isset($_GET['categoria'])){
+    $categoria = $_GET['categoria'];
+  }
+
+  if(key_exists('categoria',$_GET)){
     $results = api_request('get_products_filter', 'GET',['categoria' => $_GET['categoria']]);
+  }elseif(key_exists('tipo',$_GET)){
+    $results = api_request('get_products_filter', 'GET',['tipo' => $_GET['tipo']]);
   }
 
   if($results['data']['status'] == 'SUCCESS'){

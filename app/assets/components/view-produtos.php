@@ -9,11 +9,29 @@
             <div class="container">
                 <div class="titulo_pagina">
                     <div class="localizacao">
-                        <div class="regular"> Página inicial ></div>
+                        <div class="regular"> 
+                            Página inicial >
+                            <?php
+                                if(isset($categoria)){
+                                    echo(' '.$tipo.' > '.$categoria);
+                                }else{
+                                    echo(' '.$tipo);
+                                }
+                                
+                            ?>
+                        </div>
                     </div>
                     <div class="titulo">
                         <!-- TESTE -->
-                        <h1 class="titulo">Bicilcetinha de equilíbrio</h1>
+                        <h1 class="titulo">
+                            <?php
+                                if(isset($categoria)){
+                                    echo($categoria);
+                                }else{
+                                    echo($tipo);
+                                }
+                            ?>
+                        </h1>
 
                         <h1 class=""></h1>
                     </div>
