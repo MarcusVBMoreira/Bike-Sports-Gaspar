@@ -7,6 +7,7 @@
     --Verde-Cor: #9CCC3C;
     --Amarelo-Cor: #F2EA01;
     --Vermelho-Cor: #E72526;
+    --VermelhoEscuro-Cor: #ff0000;
     --Azul-Cor: #00C1EC;
     --Laranja-Cor: #F24701;
 }
@@ -127,6 +128,19 @@
     justify-content: center;
     padding: 4%;
 }
+
+.item_forms span{
+    display: none;
+}
+.item_forms span.active{
+    display: flex;
+    padding: 1%;
+    color: var(--Vermelho-Cor);
+}
+.item_forms input.active{
+    border-color: var(--VermelhoEscuro-Cor);
+}   
+
 
 @media screen and (max-width: 800px) {
     .container{
