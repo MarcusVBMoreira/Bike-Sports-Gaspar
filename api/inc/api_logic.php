@@ -336,11 +336,29 @@ class Api_logic{
         $results = $db->EXE_QUERY($sql);
 
         return [
-            'status' => 'OK',
+            'status' => 'SUCCESS',
             'message' => 'API RUNNING OK',
             'results' => $results
         ];
     }
 
+    public function get_product_by(){
+        $sql = "SELECT * FROM produtos";
 
+        // GET BY ID
+        if(key_exists('codigo',$this->params)){
+            if(filter_var($this->params['codigo'],FILTER_VALIDATE_INT)){
+                $sql .= " WHERE codigo = " . $this->params['codigo'];
+            }
+        }
+
+        $db = new database();
+        $results = $db->EXE_QUERY($sql);
+
+        return [
+            'status' => 'SUCCESS',
+            'message' => 'API RUNNING OK',
+            'results' => $results
+        ];
+    }
 }
