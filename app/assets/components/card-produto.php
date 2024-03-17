@@ -1,6 +1,3 @@
-<?php
-    require('painel/conecta.php');
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -16,7 +13,7 @@
                         <i class="fa-regular fa-heart"></i>
                     </div>
                     <div class="img_produto">
-                        <a href="infos_produto.php?codigo=<?= $p['codigo'] ?>" style="width: 100%;"><img src="upload/imagem_produtos/<?= $p['img'] ?>" style="width: 100%; border-radius: 5%;" class="produto_img"></a>
+                        <a href="infos-produto.php?codigo=<?= $p['codigo'] ?>" style="width: 100%;"><img src="upload/produtos/<?= $p['img'] ?>" style="width: 100%; border-radius: 5%;" class="produto_img"></a>
                     </div>
                     <div class="nome_produto">
                         <p class="bold"><?= $p['nome'] ?></p>
@@ -42,9 +39,5 @@
             <?php endforeach; ?>
             
         <?php endif ?>
-        
-
-
-
     </body>
 </html>

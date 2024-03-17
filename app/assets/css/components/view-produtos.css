@@ -1,0 +1,53 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.container_produtos{
+    width: 100%;
+}
+.produtos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.titulo_pagina{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.localizacao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+.localizacao div{
+    color: var(--Branco-Cor);
+}
+.titulo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 1% 0 1%;
+}
+.titulo h1{
+    color: var(--Branco-Cor);
+    font-size: 25px;
+}
+.titulo_pagina .row{
+    width: 100%;
+    margin: 1%;
+    border: 1px solid;
+    border-color: var(--Verde-Cor);
+}

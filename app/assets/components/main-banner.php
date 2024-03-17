@@ -23,10 +23,7 @@
       </button>
     </div>
     <style>
-      /* Banner Rotativo */
-      main{
-        padding-top: 130px;
-      } 
+      /* Banner Rotativo */ 
       .carousel-item img{
         width: 100%;
         height: 450px;
@@ -38,17 +35,12 @@
         align-items: center;
       }
       /* ---------Responsivo Header--------- */
-      @media screen  and (max-width: 850px){
-        main{
-          padding-top: 70px;
-        }
-      }
       @media screen  and (max-width: 480px){
         .carousel-inner{
           width: 80%;
         }
         main{
-          padding-top: 100px;
+        margin-top: 50px;
         }
       }
 

@@ -341,6 +341,7 @@ class Api_logic{
             'results' => $results
         ];
     }
+    // ===============================================================
 
     public function get_product_by(){
         $sql = "SELECT * FROM produtos";
@@ -361,4 +362,5 @@ class Api_logic{
             'results' => $results
         ];
     }
+
 }

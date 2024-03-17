@@ -53,23 +53,23 @@
     align-items: center;
 }
 .btn_comprar{
-    height: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2%;
     width: 92%;
-    padding: 10%;
+    padding:  5%;
     text-align: center;
     background-color: orangered;
     border-radius: 10px;
-    transition: 1s;
     color: var(--Branco-Cor);
     font-size: 25px;
 }
-.btn_comprar:hover{
-    background-color: green;
+
+.btn-comprar:hover{
+    background-color: #cf3b00;
 }
+
 .view_container{
     width: 85%;
     display: flex;
