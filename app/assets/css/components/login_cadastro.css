@@ -20,13 +20,12 @@
     justify-content: center;
 }
 .login_container{
-    width: 100%;
+    width: 80%;
 }
 .cadastro_container{
-    width: 70%;
+    width: 60%;
 }
 .login_container, .cadastro_container{
-    width: 50%;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
     display: flex;

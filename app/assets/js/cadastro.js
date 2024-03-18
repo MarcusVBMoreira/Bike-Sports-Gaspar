@@ -67,6 +67,21 @@ form.addEventListener("submit", (event) =>{
 
     event.preventDefault();
 
+    var condicaoNome = false;
+    var condicaoSobrenome = false;
+    var condicaoTelefone = false;
+    var condicaoData = false;
+    var condicaoEmail = false;
+    var condicaoSenha = false;
+    var condicaoConfirmarSenha = false;
+    var condicaoCEP = false;
+    var condicaoEstado = false;
+    var condicaoCidade = false;
+    var condicaoBairro = false;
+    var condicaoRua = false;
+    var condicaoNumero = false;
+    var condicaoNumero = false;
+
     //!verificar se o nome está vazio
     if(nome.value ===""){
         nome.classList.add('active');
@@ -74,6 +89,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         nome.classList.remove('active');
         spanNome.classList.remove('active');
+
+        condicaoNome = true;
     }
 
     //!verificar se sobrenome está vazio
@@ -83,6 +100,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         sobrenome.classList.remove('active');
         spanSobrenome.classList.remove('active');
+
+        condicaoSobrenome = true;
     }
 
     //!verificar se o telefone está vazio
@@ -92,15 +111,20 @@ form.addEventListener("submit", (event) =>{
     }else{
         telefone.classList.remove('active');
         spanTelefone.classList.remove('active');
+
+        condicaoTelefone = true;
     }
 
     //!verificar se a data de nascimento está vazio
     if(data.value ===""){
         data.classList.add('active');
         spanData.classList.add('active');
+
     }else{
         data.classList.remove('active');
         spanData.classList.remove('active');
+
+        condicaoData = true;
     }
 
     //!verificar se o email está vazio
@@ -117,6 +141,8 @@ form.addEventListener("submit", (event) =>{
         }else{
             email.classList.remove('active');
             spanEmailValido.classList.remove('active');
+
+            condicaoEmail = true;
         }
     }
     
@@ -142,6 +168,8 @@ form.addEventListener("submit", (event) =>{
             }else{
                 senha.classList.remove('active');
                 spanSenhaSegura.classList.remove('active');
+
+                condicaoSenha = true;
             }
         }
     }
@@ -160,6 +188,8 @@ form.addEventListener("submit", (event) =>{
         }else{
             confirmarSenha.classList.remove('active');
             spanSenhaDiferente.classList.remove('active');
+
+            condicaoConfirmarSenha = true;
         }
     }
     
@@ -170,6 +200,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         CEP.classList.remove('active');
         spanCEP.classList.remove('active');
+
+        condicaoCEP = true;
     }
 
     //!verificar se o estado está vazio
@@ -179,6 +211,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         estado.classList.remove('active');
         spanEstado.classList.remove('active');
+
+        condicaoEstado = true;
     }
 
     //!verificar se a cidade está vazio
@@ -188,6 +222,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         cidade.classList.remove('active');
         spanCidade.classList.remove('active');
+
+        condicaoCidade = true;
     }
 
     //!verificar se a Bairro está vazio
@@ -197,6 +233,8 @@ form.addEventListener("submit", (event) =>{
     }else{
         bairro.classList.remove('active');
         spanBairro.classList.remove('active');
+
+        condicaoBairro = true;
     }
 
     //!verificar se a rua está vazio
@@ -206,18 +244,26 @@ form.addEventListener("submit", (event) =>{
     }else{
         rua.classList.remove('active');
         spanRua.classList.remove('active');
+
+        condicaoRua = true;
     }
 
     //!verificar se o Numero está vazio
     if(numero.value ===""){
         numero.classList.add('active');
         spanNumero.classList.add('active');
+
+        condicaoNumero = false;
     }else{
         numero.classList.remove('active');
         spanNumero.classList.remove('active');
+
+        condicaoNumero = true;
     }
 
-    form.submit();
+    if(condicaoNome & condicaoSobrenome & condicaoTelefone & condicaoData & condicaoEmail & condicaoSenha & condicaoConfirmarSenha & condicaoCEP & condicaoBairro & condicaoEstado & condicaoCidade & condicaoRua & condicaoNumero === true){
+        form.submit();
+    }
 
 });
 

@@ -14,13 +14,19 @@
                         <h1 class="titulo">Login</h1>
                     </div>
                 </div>
-                <form action="" class="forms_login">
+                <form action="" class="forms_login" id="forms_login">
                     <div class="components_forms">
                         <div class="item_forms">
                             <input type="email" placeholder="E-mail" name="email" id="email" class="regular">
+                            <span class="regular" id="span_email">Informar seu email</span>
+                            <span class="regular" id="span_email_valido">Informe um email valido</span>
                         </div>
                         <div class="item_forms">
-                            <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
+                            <div class="senha_">
+                                <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
+                                <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
+                            </div>
+                           <span class="regular" id="span_senha">Informar sua senha</span> 
                         </div>
                     </div>
                     <button type="submit" class="btn_entrar bold">Entrar</button>
@@ -30,5 +36,9 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="assets/js/login.js"></script>
     </body>
 </html>
