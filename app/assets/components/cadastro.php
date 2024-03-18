@@ -38,13 +38,19 @@
                             <span class="regular" id="span_email_valido">Informar um e-mail valido</span>
                         </div>
                         <div class="item_forms">
-                            <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
+                            <div class="senha_">
+                                <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
+                                <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
+                            </div>
                             <span class="regular" id="span_senha">Informar sua senha</span>
                             <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
                             <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
                         </div>
                         <div class="item_forms">
-                            <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                            <div class="senha_">
+                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                                <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
+                            </div>
                             <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
                             <span class="regular" id="span_senha_diferente">A senha não é igual</span>
                         </div>

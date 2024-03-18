@@ -11,8 +11,8 @@ $(document).ready(function () {
 });
 
 
-
-
+//---------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------//
 
 
 //!Validação do formulário!
@@ -64,8 +64,8 @@ const spanNumero = document.getElementById('span_numero');
 
 
 form.addEventListener("submit", (event) =>{
-    event.preventDefault();
 
+    event.preventDefault();
 
     //!verificar se o nome está vazio
     if(nome.value ===""){
@@ -120,7 +120,6 @@ form.addEventListener("submit", (event) =>{
         }
     }
     
-
     //!verificar se a senha está vazio
     if(senha.value ===""){
         senha.classList.add('active');
@@ -137,17 +136,16 @@ form.addEventListener("submit", (event) =>{
             spanSenhaValida.classList.remove('active');
 
             //!Verificar se a senha esta segura
-            if(!validarSenhaSegura(senha)){
+            if(!validarSenhaSegura(senha.value)){
                 senha.classList.add('active');
                 spanSenhaSegura.classList.add('active');
             }else{
-                senha.classList.add('active');
-                spanSenhaSegura.classList.add('active');
+                senha.classList.remove('active');
+                spanSenhaSegura.classList.remove('active');
             }
         }
     }
     
-
     //!verificar se a confirmção de senha está vazio
     if(confirmarSenha.value ===""){
         confirmarSenha.classList.add('active');
@@ -165,8 +163,6 @@ form.addEventListener("submit", (event) =>{
         }
     }
     
-
-
     //!verificar se o CEP está vazio
     if(CEP.value ===""){
         CEP.classList.add('active');
@@ -221,9 +217,9 @@ form.addEventListener("submit", (event) =>{
         spanNumero.classList.remove('active');
     }
 
+    form.submit();
 
-})
-
+});
 
 //Função que valida email
 function isEmailValid(email){
@@ -257,42 +253,69 @@ function validarSenhaDiferente(senha, confirmarSenha){
 
 //Função para validar se a senha é segura
 function validarSenhaSegura(senha){
-    var letrasMaiusculas = /[A-Z]/;
-    var letrasMinusculas = /[a-z]/; 
-    var numeros = /[0-9]/;
-    var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
-
-    for(var i=0; i<senha.length; i++){
-        if(letrasMaiusculas.test(senha[i]))
-        auxMaiuscula++;
-        else if(letrasMinusculas.test(senha[i]))
-        auxMinuscula++;
-        else if(numeros.test(senha[i]))
-        auxNumero++;
-        else if(caracteresEspeciais.test(senha[i]))
-        auxEspecial++;
-    }
-    if (auxMaiuscula > 0){
-    if (auxMinuscula > 0){
-    if (auxNumero > 0){
-    if (auxEspecial) {
-    return true;
-    }}}}
-    return true;
+ var retorno = false;
+ var letrasMaiusculas = /[A-Z]/;
+ var letrasMinusculas = /[a-z]/; 
+ var numeros = /[0-9]/;
+ var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+ var auxMaiuscula = 0;
+ var auxMinuscula = 0;
+ var auxNumero = 0;
+ var auxEspecial = 0;
+ for(var i=0; i<senha.length; i++){
+ if(letrasMaiusculas.test(senha[i]))
+ auxMaiuscula++;
+ else if(letrasMinusculas.test(senha[i]))
+ auxMinuscula++;
+ else if(numeros.test(senha[i]))
+ auxNumero++;
+ else if(caracteresEspeciais.test(senha[i]))
+ auxEspecial++;
+ }
+ if (auxMaiuscula > 0){
+ if (auxMinuscula > 0){
+ if (auxNumero > 0){
+ if (auxEspecial) {
+ retorno = true;
+ }
+ }
+ }
+ }
+ 
+console.log(retorno);
+ return retorno;
 }
 
 
+//---------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------//
 
 
+//!olho para ver a senha
+const olho = document.getElementById('olho');
+const olhoconfirmar= document.getElementById('olhoconfirmar');
+function versenha(){
+    if(senha.getAttribute('type') == 'password'){
+        senha.setAttribute('type','text');
+        olho.classList.add('fa-eye');
+    }else{
+        senha.setAttribute('type','password');
+        olho.classList.remove('fa-eye');
+    }
+}
+function verconfirmarsenha(){
+    if(confirmarSenha.getAttribute('type') == 'password'){
+        confirmarSenha.setAttribute('type','text');
+        olhoconfirmar.classList.add('fa-eye');
+    }else{
+        confirmarSenha.setAttribute('type','password');
+        olhoconfirmar.classList.remove('fa-eye');
+    }
+}
 
 
-
-
-
-
-
-
-
+//---------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------------------//
 
 
 // !CEP AUTOMÁTICO!

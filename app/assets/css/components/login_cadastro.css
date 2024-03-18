@@ -140,6 +140,20 @@
 .item_forms input.active{
     border-color: var(--VermelhoEscuro-Cor);
 }   
+.senha_{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+.senha_ i{
+    position: absolute;
+    right: 5px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
 
 
 @media screen and (max-width: 800px) {
