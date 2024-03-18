@@ -20,10 +20,11 @@
                     <input type="text" class="pesquisa" placeholder="Pesquisar" >
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
+                <img class="logo-cell" src="assets/img/logoBSG-branco-menor.png" alt="">
                 <ul class="nav-list-1">
                     <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="perfil.php"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
             <nav class="nav-2" id="nav-2">
@@ -210,7 +211,7 @@
                             </ul>
                         </ul>
                     </li>
-                    <li>
+                    <li class="for-icon-resp">
                         <div class="nome-categoria">
                             <a href="view-produtos.php?tipo=Suplementos">Suplementos</a>
                             <i class="fa-solid fa-angle-right" id="seta-sup" onclick="sup_dropdown()"></i>
@@ -222,6 +223,10 @@
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Sache carbom" class="light">Sachê carbom</a></li>
                         </ul>
                     </li>
+                    <div class="icon-resp">
+                        <a href=""><i class="fa-solid fa-user resp"></i></a>
+                        <a href="#"><i class="fa-solid fa-heart resp"></i></a>            
+                    </div>
                 </ul>
             </nav>
         </header>

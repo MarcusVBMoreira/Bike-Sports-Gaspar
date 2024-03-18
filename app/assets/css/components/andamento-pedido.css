@@ -1,0 +1,100 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.container-andamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+.Mamae{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    top: -105%;
+}
+.container-andamento .line{
+    width: 90%;
+    border: 1px solid var(--Verde-Cor);
+    z-index: 0;
+}
+.container-circle{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+.container-circle-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.container-circle-description p{
+    color: var(--Verde-Cor);
+    margin-top: 2%;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 70%;
+    background-color: var(--Preto-Cor)  ;
+    border: 2px solid var(--Verde-Cor);
+    border-radius: 50%;
+    z-index: 2;
+}
+.circle img{
+    width: 60px;
+    height: 50px;
+}
+
+@media screen and (max-width: 870px){
+    .circle{
+        width: 65px;
+        height: 65px;
+    }
+    .circle img{
+        width: 50px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 590px){
+    .container-andamento .line{
+        width: 90%;
+    }
+    .circle{
+        width: 55px;
+        height: 55px;
+    }
+    .circle img{
+        width: 40px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 400px){
+    .container-andamento .line{
+        width: 90%;
+    }
+    .circle{
+        width: 45px;
+        height: 45px;
+    }
+    .circle img{
+        width: 30px;
+        height: 20px;
+    }
+}

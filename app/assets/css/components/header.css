@@ -45,6 +45,10 @@ header{
     cursor: pointer;
 }
 
+.logo-cell{
+    display: none;
+}
+
 .mob-log{
     display: flex;
     justify-content: center;
@@ -153,6 +157,10 @@ header{
 }
 .nav-list-2 a:hover{
     opacity: .9;
+}
+
+.resp{
+   display: none;
 }
 
 /* Bike Dropdown */
@@ -710,8 +718,36 @@ header{
         display: flex;
     }
 }
+@media screen and (max-width: 580px){
+    .fa-heart{
+        color: #000;
+    }
+
+    .fa-user{
+        display: none;
+    }
+}
 @media screen and (max-width: 450px){
     .nav-list-2{
         width: 60vw;
+    }
+
+    .logo-cell{
+        display: flex;
+        width: 15%;
+    }
+
+    .nav-lisst-2 .icon-resp .resp{
+        display: flex;
+        color: var(--Branco-Cor);
+    }
+
+    .mob-log{
+        flex-direction: row-reverse;
+        width: 90px;
+        margin-left: 5%;
+    }
+    .nav-1 .mob-log .logo img {
+        display: none;
     }
 }
