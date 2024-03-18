@@ -38,6 +38,7 @@ const spanEmailValido = document.getElementById('span_email_valido');
 const senha = document.querySelector("#senha");
 const spanSenha = document.getElementById('span_senha');
 const spanSenhaValida = document.getElementById('span_senha_valida');
+const spanSenhaSegura = document.getElementById('span_senha_segura');
 
 const confirmarSenha = document.querySelector("#confirmar_senha");
 const spanConfirmarSenha = document.getElementById('span_confirmar_senha');
@@ -134,6 +135,15 @@ form.addEventListener("submit", (event) =>{
         }else{
             senha.classList.remove('active');
             spanSenhaValida.classList.remove('active');
+
+            //!Verificar se a senha esta segura
+            if(!validarSenhaSegura(senha)){
+                senha.classList.add('active');
+                spanSenhaSegura.classList.add('active');
+            }else{
+                senha.classList.add('active');
+                spanSenhaSegura.classList.add('active');
+            }
         }
     }
     
@@ -245,6 +255,31 @@ function validarSenhaDiferente(senha, confirmarSenha){
     return false;
 }
 
+//Função para validar se a senha é segura
+function validarSenhaSegura(senha){
+    var letrasMaiusculas = /[A-Z]/;
+    var letrasMinusculas = /[a-z]/; 
+    var numeros = /[0-9]/;
+    var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+
+    for(var i=0; i<senha.length; i++){
+        if(letrasMaiusculas.test(senha[i]))
+        auxMaiuscula++;
+        else if(letrasMinusculas.test(senha[i]))
+        auxMinuscula++;
+        else if(numeros.test(senha[i]))
+        auxNumero++;
+        else if(caracteresEspeciais.test(senha[i]))
+        auxEspecial++;
+    }
+    if (auxMaiuscula > 0){
+    if (auxMinuscula > 0){
+    if (auxNumero > 0){
+    if (auxEspecial) {
+    return true;
+    }}}}
+    return true;
+}
 
 
 

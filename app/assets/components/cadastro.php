@@ -41,6 +41,7 @@
                             <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
                             <span class="regular" id="span_senha">Informar sua senha</span>
                             <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
+                            <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
                         </div>
                         <div class="item_forms">
                             <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
