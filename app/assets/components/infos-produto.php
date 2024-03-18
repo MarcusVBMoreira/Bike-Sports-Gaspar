@@ -5,28 +5,23 @@
         <link rel="stylesheet" href="assets/css/components/infos-produto.css">
     </head>
     <body>
-        <?php 
-            $codigo = $_GET['codigo'];
-            $sql = "SELECT * FROM produtos WHERE codigo = $codigo ";
-            $consulta = $conexao->query($sql);
-            while ($dados = $consulta->fetch_assoc()){
-                ?>
-                    <div class="container">
+        <?php if(isset($produto)): ?>
+            <div class="container">
                         <div class="localizacao">
                             <div class="light"> Página inicial > </div>
                         </div>
                         <div class="produtos_geral">
                             <div class="head_produto">
                                 <div class="img_produto">
-                                    <img src="upload/produtos/<?php echo($dados['img']); ?>" alt="">
+                                    <img src="upload/produtos/<?= $produto['img'] ?>" alt="">
                                 </div>
                             </div>
                             <div class="corpo_produto">
                                 <div class="nome_produto bold">
-                                    <?php echo($dados['nome']); ?>
+                                    <?= $produto['nome'] ?>
                                 </div>
                                 <div class="cod_produto regular">
-                                    (cod: <?php echo($dados['codigo']); ?>)
+                                    (cod: <?= $produto['codigo'] ?>)
                                     <i class="fa-regular fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
@@ -54,7 +49,7 @@
                                     </ul>
                                 </div>
                                 <div class="valor_produto bold">
-                                    R$<?php echo($dados['valor']); ?>
+                                    R$<?= $produto['valor'] ?>
                                 </div>
                                 <div class="botoes">
                                     <div class="compra">
@@ -65,7 +60,7 @@
                                     <div class="frete">
                                         <div class="btn_frete">
                                             <input type="txt" class="input_frete regular" name="calcular_frete" id="calcular_frete" placeholder="Calcule seu frete">
-                                            <button href="" type="submit" class="input_calcular bold" value="">calcular</button>
+                                            <button href="" type="submit" class="input_calcular bold" value="">Calcular</button>
                                         </div>
                                     </div>
                                 </div>
@@ -85,10 +80,9 @@
                             </div>
                         </div>
                     </div>
-
-                <?php
-            }
-        ?>
+                <?php else: ?>
+                    <p>Erro: Produto não encontrado</p>
+                <?php endif; ?>
     
         <script src="assets/js/infos-produto.js"></script>
     </body>
