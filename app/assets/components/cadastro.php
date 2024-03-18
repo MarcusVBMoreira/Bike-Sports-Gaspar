@@ -82,7 +82,7 @@
                             <span class="regular" id="span_numero">Informar o número</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="complemento" name="complemento" id="complemento" class="regular">
+                            <input type="text" placeholder="Complemento(Opcional)" name="complemento" id="complemento" class="regular">
                         </div>
                     </div>
                     <button type="submit" class="btn_entrar bold">Cadastrar</button>
