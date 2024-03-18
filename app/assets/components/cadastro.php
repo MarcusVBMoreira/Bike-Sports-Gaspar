@@ -7,9 +7,9 @@
         <div class="container_cadastro">
             <div class="cadastro_container">
                 <div class="header_login_cadastro">
-                    <div class="logo_login_cadastro">
+                    <a href="index.php" class="logo_login_cadastro">
                         <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
-                    </div>
+                    </a>
                 </div>
                 <form action="#" class="forms_login" id="forms_cadastro">
                     <div class="components_forms">
@@ -19,14 +19,17 @@
                         <div class="item_forms">
                             <input type="text" placeholder="Nome" name="" id="nome" class="regular">
                             <span class="regular" id="span_nome">Informar seu nome</span>
+                            <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
                             <input type="text" placeholder="Sobrenome" name="sobrenome" id="sobrenome" class="regular">
                             <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
+                            <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
                             <input type="text" placeholder="Telefone" name="telefone" id="telefone" class="regular">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
+                            <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
                         </div>
                         <div class="item_forms">
                             <input type="text" placeholder="Data de nascimento" name="data_nascimento" id="data_nascimento" class="regular">

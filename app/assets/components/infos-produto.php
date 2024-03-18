@@ -5,15 +5,53 @@
     </head>
     <body>
         <?php if(isset($produto)){ ?>
-            
             <div class="container">
-                <div class="localizacao">
-                    <div class="light"> Página inicial > </div>
-                </div>
-                <form action="" method="" class="produtos_geral">
+                <form action="" method="" class="produtos_geral" id="form_view_produto">
                     <div class="head_produto">
                         <div class="img_produto">
-                            <img src="upload/produtos/<?= $produto['img'] ?>" alt="">
+                            <img class="main-image" id="main-image" id="main-image" src="upload/produtos/<?= $produto['img1'] ?>" alt="">
+                        </div>
+                        <div class="outras_img">
+                            <?php
+                                $img1 = $produto['img1'];
+                                if($img1 != null){
+                                    ?>
+                                        <div class="quadrado_img">
+                                            <img class="bottom-image" id="img1" src="upload/produtos/<?php echo($img1); ?>" alt="">
+                                        </div>
+                                    <?php
+                                }
+                            ?>
+                            <?php
+                                $img2 = $produto['img2'];
+                                if($img2 != null){
+                                    ?>
+                                        <div class="quadrado_img">
+                                            <img class="bottom-image" id="img2" src="upload/produtos/<?php echo($img2); ?>" alt="">
+                                        </div>
+                                    <?php
+                                }
+                            ?>
+                            <?php
+                                $img3 = $produto['img3'];
+                                if($img3 != null){
+                                    ?>
+                                        <div class="quadrado_img">
+                                            <img class="bottom-image" id="img3" src="upload/produtos/<?php echo($img3); ?>" alt="">
+                                        </div>
+                                    <?php
+                                }
+                            ?>
+                            <?php
+                                $img4 = $produto['img4'];
+                                if($img4 != null){
+                                    ?>
+                                        <div class="quadrado_img">
+                                            <img class="bottom-image" id="img4" src="upload/produtos/<?php echo($img4); ?>" alt="">
+                                        </div>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="corpo_produto">
@@ -33,56 +71,124 @@
                                 <h2 class="light">Cor:</h2>
                             </div>
                             <ul>
-                                <li class="cor1"></li>
-                                <li class="cor2"></li>
+                                <div>
+                                    <?php
+
+                                        $cor1  = $produto['cor1'];
+                                        $cor2  = $produto['cor2'];
+                                        $cor3  = $produto['cor3'];
+                                        $cor4  = $produto['cor4'];
+
+                                        //!Verificando se tem a cor 1
+                                        if($cor1 != null){
+                                            ?>
+                                                <li class="<?php echo($cor1); ?>" onclick="funcao_cor1()" id="cor1"></li>
+                                            <?php
+                                        }
+
+                                        //!Verificando se tem a cor 2
+                                        if($cor2 != null){
+                                            ?>
+                                                <li class="<?php echo($cor2); ?>" onclick="funcao_cor2()" id="cor2"></li>
+                                            <?php
+                                        }
+
+                                        //!Verificando se tem a cor 3
+                                        if($cor3 != null){
+                                            ?>
+                                                <li class="<?php echo($cor3); ?>" onclick="funcao_cor3()" id="cor3"></li>
+                                            <?php
+                                        }
+
+                                        //!Verificando se tem a cor 4
+                                        if($cor4 != null){
+                                            ?>
+                                                <li class="<?php echo($cor4); ?>" onclick="funcao_cor4()" id="cor4"></li>
+                                            <?php
+                                        }
+                                        ?>
+                                        </div>
+                                        <span class="regular span_cor" id="span_cor">Selecione uma cor</span>
+                                        <input type="none" class="input_none" id="cor" name="cor" value="none">
+                                        <?php
+                                    ?>
                             </ul>
                         </div>
                         <div class="tamanho_produto">
-                            <div class="tamanho_titulo">
-                                <h2 class="light">Tamanho:</h2>
-                            </div>
-                            <ul>
-                                <?php
+                            <?php
+                                echo('<ul>');
+                                    echo('<div>');
+                                
+                                        $P = 0;
+                                        $M = 0;
+                                        $G = 0;
+                                        $GG = 0;
 
-                                    // !Verificando se existe o tamanho desejado
-                                    $tamanho_P = $produto['tamanho_P'];
-                                    if( $tamanho_P == 1){
-                                        echo('<li class="P regular" id="P">P</li>');
-                                    }
+                                        // !Verificando se existe o tamanho desejado
+                                        $tamanho_P = $produto['tamanho_P'];
+                                        if( $tamanho_P == 1){
+                                            echo('<li class="P regular" id="P" onclick="tamanho_P()">P</li>');
 
-                                    // !Verificando se existe o tamanho desejado
-                                    $tamanho_M = $produto['tamanho_M'];
-                                    if( $tamanho_M == 1){
-                                        echo('<li class="M regular" id="M">M</li>');
-                                    }
+                                            $P = 1;
+                                        }
 
-                                    // !Verificando se existe o tamanho desejado
-                                    $tamanho_G = $produto['tamanho_G'];
-                                    if( $tamanho_G == 1){
-                                        echo('<li class="G regular" id="G">G</li>');
-                                    }
+                                        // !Verificando se existe o tamanho desejado
+                                        $tamanho_M = $produto['tamanho_M'];
+                                        if( $tamanho_M == 1){
+                                            echo('<li class="M regular" id="M" onclick="tamanho_M()">M</li>');
 
-                                    // !Verificando se existe o tamanho desejado
-                                    $tamanho_GG = $produto['tamanho_GG'];
-                                    if( $tamanho_GG == 1){
-                                        echo('<li class="GG regular" id="GG">GG</li>');
+                                            $M = 1;
+                                        }
+
+                                        // !Verificando se existe o tamanho desejado
+                                        $tamanho_G = $produto['tamanho_G'];
+                                        if( $tamanho_G == 1){
+                                            echo('<li class="G regular" id="G" onclick="tamanho_G()">G</li>');
+
+                                            $G = 1;
+                                        }
+
+                                        // !Verificando se existe o tamanho desejado
+                                        $tamanho_GG = $produto['tamanho_GG'];
+                                        if( $tamanho_GG == 1){
+                                            echo('<li class="GG regular" id="GG" onclick="tamanho_GG()">GG</li>');
+
+                                            $GG = 1;
+                                        }
+                                    
+                                    echo('</div>');
+                                    echo('<span class="span_tamanho regular" id="span_tamanho">Selecionar um tamanho</span>');
+                                    echo('<input type="none" id="tamanho" class="input_none" name="tamanho" value="none">');
+                                echo('</ul>');
+                                echo('<div class="tamanho_titulo">');
+                                    $consulta = $P + $M + $G + $GG ;
+                                    if( $consulta === 0){
+                                        echo('
+                                        <h2 class="light">Tamanho: único</h2>
+
+                                        <script lang="javascript">
+                                            document.querySelector("#tamanho").setAttribute("value", "unico");
+                                        </script>
+                                        ');
+                                    }else{
+                                        echo('<h2 class="light">Tamanho:</h2>');
                                     }
-                                ?>
-                            </ul>
+                                echo('</div>');
+                            ?>
                         </div>
                         <div class="valor_produto bold">
                             R$<?= $produto['valor'] ?>
                         </div>
                         <div class="botoes">
                             <div class="compra">
-                                <button type="submit" href="" class="btn_add_carrinho regular">
+                                <button type="submit" class="btn_add_carrinho regular">
                                     Adicionar ao carrinho <i class="fa-solid fa-cart-shopping"></i>
                                 </button>
                             </div>
                             <div class="frete">
                                 <div class="btn_frete">
                                     <input type="txt" class="input_frete regular" name="calcular_frete" id="calcular_frete" placeholder="Calcule seu frete">
-                                    <button href="" type="submit" class="input_calcular bold" value="">Calcular</button>
+                                    <button class="input_calcular bold" value="">Calcular</button>
                                 </div>
                             </div>
                         </div>
