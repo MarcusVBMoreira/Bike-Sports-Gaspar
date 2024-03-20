@@ -70,7 +70,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="btn-valortotal">
-                    <input class="btn-vermais" type="submit" value="Ver datalhes">
+                    <a href="andamento-pedido.php" class="btn-vermais">Ver detalhes</a>
                     <p class="bold">Valor total: [Valor]</p>
                 </div>
             </div>
