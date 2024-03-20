@@ -21,12 +21,15 @@ const form = document.querySelector("#forms_cadastro");
 
 const nome = document.querySelector("#nome");
 const spanNome = document.getElementById('span_nome');
+const spanNomeErrado = document.getElementById('span_nome_errado');
 
 const sobrenome = document.querySelector("#sobrenome");
 const spanSobrenome = document.getElementById('span_sobrenome');
+const spanSobrenomeErrado = document.getElementById('span_sobrenome_errado');
 
 const telefone = document.querySelector("#telefone");
 const spanTelefone = document.getElementById('span_telefone');
+const spanTelefoneErrado = document.getElementById('span_telefone_errado');
 
 const data = document.querySelector("#data_nascimento");
 const spanData = document.getElementById('span_data');
@@ -88,9 +91,18 @@ form.addEventListener("submit", (event) =>{
         spanNome.classList.add('active');
     }else{
         nome.classList.remove('active');
-        spanNome.classList.remove('active');
+        spanNomeErrado.classList.remove('active');
 
-        condicaoNome = true;
+        //!Verificar se o nome tem mais de 3 letras
+        if(nome.value.length < 3){
+            nome.classList.add('active');
+            spanNomeErrado.classList.add('active');
+        }else{
+            nome.classList.remove('active');
+            spanNomeErrado.classList.remove('active');
+
+            condicaoNome = true;
+        }
     }
 
     //!verificar se sobrenome está vazio
@@ -101,7 +113,16 @@ form.addEventListener("submit", (event) =>{
         sobrenome.classList.remove('active');
         spanSobrenome.classList.remove('active');
 
-        condicaoSobrenome = true;
+        //!Verificar se o sobrenome tem mais de 3 letras
+        if(sobrenome.value.length < 3){
+            sobrenome.classList.add('active');
+            spanSobrenomeErrado.classList.add('active');
+        }else{
+            sobrenome.classList.remove('active');
+            spanSobrenomeErrado.remove('active');
+
+            condicaoSobrenome = true;
+        }  
     }
 
     //!verificar se o telefone está vazio
@@ -112,7 +133,16 @@ form.addEventListener("submit", (event) =>{
         telefone.classList.remove('active');
         spanTelefone.classList.remove('active');
 
-        condicaoTelefone = true;
+        //!Verificar se o telefone contém 14 dígitos (11 dígitos mais os () e o -)
+        if(telefone.value.length != 14){
+            telefone.classList.add('active');
+            spanTelefoneErrado.classList.add('active');
+        }else{
+            telefone.classList.remove('active');
+            spanTelefoneErrado.classList.remove('active');
+
+            condicaoTelefone = true;
+        }
     }
 
     //!verificar se a data de nascimento está vazio
@@ -252,8 +282,6 @@ form.addEventListener("submit", (event) =>{
     if(numero.value ===""){
         numero.classList.add('active');
         spanNumero.classList.add('active');
-
-        condicaoNumero = false;
     }else{
         numero.classList.remove('active');
         spanNumero.classList.remove('active');
@@ -273,7 +301,6 @@ function isEmailValid(email){
     const emailRegex = new RegExp(
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
     );
-
     if(emailRegex.test(email)){
         return true;
     }

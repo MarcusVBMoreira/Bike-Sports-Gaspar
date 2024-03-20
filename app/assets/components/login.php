@@ -7,9 +7,9 @@
         <div class="container">
             <div class="login_container">
                 <div class="header_login_cadastro">
-                    <div class="logo_login_cadastro">
+                    <a href="index.php" class="logo_login_cadastro">
                         <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
-                    </div>
+                    </a>
                     <div class="titulo_login_cadastro">
                         <h1 class="titulo">Login</h1>
                     </div>
