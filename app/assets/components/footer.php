@@ -36,6 +36,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="container-contact">
+                    <div class="ttl-cont">
+                        <h1>Contatos</h1>
+                    </div>
+                    <div class="contacts">
+                        <a target="_blank" href="">
+                            <div class="icon-contact">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </a>
+                        <a target="_blank" href="">
+                            <div class="icon-contact">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                        </a>
+                        <a target="_blank" href="">
+                            <div class="icon-contact">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </a>
+                        <a target="_blank" href="">
+                            <div class="icon-contact">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="line"></div>
             <p class="copy">&copy; Code Track</p>
