@@ -89,17 +89,23 @@
 .cor_produto ul div{
     width: 100%;
     display: flex;
+    gap: 6px;
 }
 .cor_produto ul div li{
     padding: 2.5%;
-    margin: 0.5px;
     border-radius: 50%;
     border: solid 1px var(--Branco-Cor);
     transition: 0.3s;
     cursor: pointer;
 }
-.cor_produto ul div li:hover{
+.cor_produto ul div li.ativo:hover{
     border: solid 1px var(--Preto-Cor);
+}
+.cor_produto ul div li.inative{
+    opacity: 0.3;
+    cursor: default;
+    position: relative;
+    border: 1px solid var(--Preto-Cor);
 }
 .cor_produto ul div li.active{
     border: solid 1px var(--Preto-Cor);   
@@ -110,23 +116,47 @@
     flex-direction: column;
 }
 .tamanho_produto ul li{
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding: 2.5%;
+    padding-right: 3%;
+    padding-left: 3%;
     background-color: var(--CinzaClaro-Cor);
     border: solid 1px var(--Branco-Cor);
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
-.tamanho_produto ul li:hover{
+.container_tamanho div li.active{
     background-color: var(--CinzaEscuro-Cor);
     border: solid 1px var(--Preto-Cor);
 }
-.tamanho_produto ul li.active{
+.container_tamanho div li.ativo:hover{
     background-color: var(--CinzaEscuro-Cor);
     border: solid 1px var(--Preto-Cor);
+}
+.container_tamanho div li.inative{
+    cursor: default;
+    opacity: 0.3;
+    border: solid 1px var(--Preto-Cor);
+}
+.container_tamanho div li.active{
+    background-color: var(--CinzaEscuro-Cor);
+    border: solid 1px var(--Preto-Cor);
+}
+.tamanhos_cor.active{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.tamanhos_cor{
+    display: none;
+}
+.tamanhos_cor1, .tamanhos_cor2, .tamanhos_cor3, .tamanhos_cor4{
+    display: none;
+}
+.tamanhos_cor1.active, .tamanhos_cor2.active, .tamanhos_cor3.active, .tamanhos_cor4.active{
+    display: flex;
+    width: 100%;
+    gap: 10px;
 }
 .tamanho_produto{
     width: 100%;
@@ -135,9 +165,9 @@
     flex-direction: column-reverse;
     justify-content: center;
 }
-.tamanho_produto ul div{
+.container_tamanho{
     display: flex;
-    gap: 5px;
+    flex-direction: column;
 }
 .valor_produto{
     width: 100%;
@@ -244,6 +274,25 @@
 .descricao{
     display: none;
 }
+.descricao_p{
+    color: var(--Branco-Cor);
+    padding-top: 3%;
+    padding: 2%;
+    padding-bottom: 1%;
+}
+.nome_p, .marca_p, .modelo_p, .composicao_p, .compativel_p , .cor_p{
+    color: var(--Branco-Cor);
+    padding: 1%;
+}
+.descricao pre{
+    color: var(--Branco-Cor);
+    padding: 3%;
+    text-align: justify;
+    white-space: pre-line;
+    padding-top: 0%;
+    padding-bottom: 3%;
+}
+
 .medidas{
     display: none;
 }
@@ -287,6 +336,9 @@
     display: flex;
     padding: 1%;
     border: 1px solid;
+}
+.quadrado_img.active{
+    border-color: var(--Laranja-Cor);
 }
 .bottom-image{
     cursor: pointer;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/03/2024 às 21:41
+-- Tempo de geração: 21/03/2024 às 04:50
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -62,41 +62,63 @@ CREATE TABLE `produtos` (
   `codigo` int(255) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `descricao` longtext DEFAULT NULL,
-  `valor` decimal(7,2) NOT NULL,
+  `valor` decimal(7,2) DEFAULT NULL,
   `categoria` varchar(255) DEFAULT NULL,
-  `qnt_estoque` int(255) NOT NULL,
+  `qnt_estoque` int(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   `modelo` varchar(255) DEFAULT NULL,
-  `cor1` varchar(255) DEFAULT NULL,
   `marca` varchar(255) DEFAULT NULL,
-  `peso` double NOT NULL,
-  `altura` double NOT NULL,
-  `largura` double NOT NULL,
-  `comprimento` double NOT NULL,
-  `especificacoes` varchar(1000) NOT NULL,
-  `tamanho_P` bit(1) NOT NULL,
-  `tamanho_M` bit(1) NOT NULL,
-  `tamanho_G` bit(1) NOT NULL,
-  `tamanho_GG` bit(1) NOT NULL,
+  `composicao` varchar(255) DEFAULT NULL,
+  `compativel` varchar(255) DEFAULT NULL,
+  `peso` double DEFAULT NULL,
+  `altura` double DEFAULT NULL,
+  `largura` double DEFAULT NULL,
+  `comprimento` double DEFAULT NULL,
+  `especificacoes` varchar(1000) DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
-  `cor2` varchar(255) DEFAULT NULL,
-  `cor3` varchar(255) DEFAULT NULL,
-  `cor4` varchar(255) DEFAULT NULL,
   `img2` varchar(255) DEFAULT NULL,
   `img3` varchar(255) DEFAULT NULL,
-  `img4` varchar(255) DEFAULT NULL
+  `img4` varchar(255) NOT NULL,
+  `cor1` varchar(255) DEFAULT NULL,
+  `qnt_cor1` int(11) NOT NULL,
+  `tamanho_cor1` varchar(255) DEFAULT NULL,
+  `qnt_cor1_P` varchar(255) DEFAULT NULL,
+  `qnt_cor1_M` varchar(255) DEFAULT NULL,
+  `qnt_cor1_G` varchar(255) DEFAULT NULL,
+  `qnt_cor1_GG` varchar(255) DEFAULT NULL,
+  `cor2` varchar(255) DEFAULT NULL,
+  `qnt_cor2` int(11) NOT NULL,
+  `tamanho_cor2` varchar(255) DEFAULT NULL,
+  `qnt_cor2_P` varchar(255) DEFAULT NULL,
+  `qnt_cor2_M` varchar(255) DEFAULT NULL,
+  `qnt_cor2_G` varchar(255) DEFAULT NULL,
+  `qnt_cor2_GG` varchar(255) DEFAULT NULL,
+  `cor3` varchar(255) DEFAULT NULL,
+  `qnt_cor3` int(11) NOT NULL,
+  `tamanho_cor3` varchar(255) DEFAULT NULL,
+  `qnt_cor3_P` varchar(255) DEFAULT NULL,
+  `qnt_cor3_M` varchar(255) DEFAULT NULL,
+  `qnt_cor3_G` varchar(255) DEFAULT NULL,
+  `qnt_cor3_GG` varchar(255) DEFAULT NULL,
+  `cor4` varchar(255) DEFAULT NULL,
+  `qnt_cor4` int(11) NOT NULL,
+  `tamanho_cor4` varchar(255) DEFAULT NULL,
+  `qnt_cor4_P` varchar(255) DEFAULT NULL,
+  `qnt_cor4_M` varchar(255) DEFAULT NULL,
+  `qnt_cor4_G` varchar(255) DEFAULT NULL,
+  `qnt_cor4_GG` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `produtos`
 --
 
-INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `valor`, `categoria`, `qnt_estoque`, `tipo`, `modelo`, `cor1`, `marca`, `peso`, `altura`, `largura`, `comprimento`, `especificacoes`, `tamanho_P`, `tamanho_M`, `tamanho_G`, `tamanho_GG`, `img1`, `cor2`, `cor3`, `cor4`, `img2`, `img3`, `img4`) VALUES
-(1, 'Bicicleta Seminova aro 29', 'Ei você, sim, você... aquele com a balança vendo qual dos seis pneus idênticos na prateleira é o mais leve. Claro, alguns podem chamá-lo de um pouco obsessivo, mas não se preocupe, aqui a S-Works Epic LTD fala exatamente a mesma língua. Inúmeras horas de projeto, intermináveis voltas de teste, terabytes de dados de telemetria – tudo isso para garantir que não restasse um único grama de velocidade na mesa.\r\n\r\nCombinando eficiência hardtail e capacidade de suspensão total com resultados impressionantemente rápidos, a S-Works Epic LTD sempre foi definida pelo compromisso obsessivo com a velocidade. Bem, isso e mais de 100 vitórias e pódios em Copas do Mundo também.\r\n\r\nUm CÉREBRO MAIS INTELIGENTE\r\n\r\nFiel à sua forma, a mais recente Epic continua a tradição, aproveitando a suspensão BRAIN mais eficiente que já criamos para garantir que seja sempre rápida e pelo primeiro nome.\r\n\r\nReprojetado de mãos dadas com o novo Epic, o mais recente design BRAIN redefine a expectativa de eficiência, empregando uma nova plataforma de pedalada ajustada para corrida para garantir que cada watt possível seja traduzido em movimento para frente, enquanto absorve com facilidade as vibrações que matam o impulso. e grandes sucessos - tudo mais suavemente do que nunca.\r\n\r\nTrocador de quadros\r\n\r\nRedesenhado com foco na transferência eficiente de potência e melhor desempenho de manuseio, o quadro S-Works Epic LTD apresenta um triângulo traseiro 15% mais rígido para aproveitar ao máximo a nova plataforma de pedalada do BRAIN, ajustada para corrida. Um cronograma de disposição dedicado e o uso de nosso carbono FACT 12m de última geração levam a economia de peso ainda um passo além de seus companheiros estáveis, enquanto a pièce de résistance vem na forma de um elo de choque de fibra de carbono, combinado para raspar um total de mais de 100 gramas do quadro S-works da geração anterior - não é uma tarefa fácil, lembre-se.\r\n\r\nCombinando perfeitamente com o amortecedor traseiro Brain para o desempenho de suspensão mais equilibrado em uma Epic até agora, o garfo Brain sensível à posição da S-Works se beneficia do chassi SID SL Ultimate esbelto e rígido da RockShox, melhorando a rigidez frontal e a precisão de manuseio enquanto mantendo os gramas sob controle.\r\n\r\nO carro-chefe do grupo XX Eagle AXS da SRAM certamente se encaixa no projeto quando apenas o melhor serve, despachando turnos com autoridade eletrônica enquanto encarregamos Roval de criar um aro Control SL inteiramente novo que não seria apenas capaz de ir de igual para igual com o A nova velocidade e desempenho de manuseio da Epic, mas também adiciona um pouco à mistura.\r\n\r\n- Se a velocidade falasse, ela se apresentaria como o novo quadro S-Works Epic. Oferecendo 100 milímetros de deslocamento brilhantemente eficiente controlado pelo cérebro, o S-Work Epic aumenta a rigidez do triângulo traseiro para uma transferência de potência incomparável, enquanto o uso de carbono FACT 12m, uma disposição dedicada e um link de choque totalmente em carbono também o tornam o mais leve. quadro de suspensão que já criamos, ao mesmo tempo que oferece o manuseio mais capaz em uma Epic até agora. Prazer em conhecê-lo, rápido.\r\n- Combinando 100 milímetros do curso mais eficiente do planeta com o chassi SID SL Ultimate esbelto e rígido da RockShox, o garfo RockShox SID SL Ultimate BRAIN serve como o auge da perfeição da suspensão de corrida XC.\r\n- O XX Eagle AXS da SRAM não é apenas o grupo eletrônico de MTB mais leve do mercado, ele também foi projetado para suportar cargas de corrente vencedoras da Copa do Mundo enquanto faz mudanças instantâneas para garantir que você nunca seja pego com o pé atrás.\r\n- Criado especificamente para corresponder às capacidades aumentadas da Epic, o aro Roval Control SL apresenta um perfil de aro offset completamente novo que apresenta uma largura interna de 29 milímetros de largura e não apenas aumenta a resistência e reduz o peso, mas também melhora a resistência ao esmagamento. 22 por cento.', 10000.00, 'Aro 29', 1, 'Bicicletas', 'Specialized Diverge S-Works 2020', 'preto', 'marca:(...)', 10, 10, 10, 10, 'especificações: (...)', b'0', b'1', b'1', b'1', 'c6016b180583b6a8889d3a289eb8932b.png', 'azul', 'verde', '', '2.png', '3.png', ''),
-(128, 'aro 20', 'asdasd', 10000.00, 'Aro 20', 3, 'Bicicletas', 'modelo teste', 'preto', 'marca teste', 10, 11, 12, 13, 'especificações teste', b'1', b'1', b'1', b'1', '2.png', '', '', '', '', '', ''),
-(129, 'Cadeado', 'asdasdas', 10000.00, 'Cadeado', 4, 'Acessórios', 'asdasd', 'asdasd', 'asdasd', 10, 10, 10, 10, 'qweqweqwe', b'1', b'1', b'1', b'1', '3.png', '', '', '', '', '', ''),
-(130, 'Bicicletinha de equilíbrio', 'aro29', 100.00, 'Bicicletinha de equilíbrio', 1, 'Bicicletas', 'aro29', 'preta', 'asad', 10, 10, 10, 10, 'asdasd', b'1', b'1', b'1', b'1', '3.png', '', '', '', '', '', ''),
-(131, 'Cambio Traseiro Shimano TZ31 7v', 'O câmbio traseiro Shimano Tourney TZ31 foi desenvolvido para equipar bicicletas de 18 ou 21 velocidades, trazendo um ótimo custo benefício para Mountain Bike de entrada. Sua fabricação é feita totalmente em aço trás uma alta qualidade e durabilidade do produto.', 0.00, 'Cambio traseiro', 0, 'Componentes', '', '', '', 0, 0, 0, 0, 'Trocas de marchas precisas;\r\nCompatível com alavancas indexadas e não indexadas;​\r\nCompatível com: 6 e 7 Velocidades;​\r\nSistema: SIS INDEX – Polias com 12D;\r\nTamanho máximo de dentes da catraca: 28D;​\r\nCapacidade total do câmbio: 34D;\r\nDiferença máxima das coroas do pedivela: 20D;​\r\nFixação: Fixação diretamente na gancheira do quadro;', b'0', b'0', b'0', b'0', 'produto 1.jpg', '', '', '', '', '', '');
+INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `valor`, `categoria`, `qnt_estoque`, `tipo`, `modelo`, `marca`, `composicao`, `compativel`, `peso`, `altura`, `largura`, `comprimento`, `especificacoes`, `img1`, `img2`, `img3`, `img4`, `cor1`, `qnt_cor1`, `tamanho_cor1`, `qnt_cor1_P`, `qnt_cor1_M`, `qnt_cor1_G`, `qnt_cor1_GG`, `cor2`, `qnt_cor2`, `tamanho_cor2`, `qnt_cor2_P`, `qnt_cor2_M`, `qnt_cor2_G`, `qnt_cor2_GG`, `cor3`, `qnt_cor3`, `tamanho_cor3`, `qnt_cor3_P`, `qnt_cor3_M`, `qnt_cor3_G`, `qnt_cor3_GG`, `cor4`, `qnt_cor4`, `tamanho_cor4`, `qnt_cor4_P`, `qnt_cor4_M`, `qnt_cor4_G`, `qnt_cor4_GG`) VALUES
+(1, 'Bicicleta Seminova aro 29', 'Uma bicicleta seminova aro 29 é um tipo de bicicleta que possui rodas com um diâmetro de 29 polegadas, tornando-a adequada para diversos tipos de terrenos, desde trilhas off-road até passeios urbanos. Essas bicicletas são conhecidas por oferecerem uma boa estabilidade e conforto ao pedalar, além de uma maior capacidade de enfrentar obstáculos no terreno devido ao tamanho maior das rodas.\r\n\r\nGeralmente, uma bicicleta seminova significa que ela foi usada por algum tempo, mas ainda está em boas condições de funcionamento. Pode apresentar alguns sinais de desgaste ou uso, mas nada que comprometa sua performance. Dependendo do modelo e da manutenção que recebeu, uma bicicleta seminova pode oferecer um ótimo custo-benefício para quem procura uma alternativa mais acessível em comparação com uma bicicleta totalmente nova.\r\n\r\nAs bicicletas aro 29 são populares entre ciclistas de diferentes níveis de habilidade devido à sua versatilidade e capacidade de adaptação a diferentes tipos de terreno. Elas podem ser utilizadas tanto para atividades recreativas quanto para deslocamentos diários, proporcionando uma experiência de pedalada confortável e eficiente.', 10000.00, 'Aro 29', 1, 'Bicicletas', 'Specialized Diverge S-Works 2020', 'marca:(...)', '', '', 10, 10, 10, 10, 'especificações: (...)', 'c6016b180583b6a8889d3a289eb8932b.png', '2.png', '3.png', '', 'preto', 2, NULL, '1', NULL, NULL, '1', 'cinza', 0, NULL, NULL, NULL, NULL, NULL, 'azul', 2, NULL, NULL, '1', '1', NULL, '', 0, NULL, NULL, NULL, NULL, NULL),
+(128, 'aro 20', 'asdasd', 10000.00, 'Aro 20', 3, 'Bicicletas', 'modelo teste', 'marca teste', '', '', 10, 11, 12, 13, 'especificações teste', '2.png', NULL, NULL, '', 'preto', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL),
+(129, 'Cadeado', 'asdasdas', 10000.00, 'Cadeado', 4, 'Acessórios', 'asdasd', 'asdasd', '', '', 10, 10, 10, 10, 'qweqweqwe', '3.png', NULL, NULL, '', 'preto', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL),
+(130, 'Bicicletinha de equilíbrio', 'aro29', 100.00, 'Bicicletinha de equilíbrio', 1, 'Bicicletas', 'aro29', 'asad', '', '', 10, 10, 10, 10, 'asdasd', '3.png', NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL),
+(131, 'Cambio Traseiro Shimano TZ31 7v', 'O câmbio traseiro Shimano Tourney TZ31 foi desenvolvido para equipar bicicletas de 18 ou 21 velocidades, trazendo um ótimo custo benefício para Mountain Bike de entrada. Sua fabricação é feita totalmente em aço trás uma alta qualidade e durabilidade do produto.', 0.00, 'Cambio traseiro', 0, 'Componentes', '', '', '', '', 0, 0, 0, 0, 'Trocas de marchas precisas;\r\nCompatível com alavancas indexadas e não indexadas;​\r\nCompatível com: 6 e 7 Velocidades;​\r\nSistema: SIS INDEX – Polias com 12D;\r\nTamanho máximo de dentes da catraca: 28D;​\r\nCapacidade total do câmbio: 34D;\r\nDiferença máxima das coroas do pedivela: 20D;​\r\nFixação: Fixação diretamente na gancheira do quadro;', 'produto 1.jpg', NULL, NULL, '', '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL, '', 0, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
