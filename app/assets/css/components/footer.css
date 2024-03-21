@@ -101,31 +101,8 @@ footer p{
     width: 100%;
 }
 
-
-/* !RESPONSIVIDADE DO FOOTER! */
-
-/* *CELULAR* */
-@media screen and (max-width: 480px) {
-    footer{
-        padding: 3%;
-    }
-    .footer_infos h2{
-        font-size: 1.15em;
-    }
-    footer p{
-        font-size: 15px
-    }
-}
-
 @media screen and (max-width: 800px) {
-    .footer_infos{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .metod-pag{
-        width: 100%;
+    .footer{
+        display: none;
     }
 }

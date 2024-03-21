@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="assets/css/components/footer.css">
     </head>
     <body>
-        <footer>
+        <footer class="footer">
             <div class="line"></div>
             <h1 class="bold">Bike Sport Gaspar</h1>
             <div class="footer_infos">
