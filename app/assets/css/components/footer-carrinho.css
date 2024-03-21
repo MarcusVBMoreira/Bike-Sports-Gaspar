@@ -1,0 +1,100 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --Cinza-Cor: #969696;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--CinzaClaro-Cor) ;
+    border-radius: 10px 10px 0 0;
+    padding: 1%;
+}
+.container-pag{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 0 auto;
+}
+.desconto{
+    background-color: var(--Cinza-Cor);
+    border-radius: 5px;
+    padding: 8px;
+    width: 80%;
+}
+.desconto input{
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--CinzaClaro-Cor-Cor);
+    font-family: inter-regular;
+    font-size: 15px;
+    padding: 1.5%;
+}
+.desconto input:focus{
+    outline: none;
+}
+.desconto input::placeholder{
+    color: var(--Preto-Cor);
+    text-align: center;
+}
+.desconto i{
+    color: var(--Preto-Cor);
+}
+
+.cep-calc{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.cep{
+    background-color: var(--Branco-Cor);
+    border-radius: 5px;
+    border: 1px solid var(--Preto-Cor);
+}
+.cep input{
+    font-family: inter-regular;
+    border: none;
+}
+.cep input::placeholder{
+    font-family: inter-regular;
+}
+.cep input:focus{
+    outline: none;
+}
+.cep button{
+    border: none;
+    background-color: var(--Preto-Cor);
+    color: var(--Branco-Cor);
+    padding: 10px;
+}
+
+.total{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topay{
+    width: 80%;
+    border: none;
+    padding: 10px;
+    background-color: var(--Preto-Cor);
+    color: var(--Branco-Cor);
+    font-family: inter-regular;
+    border-radius: 5px;
+}
