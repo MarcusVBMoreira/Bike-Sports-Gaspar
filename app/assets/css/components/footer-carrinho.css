@@ -30,7 +30,8 @@ footer{
     margin: 0 auto;
 }
 .desconto{
-    background-color: var(--Cinza-Cor);
+    background-color: var(--Branco-Cor);
+    border: 1px solid var(--Preto-Cor);
     border-radius: 5px;
     padding: 8px;
     width: 80%;
@@ -40,7 +41,7 @@ footer{
     height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: var(--CinzaClaro-Cor-Cor);
+    background-color: var(--Branco-Cor);
     font-family: inter-regular;
     font-size: 15px;
     padding: 1.5%;
