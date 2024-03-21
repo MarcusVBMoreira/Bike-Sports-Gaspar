@@ -343,3 +343,17 @@
 .bottom-image{
     cursor: pointer;
 }
+
+@media screen and (max-width: 800px){
+    .produtos_geral{
+        flex-direction: column;
+        padding: 4%;
+        height: 750px;
+    }
+    .head_produto{
+        width: 100%;
+    }
+    .corpo_produto{
+        width: 100%;
+    }
+}
