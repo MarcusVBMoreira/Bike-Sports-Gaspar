@@ -98,3 +98,165 @@ footer{
     font-family: inter-regular;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1920px){
+    .pedido{
+        width: 100%;
+    }
+    .produto{
+        gap: 300px;
+    }
+
+    .cep-calc{
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 1450px){
+    .pedido{
+        width: 100%;
+    }
+    .produto{
+        gap: 200px;
+    }
+
+    .cep-calc{
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 1280px){
+    .pedido{
+        width: 100%;
+    }
+    .produto{
+        gap: 150px;
+    }
+
+    .container-pag{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 778px){
+    .pedido{
+        width: 100%;
+    }
+    .produto{
+        gap: 50px;
+    }
+
+    .container-pag{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 550px){
+    .pedido{
+        width: 100%;
+    }
+
+    .produto{
+        gap: 20px;
+    }
+
+    .produto img{
+        width: 170px;
+        height: 70px;
+    }
+
+    .nome p{
+        font-size: 15px;
+    }
+
+    .container-pag{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 385px){
+    .pedido{
+        width: 100%;
+    }
+
+    .produto{
+        gap: 20px;
+    }
+
+    .produto img{
+        width: 160px;
+        height: 60px;
+    }
+
+    .cep{
+        width: 92%;
+        background-color: var(--Preto-Cor);
+        border: 2px solid var(--Preto-Cor);
+        border-radius: 5px;
+    }
+    .cep input{
+        width: 67%;
+        padding: 5px;
+    }
+    .cep button{
+        padding: 5px;
+    }
+    .nome p{
+        font-size: 15px;
+    }
+
+    .container-pag{
+        width: 100%;
+        padding: 2%;
+    }
+}
+@media screen and (max-width: 337px){
+    .produto img{
+        width: 140px;
+        height: 40px;
+    }
+    
+    .cep{
+        width: 90%;
+        background-color: var(--Preto-Cor);
+        border: 2px solid var(--Preto-Cor);
+        border-radius: 5px;
+    }
+    .cep input{
+        width: 65%;
+        padding: 5px;
+    }
+    .cep button{
+        padding: 4px;
+    }
+    .nome p{
+        font-size: 12px;
+    }
+    .container-pag{
+        width: 100%;
+        padding: 2%;
+    }
+    .valor{
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 317px){
+    .cep{
+        width: 100%;
+        background-color: var(--Preto-Cor);
+        border: 2px solid var(--Preto-Cor);
+        border-radius: 5px;
+    }
+    .cep input{
+        width: 65%;
+        padding: 5px;
+    }
+    .cep button{
+        padding: 4px;
+    }
+    .nome p{
+        font-size: 12px;
+    }
+    .container-pag{
+        width: 100%;
+        padding: 2%;
+    }
+    .valor{
+        margin-top: 10%;
+    }
+}
