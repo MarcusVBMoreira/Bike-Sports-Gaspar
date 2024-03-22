@@ -13,7 +13,10 @@
         require('assets/components/carrinho.php')
     ?>
     <?php
-        require('assets/components/footer-carrinho.php')
+      require('assets/components/footer.php');
+    ?>
+    <?php
+      require('assets/components/footer-responsivo.php');
     ?>
 </body>
 </html>

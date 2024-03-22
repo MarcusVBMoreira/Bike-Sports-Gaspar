@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="assets/css/components/andamento-pedido.css">
-    <link rel="stylesheet" href="assets/css/components/padrao.css">
 </head>
 <body>
     <div class="container">

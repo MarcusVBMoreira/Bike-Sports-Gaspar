@@ -13,7 +13,10 @@
         require('assets/components/perfil.php')
     ?>
     <?php
-        require('assets/components/footer.php')
+      require('assets/components/footer.php');
+    ?>
+    <?php
+      require('assets/components/footer-responsivo.php');
     ?>
 </body>
 </html>

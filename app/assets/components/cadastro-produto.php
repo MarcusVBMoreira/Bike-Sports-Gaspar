@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="assets/css/components/cadastro-produto.css">
-    <link rel="stylesheet" href="assets/css/components/padrao.css">
 </head>
 <body>
     <div class="container">
