@@ -14,7 +14,7 @@
                         <h1 class="titulo">Tela administrativa</h1>
                     </div>
                 </div>
-                <div class="row2_adm">
+                <div class="row2_header">
                     <div class="pesquisar">
                         <input type="text" class="pesquisa" placeholder="Pesquisar" >
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -22,7 +22,16 @@
                 </div>
             </div>
             <div class="container_produtos_adm">
-                <?php //require(''); ?>
+                <div class="header_container_produtos">
+                    <h1 class="titulo">Todos os produtos cadastrados</h1>
+                    <div class="btn_adicionar_produto">
+                        <a href="cadastro-produto.php" class="btn_add">Adicionar produto</a>
+                    </div>
+                </div>
+                <div class="row_container_adm"></div>
+                <div class="adm_container_produtos">
+                    <?php require('card-produto-adm.php'); ?>
+                </div>
             </div>
         </div>
     </body>
