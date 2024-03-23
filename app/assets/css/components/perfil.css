@@ -2,6 +2,7 @@
     --Preto-Cor: #000;
     --Branco-Cor: #FFF;
     --CinzaClaro-Cor: #DFDFDF;
+    --CinzaEscuro-Cor: #adadad;
     --Verde-Cor: #9CCC3C;
     --Amarelo-Cor: #F2EA01;
     --Vermelho-Cor: #E72526;
@@ -15,42 +16,94 @@
     width: 100%;
     justify-content: space-evenly;
 }
-
-.card-perfil{
+.ttl-perfil{
+    margin-bottom: 2%;
+}
+.ttl-perfil h1{
+    font-family: michroma;
+    font-size: 20px;
+    color: var(--Verde-Cor);
+    border-bottom: 2px solid var(--Verde-Cor);
+    padding-bottom: 5px;
+    text-align: left;
+}
+.colunm{
     display: flex;
     flex-direction: column;
+    gap: 20px;
     width: 46.5%;
-    height: 25vh;
+}
+.card-perfil{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
 }
-.top{
+.card-favoritos{
+    width: 100%;
+    height: 42vh;
+    border-radius: 10px;
+    background-color: var(--Branco-Cor);
+}
+.ttl-fav{
     display: flex;
+    width: 100%;
+    height: 10%;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 20%;
+}
+.ttl-fav h1{
+    font-size: 20px;
+    font-family: michroma;
+}
+.container-favoritos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 98%;
+    margin: 0 auto;
+    height: 85%;
+    overflow-y: scroll;
+}
+.favorito{
+    cursor: pointer;
+    display: flex;
+    width: 90%;
+    gap: 10px;
+    height: 10vh;
+    background-color: var(--Branco-Cor);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.profile{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 95%;
     margin: 10% auto;
-    gap: 20px;
+    gap: 10px;
 }
-.top .fa-user{
-    font-size: 50px;
+.profile .fa-user{
+    font-size: 30px;
+    width: 13%;text-align: center;
+    background-color: var(--CinzaClaro-Cor);
+    border-radius: 50%;
+    color: var(--CinzaEscuro-Cor);
+    padding: 10px;
 }
-.top h1{
+.profile h1{
     font-family: michroma;
     font-size: 28px;
 }
-.txt-perfil p{
-    text-align: center;
-    font-family: inter-regular;
-}
-
 
 .card-dados{
     display: flex;
     flex-direction: column;
     width: 46.5%;
-    padding: 10px;
+    height: 55vh;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
 }
@@ -94,12 +147,24 @@
     cursor: pointer;
 }
 
-.meus-pedidos{
-    margin-top: 4%;
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: var(--Preto-Cor);
+}
+.line-ped{
     width: 100%;
+    height: 2px;
+    background-color: var(--Preto-Cor);
+    margin-top: 1%;
 }
 
-.meus-pedidos h1{
+.ttl-pedidos{
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+.ttl-pedidos h1{
     font-family: michroma;
     font-size: 20px;
     color: var(--Verde-Cor);
@@ -108,84 +173,91 @@
     text-align: left;
 }
 
-.container-pedidos{
-    display: flex;
-    padding: 10px;
-    flex-direction: column; 
-    margin-top: 2%;
-    background-color: var(--Branco-Cor);
-    border-radius: 10px;
-}
-
 .card-pedidos{
     display: flex;
-    width: 90%;
-    gap: 20px;
-    height: 10vh;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    padding: 10px;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 1%;
 }
-
+.container-pedidos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    height: 85%;
+    overflow-y: scroll;
+}
 .pedido{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
-
-.pedido p{
-    margin-top: 2%;
+.img-fav img{
+    width: 80%;
 }
-.img-prod img{
-    width: 140px;
+.img-ped{
+    width: 30%;
 }
-
-.conteudo{
-    width: 100%;
+.desc{
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
-.nome-prod{
-    display: flex;
-    justify-content: flex-start;
+.nome p{
+    font-size: 20px;
 }
-
-.valor{
+.preco{
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: end;
 }
-
-.line{
+.mais-detalhes{
+    display: flex;
     width: 90%;
-    height: 2px;
-    background-color: var(--Preto-Cor);
-}
-
-.btn-valortotal{
-    display: flex;
-    width: 89%;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
 }
-
-.btn-vermais{
-    border: none;
-    padding: 10px;
-    background-color: var(--Laranja-Cor);
+.mais-detalhes a{
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: var(--Branco-Cor);
-    font-family: inter-regular;
-    border-radius: 10px;
+    background-color: var(--Laranja-Cor);
+}
+@media screen and (max-width: 1920px){
+    .card-dados{
+        height: 55vh;
+    }
 }
 @media screen and (max-width: 1000px){
     .card-perfil{
-        height: 20vh;
+        height: 8vh;
     }
-    .top h1{
+    .profile .fa-user{
+        font-size: 25px;
+        width: 15%;
+        height: 15%;
+        text-align: center;
+        background-color: var(--CinzaClaro-Cor);
+        border-radius: 50%;
+        color: var(--CinzaEscuro-Cor);
+        padding: 10px;
+    }
+    .profile h1{
         font-family: michroma;
-        font-size: 22px;
+        font-size: 25px;
+    }
+    .favorito .img-prod img{
+        width: 100px;
+    }
+    .favorito{
+        flex-direction: column;
+        margin-bottom: 30%;
     }
 }   
 @media screen and (max-width: 770px){
@@ -195,29 +267,94 @@
     .btn-dados input{
         font-size: 12px;
     }
+    .profile .fa-user{
+        font-size: 30px;
+        width: 25%;
+        height: 25%;
+        text-align: center;
+        background-color: var(--CinzaClaro-Cor);
+        border-radius: 50%;
+        color: var(--CinzaEscuro-Cor);
+        padding: 10px;
+    }
+    .profile h1{
+        font-family: michroma;
+        font-size: 15px;
+    }
 }   
 @media screen and (max-width: 600px){
     .row{
         flex-direction: column;
         gap: 20px;
+        align-items: center;
+    }
+    .profile .fa-user{
+        font-size: 30px;
+        width: 15%;
+        text-align: center;
+        background-color: var(--CinzaClaro-Cor);
+        border-radius: 50%;
+        color: var(--CinzaEscuro-Cor);
+        padding: 10px;
+    }
+    .profile h1{
+        font-family: michroma;
+        font-size: 15px;
+    }
+    .colunm{
+        width: 100%;
     }
     .card-perfil{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
     .card-dados{
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
     }
     .btn-dados{
-        gap: 25px;
+        gap: 40px;
     }
     .btn-dados input{
-        font-size: 16px;
+        font-size: 20px;
     }
+
+@media screen and (max-width: 580px){
+    .card-perfil .profile .fa-user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pedido{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-ped{
+        width: 80%;
+    }
+    .nome{
+        width: 100%;
+    }
+    .nome p{
+        font-size: 20px;
+    }
+    .preco{
+        justify-content: start;
+    }
+    .preco p{
+        font-size: 20px;
+    }
+}
 @media screen and (max-width: 480px){
     .container-pedidos{
         height: 32vh;
+    }
+}
+@media screen and (max-width: 430px){
+    .card-pedidos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
     }
 }
 @media screen and (max-width: 400px){
@@ -232,6 +369,12 @@
 @media screen and (max-width: 370px){
     .btn-dados input{
         font-size: 11px;
+    }
+    .mais-detalhes a{
+        font-size: 12px;
+    }
+    .mais-detalhes p{
+        font-size: 12px;
     }
 }
 }
