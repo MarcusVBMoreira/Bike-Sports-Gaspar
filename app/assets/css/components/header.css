@@ -1,6 +1,7 @@
 /* !CORES! */
 :root{
     --Preto-Cor: #000;
+    --PretoClaro-Cor: #1d1d1d;
     --Branco-Cor: #FFF;
     --CinzaClaro-Cor: #DFDFDF;
     --CinzaEscuro-Cor: #a8a8a8;
@@ -165,7 +166,7 @@ header{
 .usuario{
     display: none;
     width: 100%;
-    background-color: var(--CinzaEscuro-Cor);
+    background-color: var(--PretoClaro-Cor);
 }
 
 /* Bike Dropdown */
@@ -751,6 +752,7 @@ header{
 
     .username{
         font-size: 10px;
+        color: var(--Branco-Cor);
     }
 
     .nome .desc{
@@ -761,8 +763,8 @@ header{
     .usuario .fa-user{
         display: flex;
         font-size: 20px;
-        color: var(--Preto-Cor);
-        border: 1px solid var(--Preto-Cor);
+        color: var(--Branco-Cor);
+        border: 1px solid var(--Branco-Cor);
         border-radius: 50%;
         padding: 8px;
     }
