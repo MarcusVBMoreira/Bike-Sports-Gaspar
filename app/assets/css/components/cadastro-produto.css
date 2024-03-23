@@ -45,6 +45,11 @@
     border-radius: 5px;
     font-family: inter-regular;
 }
+.form h1{
+    color: var(--Preto-Cor);
+    font-size: 20px;
+    font: inter-bold;
+}
 .item_forms{
     width: 100%;
     display: flex;
@@ -68,10 +73,20 @@
     border-radius: 5px;
     font-family: inter-regular;
 }
+.form input[type="text"].active{
+   border: 1px solid var(--Vermelho-Cor);
+}
 .form input[type="text"]:focus{
     outline: none;
 }
 .form input[type="text"]::placeholder{
+    font-family: inter-regular;
+}
+.form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Preto-Cor);
+    border-radius: 5px;
     font-family: inter-regular;
 }
 .btn_cadastrar{
@@ -82,4 +97,19 @@
     border: none;
     background-color: var(--Laranja-Cor);
 
+}
+.label_img1_opt2, .label_img2_opt2, .label_img3_opt2, .label_img4_opt2{
+    display: none;
+}
+#default, #tipo_bicicletas, #tipo_acessorios, #tipo_vestuario, #tipo_ferramentas, #tipo_componentes, #tipo_suplementos{
+    display: none;
+}
+#default.active, #tipo_bicicletas.active, #tipo_acessorios.active, #tipo_vestuario.active, #tipo_ferramentas.active, #tipo_componentes.active, #tipo_suplementos.active{
+    display: flex;
+}
+.div_img2.active, .div_img3.active, .div_img4.active{
+    display: flex;
+}
+.div_img2, .div_img3, .div_img4{
+    display: none;
 }
