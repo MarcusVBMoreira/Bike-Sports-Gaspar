@@ -6,13 +6,63 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="card-perfil">
-                <div class="top">
-                <i class="fa-solid fa-user"></i>
-                <h1>Meu perfil</h1>
+            <div class="ttl-perfil">
+                <h1>Meu perfil:</h1>
+            </div>
+            <div class="colunm">
+                <div class="card-perfil">
+                    <div class="profile">
+                    <i class="fa-solid fa-user"></i>
+                    <h1>[ Username ]</h1>
+                    </div>
                 </div>
-                <div class="txt-perfil">
-                    <p>Olá [ Usúario ], seja bem vindo a tela de gerenciamento de sua conta</p>
+                <div class="card-favoritos">
+                    <div class="ttl-fav">
+                        <h1>Favoritos</h1>
+                    </div>
+                    <div class="container-favoritos">
+                        <div class="favorito">
+                            <div class="img-fav">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="conteudo">
+                                <div class="nome-fav">
+                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="valor-fav">
+                                    <p>[Valor]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="favorito">
+                            <div class="img-fav">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="conteudo">
+                                <div class="nome-fav">
+                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="valor-fav">
+                                    <p>[Valor]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="favorito">
+                            <div class="img-fav">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="conteudo">
+                                <div class="nome-fav">
+                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="valor-fav">
+                                    <p>[Valor]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card-dados">
@@ -37,41 +87,79 @@
                 </div>
             </div>
         </div>
-        <div class="meus-pedidos">
+        <div class="ttl-pedidos">
             <h1>Meus pedidos:</h1>
+        </div>
+        <div class="card-pedidos">
             <div class="container-pedidos">
-                <div class="card-pedidos">
-                    <div class="img-prod">
-                        <img src="upload/produtos/2.png" alt="">
-                    </div>
-                    <div class="conteudo">
-                        <div class="nome-prod">
-                            <p class="txt-ped bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                <div class="separacao">
+                        <div class="pedido">
+                            <div class="img-ped">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="nome">
+                                    <p class="bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="preco">
+                                    <p>[ valor ]</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="valor">
-                            <p>[Valor]</p>
-                        </div>
-                    </div>
+                    <div class="line-ped"></div>
                 </div>
-                <div class="line"></div>
-                <div class="card-pedidos">
-                    <div class="img-prod">
-                        <img src="upload/produtos/2.png" alt="">
-                    </div>
-                    <div class="conteudo">
-                        <div class="nome-prod">
-                            <p class="txt-ped bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                <div class="separacao">
+                        <div class="pedido">
+                            <div class="img-ped">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="nome">
+                                    <p class="bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="preco">
+                                    <p>[ valor ]</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="valor">
-                            <p>[Valor]</p>
+                    <div class="line-ped"></div>
+                </div>
+                <div class="separacao">
+                        <div class="pedido">
+                            <div class="img-ped">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="nome">
+                                    <p class="bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="preco">
+                                    <p>[ valor ]</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    <div class="line-ped"></div>
                 </div>
-                <div class="line"></div>
-                <div class="btn-valortotal">
-                    <a href="andamento-pedido.php" class="btn-vermais">Ver detalhes</a>
-                    <p class="bold">Valor total: [Valor]</p>
+                <div class="separacao">
+                        <div class="pedido">
+                            <div class="img-ped">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="nome">
+                                    <p class="bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="preco">
+                                    <p>[ valor ]</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
+            </div>
+            <div class="line"></div>
+            <div class="mais-detalhes">
+                <a href="andamento-pedido.php">Ver Detalhes</a>
+                <p class="bold">Total: [ valor ]</p>
             </div>
         </div>
     </div>
