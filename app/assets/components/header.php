@@ -27,6 +27,15 @@
             </nav>
             <nav class="nav-2" id="nav-2">
                 <ul class="nav-list-2" id="nav-list-2">
+                        <div class="usuario">
+                            <a class="user" href="perfil.php">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                            <a class="nome" href="perfil.php">
+                                <p class="bold username">[ Nome do usuario]</p>
+                                <p class="desc">Acessesua conta e seus pedidos</p>
+                            </a>
+                        </div>
                     <div class="categorias">
                         <a href="">Bikes Magazines</a>
                     </div>

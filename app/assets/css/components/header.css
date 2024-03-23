@@ -123,8 +123,7 @@ header{
 .categorias a{
     text-transform: uppercase;
     text-align: center;
-    font-size: 16
-    px;
+    font-size: 16px;
     color: var(--Branco-Cor);
     font-family: Michroma;
 }
@@ -161,6 +160,12 @@ header{
 
 .resp{
    display: none;
+}
+
+.usuario{
+    display: none;
+    width: 100%;
+    background-color: var(--CinzaEscuro-Cor);
 }
 
 /* Bike Dropdown */
@@ -603,6 +608,7 @@ header{
 
     .nav-list-2.active{
         display: flex;
+        gap: 10px;
     }
     
     .nav-1{
@@ -720,11 +726,45 @@ header{
 }
 @media screen and (max-width: 580px){
     .fa-heart{
-        color: #000;
+        display: none;
     }
-
     .fa-user{
         display: none;
+    }
+
+    .usuario{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .user{
+        width: 30%;
+    }
+    .nome{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 70%;
+    }
+
+    .username{
+        font-size: 10px;
+    }
+
+    .nome .desc{
+        font-size: 8px;
+        color: var(--CinzaClaro-Cor);
+    }
+
+    .usuario .fa-user{
+        display: flex;
+        font-size: 20px;
+        color: var(--Preto-Cor);
+        border: 1px solid var(--Preto-Cor);
+        border-radius: 50%;
+        padding: 8px;
     }
 }
 @media screen and (max-width: 450px){

@@ -183,18 +183,12 @@
     .card-perfil{
         height: 20vh;
     }
-    .card-dados{
-        height: 49vh;
-    }
     .top h1{
         font-family: michroma;
         font-size: 22px;
     }
 }   
 @media screen and (max-width: 770px){
-    .card-dados{
-        height: 46vh;
-    }
     .btn-dados{
         gap: 15px;
     }
@@ -214,7 +208,6 @@
     .card-dados{
         width: 80%;
         margin: 0 auto;
-        height: 50vh;
     }
     .btn-dados{
         gap: 25px;
@@ -223,12 +216,6 @@
         font-size: 16px;
     }
 @media screen and (max-width: 480px){
-    .card-dados{
-        height: 44vh;
-    }
-
-
-
     .container-pedidos{
         height: 32vh;
     }
