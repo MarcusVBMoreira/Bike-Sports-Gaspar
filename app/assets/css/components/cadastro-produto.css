@@ -13,7 +13,6 @@
 .logo{
     width: 120px;
 }
-
 .card-cadastro{
     width: 60%;
     margin: 30px auto;
@@ -21,14 +20,12 @@
     padding: 4%;
     border-radius: 10px;
 }
-
 .ttl h1{
     width: 100%;
     text-align: center;
     font-size: 25px;
     font-family: michroma;
 }
-
 .form{
     display: flex;
     width: 100%;
@@ -37,10 +34,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}   
-
+}
+.form label{
+    font-family: inter-regular;
+}
+.form select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Preto-Cor);
+    border-radius: 5px;
+    font-family: inter-regular;
+}
+.item_forms{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.container_cor1, .container_cor2.active, .container_cor3.active, .container_cor4.active,
+.container_cor1_PMGGG.active, .container_cor2_PMGGG.active, .container_cor3_PMGGG.active, .container_cor4_PMGGG.active{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container_cor2, .container_cor3, .container_cor4,
+.container_cor1_PMGGG, .container_cor2_PMGGG, .container_cor3_PMGGG, .container_cor4_PMGGG{
+    display: none;
+}
 .form input[type="text"]{
-    width: 70%;
+    width: 100%;
     padding: 10px;
     border: 1px solid var(--Preto-Cor);
     border-radius: 5px;
@@ -51,4 +73,13 @@
 }
 .form input[type="text"]::placeholder{
     font-family: inter-regular;
+}
+.btn_cadastrar{
+    padding: 2%;
+    color: var(--Branco-Cor);
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--Laranja-Cor);
+
 }

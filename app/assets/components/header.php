@@ -191,7 +191,7 @@
                                 <li><a href="view-produtos.php?tipo=Componentes & categoria=Garfo" class="light">Garfo</a></li>
                                 <li><a href="view-produtos.php?tipo=Componentes & categoria=Gancheira freios" class="light">Gancheira freios</a></li>
                                 <li><a href="view-produtos.php?tipo=Componentes & categoria=Guidão" class="light">Guidão</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=manetes" class="light">Manetes</a></li>
+                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Manetes" class="light">Manetes</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
@@ -215,7 +215,6 @@
                             <i class="fa-solid fa-angle-right" id="seta-sup" onclick="sup_dropdown()"></i>
                         </div>
                         <ul class="sup-dropdown" id="sup">
-                            <li class="li-responsivo"><a href="view-produtos.php?categoria=Suplementos" class="light">Suplementos</a></li>
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Creatina" class="light">Creatina</a></li>
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Pré treino" class="light">Pré treino</a></li>
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Sache carbom" class="light">Sachê carbom</a></li>
