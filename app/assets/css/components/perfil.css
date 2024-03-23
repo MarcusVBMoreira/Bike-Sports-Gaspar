@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     width: 46.5%;
-    height: 25vh;
+    height: 15vh;
     background-color: var(--Branco-Cor);
     border-radius: 10px;
 }
@@ -110,7 +110,7 @@
 
 .container-pedidos{
     display: flex;
-    height: 36vh;
+    padding: 10px;
     flex-direction: column; 
     margin-top: 2%;
     background-color: var(--Branco-Cor);
@@ -180,9 +180,6 @@
     border-radius: 10px;
 }
 @media screen and (max-width: 1000px){
-    .card-perfil{
-        height: 20vh;
-    }
     .top h1{
         font-family: michroma;
         font-size: 22px;
