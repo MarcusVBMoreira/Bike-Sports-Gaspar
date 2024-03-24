@@ -357,3 +357,38 @@
         width: 100%;
     }
 }
+@media screen and (max-width: 500px){
+    .img_produto{
+        height: 60%;
+    }
+}
+@media screen and (max-width: 430px){
+    .img_produto{
+        height: 100%;
+    }
+    .head_produto{
+        height: 50%;
+    }
+    .outras_img{
+        height: 50%;
+        justify-content: space-evenly;
+    }
+    .input_frete{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 340px){
+    .img_produto{
+        height: 90%;
+    }
+    .head_produto{
+        height: 50%;
+    }
+    .outras_img{
+        height: 40%;
+        justify-content: space-evenly;
+    }
+    .input_frete{
+        width: 55%;
+    }
+}

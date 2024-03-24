@@ -179,3 +179,90 @@
         height: 500px;
     }
 }
+@media screen and (max-width: 1500px){
+    .produto{
+        width: 30%;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .produto{
+        width: 30%;
+        height: 370px;
+    }
+}
+@media screen and (max-width: 950px){
+    .produto{
+        width: 30%;
+        height: 320px;
+    }
+}
+@media screen and (max-width: 770px){
+    .produto{
+        width: 30%;
+        height: 290px;
+    }
+}
+@media screen and (max-width: 760px){
+    .produto{
+        width: 30%;
+        height: 270px;
+    }
+    .nome_produto{
+        height: 30%;
+    }
+}
+@media screen and (max-width: 550px){
+    .produto{
+        width: 30%;
+        height: 270px;
+    }
+    .nome_produto{
+        height: 30%;
+    }
+    .valor_produto .bold{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 440px){
+    .produto{
+        width: 30%;
+        height: 230px;
+    }
+    .nome_produto{
+        height: 30%;
+    }
+    .valor_produto .bold{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 400px){
+    .produto{
+        width: 30%;
+        height: 210px;
+    }
+    .nome_produto{
+        height: 30%;
+    }
+    .botao_comprar a{
+        font-size: 10px;
+    }
+    .valor_produto .bold{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 350px){
+    .produto{
+        width: 30%;
+        height: 190px;
+    }
+    .nome_produto{
+        height: 30%;
+    }
+    .botao_comprar a{
+        font-size: 10px;
+    }
+    .valor_produto .bold{
+        font-size: 10px;
+    }
+}
