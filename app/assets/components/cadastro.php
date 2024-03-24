@@ -27,6 +27,11 @@
                             <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
+                            <input type="text" placeholder="CPF" name="sobrenome" id="sobrenome" class="regular">
+                            <span class="regular" id="span_cpf">Informar seu CPF</span>
+                            <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
+                        </div>
+                        <div class="item_forms">
                             <input type="text" placeholder="Telefone" name="telefone" id="telefone" class="regular">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
                             <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
