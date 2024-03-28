@@ -36,9 +36,6 @@
                                 <p class="desc">Acessesua conta e seus pedidos</p>
                             </a>
                         </div>
-                    <div class="categorias">
-                        <a href="">Bikes Magazines</a>
-                    </div>
                     <li>
                         <div class="nome-categoria">
                             <a href="view-produtos.php?tipo=Bicicletas">Bicicletas</a>
@@ -229,6 +226,9 @@
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Sache carbom" class="light">Sachê carbom</a></li>
                         </ul>
                     </li>
+                    <div class="categorias">
+                        <a href="">Bikes Magazines</a>
+                    </div>
                     <div class="icon-resp">
                         <a href=""><i class="fa-solid fa-user resp"></i></a>
                         <a href="#"><i class="fa-solid fa-heart resp"></i></a>            
