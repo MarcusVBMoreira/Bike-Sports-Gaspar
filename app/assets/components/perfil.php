@@ -10,17 +10,39 @@
                 <h1>Meu perfil:</h1>
             </div>
             <div class="colunm">
-                <div class="card-perfil">
-                    <div class="profile">
-                    <i class="fa-solid fa-user"></i>
-                    <h1>[ Username ]</h1>
-                    </div>
-                </div>
                 <div class="card-favoritos">
                     <div class="ttl-fav">
                         <h1>Favoritos</h1>
                     </div>
                     <div class="container-favoritos">
+                        <div class="favorito">
+                            <div class="img-fav">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="conteudo">
+                                <div class="nome-fav">
+                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="valor-fav">
+                                    <p>[Valor]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="favorito">
+                            <div class="img-fav">
+                                <img src="upload/produtos/3.png" alt="">
+                            </div>
+                            <div class="conteudo">
+                                <div class="nome-fav">
+                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
+                                </div>
+                                <div class="valor-fav">
+                                    <p>[Valor]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
                         <div class="favorito">
                             <div class="img-fav">
                                 <img src="upload/produtos/3.png" alt="">
@@ -69,6 +91,16 @@
                 <h1>Meus dados</h1>
                 <div class="dados">
                     <div class="dado">
+                        <div class="foto">
+                            <div class="img-side">
+
+                                <label for="addFoto"><i class="fa-solid fa-user-plus"></i></label>
+                            </div>
+                            <div class="add-img">
+                                <input type="file" name="" id="addFoto">
+                                <label for="addFoto">Adicionar foto</label>
+                            </div>
+                        </div>
                         <h3 class="bold">Nome:</h3>
                         <p class="inter-regular">[ Usúario ]</p>
                         <h3 class="bold">CPF:</h3>
