@@ -116,7 +116,7 @@ header{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: var(--Laranja-Cor);
+    background-color: var(--Preto-Cor);
     color: #f5f5f5;
     padding: 0px 22px 0px 20px;
     height: 100%;
@@ -448,7 +448,7 @@ header{
     width: 16%; /* ARRUMAR NA RESPONSIVIDADE DO SITE O TAMNAHO */
     max-height: 500px;
     padding: 1%;
-    right: 0;
+    
 }
 .nav-list-2 ul.sup-dropdown li:hover{
     background-color: #dfdfdf;
