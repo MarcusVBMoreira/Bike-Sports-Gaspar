@@ -20,7 +20,7 @@
                 </div>
                 <img class="logo-cell" src="assets/img/logoBSG-branco-menor.png" alt="">
                 <ul class="nav-list-1">
-                    <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="perfil.php"><i class="fa-solid fa-heart"></i></a></li>
                     <li><a href="carrinho.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li><a href="perfil.php"><i class="fa-solid fa-user"></i></a></li>
                 </ul>

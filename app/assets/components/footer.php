@@ -25,7 +25,7 @@
                             </a>
                             <a target="_blank" href="">
                                 <div class="icon-contact">
-                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-facebook"></i>
                                 </div>
                             </a>
                             <a target="_blank" href="">
