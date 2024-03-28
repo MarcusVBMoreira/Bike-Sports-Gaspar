@@ -115,7 +115,7 @@
                 </div>
                 <div class="btn-dados">
                     <input type="submit" value="Alterar Senha">
-                    <input type="submit" value="Editar Perfil">
+                    <input type="submit" id="edit" onclick="editarPerfil()" value="Editar Perfil">
                 </div>
             </div>
         </div>
@@ -195,5 +195,6 @@
             </div>
         </div>
     </div>
+<script src="assets/js/editar-perfil.js"></script>
 </body>
 </html>
