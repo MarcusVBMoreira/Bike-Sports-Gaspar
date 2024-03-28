@@ -11,7 +11,7 @@
     --Laranja-Cor: #F24701;
 }
 
-.pop-up{
+.ettore .pop-up{
     position: fixed;
     z-index: 999;
     bottom: 1%;
@@ -25,15 +25,28 @@
     padding: 2%;
     border-radius: 50%;
 }
+.leo .pop-up{
+    position: fixed;
+    z-index: 999;
+    bottom: 12%;
+    right: 1%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--Azul-Cor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    border-radius: 50%;
+}
 .pop-up i{
     font-size: 40px;
     color: var(--Branco-Cor);
 }
-
-.pop-up i:hover{
+.leo .pop-up i{
+    font-size: 30px;
     color: var(--Branco-Cor);
 }
-
 @media screen and (max-width: 850px){
     .pop-up{
         width: 50px;
