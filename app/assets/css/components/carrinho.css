@@ -84,3 +84,36 @@
     background-color: var(--Preto-Cor);
     margin-top: 1%;
 }
+
+@media screen and (max-width: 630px){
+    .produto{
+        flex-direction: column;
+    }
+    .produto img{
+        margin: 0 auto;
+    }
+    .desc{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nome p{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    .produto{
+        flex-direction: column;
+    }
+    .produto img{
+        width: 165px;
+        height: 92px;
+        margin: 0 auto;
+    }
+    .desc{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nome p{
+        width: 100%;
+    }
+}
