@@ -74,10 +74,11 @@
             <div class="line-2"></div>
             <h1 class="bold">Bike Sport Gaspar</h1>
             <div class="footer_infos">
-                <div class="horarios">
+                <div class="horarios-resp">
                     <h2>Horário de funcionamento</h2>
                     <p class="light">Segunda à Sexta das 08h30 - 18h30</p>
                     <p class="light">Sábados das 9h00 às 13h00</p>
+                    <p class="light">Telefone:(11)9123-1233</p>
                     <p class="bold">AV. Dom José Gaspar, 1154 - Matriz</p>
                 </div>
             </div>

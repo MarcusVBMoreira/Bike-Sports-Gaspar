@@ -14,10 +14,20 @@
     display: none;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 840px){
     .footer-resp{
         display: flex;
         z-index: 0;
+    }
+    .horarios-resp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .horarios-resp p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .accordion{
@@ -72,7 +82,6 @@
     
     .contacts{
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
         height: 100%;
         justify-content: space-evenly;

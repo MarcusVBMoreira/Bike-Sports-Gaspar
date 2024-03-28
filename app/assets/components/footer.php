@@ -10,57 +10,59 @@
             <div class="line"></div>
             <h1 class="bold">Bike Sport Gaspar</h1>
             <div class="footer_infos">
-                <div class="horarios">
-                    <h2>Horário de funcionamento</h2>
-                    <p class="light">Segunda à Sexta das 08h30 - 18h30</p>
-                    <p class="light">Sábados das 9h00 às 13h00</p>
-                    <p class="bold">AV. Dom José Gaspar, 1154 - Matriz</p>
-                </div>
-                <div class="metod-pag">
-                    <h1>Metodos de pagamentos</h1>
-                    <div class="container-pag">
-                        <div class="item-pag">
-                            <img src="assets/img/logo-mercado-pago-icone-1024.png" alt="">
-                        </div>
-                        <div class="item-pag">
-                            <img src="assets/img/boleto-logo.png" alt="">
-                        </div>
-                        <div class="item-pag">
-                            <img src="assets/img/mastercard-icon-2048x1225-3kb6axel.png" alt="">
-                        </div>
-                        <div class="item-pag">
-                            <img src="assets/img/Old_Visa_Logo.svg.png" alt="">
-                        </div>
-                        <div class="item-pag-pix">
-                            <img src="assets/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png" alt="">
+                <div class="colunm">
+                    <div class="container-contact">
+                        <div class="contacts">
+                            <a target="_blank" href="">
+                                <div class="icon-contact">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                            </a>
+                            <a target="_blank" href="">
+                                <div class="icon-contact">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                            </a>
+                            <a target="_blank" href="">
+                                <div class="icon-contact">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </a>
+                            <a target="_blank" href="">
+                                <div class="icon-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="container-contact">
-                    <div class="ttl-cont">
-                        <h1>Contatos</h1>
+                <div class="row">
+                    <div class="horarios">
+                        <h2>Horário de funcionamento</h2>
+                        <p class="light">Segunda à Sexta das 08h30 - 18h30</p>
+                        <p class="light">Sábados das 9h00 às 13h00</p>
+                        <p class="light">Telefone:(11)9123-1233</p>
+                        <p class="bold">AV. Dom José Gaspar, 1154 - Matriz</p>
                     </div>
-                    <div class="contacts">
-                        <a target="_blank" href="">
-                            <div class="icon-contact">
-                                <i class="fa-brands fa-instagram"></i>
+                    <div class="metod-pag">
+                        <h1>Metodos de pagamentos</h1>
+                        <div class="container-pag">
+                            <div class="item-pag">
+                                <img src="assets/img/logo-mercado-pago-icone-1024.png" alt="">
                             </div>
-                        </a>
-                        <a target="_blank" href="">
-                            <div class="icon-contact">
-                                <i class="fa-brands fa-whatsapp"></i>
+                            <div class="item-pag">
+                                <img src="assets/img/boleto-logo.png" alt="">
                             </div>
-                        </a>
-                        <a target="_blank" href="">
-                            <div class="icon-contact">
-                                <i class="fa-brands fa-linkedin"></i>
+                            <div class="item-pag">
+                                <img src="assets/img/mastercard-icon-2048x1225-3kb6axel.png" alt="">
                             </div>
-                        </a>
-                        <a target="_blank" href="">
-                            <div class="icon-contact">
-                                <i class="fa-solid fa-envelope"></i>
+                            <div class="item-pag">
+                                <img src="assets/img/Old_Visa_Logo.svg.png" alt="">
                             </div>
-                        </a>
+                            <div class="item-pag-pix">
+                                <img src="assets/img/99538099-3b7a5d00-298b-11eb-9f4f-c3d0cd4a5280.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
