@@ -4,6 +4,19 @@
     <link rel="stylesheet" href="assets/css/components/perfil.css">
 </head>
 <body>
+    <div class="editar-perfil" id="abrir">
+        <form>
+            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="CPF">
+            <input type="text" placeholder="Data de nascimento">
+            <input type="text" placeholder="Telefone">
+            <input type="text" placeholder="Email">
+            <div class="btn-salvar-sair">
+                <input type="submit" value="Salvar">
+                <input type="submit" value="Sair">
+            </div>
+        </form>
+    </div>
     <div class="container">
         <div class="row">
             <div class="ttl-perfil">
@@ -114,8 +127,8 @@
                     </div>
                 </div>
                 <div class="btn-dados">
-                    <input type="submit" value="Alterar Senha">
-                    <input type="submit" id="edit" onclick="editarPerfil()" value="Editar Perfil">
+                    <input type="submit" id="fechar" onclick="fecharPerfil()" value="Alterar Senha">
+                    <input type="submit" onclick="abrirPerfil()" value="Editar Perfil">
                 </div>
             </div>
         </div>
