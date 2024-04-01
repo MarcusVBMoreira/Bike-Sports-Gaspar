@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="btn-dados">
-                    <input type="submit" id="fechar" onclick="fecharPerfil()" value="Alterar Senha">
+                    <input type="submit" value="Alterar Senha">
                     <input type="submit" onclick="abrirPerfil()" value="Editar Perfil">
                 </div>
             </div>

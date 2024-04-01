@@ -126,7 +126,7 @@ header{
     text-align: center;
     font-size: 16px;
     color: var(--Branco-Cor);
-    font-family: Michroma;
+    font-family: inter-regular;
 }
 .categorias:hover{
     color: var(--Branco-Cor);
