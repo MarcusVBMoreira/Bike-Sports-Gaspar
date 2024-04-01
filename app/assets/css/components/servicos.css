@@ -1,0 +1,71 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --Cinza-Cor: #969696;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.ttl-services{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5%;
+}
+.icon-back{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.icon-back i{
+    color: var(--Branco-Cor);
+    font-size: 20px;
+}
+.ttl{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+.ttl h1{
+    color: var(--Verde-Cor);
+    font-family: michroma;
+    font-size: 20px;
+}
+.container-services{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 30vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.services{
+    padding: 20px;
+    background-color: var(--Branco-Cor);
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+a{
+    width: 70%;
+}
+
+@media screen and (max-width: 500px){
+    a .services p{
+        font-size: 15px;
+    }
+
+    a{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 340px){
+    a .services p{
+        font-size: 13px;
+    }
+}
