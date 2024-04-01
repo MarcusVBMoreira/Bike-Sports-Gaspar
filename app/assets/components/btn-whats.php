@@ -6,7 +6,7 @@
     <body>
         <div class="contatos">
             <div class="leo">
-                <a target="_blank" href="https://wa.me/5511940080872" class="pop-up">
+                <a target="_blank" href="servicos.php" class="pop-up">
                     <i class="fa-solid fa-screwdriver-wrench"></i>                
                 </a>
             </div>
