@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="container-services">
-                <a href="">
+                <a href="bike-fitter.php">
                     <div class="services">
                         <p>Bike fitter</p>
                         <i class="fa-solid fa-angle-right"></i>

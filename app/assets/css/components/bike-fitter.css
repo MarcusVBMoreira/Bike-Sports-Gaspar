@@ -1,0 +1,129 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.bike_fitter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.header_bike_fitter{
+    width: 90%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_bike_fitter a {
+    font-size: 25px;
+    color: var(--Branco-Cor);
+    position: absolute;
+    left: 10%;
+}
+.header_bike_fitter div h1{
+    font-size: 25px;
+    color: var(--Branco-Cor);
+}
+.container_bike_fitter{
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.card_bike_fitter{
+    width: 60%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Branco-Cor);
+    border-radius: 15px;
+}
+.container_card{
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.img_card{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo_card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.nome_servico h2{
+    font-size: 25px;
+}
+.atendente{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Verde-Cor);
+    border-radius: 10px;
+    padding: 1%;
+}
+.atendente a{
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.atendente a i{
+    font-size: 20px;
+    color: var(--Preto-Cor);
+}
+.descricao_bike_fitter{
+    width: 90%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.header_descricao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.header_descricao h1{
+    font-size: 25px;
+    color: var(--Branco-Cor);
+}
+.line_descricao{
+    width: 100%;
+    margin: 1%;
+    border: 1px solid var(--Verde-Cor);
+}
+.corpo_descricao p{
+    font-size: 20px;
+    color: var(--Branco-Cor);
+    text-indent: 10px;
+}
