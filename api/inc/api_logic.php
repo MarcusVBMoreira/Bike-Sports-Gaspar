@@ -156,10 +156,17 @@ class Api_logic{
     }
     // ===============================================================
     public function get_client_by_email(){
-        $sql = "SELECT * FROM clientes WHERE 1 ";
 
         if(key_exists('email',$this->params)){
-            $sql .= "AND email LIKE '%" . $this->params['email'] . "%'";
+            $params = [
+                ':email' => $this->params['email']
+            ];
+            $db = new database();
+            $results = $db->EXE_QUERY("
+                SELECT * FROM clientes
+                WHERE
+                email = :email
+            ", $params);
         }else{
             return [
                 'status' => 'ERROR',
@@ -167,10 +174,6 @@ class Api_logic{
                 'results' => []
             ];
         }
-
-        $db = new database();
-        $results = $db->EXE_QUERY($sql);
-
         return [
             'status' => 'SUCCESS',
             'message' => 'API RUNNING OK',
@@ -204,86 +207,128 @@ class Api_logic{
         ];
     }
     // ===============================================================
-    /* public function create_client(){
-        $sql = "INSERT INTO clientes (nome,email,telefone) VALUES ";
-
-        if(key_exists('name',$this->params)){
-            $sql .= "('" . $this->params['name'] . "',";
-        }else{
+    public function create_new_client(){
+        
+        if(//Checar campos vazios
+            !isset($this->params['nome']) || 
+            !isset($this->params['cpf']) || 
+            !isset($this->params['email']) || 
+            !isset($this->params['telefone']) ||
+            !isset($this->params['sobrenome']) ||
+            !isset($this->params['data_nascimento']) ||
+            !isset($this->params['senha']) ||
+            !isset($this->params['cep']) ||
+            !isset($this->params['estado']) ||
+            !isset($this->params['cidade']) ||
+            !isset($this->params['bairro']) ||
+            !isset($this->params['rua']) ||
+            !isset($this->params['numero']) ||
+            $this->params['nome']=='' ||
+            $this->params['email']=='' ||
+            $this->params['cpf']=='' ||
+            $this->params['telefone']=='' ||
+            $this->params['sobrenome']=='' ||
+            $this->params['data_nascimento']=='' ||
+            $this->params['senha']=='' ||
+            $this->params['cep']=='' ||
+            $this->params['estado']=='' ||
+            $this->params['cidade']=='' ||
+            $this->params['bairro']=='' ||
+            $this->params['rua']=='' ||
+            $this->params['numero']==''
+        ){
             return [
-                'status' => 'ERROR',
-                'message' => 'USER NAME UNDEFINED',
-                'results' => []
+                'status'=> 'ERROR',
+                'message'=> 'Informações insuficientes para adicionar cliente',
+                'results'=> []
             ];
         }
         
-        if(key_exists('email',$this->params)){
-            if(filter_var($this->params['email'],FILTER_VALIDATE_EMAIL)){
-                $sql .= "'" . $this->params['email'] . "',";
-            }else{
-                return [
-                    'status' => 'ERROR',
-                    'message' => 'USER EMAIL INVALID',
-                    'return' => []
-                ];
-            }
-        }else{
-            return [
-                'status' => 'ERROR',
-                'message' => 'USER EMAIL UNDEFINED',
-                'results' => []
-            ];
-        }
-        
-        if(key_exists('ddd',$this->params)){
-            if(filter_var($this->params['ddd'],FILTER_VALIDATE_INT)){
-                if(key_exists('phone',$this->params)){
-                    if(filter_var($this->params['phone'],FILTER_VALIDATE_INT)){
-                        $ddd = "(" . $this->params['ddd'] . ")";
-                        $phone = $ddd . $this->params['phone'];
-                        $sql .= "'" . $phone . "')";
-                    }else{
-                        return [
-                            'status' => 'ERROR',
-                            'message' => 'USER PHONE INVALID',
-                            'results' => []
-                        ];
-                    }
-                }else{
-                    return [
-                        'status' => 'ERROR',
-                        'message' => 'USER PHONE UNDEFINED',
-                        'results' => []
-                    ];
-                }
-            }else{
-                return [
-                    'status' => 'ERROR',
-                    'message' => 'USER DDD INVALID',
-                    'results' => []
-                ];
-            }
-            
-        }else{
-            return [
-                'status' => 'ERROR',
-                'message' => 'USER DDD UNDEFINED',
-                'results' => []
-            ];
-        }
-
+        //checar emails duplicados
         $db = new database();
-        $results = $db->EXE_QUERY($sql);
+        $params = [
+            ':email' => $this->params['email'],
+            ':cpf' => $this->params['cpf']
+        ];
+        $results = $db->EXE_QUERY("
+            SELECT id FROM clientes
+            WHERE
+            email = :email OR CPF = :cpf
+        ",$params);
+        if(count($results) != 0){
+            return [
+                'status' => 'ERROR',
+                'message' => 'Já existe um cliente com o mesmo email ou CPF.',
+                'results' => []
+            ];
+        }
+
+        $params = [
+            ':nome' => $this->params['nome'],
+            ':cpf' => $this->params['cpf'],
+            ':email' => $this->params['email'],
+            ':telefone' => $this->params['telefone'],
+            ':sobrenome' => $this->params['sobrenome'],
+            ':data_nascimento' => $this->params['data_nascimento'],
+            ':senha' => $this->params['senha'],
+            ':cep' => $this->params['cep'],
+            ':estado' => $this->params['estado'],
+            ':cidade' => $this->params['cidade'],
+            ':bairro' => $this->params['bairro'],
+            ':rua' => $this->params['rua'],
+            ':numero' => $this->params['numero'],
+            ':complemento' => $this->params['complemento']
+        ];
+        // NAO HA CAMPO PARA CPF NO FORMULARIO AINDA, O CAMPO NO BD ESTA NULO
+        $db = new database();
+        $db->EXE_QUERY("
+            INSERT INTO clientes (
+                    nome,
+                    CPF,
+                    sobrenome,
+                    email,
+                    senha,
+                    data_nascimento,
+                    telefone,
+                    CEP,
+                    estado,
+                    cidade,
+                    rua,
+                    bairro,
+                    numero,
+                    complemento
+                ) VALUES (
+                    :nome,
+                    :cpf,
+                    :sobrenome,
+                    :email,
+                    :senha,
+                    :data_nascimento,
+                    :telefone,
+                    :cep,
+                    :estado,
+                    :cidade,
+                    :rua,
+                    :bairro,
+                    :numero,
+                    :complemento
+                )
+
+        ",$params);
+        
+        /* $db = new database();
+        $results = $db->EXE_QUERY("
+            SELECT id FROM clientes
+            WHERE
+            email = :email
+        ",$params); */
 
         return [
             'status' => 'SUCCESS',
-            'message' => 'API RUNNING OK',
-            'results' => 'CLIENT CREATED SUCCESSFULLY'
+            'message' => 'Cliente criado com sucesso',
+            'results' => $params
         ];
-    } */
-    // ===============================================================
-
-
+    }
 
 
 
@@ -380,6 +425,75 @@ class Api_logic{
             'status' => 'SUCCESS',
             'message' => 'API RUNNING OK',
             'results' =>  $results
+        ];
+    }
+
+    public function create_new_product(){
+        
+        if(//Checar campos vazios
+            !isset($this->params['nome']) || 
+            !isset($this->params['valor_a_vista']) || 
+            $this->params['nome']=='' ||
+            $this->params['valor_a_vista']==null
+        ){
+            return [
+                'status'=> 'ERROR',
+                'message'=> 'Informações insuficientes para adicionar produto',
+                'results'=> []
+            ];
+        }
+        
+        //checar nomes duplicados
+        $db = new database();
+        $params = [
+            ':nome' => $this->params['nome']
+        ];
+        $results = $db->EXE_QUERY("
+            SELECT codigo FROM produtos
+            WHERE
+            nome = :nome
+        ",$params);
+        if(count($results) != 0){
+            return [
+                'status' => 'ERROR',
+                'message' => 'Já existe um produto com o mesmo nome.',
+                'results' => []
+            ];
+        }
+
+        $params = [
+            ':nome' => $this->params['nome'],
+            ':valor_a_vista' => $this->params['valor_a_vista']
+        ];
+        
+        $db = new database();
+        $db->EXE_QUERY("
+            INSERT INTO produtos (
+                    nome,
+                    valor
+                ) VALUES (
+                    :nome,
+                    :valor_a_vista
+                )
+
+        ",$params);
+
+        $params = [
+            'nome' => $this->params['nome'],
+            'valor_a_vista' => $this->params['valor_a_vista']
+        ];
+        
+        /* $db = new database();
+        $results = $db->EXE_QUERY("
+            SELECT id FROM clientes
+            WHERE
+            email = :email
+        ",$params); */
+
+        return [
+            'status' => 'SUCCESS',
+            'message' => 'Produto criado com sucesso',
+            'results' => $params
         ];
     }
 

@@ -11,7 +11,7 @@
                         <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
                     </a>
                 </div>
-                <form action="#" class="forms_login" id="forms_cadastro">
+                <form action="processa_cadastro.php" class="forms_login" id="forms_cadastro">
                     <div class="components_forms">
                         <div class="titulo_login_cadastro">
                             <h1 class="titulo">Cadastro</h1>
@@ -27,7 +27,7 @@
                             <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="CPF" name="sobrenome" id="sobrenome" class="regular">
+                            <input type="text" placeholder="CPF" name="sobrenome" id="CPF" class="regular">
                             <span class="regular" id="span_cpf">Informar seu CPF</span>
                             <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
                         </div>
@@ -62,7 +62,7 @@
                             <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
                             <span class="regular" id="span_senha_diferente">A senha não é igual</span>
                         </div>
-                        <div class="titulo_login_cadastro">
+                        <!-- <div class="titulo_login_cadastro">
                             <h1 class="titulo">Endereço</h1>
                         </div>
                         <div class="item_forms">
@@ -91,7 +91,7 @@
                         </div>
                         <div class="item_forms">
                             <input type="text" placeholder="Complemento(Opcional)" name="complemento" id="complemento" class="regular">
-                        </div>
+                        </div> -->
                     </div>
                     <button type="submit" class="btn_entrar bold">Cadastrar</button>
                 </form>

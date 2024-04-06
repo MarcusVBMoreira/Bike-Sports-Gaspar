@@ -8,6 +8,8 @@ $(document).ready(function () {
 
     // Adicionando máscara ao campo de data de nascimento
     $("#data_nascimento").mask("00/00/0000");
+
+    $("#CPF").mask("000.000.000-00");
 });
 
 
