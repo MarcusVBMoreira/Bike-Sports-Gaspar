@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#telefone").mask("(00)00000-0000");
 
     // Adicionando máscara ao campo de CPF
-    $("#CEP").mask("00000-000");
+    // $("#CEP").mask("00000-000");
 
     // Adicionando máscara ao campo de data de nascimento
     $("#data_nascimento").mask("00/00/0000");
@@ -49,7 +49,7 @@ const confirmarSenha = document.querySelector("#confirmar_senha");
 const spanConfirmarSenha = document.getElementById('span_confirmar_senha');
 const spanSenhaDiferente = document.getElementById('span_senha_diferente');
 
-const CEP = document.querySelector("#CEP");
+/* const CEP = document.querySelector("#CEP");
 const spanCEP = document.getElementById('span_CEP');
 
 const estado = document.querySelector("#estado");
@@ -66,7 +66,7 @@ const spanRua = document.getElementById('span_rua');
 
 const numero = document.querySelector("#numero");
 const spanNumero = document.getElementById('span_numero');
-
+ */
 
 form.addEventListener("submit", (event) =>{
 
@@ -79,13 +79,13 @@ form.addEventListener("submit", (event) =>{
     var condicaoEmail = false;
     var condicaoSenha = false;
     var condicaoConfirmarSenha = false;
-    var condicaoCEP = false;
+    /* var condicaoCEP = false;
     var condicaoEstado = false;
     var condicaoCidade = false;
     var condicaoBairro = false;
     var condicaoRua = false;
     var condicaoNumero = false;
-    var condicaoNumero = false;
+    var condicaoNumero = false; */
 
     //!verificar se o nome está vazio
     if(nome.value ===""){
@@ -225,7 +225,7 @@ form.addEventListener("submit", (event) =>{
         }
     }
     
-    //!verificar se o CEP está vazio
+   /*  //!verificar se o CEP está vazio
     if(CEP.value ===""){
         CEP.classList.add('active');
         spanCEP.classList.add('active');
@@ -289,9 +289,9 @@ form.addEventListener("submit", (event) =>{
         spanNumero.classList.remove('active');
 
         condicaoNumero = true;
-    }
+    } */
 
-    if(condicaoNome & condicaoSobrenome & condicaoTelefone & condicaoData & condicaoEmail & condicaoSenha & condicaoConfirmarSenha & condicaoCEP & condicaoBairro & condicaoEstado & condicaoCidade & condicaoRua & condicaoNumero === true){
+    if(condicaoNome & condicaoSobrenome & condicaoTelefone & condicaoData & condicaoEmail & condicaoSenha & condicaoConfirmarSenha){
         form.submit();
     }
 
@@ -394,7 +394,7 @@ function verconfirmarsenha(){
 
 
 // !CEP AUTOMÁTICO!
-$("#CEP").blur(function(){
+/* $("#CEP").blur(function(){
 	// Remove tudo o que não é número para fazer a pesquisa
 	var cep = this.value.replace(/[^0-9]/, "");
 	
@@ -422,4 +422,4 @@ $("#CEP").blur(function(){
 			$("#estado").val(dadosRetorno.uf);
 		}catch(ex){}
 	});
-});
+}); */

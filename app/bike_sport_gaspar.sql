@@ -36,13 +36,13 @@ CREATE TABLE `clientes` (
   `senha` varchar(255) NOT NULL,
   `data_nascimento` date NOT NULL,
   `telefone` int(11) NOT NULL,
-  `CEP` varchar(255) NOT NULL,
-  `estado` varchar(255) NOT NULL,
-  `cidade` varchar(255) NOT NULL,
-  `rua` varchar(255) NOT NULL,
-  `bairro` varchar(255) NOT NULL,
-  `numero` varchar(255) NOT NULL,
-  `complemento` varchar(255) NOT NULL
+  `CEP` varchar(255) NULL,
+  `estado` varchar(255) NULL,
+  `cidade` varchar(255) NULL,
+  `rua` varchar(255) NULL,
+  `bairro` varchar(255) NULL,
+  `numero` varchar(255) NULL,
+  `complemento` varchar(255) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

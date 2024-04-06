@@ -17,37 +17,37 @@
                             <h1 class="titulo">Cadastro</h1>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="Nome" name="" id="nome" class="regular">
+                            <input type="text" placeholder="Nome" name="user_nome" id="nome" class="regular">
                             <span class="regular" id="span_nome">Informar seu nome</span>
                             <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="Sobrenome" name="sobrenome" id="sobrenome" class="regular">
+                            <input type="text" placeholder="Sobrenome" name="user_sobrenome" id="sobrenome" class="regular">
                             <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
                             <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="CPF" name="sobrenome" id="CPF" class="regular">
+                            <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
                             <span class="regular" id="span_cpf">Informar seu CPF</span>
                             <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="Telefone" name="telefone" id="telefone" class="regular">
+                            <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
                             <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="Data de nascimento" name="data_nascimento" id="data_nascimento" class="regular">
+                            <input type="text" placeholder="Data de nascimento" name="user_data_nascimento" id="data_nascimento" class="regular">
                             <span class="regular" id="span_data">Informar sua data de nascimento</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="E-mail" name="email" id="email" class="regular">
+                            <input type="text" placeholder="E-mail" name="user_email" id="email" class="regular">
                             <span class="regular" id="span_email">Informar seu e-mail</span>
                             <span class="regular" id="span_email_valido">Informar um e-mail valido</span>
                         </div>
                         <div class="item_forms">
                             <div class="senha_">
-                                <input type="password" placeholder="Senha" name="senha" id="senha" class="regular">
+                                <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
                                 <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
                             </div>
                             <span class="regular" id="span_senha">Informar sua senha</span>
