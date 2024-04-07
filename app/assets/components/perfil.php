@@ -131,6 +131,7 @@
                 <div class="btn-dados">
                     <input type="submit" value="Alterar Senha">
                     <input type="submit" onclick="abrirPerfil()" value="Editar Perfil">
+                    <a href="finalizar_sessao.php">Sair</a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,17 @@
+<?php
+  require('inc/config.php');
+  require('inc/api_functions.php');
+  require('inc/functions.php');
+
+  session_start();
+
+  if(empty($_SESSION)){
+    header('Location: login.php');
+  }
+  // ck_8376b8bdb6d7ae81163c7f843e304897cc4e492e 
+  // cs_94442774f145249efca928791a907d665d0b9e53 
+  // consumer
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

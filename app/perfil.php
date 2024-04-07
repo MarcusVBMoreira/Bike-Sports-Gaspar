@@ -4,6 +4,10 @@
   require('inc/functions.php');
 
   session_start();
+
+  if(empty($_SESSION)){
+    header('Location: login.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
