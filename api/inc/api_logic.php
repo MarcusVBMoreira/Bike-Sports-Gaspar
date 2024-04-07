@@ -217,25 +217,13 @@ class Api_logic{
             !isset($this->params['sobrenome']) ||
             !isset($this->params['data_nascimento']) ||
             !isset($this->params['senha']) ||
-            !isset($this->params['cep']) ||
-            !isset($this->params['estado']) ||
-            !isset($this->params['cidade']) ||
-            !isset($this->params['bairro']) ||
-            !isset($this->params['rua']) ||
-            !isset($this->params['numero']) ||
             $this->params['nome']=='' ||
             $this->params['email']=='' ||
             $this->params['cpf']=='' ||
             $this->params['telefone']=='' ||
             $this->params['sobrenome']=='' ||
             $this->params['data_nascimento']=='' ||
-            $this->params['senha']=='' ||
-            $this->params['cep']=='' ||
-            $this->params['estado']=='' ||
-            $this->params['cidade']=='' ||
-            $this->params['bairro']=='' ||
-            $this->params['rua']=='' ||
-            $this->params['numero']==''
+            $this->params['senha']==''
         ){
             return [
                 'status'=> 'ERROR',
@@ -262,7 +250,7 @@ class Api_logic{
                 'results' => []
             ];
         }
-
+        
         $params = [
             ':nome' => $this->params['nome'],
             ':cpf' => $this->params['cpf'],
@@ -270,14 +258,7 @@ class Api_logic{
             ':telefone' => $this->params['telefone'],
             ':sobrenome' => $this->params['sobrenome'],
             ':data_nascimento' => $this->params['data_nascimento'],
-            ':senha' => $this->params['senha'],
-            ':cep' => $this->params['cep'],
-            ':estado' => $this->params['estado'],
-            ':cidade' => $this->params['cidade'],
-            ':bairro' => $this->params['bairro'],
-            ':rua' => $this->params['rua'],
-            ':numero' => $this->params['numero'],
-            ':complemento' => $this->params['complemento']
+            ':senha' => $this->params['senha']
         ];
         // NAO HA CAMPO PARA CPF NO FORMULARIO AINDA, O CAMPO NO BD ESTA NULO
         $db = new database();
@@ -289,14 +270,7 @@ class Api_logic{
                     email,
                     senha,
                     data_nascimento,
-                    telefone,
-                    CEP,
-                    estado,
-                    cidade,
-                    rua,
-                    bairro,
-                    numero,
-                    complemento
+                    telefone
                 ) VALUES (
                     :nome,
                     :cpf,
@@ -304,14 +278,96 @@ class Api_logic{
                     :email,
                     :senha,
                     :data_nascimento,
-                    :telefone,
-                    :cep,
-                    :estado,
-                    :cidade,
-                    :rua,
-                    :bairro,
-                    :numero,
-                    :complemento
+                    :telefone
+                )
+
+        ",$params);
+        
+        /* $db = new database();
+        $results = $db->EXE_QUERY("
+            SELECT id FROM clientes
+            WHERE
+            email = :email
+        ",$params); */
+
+        return [
+            'status' => 'SUCCESS',
+            'message' => 'Cliente criado com sucesso',
+            'results' => $params
+        ];
+    }
+    // ===============================================================
+    public function update_client(){
+        
+        if(//Checar campos vazios
+            !isset($this->params['nome']) || 
+            !isset($this->params['cpf']) || 
+            !isset($this->params['email']) || 
+            !isset($this->params['telefone']) ||
+            !isset($this->params['data_nascimento']) ||
+            $this->params['nome']=='' ||
+            $this->params['email']=='' ||
+            $this->params['cpf']=='' ||
+            $this->params['telefone']=='' ||
+            $this->params['data_nascimento']==''
+        ){
+            return [
+                'status'=> 'ERROR',
+                'message'=> 'Informações insuficientes para atualizar cliente',
+                'results'=> []
+            ];
+        }
+        //checar emails duplicados
+        $db = new database();
+        $params = [
+            ':id' => $this->params['id'],
+            ':email' => $this->params['email'],
+            ':cpf' => $this->params['cpf']
+        ];
+        $results = $db->EXE_QUERY("
+            SELECT id FROM clientes
+            WHERE
+            (email = :email OR CPF = :cpf)
+            AND deleted_at IS NULL
+            AND id <> :id
+        ",$params);
+        return $results;
+        if(count($results) != 0){
+            return [
+                'status' => 'ERROR',
+                'message' => 'Já existe um cliente com o mesmo email ou CPF.',
+                'results' => []
+            ];
+        }
+        
+        $params = [
+            ':nome' => $this->params['nome'],
+            ':cpf' => $this->params['cpf'],
+            ':email' => $this->params['email'],
+            ':telefone' => $this->params['telefone'],
+            ':sobrenome' => $this->params['sobrenome'],
+            ':data_nascimento' => $this->params['data_nascimento'],
+            ':senha' => $this->params['senha']
+        ];
+        // NAO HA CAMPO PARA CPF NO FORMULARIO AINDA, O CAMPO NO BD ESTA NULO
+        $db = new database();
+        $db->EXE_QUERY("
+            INSERT INTO clientes (
+                    nome,
+                    CPF,
+                    sobrenome,
+                    email,
+                    senha,
+                    data_nascimento,
+                    telefone
+                ) VALUES (
+                    :nome,
+                    :cpf,
+                    :sobrenome,
+                    :email,
+                    :senha,
+                    :data_nascimento,
+                    :telefone
                 )
 
         ",$params);

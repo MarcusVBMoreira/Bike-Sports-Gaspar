@@ -31,7 +31,7 @@ if($_POST['user_senha'] !== $_POST['confirmar_senha']){
 }
 
 $senha_hash = password_hash($_POST['user_senha'],PASSWORD_DEFAULT);
-print_data($senha_hash);
+
 $result = api_request('create_new_client','POST',[
     'nome' => $_POST['user_nome'],
     'cpf' => $_POST['user_cpf'],
@@ -41,7 +41,6 @@ $result = api_request('create_new_client','POST',[
     'email' => $_POST['user_email'],
     'senha' => $senha_hash
 ]);
-
 
 if($result['data']['status'] == 'SUCCESS'){
     

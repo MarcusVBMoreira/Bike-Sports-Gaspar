@@ -1,3 +1,5 @@
+<?php
+?>
 <html>
 <!DOCTYPE html>
 <head>
@@ -5,15 +7,15 @@
 </head>
 <body>
     <div class="editar-perfil" id="abrir">
-        <form>
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="CPF">
-            <input type="text" placeholder="Data de nascimento">
-            <input type="text" placeholder="Telefone">
-            <input type="text" placeholder="Email">
+        <form method="POST" action="editar_usuario.php">
+            <input name="novo_nome" type="text" value="<?= $_SESSION['nome'] ?>" placeholder="Nome">
+            <input name="novo_cpf" type="text" value="<?= $_SESSION['CPF'] ?>" placeholder="CPF">
+            <input name="novo_data_nascimento" type="text" value="<?= $_SESSION['data_nascimento'] ?>" placeholder="Data de nascimento">
+            <input name="novo_telefone" type="text" value="<?= $_SESSION['telefone'] ?>" placeholder="Telefone">
+            <input name="novo_email" type="text" value="<?= $_SESSION['email'] ?>" placeholder="Email">
             <div class="btn-salvar-sair">
                 <input type="submit" value="Salvar">
-                <input type="submit" value="Sair">
+                <a href="perfil.php">Cancelar</a>
             </div>
         </form>
     </div>
@@ -115,15 +117,15 @@
                             </div>
                         </div>
                         <h3 class="bold">Nome:</h3>
-                        <p class="inter-regular">[ Usúario ]</p>
+                        <p class="inter-regular"><?= $_SESSION['nome'] ?></p>
                         <h3 class="bold">CPF:</h3>
-                        <p class="inter-regular">000.000.000-00</p>
+                        <p class="inter-regular"><?= $_SESSION['CPF'] ?></p>
                         <h3 class="bold">Data de Nascimento:</h3>
-                        <p class="inter-regular">DD/MM/AA</p>
+                        <p class="inter-regular"><?= $_SESSION['data_nascimento'] ?></p>
                         <h3 class="bold">Telefone:</h3>
-                        <p class="inter-regular">(00)0000-0000</p>
+                        <p class="inter-regular"><?= $_SESSION['telefone'] ?></p>
                         <h3 class="bold">Email:</h3>
-                        <p class="inter-regular">usuario@gmail.com</p>
+                        <p class="inter-regular"><?= $_SESSION['email'] ?></p>
                     </div>
                 </div>
                 <div class="btn-dados">
