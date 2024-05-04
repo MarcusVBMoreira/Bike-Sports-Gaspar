@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21/03/2024 às 04:50
+-- Tempo de geração: 04-Maio-2024 às 23:31
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,38 +24,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `clientes`
+-- Estrutura da tabela `clientes`
 --
 
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
-  `CPF` int(11) NOT NULL,
+  `CPF` varchar(50) NOT NULL,
   `sobrenome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `data_nascimento` date NOT NULL,
-  `telefone` int(11) NOT NULL,
-  `CEP` varchar(255) NULL,
-  `estado` varchar(255) NULL,
-  `cidade` varchar(255) NULL,
-  `rua` varchar(255) NULL,
-  `bairro` varchar(255) NULL,
-  `numero` varchar(255) NULL,
-  `complemento` varchar(255) NULL
+  `data_nascimento` varchar(50) NOT NULL,
+  `telefone` varchar(50) NOT NULL,
+  `CEP` varchar(255) DEFAULT NULL,
+  `estado` varchar(255) DEFAULT NULL,
+  `cidade` varchar(255) DEFAULT NULL,
+  `rua` varchar(255) DEFAULT NULL,
+  `bairro` varchar(255) DEFAULT NULL,
+  `numero` varchar(255) DEFAULT NULL,
+  `complemento` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `clientes`
+-- Extraindo dados da tabela `clientes`
 --
 
 INSERT INTO `clientes` (`id`, `nome`, `CPF`, `sobrenome`, `email`, `senha`, `data_nascimento`, `telefone`, `CEP`, `estado`, `cidade`, `rua`, `bairro`, `numero`, `complemento`) VALUES
-(1, 'asd', 0, '0', 'asd', 'asd', '0000-00-00', 0, 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd');
+(1, 'asd', '0', '0', 'asd', 'asd', '0000-00-00', '0', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd'),
+(2, 'Teste de seguranca', '123455', 'num1', 'abc@a.com', '$2y$10$PGyXIShpk7z/q0vVDq.QGODiMl0LEhzqiF.zl.ezxBpxoWbfEnr8K', '0000-00-00', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'kladmklasdkasl', '123123', 'masdklasdmkldmk', '1klmasdmkl@lmkasd.com', '$2y$10$YeN4J.gND5FXoGB0doUGmOJ6yAN0lCWzR59H9V2SgS9mS3GSrWfWm', '0000-00-00', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'Michel', '1029312', 'sobrenome', 'michel@email.com', 'dasmldasmkl', '0000-00-00', '11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 'alsdkm', '930192', 'sobrenomesdal', 'alsdkm@alsdkm>com', 'testenhakjn123', '0000-00-00', '12039', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'alsdkm', '9301929', 'sobrenomesdal', 'alsdkm@alsdkm.com', 'testenhakjn123', '0000-00-00', '12039', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `produtos`
+-- Estrutura da tabela `produtos`
 --
 
 CREATE TABLE `produtos` (
@@ -110,7 +115,7 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `produtos`
+-- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `valor`, `categoria`, `qnt_estoque`, `tipo`, `modelo`, `marca`, `composicao`, `compativel`, `peso`, `altura`, `largura`, `comprimento`, `especificacoes`, `img1`, `img2`, `img3`, `img4`, `cor1`, `qnt_cor1`, `tamanho_cor1`, `qnt_cor1_P`, `qnt_cor1_M`, `qnt_cor1_G`, `qnt_cor1_GG`, `cor2`, `qnt_cor2`, `tamanho_cor2`, `qnt_cor2_P`, `qnt_cor2_M`, `qnt_cor2_G`, `qnt_cor2_GG`, `cor3`, `qnt_cor3`, `tamanho_cor3`, `qnt_cor3_P`, `qnt_cor3_M`, `qnt_cor3_G`, `qnt_cor3_GG`, `cor4`, `qnt_cor4`, `tamanho_cor4`, `qnt_cor4_P`, `qnt_cor4_M`, `qnt_cor4_G`, `qnt_cor4_GG`) VALUES
@@ -125,26 +130,26 @@ INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `valor`, `categoria`, `qn
 --
 
 --
--- Índices de tabela `clientes`
+-- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `produtos`
+-- Índices para tabela `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`

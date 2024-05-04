@@ -3,8 +3,6 @@
   require('inc/api_functions.php');
   require('inc/functions.php');
 
-  session_start();
-
   if(empty($_SESSION)){
     header('Location: login.php');
   }

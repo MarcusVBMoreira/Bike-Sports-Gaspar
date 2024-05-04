@@ -293,7 +293,7 @@ class Api_logic{
         return [
             'status' => 'SUCCESS',
             'message' => 'Cliente criado com sucesso',
-            'results' => $params
+            'results' => []
         ];
     }
     // ===============================================================

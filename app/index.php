@@ -2,9 +2,7 @@
   require('inc/config.php');
   require('inc/api_functions.php');
   require('inc/functions.php');
-
-  session_start();
-
+  
   $results = api_request('get_all_products', 'GET');
 
   if($results['data']['status'] == 'SUCCESS'){

@@ -1,8 +1,4 @@
 <?php
-    require('inc/config.php');
-    require('inc/api_functions.php');
-    require('inc/functions.php');
-
     $is_invalid = false;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = api_request('get_client_by_email','GET',[

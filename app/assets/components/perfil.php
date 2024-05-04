@@ -1,5 +1,3 @@
-<?php
-?>
 <html>
 <!DOCTYPE html>
 <head>

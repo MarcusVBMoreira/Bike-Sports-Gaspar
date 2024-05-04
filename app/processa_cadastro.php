@@ -6,7 +6,11 @@ require('inc/functions.php');
 
 echo '<pre>';
 //VALIDAÇÃO
-
+/*
+[user_email] => 1klmasdmkl@lmkasd.com
+    [user_senha] => asdk(091321Lkm#
+    [confirmar_senha] => asdk(091321Lkm#
+*/
 /* $keys = array_keys($_POST);
 $values = array_values($_POST);//ACESSANDO CHAVES E VALORES DO POST
 $i = 0; */
