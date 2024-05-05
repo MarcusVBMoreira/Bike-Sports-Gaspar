@@ -13,7 +13,7 @@ session_set_cookie_params([
     'httponly' => true
 ]);
 
-if(!isset($_SESSION['ultimo_id'])){
+if(!isset($_SESSION['ultimo_id'])){//REGENERATE SESSION ID EVERY 30 MINUTES
     session_regenerate_id(true);
     $_SESSION['ultimo_id'] = time();
 } else{
