@@ -1,6 +1,6 @@
 <?php
-require '/xampp/htdocs/Bike-Sports-Gaspar/mp_teste/api/repositories/IUserRepository.php';
-require '/xampp/htdocs/Bike-Sports-Gaspar/mp_teste/api/context/DBContext.php';
+require '../api/repositories/IUserRepository.php';  
+require '../api/context/DBContext.php';
 class UserRepository implements IUserRepository{
     public $DBContext;
     private static $Instance = null;
@@ -39,7 +39,10 @@ class UserRepository implements IUserRepository{
         }
     }
     public function InsertUser($user){
-
+        if(!is_array($user)){
+            return "User paramater must be an associative array. Passed:" . var_dump($user) .".";
+        }
+        // ...
     }
     public function UpdateUser($user, $id){
 

@@ -17,7 +17,7 @@
     <div class=" h-100 d-flex justify-content-center align-items-center">
         <div class="center-box">
             <h1>Teste de pagamento</h1>
-            <p>Nome do usuário: <strong><?php print_r($users) ?></strong></p>
+            <p>Nome do usuário: <strong><?php echo '<pre>'; print_r($users) ?></strong></p>
         </div>
     </div>
 </body>
