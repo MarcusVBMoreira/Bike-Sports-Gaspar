@@ -12,6 +12,7 @@ define("_CODES",[
 class Response{
     private $Data;
     private const _AcceptedMethods = ['GET','POST','DELETE','PUT'];
+    //INITIALIZE OBJECT WITH METHOD AND ENDPOINT PARAMETERS
     public function __construct($method,$endpoint){
         if(!$this->MethodIsAccepted($method)){
             $this->RequestError(_CODES[6],'Request method invalid.');

@@ -1,5 +1,11 @@
 <?php
     require '../api/controllers/UserController.php';
+    require './send_request.php';
+
+    $res = send_request('users','getUsers','GETad');// NAO PODE TER ESPACO
+    echo '<pre>';
+    print_r($res);
+    die();
 
     $userController = new UserController();
     $users = $userController->GetUsers();
