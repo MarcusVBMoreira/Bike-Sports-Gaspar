@@ -111,14 +111,6 @@
                         <div class="nome_produto bold">
                             <?= $nome ?>
                         </div>
-                        <div class="cod_produto regular">
-                            (cod: <?php echo($codigo); ?>)
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
                         <div class="cor_produto">
                             <div class="cor_titulo">
                                 <h2 class="light">Cor:</h2>
