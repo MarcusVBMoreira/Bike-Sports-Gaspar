@@ -126,4 +126,30 @@
     font-size: 20px;
     color: var(--Branco-Cor);
     text-indent: 10px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 500px){
+    .header_bike_fitter div h1{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 450px){
+    .atendente{
+        width: 210px;
+    }
+    .atendente a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 380px){
+    .atendente{
+        width: 185px;
+    }
+    .atendente a{
+        font-size: 13px;
+    }
+    .header_bike_fitter div h1{
+        font-size: 15px;
+    }
 }
