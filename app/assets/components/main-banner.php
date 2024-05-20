@@ -4,13 +4,16 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="assets/img/banner-1.png" class="d-block w-100" alt="...">
+          <img src="assets/img/banner/banner1_deitado.jpg" class="w-100 deitado" alt="...">
+          <img src="assets/img/banner/banner1_vertical.jpg" class="w-100 vertical" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/img/banner-2.png" class="d-block w-100" alt="...">
+          <img src="assets/img/banner/banner2_deitado.jpg" class="w-100 deitado" alt="...">
+          <img src="assets/img/banner/banner2_vertical.jpg" class="w-100 vertical" alt="...">
         </div>
-        <div class="carousel-item">
-          <img src="assets/img/banner-3.png" class="d-block w-100" alt="...">
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="assets/img/banner/banner3_deitado.jpg" class="w-100 deitado" alt="...">
+          <img src="assets/img/banner/banner3_vertical.jpg" class="w-100 vertical" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -34,13 +37,25 @@
         justify-content: center;
         align-items: center;
       }
+      .vertical{
+        display: none;
+      }
+      .deitado{
+        display: flex;
+      }
       /* ---------Responsivo Header--------- */
       @media screen  and (max-width: 480px){
         .carousel-inner{
           width: 80%;
         }
         main{
-        margin-top: 50px;
+          margin-top: 50px;
+        }
+        .vertical{
+          display: flex;
+        }
+        .deitado{
+          display: none;
         }
       }
 
