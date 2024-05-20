@@ -534,7 +534,7 @@
                 <div class="produtos_infos">
                     <ul>
                         <li class="bold" onclick="descricao()">Descrição <div class="row_verde active" id="row_descricao"></div></li>
-                        <div class="row"></div>
+                        <div class="row_info_produtos"></div>
                         <li class="bold" onclick="medidas()">Medidas <div class="row_verde" id="row_medidas"></div></li>
                     </ul>
                     <div class="descricao active" id="descricao">
