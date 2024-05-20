@@ -260,6 +260,13 @@
         width: 100%;
     }
 }
+.row_info_produtos{
+    height: 25px;
+    border: solid 1.5px var(--Branco-Cor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .produtos_infos .row_verde.active{
     width: 100%;
     border: solid 1px var(--Verde-Cor);
