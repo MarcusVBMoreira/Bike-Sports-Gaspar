@@ -111,14 +111,6 @@
                         <div class="nome_produto bold">
                             <?= $nome ?>
                         </div>
-                        <div class="cod_produto regular">
-                            (cod: <?php echo($codigo); ?>)
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
                         <div class="cor_produto">
                             <div class="cor_titulo">
                                 <h2 class="light">Cor:</h2>
@@ -542,7 +534,7 @@
                 <div class="produtos_infos">
                     <ul>
                         <li class="bold" onclick="descricao()">Descrição <div class="row_verde active" id="row_descricao"></div></li>
-                        <div class="row"></div>
+                        <div class="row_info_produtos"></div>
                         <li class="bold" onclick="medidas()">Medidas <div class="row_verde" id="row_medidas"></div></li>
                     </ul>
                     <div class="descricao active" id="descricao">
