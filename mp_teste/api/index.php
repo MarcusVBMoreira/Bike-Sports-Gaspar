@@ -9,19 +9,33 @@
     5 => 404,
     6 => 405
 */
+echo "<pre>";
 
-//REQUIRE CONTROLLERS
-require '../api/controllers/UserController.php';
-//REQUIRE RESPONSE BUILDER CLASS
-require '../api/utilities/Response.php';
+require_once '../api/controllers/UserController.php';
+require_once '../api/utilities/Response.php';
+
+$userController = new UserController();
+
+define("_BASE_URI","/bike-sports-gaspar/mp_teste/api");
+define("_CODES",[
+    200,
+    201,
+    204,
+    401,
+    403,
+    404,
+    405
+]);
+
+
 
 $requestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
-
 if($requestMethod == 'GET'){
-    $response = new Response($requestMethod, $_SERVER['REQUEST_URI']);
+    $response = new Response($requestMethod,$route);
 }else if($requestMethod == 'POST'){
-    $response = new Response($requestMethod, $_POST['endpoint']);
+    $response = new Response($requestMethod,$route);
 }
 
-//INSTANTIATE RESPONSE CLASS
+$response->AddToResponse('message','API running Ok.');
+
 $response->Send(_CODES[0]);

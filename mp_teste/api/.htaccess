@@ -1,8 +1,13 @@
+Options +MultiViews
 <Files "*.php">
     Require ip 127.0.0.1
 </Files>
 
 <Files "index.php">
+    Require all granted
+</Files>
+
+<Files "routes/*.php">
     Require all granted
 </Files>
 
@@ -20,3 +25,4 @@ RewriteBase /simple-api/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php [QSA,L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
