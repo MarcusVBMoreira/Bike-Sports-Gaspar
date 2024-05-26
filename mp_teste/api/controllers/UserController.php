@@ -1,6 +1,6 @@
 <?php
-require '../api/repositories/UserRepository.php';//REQUIRING ESSENTIAL CLASSES
-require '../api/models/UserModel.php';
+require_once 'C:/xampp/htdocs/Bike-Sports-Gaspar/mp_teste/api/repositories/UserRepository.php';
+require_once 'C:/xampp/htdocs/Bike-Sports-Gaspar/mp_teste/api/models/UserModel.php';
 class UserController{
     private $UserRepository;
     private $User;

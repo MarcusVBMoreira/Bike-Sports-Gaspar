@@ -1,6 +1,6 @@
 <?php
-require '../api/repositories/IUserRepository.php';  
-require '../api/context/DBContext.php';
+require __DIR__ . '/IUserRepository.php'; 
+require __DIR__ . '/../context/DBContext.php';
 class UserRepository implements IUserRepository{
     public $DBContext;
     private static $Instance = null;

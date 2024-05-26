@@ -7,9 +7,11 @@ Options +MultiViews
     Require all granted
 </Files>
 
-<Files "routes/*.php">
+<Files "Get.php">
     Require all granted
 </Files>
+
+
 
 RewriteEngine On
 #Remove the comments to force https, you must have an SSL certificate.
@@ -21,7 +23,7 @@ RewriteEngine On
 RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
-RewriteBase /simple-api/
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php [QSA,L]

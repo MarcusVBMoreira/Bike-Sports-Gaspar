@@ -1,11 +1,11 @@
 <?php
 class Response{
     private $Data;
-    private const _AcceptedMethods = ['GET','POST','DELETE','PUT'];
+    private const _AcceptedMethods = ['GET','POST','DELETE','PUT',];
     //INITIALIZE OBJECT WITH METHOD AND ENDPOINT PARAMETERS
     public function __construct($method,$params = []){
         if(!$this->MethodIsAccepted($method)){
-            $this->RequestError(_CODES[6],"Request method invalid: $method");
+            $this->RequestError(400,"Request method invalid: $method");
         }
         // if(!$this->RouteIsAccepted($route)){
         //     $this->RequestError(_CODES[5],"Request route does not exist: $route");
