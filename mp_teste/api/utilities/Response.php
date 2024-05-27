@@ -5,7 +5,7 @@ class Response{
     //INITIALIZE OBJECT WITH METHOD AND ENDPOINT PARAMETERS
     public function __construct($method,$params = []){
         if(!$this->MethodIsAccepted($method)){
-            $this->RequestError(400,"Request method invalid: $method");
+            $this->RequestError(405,"Request method invalid: $method");
         }
         // if(!$this->RouteIsAccepted($route)){
         //     $this->RequestError(_CODES[5],"Request route does not exist: $route");
@@ -31,11 +31,8 @@ class Response{
         $this->Data[$key] = $value;
     }
     //THROWING ERRORS ON REQUEST
-    private function RequestError($code,$message){
-        $this->Data = [
-            'message' => $message,
-            'results' => null
-        ];
+    public function RequestError($code,$message){
+        $this->Data += ['message'=> $message,'results'=> null];
         $this->Send($code);
     }
     //SENDING RESPONSE AND KILL THE SCRIPT

@@ -34,7 +34,7 @@ class UserRepository implements IUserRepository{
             if(count($result)>0){
                 return $result[0];
             }else{
-                return "User of id $id not found in database.";
+                return "User of id $id not found in database. Make sure you tiped 'id' correctely on the request header.";
             }
         }
     }

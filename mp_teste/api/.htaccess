@@ -9,8 +9,11 @@ Options +MultiViews
 
 <Files "Get.php">
     Require all granted
-</Files>
+</Files>    
 
+<Files "GetById.php">
+    Require all granted
+</Files>
 
 
 RewriteEngine On
