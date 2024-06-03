@@ -7,7 +7,7 @@
         <header>
             <nav class="nav-1">
                 <div class="mob-log" id="mob-lob">
-                    <a href="index.php" class="logo"><img src="assets/img/logoBSG-branco-menor.png" alt="Logo Bike Sport Gaspar"></a>
+                    <a href="index.php" class="logo"><img src="assets/img/logoNovo.png" alt="Logo Bike Sport Gaspar"></a>
                     <div class="mobile-menu" onclick="menu_clicou()">
                         <div class="line1" id="line1"></div>
                         <div class="line2" id="line2"></div>
