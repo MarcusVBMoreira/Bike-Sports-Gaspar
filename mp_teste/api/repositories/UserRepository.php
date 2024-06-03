@@ -1,6 +1,6 @@
 <?php
-require '../api/repositories/IUserRepository.php';  
-require '../api/context/DBContext.php';
+require __DIR__ . '/IUserRepository.php'; 
+require __DIR__ . '/../context/DBContext.php';
 class UserRepository implements IUserRepository{
     public $DBContext;
     private static $Instance = null;
@@ -34,7 +34,7 @@ class UserRepository implements IUserRepository{
             if(count($result)>0){
                 return $result[0];
             }else{
-                return "User of id $id not found in database.";
+                return "User of id $id not found in database. Make sure you tiped 'id' correctely on the request header.";
             }
         }
     }

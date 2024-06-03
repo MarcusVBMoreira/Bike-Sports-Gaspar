@@ -1,9 +1,9 @@
 <?php
 
-define("API_BASE_URL","http://localhost/bike-sports-gaspar/mp_teste/api/"); //LOCALHOST CONFIG FOR API PATH
+define("API_BASE_URL","http://localhost/bike-sports-gaspar/mp_teste/api"); //LOCALHOST CONFIG FOR API PATH
 
 
-function send_request($route, $endpoint = '', $method, $variables = []){
+function send_request($route, $method, array $variables = []){
 
     $client = curl_init();
 
@@ -12,14 +12,13 @@ function send_request($route, $endpoint = '', $method, $variables = []){
     $url = API_BASE_URL;
 
     if($method == 'GET'){
-        $url .= $route . "/" . $endpoint; 
+        $url .= "$route"; 
         if(!empty($variables)){
-            $url .= "&" . http_build_query($variables);
+            $url .= "?" . http_build_query($variables);
         }
     }else if($method == 'POST'){
-        $body = array_merge(['endpoint' => $endpoint], $variables);
         curl_setopt($client, CURLOPT_POST, true);
-        curl_setopt($client, CURLOPT_POSTFIELDS, $body);
+        curl_setopt($client, CURLOPT_POSTFIELDS, $variables);
     }else{
         echo "APP: Método não reconhecido: " . $method;
     }
