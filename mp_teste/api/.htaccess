@@ -1,17 +1,10 @@
 Options +MultiViews
-<Files "*.php">
-    Require ip 127.0.0.1
-</Files>
+Options -Indexes
+# <Files "*.php">
+#     Require ip 127.0.0.1
+# </Files>
 
 <Files "index.php">
-    Require all granted
-</Files>
-
-<Files "Get.php">
-    Require all granted
-</Files>    
-
-<Files "GetById.php">
     Require all granted
 </Files>
 
@@ -26,8 +19,6 @@ RewriteEngine On
 RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
-
+RewriteRule ^(.*)?id=([0-9])$ 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)$ index.php [QSA,L]
-RewriteRule ^([^\.]+)$ $1.php [NC,L]

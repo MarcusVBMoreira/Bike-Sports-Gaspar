@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../../utilities/Response.php';
-require_once __DIR__ . '/../../controllers/UserController.php';
+require_once __DIR__ . '/../../private/utilities/Response.php';
+require_once __DIR__ . '/../../private/controllers/UserController.php';
 
 $response = new Response($_SERVER['REQUEST_METHOD']);
 $userController = new UserController();

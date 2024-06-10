@@ -19,7 +19,7 @@ class UserController{
         $this->User->Id = $user['id'];
         $this->User->Name = $user['nome'];
         $this->User->Email = $user['email'];
-        $this->User->Cpf = $user['cpf'];
+        $this->User->Cpf = $user['CPF'];
         $this->User->Birthday = $user['data_nascimento'];
         $this->User->Cep = $user['CEP'];
         $this->User->State = $user['estado'];
