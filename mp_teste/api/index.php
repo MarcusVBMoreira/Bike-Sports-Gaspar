@@ -5,7 +5,9 @@ define('_API_BASE_URI','http://localhost/bike-sports-gaspar/mp_teste/api');
 
 require_once __DIR__ . '/private/utilities/Response.php';
 
-$_GET['url'] = '/' . ucfirst($_GET['url']);
+$exploded_uri = explode('/', $_GET['url']);
+
+print_r($exploded_uri);die();
 
 define('_ROUTES',[
     '/' => '',
