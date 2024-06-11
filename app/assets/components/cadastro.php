@@ -8,7 +8,7 @@
             <div class="cadastro_container">
                 <div class="header_login_cadastro">
                     <a href="index.php" class="logo_login_cadastro">
-                        <img src="assets/img/logoBSG-preto-menor.png" alt="logo BSG">
+                        <img src="assets/img/logoNovo.png" alt="logo BSG">
                     </a>
                 </div>
                 <form action="processa_cadastro.php" method="POST" class="forms_login" id="forms_cadastro">
@@ -36,10 +36,10 @@
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
                             <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
                         </div>
-                        <div class="item_forms">
+                        <!-- <div class="item_forms">
                             <input type="text" placeholder="Data de nascimento" name="user_data_nascimento" id="data_nascimento" class="regular">
                             <span class="regular" id="span_data">Informar sua data de nascimento</span>
-                        </div>
+                        </div> -->
                         <div class="item_forms">
                             <input type="text" placeholder="E-mail" name="user_email" id="email" class="regular">
                             <span class="regular" id="span_email">Informar seu e-mail</span>

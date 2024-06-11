@@ -29,6 +29,10 @@ const sobrenome = document.querySelector("#sobrenome");
 const spanSobrenome = document.getElementById('span_sobrenome');
 const spanSobrenomeErrado = document.getElementById('span_sobrenome_errado');
 
+const CPF = document.querySelector("#CPF");
+const spanCPF = document.getElementById('span_cpf');
+const spanCPFErrado = document.getElementById('span_cpf_errado');
+
 const telefone = document.querySelector("#telefone");
 const spanTelefone = document.getElementById('span_telefone');
 const spanTelefoneErrado = document.getElementById('span_telefone_errado');
@@ -74,8 +78,9 @@ form.addEventListener("submit", (event) =>{
 
     var condicaoNome = false;
     var condicaoSobrenome = false;
+    var condicaoCPF = false
     var condicaoTelefone = false;
-    var condicaoData = false;
+    /* var condicaoData = false; */
     var condicaoEmail = false;
     var condicaoSenha = false;
     var condicaoConfirmarSenha = false;
@@ -127,6 +132,17 @@ form.addEventListener("submit", (event) =>{
         }  
     }
 
+    //!verificar se CPF está vazio
+    if(sobrenome.value ===""){
+        CPF.classList.add('active');
+        spanCPF.classList.add('active');
+    }else{
+        CPF.classList.remove('active');
+        spanCPF.classList.remove('active');
+        
+        condicaoCPF = true;
+    }
+
     //!verificar se o telefone está vazio
     if(telefone.value ===""){
         telefone.classList.add('active');
@@ -147,7 +163,7 @@ form.addEventListener("submit", (event) =>{
         }
     }
 
-    //!verificar se a data de nascimento está vazio
+    /* //!verificar se a data de nascimento está vazio
     if(data.value ===""){
         data.classList.add('active');
         spanData.classList.add('active');
@@ -157,7 +173,7 @@ form.addEventListener("submit", (event) =>{
         spanData.classList.remove('active');
 
         condicaoData = true;
-    }
+    } */
 
     //!verificar se o email está vazio
     if(email.value ===""){
@@ -291,7 +307,7 @@ form.addEventListener("submit", (event) =>{
         condicaoNumero = true;
     } */
 
-    if(condicaoNome & condicaoSobrenome & condicaoTelefone & condicaoData & condicaoEmail & condicaoSenha & condicaoConfirmarSenha){
+    if(condicaoNome & condicaoSobrenome & condicaoCPF & condicaoTelefone & condicaoEmail & condicaoSenha & condicaoConfirmarSenha){
         form.submit();
     }
 
