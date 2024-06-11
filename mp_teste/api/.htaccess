@@ -19,6 +19,6 @@ RewriteEngine On
 RewriteCond %{HTTP:Authorization} ^(.*)
 RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
-RewriteRule ^(.*)?id=([0-9])$ 
+RewriteRule ^(.*)$ index.php?url=$1 [QSA]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
