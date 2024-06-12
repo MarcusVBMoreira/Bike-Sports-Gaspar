@@ -125,11 +125,11 @@
                         <h3 class="bold">Email:</h3>
                         <p class="inter-regular"><?= $_SESSION['email'] ?></p>
                     </div>
-                </div>
-                <div class="btn-dados">
-                    <input type="submit" value="Alterar Senha">
-                    <input type="submit" onclick="abrirPerfil()" value="Editar Perfil">
-                    <a href="finalizar_sessao.php">Sair</a>
+                    <div class="btn-dados">
+                        <input type="submit" value="Alterar Senha">
+                        <input type="submit" onclick="abrirPerfil()" value="Editar Perfil">
+                        <a href="finalizar_sessao.php">Sair</a>
+                    </div>
                 </div>
             </div>
         </div>

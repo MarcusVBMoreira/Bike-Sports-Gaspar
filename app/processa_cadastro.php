@@ -41,7 +41,7 @@ $result = api_request('create_new_client','POST',[
     'cpf' => $_POST['user_cpf'],
     'sobrenome' => $_POST['user_sobrenome'],
     'telefone' => $_POST['user_telefone'],
-    'data_nascimento' => $_POST['user_data_nascimento'],
+    /* 'data_nascimento' => $_POST['user_data_nascimento'], */
     'email' => $_POST['user_email'],
     'senha' => $senha_hash
 ]);

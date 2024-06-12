@@ -30,5 +30,14 @@
     <?php
       require('assets/components/footer-responsivo.php');
     ?>
+    <?php
+      require('assets/components/compra-confirmada.php');
+    ?>
+    <?php
+      require('assets/components/compra-erro.php');
+    ?>
+    <?php
+      require('assets/components/compra-pendente.php');
+    ?>
 </body>
 </html>

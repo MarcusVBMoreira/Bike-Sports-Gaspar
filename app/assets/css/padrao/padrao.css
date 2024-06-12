@@ -80,7 +80,7 @@ a, p,button{
 body{
     width: 100%;
     background-color: var(--Preto-Cor);
-    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .container{
@@ -98,4 +98,8 @@ i{
 
 img{
     width: 100%;
+}
+
+body .active{
+    overflow-y: clip;
 }
