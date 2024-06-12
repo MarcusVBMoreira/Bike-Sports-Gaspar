@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php if(count($produtos)==0): ?>
-            <p>Não há clientes registrados</p>
+            <p class="nao-tem">Não há clientes registrados</p>
         <?php else: ?>
             <?php foreach($produtos as $p): ?>
                 <div class="produto">
@@ -30,4 +30,9 @@
             
         <?php endif ?>
     </body>
+    <style>
+        .nao-tem{
+            color: #fff;
+        }
+    </style>
 </html>
