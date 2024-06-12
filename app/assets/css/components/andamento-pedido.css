@@ -242,6 +242,9 @@
         gap: 20px;
         top: -90%;
     }
+    .conteudo {
+        width: 50%;
+    }
     .circle{
         width: 60px;
         height: 53%;
@@ -250,7 +253,14 @@
         width: 40px;
         height: 30px;
     }
+    .txt-ped{
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
 }
+
 @media screen and (max-width: 490px){
     .container-circle{
         width: 95%;
@@ -265,6 +275,9 @@
     .circle img{
         width: 40px;
         height: 30px;
+    }
+    .conteudo {
+        width: 45%;
     }
 }
 @media screen and (max-width: 470px){
@@ -286,4 +299,18 @@
         width: 30px;
         height: 20px;
     }
+    .conteudo {
+        width: 40%;
+    }
 }
+@media screen and (max-width: 430px){
+    .line{
+        width: 20%;
+    }
+    .container-mae{
+        gap: 5px;
+    }
+    .conteudo {
+        width: 35%;
+    }
+} 
