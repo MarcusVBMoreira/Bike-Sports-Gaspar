@@ -1,16 +1,27 @@
 <?php
+
+define('_CONF',parse_ini_file(__DIR__ . '/.ini', true));    
 class Response{
-    private $Data;
+    private $Data = [
+        'api_version' => _CONF['api']['API_VERSION'],
+        'api_active' => true,
+        'response_code' => 0,
+    ];
     private const _AcceptedMethods = ['GET','POST','DELETE','PUT',];
     //INITIALIZE OBJECT WITH METHOD AND ENDPOINT PARAMETERS
     public function __construct($method,$params = []){
-        if(!$this->MethodIsAccepted($method)){
+        if(!$this->MethodIsAccepted(strtoupper($method))){
+            $this->Data['response_code'] = 405;
             $this->RequestError(405,"Request method invalid: $method");
         }
-        // if(!$this->RouteIsAccepted($route)){
-        //     $this->RequestError(_CODES[5],"Request route does not exist: $route");
-        // }
+        if (_CONF['api']['API_ACTIVE']!=true) {
+            $this->Data['response_code'] = 503;
+            $this->RequestError(503,'API offline temporarily. Try again later.');
+        }
         $this->Data = [
+            'api_version' => _CONF['api']['API_VERSION'],
+            'api_active' => true,
+            'response_code' => 200,
             'request_method' => $method,
             'request_parameters' => $params
         ];

@@ -1,6 +1,7 @@
 <?php
 
 class DBContext{
+    private readonly array $c;
     private $Server;
     private $User;
     private $Password;
@@ -9,10 +10,12 @@ class DBContext{
     private static $Instance = null;
 
     private function __construct(){
-        $this->Server = 'localhost';
-        $this->User = 'user_bsg';
-        $this->Password = '2TScu202RFUV@iwA';
-        $this->Database = 'bike_sport_gaspar';
+        $this->c = _CONF;
+
+        $this->Server = $this->c['database']['DB_SERVER'];
+        $this->User = $this->c['database']['DB_USER'];
+        $this->Password = $this->c['database']['DB_PASS'];
+        $this->Database = $this->c['database']['DB_NAME'];
         $this->Pdo = new PDO("mysql:host=$this->Server;dbname=$this->Database", $this->User, $this->Password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8MB4"));
     }
     public static function GetInstance(){
