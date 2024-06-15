@@ -5,7 +5,6 @@ class UserModel{
     public $Id;
     public $Name;
     public $Email;
-    public $Password;
     public $Birthday;
     public $Phone;
     public $Cep;

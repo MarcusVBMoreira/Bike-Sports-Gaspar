@@ -15,7 +15,11 @@ class UserController{
     }
     public function GetUserById($id){
         $user = $this->UserRepository->GetUserById($id);
-        
+
+        if(!is_array($user)){
+            return $user;
+        }
+
         $this->User->Id = $user['id'];
         $this->User->Name = $user['nome'];
         $this->User->Email = $user['email'];

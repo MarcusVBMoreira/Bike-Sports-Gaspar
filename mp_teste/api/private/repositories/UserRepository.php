@@ -26,7 +26,7 @@ class UserRepository implements IUserRepository{
         }
     }
     public function GetUserById($id){
-        $query = $this->DBContext->prepare("SELECT * FROM clientes WHERE id = :id");
+        $query = $this->DBContext->prepare("SELECT * FROM clientes WHERE id = :id");//FILTRAR
         $query->bindValue(':id',$id);
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
