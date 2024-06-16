@@ -35,4 +35,10 @@ class UserController{
 
         return $this->User;
     }
+
+    public function CreateUser($user){
+        $created = $this->UserRepository->CreateUser($user);
+
+        return $created;
+    }
 }

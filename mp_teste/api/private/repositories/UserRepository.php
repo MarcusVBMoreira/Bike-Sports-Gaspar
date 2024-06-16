@@ -14,35 +14,55 @@ class UserRepository implements IUserRepository{
         return self::$Instance;
     }
     public function GetUsers(){
-        $query = $this->DBContext->prepare("SELECT * FROM clientes");
+        $query = $this->DBContext->prepare("
+            SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE deleted_at IS NULL
+        ");
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
             if(count($result)>0){
-                return $result;
+                return [
+                    'data' => $result,
+                    'code' => 200
+                ];
             }else{
-                return 'No users found in database.';
+                return [
+                    'data' => 'No users found in database.',
+                    'code' => 200
+                ];
             }
         }
     }
     public function GetUserById($id){
-        $query = $this->DBContext->prepare("SELECT * FROM clientes WHERE id = :id");//FILTRAR
+        $query = $this->DBContext->prepare("
+            SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE id = :id
+        ");//FILTRAR
         $query->bindValue(':id',$id);
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
             if(count($result)>0){
-                return $result[0];
+                return [
+                    'data' => $result[0],
+                    'code' => 200
+                ];
             }else{
-                return "User of id $id not found in database. Make sure you tiped 'id' correctely on the request header.";
+                return [
+                    'data' => "User of id $id not found in database.",
+                    'code' => 200
+                ];
             }
         }
     }
-    public function InsertUser($user){
+    public function CreateUser($user){
         if(!is_array($user)){
             return "User paramater must be an associative array. Passed:" . var_dump($user) .".";
         }
-        // ...
+
+        
+
+        return $user;
+        
     }
     public function UpdateUser($user, $id){
 

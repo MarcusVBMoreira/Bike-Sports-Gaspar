@@ -1,6 +1,7 @@
 <?php
 
 define('_CONF',parse_ini_file(__DIR__ . '/.ini', true));    
+
 class Response{
     private $Data = [
         'api_version' => _CONF['api']['API_VERSION'],
@@ -14,7 +15,7 @@ class Response{
             $this->Data['response_code'] = 405;
             $this->RequestError(405,"Request method invalid: $method");
         }
-        if (_CONF['api']['API_ACTIVE']!=true) {
+        if (_CONF['api']['API_ACTIVE']!=1) {
             $this->Data['response_code'] = 503;
             $this->RequestError(503,'API offline temporarily. Try again later.');
         }
@@ -52,6 +53,7 @@ class Response{
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
         http_response_code($code);
+        $this->Data['response_code'] = $code;
         echo json_encode($this->Data);
         die();
     }

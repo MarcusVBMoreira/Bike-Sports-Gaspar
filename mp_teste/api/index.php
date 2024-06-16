@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/private/utilities/Response.php';
 
+
 //TREATING THE URI
 $exploded_uri = explode('/', $_GET['uri']);
 
@@ -29,6 +30,8 @@ define('_ROUTES',[
     '/USERS/GET/' => '\public\users\get.php',
     '/USERS/GETBYID/' => '\public\users\getbyid.php',
     '/USERS/GETBYID' => '\public\users\getbyid.php',
+    '/USERS/CREATE' => '\public\users\create.php',
+    '/USERS/CREATE/' => '\public\users\create.php',
 ]);
 
 if ($requested_uri == '/') {
@@ -37,7 +40,8 @@ if ($requested_uri == '/') {
     $routes = [
         '/Users',
         '/Users/Get',
-        '/Users/GetById/{id}'
+        '/Users/GetById/{id}',
+        '/Users/Create/{name}/{cpf}/{email}/{password}/{birthday}/{phone}/{cep}/{state}/{city}/{street}/{neighbourhood}/{number}/{complement}',
     ];
     $response->AddToResponse('routes',$routes);
     $response->Send(200);

@@ -3,6 +3,11 @@
 require_once __DIR__ . '/../../private/utilities/Response.php';
 require_once __DIR__ . '/../../private/controllers/UserController.php';
 
+if(strtoupper($_SERVER['REQUEST_METHOD'])!= 'GET'){
+    $response = new Response($_SERVER['REQUEST_METHOD']);
+    $response->RequestError(405,'Verify your request method.');
+}
+
 
 if (isset($_GET['id'])) {
     $id = filter_input(INPUT_GET,'id', FILTER_VALIDATE_INT);
