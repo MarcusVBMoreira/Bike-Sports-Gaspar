@@ -29,7 +29,7 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
 //VALIDATE REQUIRED FIELDS
 if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['pwd']) || !isset($_POST['brtd']) || !isset($_POST['phone'])) {
     $response = new Response($_SERVER['REQUEST_METHOD'],$_POST);
-    $response->RequestError(400,'In order to create an user please fill the fields: name, email, pwd, brtd, phone');
+    $response->RequestError(400,'In order to create an user please fill the fields on request body: name, email, pwd, brtd, phone');
 }
 if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
     $response = new Response($_SERVER['REQUEST_METHOD'],$_POST);
@@ -48,6 +48,7 @@ $new_user = [
     'city' => isset($_POST['city']) ? $_POST['city'] : '',
     'strt' => isset($_POST['strt']) ? $_POST['strt'] : '',
     'ngbh' => isset($_POST['ngbh']) ? $_POST['ngbh'] : '',
+    'num' => isset($_POST['num']) ? $_POST['num'] : '',
     'comp' => isset($_POST['comp']) ? $_POST['comp'] : '',
 ];
 
@@ -55,5 +56,5 @@ $userController = new UserController();
 $created = $userController->CreateUser($new_user);
 
 $response = new Response($_SERVER['REQUEST_METHOD'],$new_user);
-$response->AddToResponse('results',$created);
-$response->Send(200);
+$response->AddToResponse('results',$created['data']);
+$response->Send($created['code']);
