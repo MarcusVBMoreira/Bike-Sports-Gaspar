@@ -41,7 +41,7 @@ if ($requested_uri == '/') {
         '/Users',
         '/Users/Get',
         '/Users/GetById/{id}',
-        '/Users/Create/{name}/{cpf}/{email}/{password}/{birthday}/{phone}/{cep}/{state}/{city}/{street}/{neighbourhood}/{number}/{complement}',
+        '/Users/Create/',
     ];
     $response->AddToResponse('routes',$routes);
     $response->Send(200);

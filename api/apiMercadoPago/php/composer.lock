@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba93c286d5737bf5d4ec506a2bd17518",
+    "content-hash": "c6c5e26da01c61d10392d20c42b2ebf2",
     "packages": [
         {
             "name": "mercadopago/dx-php",

@@ -61,7 +61,7 @@ class UserRepository implements IUserRepository{
 
         
 
-        return $user;
+        return $user['name'];
         
     }
     public function UpdateUser($user, $id){
