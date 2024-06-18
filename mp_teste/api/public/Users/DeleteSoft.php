@@ -20,6 +20,6 @@ $userController = new UserController();
 
 $deleted = $userController->SoftDeleteUser($_GET['id']);
 
-$response = new Response($_SERVER['REQUEST_METHOD']);
+$response = new Response($_SERVER['REQUEST_METHOD'],$_GET);
 $response->AddToResponse('results',$deleted['data']);
 $response->Send($deleted['code']);

@@ -25,5 +25,5 @@ $userController = new UserController();
 
 $user = $userController->GetUserById($id);
 
-$response->AddToResponse('results', $user);
-$response->Send(200);
+$response->AddToResponse('results', $user['data']);
+$response->Send($user['code']);

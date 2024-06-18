@@ -45,7 +45,7 @@ class UserController{
 
         return $deleted;
     }public function HardDeleteUser($id){
-        $deleted = $this->UserRepository->SoftDeleteUser($id);
+        $deleted = $this->UserRepository->HardDeleteUser($id);
 
         return $deleted;
     }

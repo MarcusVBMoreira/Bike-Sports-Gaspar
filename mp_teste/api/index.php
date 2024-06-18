@@ -38,6 +38,8 @@ define('_ROUTES',[
     '/USERS/DELETESOFT/' => '\public\users\deletesoft.php',
     '/USERS/DELETEHARD/' => '\public\users\deletehard.php',
     '/USERS/DELETEHARD' => '\public\users\deletehard.php',
+    '/USERS/UPDATE' => '\public\users\update.php',
+    '/USERS/UPDATE/' => '\public\users\update.php',
 ]);
 
 if ($requested_uri == '/') {

@@ -19,3 +19,7 @@ if(!isset($_GET['id']) || !filter_var($_GET['id'],FILTER_VALIDATE_INT)){
 $userController = new UserController();
 
 $deleted = $userController->HardDeleteUser($_GET['id']);
+
+$response = new Response($_SERVER['REQUEST_METHOD'],$_GET);
+$response->AddToResponse('result',$deleted['data']);
+$response->Send($deleted['code']);

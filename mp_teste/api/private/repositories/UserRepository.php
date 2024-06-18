@@ -147,7 +147,14 @@ class UserRepository implements IUserRepository{
         }        
     }
     public function UpdateUser($user, $id){
+        if(!is_array($user)){
+            return [
+                'data' => 'Updating user needs to be array. Passed: ' . var_dump($user),
+                'code' => 400
+            ];
+        }
 
+        
     }
     public function SoftDeleteUser($id){
         $query = $this->DBContext->prepare("
@@ -182,7 +189,7 @@ class UserRepository implements IUserRepository{
 
             if($query->execute()){
                 return [
-                    'data' => $result,
+                    'data' => 'User deactivated successfully',
                     'code' => 200
                 ];
             }else{
@@ -194,6 +201,39 @@ class UserRepository implements IUserRepository{
         }
     }
     public function HardDeleteUser($id){
+        $query = $this->DBContext->prepare("
+            SELECT * FROM clientes 
+            WHERE id = :id
+        ");
+        $query->bindValue(":id",$id);
 
+        if($query->execute()){
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            if(count($result) <= 0){
+                return [
+                    'data' => "User of id $id not found in database",
+                    'code' => 200
+                ];
+            }
+
+            $query = $this->DBContext->prepare("
+                DELETE FROM clientes
+                WHERE id = :id
+            ");
+            $query->bindValue(":id",$id);
+
+            if($query->execute()){
+                return [
+                    'data' => 'User deleted permanently.',
+                    'code' => 200
+                ];
+            }else{
+                return [
+                    'data'=> 'Failed to delete user',
+                    'code'=> 500
+                ];
+            }
+        }
     }
 }
