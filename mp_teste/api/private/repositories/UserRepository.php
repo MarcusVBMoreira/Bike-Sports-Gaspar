@@ -185,6 +185,11 @@ class UserRepository implements IUserRepository{
                     'data' => $result,
                     'code' => 200
                 ];
+            }else{
+                return [
+                    'data'=> 'Failed to soft delete user',
+                    'code'=> 500,
+                ];
             }
         }
     }

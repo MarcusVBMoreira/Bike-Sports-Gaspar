@@ -36,6 +36,8 @@ define('_ROUTES',[
     '/USERS/CREATE/' => '\public\users\create.php',
     '/USERS/DELETESOFT' => '\public\users\deletesoft.php',
     '/USERS/DELETESOFT/' => '\public\users\deletesoft.php',
+    '/USERS/DELETEHARD/' => '\public\users\deletehard.php',
+    '/USERS/DELETEHARD' => '\public\users\deletehard.php',
 ]);
 
 if ($requested_uri == '/') {
@@ -52,11 +54,14 @@ if ($requested_uri == '/') {
     $response->Send(200);
 }
 
-if (preg_match('(/users/getbyid/)i',$requested_uri) || preg_match('(/users/getbyid)i',$requested_uri)) {
+if (preg_match('(/users/getbyid/)i',$requested_uri)) {
     $requested_uri = '/USERS/GETBYID/';
 }
-if (preg_match('(/users/deletesoft/)i',$requested_uri) || preg_match('(/users/deletesoft)i',$requested_uri)) {
+if (preg_match('(/users/deletesoft/)i',$requested_uri)) {
     $requested_uri = '/USERS/DELETESOFT/';
+}
+if (preg_match('(/users/deletehard/)i',$requested_uri)) {
+    $requested_uri = '/USERS/DELETEHARD/';
 }
 
 //RETURN RESPONSE WITH ERROR IF ROUTE IS INCORRECT
