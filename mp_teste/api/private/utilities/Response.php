@@ -55,10 +55,9 @@ class Response{
     //SENDING RESPONSE AND KILL THE SCRIPT
     public function Send($code){
         header('Content-Type:application/json');
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
         http_response_code($code);
         $this->Data['response_code'] = $code;
+        $this->Data['response_time'] = microtime(true) - _START_TIME;
         echo json_encode($this->Data);
         die();
     }

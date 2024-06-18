@@ -5,5 +5,6 @@ interface IUserRepository{
     public function GetUsers();
     public function CreateUser($user);
     public function UpdateUser($user, $id);
-    public function DeleteUser($id);
+    public function SoftDeleteUser($id);
+    public function HardDeleteUser($id);
 }

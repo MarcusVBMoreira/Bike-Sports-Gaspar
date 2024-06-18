@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Jun-2024 às 01:17
+-- Tempo de geração: 18-Jun-2024 às 02:58
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -31,7 +31,6 @@ CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `CPF` varchar(50) NOT NULL,
-  `sobrenome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `data_nascimento` varchar(50) NOT NULL,
@@ -43,20 +42,22 @@ CREATE TABLE `clientes` (
   `bairro` varchar(255) DEFAULT NULL,
   `numero` varchar(255) DEFAULT NULL,
   `complemento` varchar(255) DEFAULT NULL,
-  `saldo` decimal(38,2) DEFAULT NULL
+  `saldo` decimal(38,2) DEFAULT NULL,
+  `created_at` varchar(255) NOT NULL,
+  `updated_at` varchar(255) NOT NULL,
+  `deleted_at` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `clientes`
 --
 
-INSERT INTO `clientes` (`id`, `nome`, `CPF`, `sobrenome`, `email`, `senha`, `data_nascimento`, `telefone`, `CEP`, `estado`, `cidade`, `rua`, `bairro`, `numero`, `complemento`, `saldo`) VALUES
-(1, 'asd', '0', '0', 'asd', 'asd', '0000-00-00', '0', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', NULL),
-(2, 'Teste de seguranca', '123455', 'num1', 'abc@a.com', '$2y$10$PGyXIShpk7z/q0vVDq.QGODiMl0LEhzqiF.zl.ezxBpxoWbfEnr8K', '0000-00-00', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'kladmklasdkasl', '123123', 'masdklasdmkldmk', '1klmasdmkl@lmkasd.com', '$2y$10$YeN4J.gND5FXoGB0doUGmOJ6yAN0lCWzR59H9V2SgS9mS3GSrWfWm', '0000-00-00', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'Michel', '1029312', 'sobrenome', 'michel@email.com', 'dasmldasmkl', '0000-00-00', '11', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 'alsdkm', '930192', 'sobrenomesdal', 'alsdkm@alsdkm>com', 'testenhakjn123', '0000-00-00', '12039', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 'alsdkm', '9301929', 'sobrenomesdal', 'alsdkm@alsdkm.com', 'testenhakjn123', '0000-00-00', '12039', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `clientes` (`id`, `nome`, `CPF`, `email`, `senha`, `data_nascimento`, `telefone`, `CEP`, `estado`, `cidade`, `rua`, `bairro`, `numero`, `complemento`, `saldo`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(11, 'teste', '', 'asddaasd', 'senha', '12-12-1230', '1239012390', '', '', '', '', '', '', '', NULL, '2024/06/17 19:07:34 America/Bahia\n2024/06/17 22:07:34 UTC', '2024/06/17 19:07:34 America/Bahia\n2024/06/17 22:07:34 UTC', '(2024/06/17 21:50:44 America/Bahia) - (2024/06/18 00:50:44 UTC)'),
+(12, 'teste', '', 'outrousuario@email.com', 'senha', '12-12-1230', '1239012390', '', '', '', '', '', '', '', NULL, '2024/06/17 19:20:24 America/Bahia\n2024/06/17 22:20:24 UTC', '2024/06/17 19:20:24 America/Bahia\n2024/06/17 22:20:24 UTC', NULL),
+(13, 'teste', '', 'outrousuario2@email.com', 'senha', '12-12-1230', '1239012390', '', '', '', '', '', '', '', NULL, '(2024/06/17 19:24:18 America/Bahia) - (2024/06/17 22:24:18 UTC)', '(2024/06/17 19:24:18 America/Bahia) - (2024/06/17 22:24:18 UTC)', NULL),
+(14, 'asd', '', 'asldkm@ala.com', 'senha generica sem segurança venha me roubar hackers', '10-12-2007', '10239110293', '', '', '', '', '', '', '', NULL, '(2024/06/17 21:54:16 America/Bahia) - (2024/06/18 00:54:16 UTC)', '(2024/06/17 21:54:16 America/Bahia) - (2024/06/18 00:54:16 UTC)', NULL),
+(15, 'asd', '', 'asldkm@skibidisigma.com', 'senha generica sem segurança venha me roubar hackers', '10-12-2007', '10239110293', '', '', '', '', '', '', '', NULL, '(2024/06/17 21:55:01 America/Bahia) - (2024/06/18 00:55:01 UTC)', '(2024/06/17 21:55:01 America/Bahia) - (2024/06/18 00:55:01 UTC)', NULL);
 
 -- --------------------------------------------------------
 
@@ -171,7 +172,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `pagamentos`

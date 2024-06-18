@@ -1,5 +1,7 @@
 <?php
 
+define('_START_TIME',microtime(true));
+
 require_once __DIR__ . '/private/utilities/Response.php';
 
 
@@ -32,6 +34,8 @@ define('_ROUTES',[
     '/USERS/GETBYID' => '\public\users\getbyid.php',
     '/USERS/CREATE' => '\public\users\create.php',
     '/USERS/CREATE/' => '\public\users\create.php',
+    '/USERS/DELETESOFT' => '\public\users\deletesoft.php',
+    '/USERS/DELETESOFT/' => '\public\users\deletesoft.php',
 ]);
 
 if ($requested_uri == '/') {
@@ -42,13 +46,17 @@ if ($requested_uri == '/') {
         '/Users/Get',
         '/Users/GetById/{id}',
         '/Users/Create/',
+        '/Users/DeleteSoft/',
     ];
     $response->AddToResponse('routes',$routes);
     $response->Send(200);
 }
 
-if (preg_match('(/users/getbyid/[0-9])i',$requested_uri) || preg_match('(/users/getbyid)i',$requested_uri)) {
+if (preg_match('(/users/getbyid/)i',$requested_uri) || preg_match('(/users/getbyid)i',$requested_uri)) {
     $requested_uri = '/USERS/GETBYID/';
+}
+if (preg_match('(/users/deletesoft/)i',$requested_uri) || preg_match('(/users/deletesoft)i',$requested_uri)) {
+    $requested_uri = '/USERS/DELETESOFT/';
 }
 
 //RETURN RESPONSE WITH ERROR IF ROUTE IS INCORRECT

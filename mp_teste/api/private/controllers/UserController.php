@@ -16,7 +16,7 @@ class UserController{
     public function GetUserById($id){
         $user = $this->UserRepository->GetUserById($id);
 
-        if(!is_array($user)){
+        if(count($user) > 0){
             return $user;
         }
 
@@ -35,10 +35,14 @@ class UserController{
 
         return $this->User;
     }
-
     public function CreateUser($user){
         $created = $this->UserRepository->CreateUser($user);
 
         return $created;
+    }
+    public function SoftDeleteUser($id){
+        $deleted = $this->UserRepository->SoftDeleteUser($id);
+
+        return $deleted;
     }
 }

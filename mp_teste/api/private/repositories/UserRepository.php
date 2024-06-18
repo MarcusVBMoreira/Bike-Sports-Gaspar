@@ -63,23 +63,44 @@ class UserRepository implements IUserRepository{
         $query = $this->DBContext->prepare("
             SELECT * FROM clientes 
             WHERE email = :email 
-            OR CPF = :cpf 
         ");
         $query->bindValue(":email",$user["email"]);
-        $query->bindValue(":cpf",$user["cpf"]);
+
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
             if(count($result)> 0){
                 return [
-                    'data' => 'There is already a user with the same email or CPF',
+                    'data' => 'There is already a user with the same email',
                     'code' => 400
                 ];
             }
         }
 
+        date_default_timezone_set('America/Bahia');
+        $time_brazil = date('Y/m/d H:i:s e');
+        date_default_timezone_set('UTC');
+        $time_utc = date('Y/m/d H:i:s e');
+        $created_at = "($time_brazil) - ($time_utc)";
+
         $query = $this->DBContext->prepare("
-            INSERT INTO clientes VALUES (
+            INSERT INTO clientes (
+                nome,
+                cpf,
+                email,
+                senha,
+                data_nascimento,
+                telefone,
+                cep,
+                estado,
+                cidade,
+                rua,
+                bairro,
+                numero,
+                complemento,
+                created_at,
+                updated_at
+            ) VALUES (
                 :nome,
                 :cpf,
                 :email,
@@ -92,7 +113,9 @@ class UserRepository implements IUserRepository{
                 :rua,
                 :bairro,
                 :numero,
-                :complemento
+                :complemento,
+                :created_at,
+                :updated_at
             )
         ");
         $query->bindValue(":nome",$user["name"]);
@@ -108,15 +131,64 @@ class UserRepository implements IUserRepository{
         $query->bindValue(":bairro",$user["ngbh"]);
         $query->bindValue(":numero",$user["num"]);
         $query->bindValue(":complemento",$user["comp"]);
+        $query->bindValue(":created_at",$created_at);
+        $query->bindValue(":updated_at",$created_at);
 
-
-        return $user['name'];
-        
+        if($query->execute()){
+            return [
+                'data' => 'User added successfully',
+                'code' => 201
+            ];
+        }else{
+            return [
+                'data' => 'Failed to add user',
+                'code' => 500
+            ];
+        }        
     }
     public function UpdateUser($user, $id){
 
     }
-    public function DeleteUser($id){
+    public function SoftDeleteUser($id){
+        $query = $this->DBContext->prepare("
+            SELECT * FROM clientes 
+            WHERE id = :id
+        ");
+        $query->bindValue(':id',$id);
+
+        if($query->execute()){
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            if(count($result) <= 0){
+                return [
+                    'data' => "User of id $id not found in database.",
+                    'code' => 200
+                ];
+            }
+
+            date_default_timezone_set('America/Bahia');
+            $time_brazil = date('Y/m/d H:i:s e');
+            date_default_timezone_set('UTC');
+            $time_utc = date('Y/m/d H:i:s e');
+            $deleted_at = "($time_brazil) - ($time_utc)";
+
+            $query = $this->DBContext->prepare("
+                UPDATE clientes SET 
+                deleted_at = :deleted 
+                WHERE id = :id
+            ");
+            $query->bindValue(':deleted',$deleted_at);
+            $query->bindValue(':id',$id);
+
+            if($query->execute()){
+                return [
+                    'data' => $result,
+                    'code' => 200
+                ];
+            }
+        }
+    }
+    public function HardDeleteUser($id){
 
     }
 }

@@ -1,5 +1,8 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET');
+
 require_once __DIR__ . '/../../private/utilities/Response.php';
 require_once __DIR__ . '/../../private/controllers/UserController.php';
 
@@ -16,10 +19,11 @@ if (isset($_GET['id'])) {
     $response->RequestError(400,"'id' key not properly set. Verify your request parameters.");
 }
 
+
 $response = new Response($_SERVER['REQUEST_METHOD'],$id);
 $userController = new UserController();
 
-$user = $userController->GetUserById($_GET['id']);
+$user = $userController->GetUserById($id);
 
 $response->AddToResponse('results', $user);
 $response->Send(200);
