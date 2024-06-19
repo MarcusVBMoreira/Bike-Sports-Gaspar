@@ -1,20 +1,19 @@
 <?php
-require __DIR__ . '/IUserRepository.php'; 
-require __DIR__ . '/../context/DBContext.php';
-class UserRepository implements IUserRepository{
-    public $DBContext;
+namespace Api\Private\Repositories;
+use Api\Private\Context\DBContext, PDO;
+
+class UserRepository implements GeneralInterface{
+    public static $DBContext;
     private static $Instance = null;
-    public function __construct(){
-        $this->DBContext = DBContext::GetInstance();
-    }
     public function GetInstance(){
         if(self::$Instance === null){
             self::$Instance = new self();
         }
         return self::$Instance;
     }
-    public function GetUsers(){
-        $query = $this->DBContext->prepare("
+    public static function Get(){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
             SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE deleted_at IS NULL
         ");
         if($query->execute()){
@@ -33,8 +32,9 @@ class UserRepository implements IUserRepository{
             }
         }
     }
-    public function GetUserById($id){
-        $query = $this->DBContext->prepare("
+    public static function GetById($id){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
             SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE id = :id
         ");//FILTRAR
         $query->bindValue(':id',$id);
@@ -54,13 +54,14 @@ class UserRepository implements IUserRepository{
             }
         }
     }
-    public function CreateUser($user){
+    public static function Create($user){
+        self::$DBContext = DBContext::GetInstance();
         if(!is_array($user)){
             return "User paramater must be an associative array. Passed:" . var_dump($user) .".";
         }
 
         //LOOK FOR DUPLICATE RECORDS
-        $query = $this->DBContext->prepare("
+        $query = self::$DBContext->prepare("
             SELECT * FROM clientes 
             WHERE email = :email 
         ");
@@ -83,7 +84,7 @@ class UserRepository implements IUserRepository{
         $time_utc = date('Y/m/d H:i:s e');
         $created_at = "($time_brazil) - ($time_utc)";
 
-        $query = $this->DBContext->prepare("
+        $query = self::$DBContext->prepare("
             INSERT INTO clientes (
                 nome,
                 cpf,
@@ -146,7 +147,8 @@ class UserRepository implements IUserRepository{
             ];
         }        
     }
-    public function UpdateUser($user, $id){
+    public static function Update($user, $id){
+        self::$DBContext = DBContext::GetInstance();
         if(!is_array($user)){
             return [
                 'data' => 'Updating user needs to be array. Passed: ' . var_dump($user),
@@ -156,8 +158,9 @@ class UserRepository implements IUserRepository{
 
         
     }
-    public function SoftDeleteUser($id){
-        $query = $this->DBContext->prepare("
+    public static function SoftDelete($id){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
             SELECT * FROM clientes 
             WHERE id = :id
         ");
@@ -179,7 +182,7 @@ class UserRepository implements IUserRepository{
             $time_utc = date('Y/m/d H:i:s e');
             $deleted_at = "($time_brazil) - ($time_utc)";
 
-            $query = $this->DBContext->prepare("
+            $query = self::$DBContext->prepare("
                 UPDATE clientes SET 
                 deleted_at = :deleted 
                 WHERE id = :id
@@ -200,8 +203,9 @@ class UserRepository implements IUserRepository{
             }
         }
     }
-    public function HardDeleteUser($id){
-        $query = $this->DBContext->prepare("
+    public static function HardDelete($id){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
             SELECT * FROM clientes 
             WHERE id = :id
         ");
@@ -217,7 +221,7 @@ class UserRepository implements IUserRepository{
                 ];
             }
 
-            $query = $this->DBContext->prepare("
+            $query = self::$DBContext->prepare("
                 DELETE FROM clientes
                 WHERE id = :id
             ");

@@ -1,5 +1,6 @@
 <?php
-
+namespace Api\Private\Context;
+use PDO;
 class DBContext{
     private readonly array $c;
     private $Server;

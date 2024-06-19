@@ -7,13 +7,11 @@ require_once __DIR__ . '/../../private/utilities/Response.php';
 require_once __DIR__ . '/../../private/controllers/UserController.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'DELETE'){
-    $response = new Response($_SERVER['REQUEST_METHOD'],$_GET);
-    $response->RequestError(405,'Verify your request method.');
+    Response::RequestError(405,'Verify your request method.');
 }
 
 if(!isset($_GET['id']) || !filter_var($_GET['id'],FILTER_VALIDATE_INT)){
-    $response = new Response($_SERVER['REQUEST_METHOD']);
-    $response->RequestError(400,"'id' key not properly set.");
+    Response::RequestError(400,"'id' key not properly set.");
 }
 
 $userController = new UserController();

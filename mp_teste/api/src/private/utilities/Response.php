@@ -1,4 +1,5 @@
 <?php
+namespace Api\Private\Utilities;
 
 define('_CONF',parse_ini_file(__DIR__ . '/.ini', true));    
 
@@ -48,9 +49,17 @@ class Response{
         $this->Data[$key] = $value;
     }
     //THROWING ERRORS ON REQUEST
-    public function RequestError($code,$message){
-        $this->Data += ['message'=> $message,'results'=> null];
-        $this->Send($code);
+    public static function RequestError($code,$message){
+        header('Content-Type:application/json');
+        http_response_code($code);
+        self::$Data['response_code'] = $code;
+        self::$Data['response_time'] = microtime(true) - _START_TIME;
+        self::$Data += [
+            'message' => $message,
+            'results' => null
+        ];
+        echo json_encode(self::$Data);
+        die();
     }
     //SENDING RESPONSE AND KILL THE SCRIPT
     public function Send($code){
