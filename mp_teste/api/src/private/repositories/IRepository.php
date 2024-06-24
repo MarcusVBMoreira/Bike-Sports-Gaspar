@@ -1,6 +1,6 @@
 <?php
 namespace Api\Private\Repositories;
-interface GeneralInterface{
+interface IRepository{
     public static function GetById($id);
     public static function Get();
     public static function Create($user);

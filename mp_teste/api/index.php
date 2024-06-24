@@ -71,7 +71,7 @@ if (preg_match('(/users/deletehard/)i',$requested_uri)) {
 
 //RETURN RESPONSE WITH ERROR IF ROUTE IS INCORRECT
 if (!isset(_ROUTES[$requested_uri])) {
-    Response::RequestError(400,"Route does not exist: " . $_SERVER['REQUEST_URI']);
+    Response::RequestError(400,"Route does not exist: " . $_SERVER['REQUEST_URI'],null);
 }
 
 $redirect_uri = __DIR__ . _ROUTES[$requested_uri];

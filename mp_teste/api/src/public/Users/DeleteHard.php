@@ -1,10 +1,10 @@
 <?php
 
+use Api\Private\Controllers\UserController;
+use Api\Private\Utilities\Response;
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: DELETE');
-
-require_once __DIR__ . '/../../private/utilities/Response.php';
-require_once __DIR__ . '/../../private/controllers/UserController.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'DELETE'){
     Response::RequestError(405,'Verify your request method.');

@@ -25,15 +25,15 @@ header('Access-Control-Allow-Methods: POST');
 
 //BLOCKING GET METHOD
 if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
-    Response::RequestError(405,'Verify your request method.');
+    Response::RequestError(405,'Verify your request method.',null);
 }
 
 //VALIDATE REQUIRED FIELDS
 if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['pwd']) || !isset($_POST['brtd']) || !isset($_POST['phone'])) {
-    Response::RequestError(400,'In order to create an user please fill the fields on request body: name, email, pwd, brtd, phone');
+    Response::RequestError(400,'In order to create an user please fill the fields on request body: name, email, pwd, brtd, phone',$_POST);
 }
 if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-    Response::RequestError(400,"The 'email' field is not a valid email address.");
+    Response::RequestError(400,"The 'email' field is not a valid email address.",$_POST);
 }
 
 $new_user = [

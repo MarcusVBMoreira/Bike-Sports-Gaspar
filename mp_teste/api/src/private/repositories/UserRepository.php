@@ -2,7 +2,7 @@
 namespace Api\Private\Repositories;
 use Api\Private\Context\DBContext, PDO;
 
-class UserRepository implements GeneralInterface{
+class UserRepository implements IRepository{
     public static $DBContext;
     private static $Instance = null;
     public function GetInstance(){
@@ -73,7 +73,7 @@ class UserRepository implements GeneralInterface{
             if(count($result)> 0){
                 return [
                     'data' => 'There is already a user with the same email',
-                    'code' => 400
+                    'code' => 200
                 ];
             }
         }

@@ -16,11 +16,11 @@ class Response{
     public function __construct($method,$params = []){
         if(!$this->MethodIsAccepted(strtoupper($method))){
             $this->Data['response_code'] = 405;
-            $this->RequestError(405,"Request method invalid: $method");
+            self::RequestError(405,"Request method invalid: $method",$params);
         }
         if (_CONF['api']['API_ACTIVE']!=1) {
             $this->Data['response_code'] = 503;
-            $this->RequestError(503,'API offline temporarily. Try again later.');
+            self::RequestError(503,'API offline temporarily. Try again later.',$params);
         }
         date_default_timezone_set('America/Bahia');
         $this->Data = [
@@ -49,16 +49,21 @@ class Response{
         $this->Data[$key] = $value;
     }
     //THROWING ERRORS ON REQUEST
-    public static function RequestError($code,$message){
+    public static function RequestError($code,$message,$params){
         header('Content-Type:application/json');
         http_response_code($code);
-        self::$Data['response_code'] = $code;
-        self::$Data['response_time'] = microtime(true) - _START_TIME;
-        self::$Data += [
+        $Data = [
+            'api_version' => _CONF['api']['API_VERSION'],
+            'response_code' => $code,
+            'response_time' => microtime(true) - _START_TIME,
+            'response_date' => date('Y-m-d H:i:s'),
+            'api_active' => true,
+            'request_method' => $_SERVER['REQUEST_METHOD'],
+            'request_parameters' => $params,
             'message' => $message,
-            'results' => null
+            'results' => null,
         ];
-        echo json_encode(self::$Data);
+        echo json_encode($Data);
         die();
     }
     //SENDING RESPONSE AND KILL THE SCRIPT
