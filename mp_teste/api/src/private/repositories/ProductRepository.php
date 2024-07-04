@@ -2,7 +2,7 @@
 namespace Api\Private\Repositories;
 use Api\Private\Context\DBContext, PDO;
 
-class UserRepository implements IRepository{
+class ProductRepository implements IRepository{
     public static $DBContext;
     private static $Instance = null;
     public function GetInstance(){
@@ -14,7 +14,7 @@ class UserRepository implements IRepository{
     public static function Get(){
         self::$DBContext = DBContext::GetInstance();
         $query = self::$DBContext->prepare("
-            SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE deleted_at IS NULL
+            SELECT * FROM produtos WHERE deleted_at IS NULL
         ");
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +35,7 @@ class UserRepository implements IRepository{
     public static function GetById($id){
         self::$DBContext = DBContext::GetInstance();
         $query = self::$DBContext->prepare("
-            SELECT id,nome,CPF,email,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE id = :id
+            SELECT * FROM produtos WHERE id = :id
         ");//FILTRAR
         $query->bindValue(':id',$id);
         
@@ -49,31 +49,31 @@ class UserRepository implements IRepository{
                 ];
             }else{
                 return [
-                    'data' => "User of id $id not found in database.",
+                    'data' => "Product of id $id not found in database.",
                     'code' => 200
                 ];
             }
         }
     }
-    public static function Create($user){
+    public static function Create($product){
         self::$DBContext = DBContext::GetInstance();
-        if(!is_array($user)){
-            return "User paramater must be an associative array. Passed:" . var_dump($user) .".";
+        if(!is_array($product)){
+            return "Product paramater must be an associative array. Passed:" . var_dump($product) .".";
         }
 
         //LOOK FOR DUPLICATE RECORDS
         $query = self::$DBContext->prepare("
-            SELECT * FROM clientes 
-            WHERE email = :email 
+            SELECT * FROM produtos 
+            WHERE nome = :name 
         ");
-        $query->bindValue(":email",$user["email"]);
+        $query->bindValue(":name",$product["name"]);
 
         if($query->execute()){
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
             if(count($result)> 0){
                 return [
-                    'data' => 'There is already a user with the same email',
+                    'data' => 'There is already a product with the same name',
                     'code' => 200
                 ];
             }
@@ -86,73 +86,92 @@ class UserRepository implements IRepository{
         $created_at = "($time_brazil) - ($time_utc)";
 
         $query = self::$DBContext->prepare("
-            INSERT INTO clientes (
+            INSERT INTO produtos (
                 nome,
-                cpf,
-                email,
-                senha,
-                data_nascimento,
-                telefone,
-                cep,
-                estado,
-                cidade,
-                rua,
-                bairro,
-                numero,
-                complemento,
+                descricao,
+                valor,
+                categoria,
+                quantidade,
+                tipo,
+                modelo,
+                marca,
+                composicao,
+                compativel,
+                peso,
+                altura,
+                largura,
+                comprimento,
+                especificacoes,
+                img1,
+                img2,
+                img3,
+                img4,
                 created_at,
                 updated_at
-            ) VALUES (
+            )
+            VALUES (
                 :nome,
-                :cpf,
-                :email,
-                :senha,
-                :data_nascimento,
-                :telefone,
-                :cep,
-                :estado,
-                :cidade,
-                :rua,
-                :bairro,
-                :numero,
-                :complemento,
+                :desc,
+                :val,
+                :cat,
+                :qtd,
+                :tp,
+                :mod,
+                :brnd,
+                :compst,
+                :comptb,
+                :wght,
+                :hght,
+                :wdth,
+                :lgth,
+                :spec,
+                :i1,
+                :i2,
+                :i3,
+                :i4,
                 :created_at,
                 :updated_at
             )
-        ");
-        $query->bindValue(":nome",$user["name"]);
-        $query->bindValue(":cpf",$user["cpf"]);
-        $query->bindValue(":email",$user["email"]);
-        $query->bindValue(":senha",$user["pwd"]);
-        $query->bindValue(":data_nascimento",$user["brtd"]);
-        $query->bindValue(":telefone",$user["phone"]);
-        $query->bindValue(":cep",$user["cep"]);
-        $query->bindValue(":estado",$user["st"]);
-        $query->bindValue(":cidade",$user["city"]);
-        $query->bindValue(":rua",$user["strt"]);
-        $query->bindValue(":bairro",$user["ngbh"]);
-        $query->bindValue(":numero",$user["num"]);
-        $query->bindValue(":complemento",$user["comp"]);
+        ");//CONVERTER VALORESS
+        $query->bindValue(":nome",$product["name"]);
+        $query->bindValue(":desc",$product["desc"]);
+        $query->bindValue(":val",$product["val"]);
+        $query->bindValue(":cat",$product["cat"]);
+        $query->bindValue(":qtd",$product["qtd"]);
+        $query->bindValue(":tp",$product["tp"]);
+        $query->bindValue(":mod",$product["mod"]);
+        $query->bindValue(":brnd",$product["brnd"]);
+        $query->bindValue(":compst",$product["compst"]);
+        $query->bindValue(":comptb",$product["comptb"]);
+        $query->bindValue(":wght",$product["wght"]);
+        $query->bindValue(":hght",$product["hght"]);
+        $query->bindValue(":wdth",$product["wdth"]);
+        $query->bindValue(":lgth",$product["lgth"]);
+        $query->bindValue(":spec",$product["spec"]);
+        $query->bindValue(":i1",$product["i1"]);
+        $query->bindValue(":i2",$product["i2"]);
+        $query->bindValue(":i3",$product["i3"]);
+        $query->bindValue(":i4",$product["i4"]);
         $query->bindValue(":created_at",$created_at);
         $query->bindValue(":updated_at",$created_at);
 
         if($query->execute()){
             return [
-                'data' => 'User added successfully',
+                'data' => 'Product added successfully',
                 'code' => 201
             ];
         }else{
             return [
-                'data' => 'Failed to add user',
+                'data' => 'Failed to add product',
                 'code' => 500
             ];
         }        
     }
-    public static function Update($user, $id){
+    public static function Update($product, $id){
         self::$DBContext = DBContext::GetInstance();
-        if(!is_array($user)){
+        if(!is_array($product)){
             return [
-                'data' => 'Updating user needs to be array. Passed: ' . var_dump($user),
+                'data' => 'Updating product needs to be array. Passed: ' . var_dump($product),
                 'code' => 400
             ];
         }
@@ -160,18 +179,18 @@ class UserRepository implements IRepository{
         $search_id = self::GetById($id);
         if(!is_array($search_id['data'])){
             return [
-                'data' => "User of id $id not found in database.",
+                'data' => "Product of id $id not found in database.",
                 'code' => 200
             ];
         }
 
         //LOOK FOR DUPLICATE EMAIL ON DIFFERENT RECORD
         $query = self::$DBContext->prepare("
-            SELECT * FROM clientes 
-            WHERE email = :email AND 
+            SELECT * FROM produtos 
+            WHERE nome = :name AND 
             id <> :id
         ");
-        $query->bindValue(":email",$user["email"]);
+        $query->bindValue(":name",$product["name"]);
         $query->bindValue(":id",$id);
 
         if($query->execute()){
@@ -179,27 +198,33 @@ class UserRepository implements IRepository{
 
             if(count($result)> 0){
                 return [
-                    'data' => 'There is already a user with the same email',
+                    'data' => 'There is already a product with the same name',
                     'code' => 200
                 ];
             }
         }
 
         $query = self::$DBContext->prepare("
-            UPDATE clientes SET
+            UPDATE produtos SET
             nome = :name,
-            cpf = :cpf,
-            email = :email,
-            senha = :pwd,
-            data_nascimento = :brtd,
-            telefone = :phone,
-            cep = :cep,
-            estado = :st,
-            cidade = :city,
-            rua = :strt,
-            bairro = :ngbh,
-            numero = :num,
-            complemento = :comp,
+            descricao = :desc,
+            valor = :val,
+            categoria = :cat,
+            quantidade = :qtd,
+            tipo = :tp,
+            modelo = :mod,
+            marca = :brnd,
+            composicao = :compst,
+            compativel = :comptb,
+            peso = :wght,
+            altura = :hght,
+            largura = :wdth,
+            comprimento = :lgth,
+            especificacoes = :spec,
+            img1 = :i1,
+            img2 = :i2,
+            img3 = :i3,
+            img4 = :i4,
             updated_at = :updated_at
             WHERE
             id = :id
@@ -211,30 +236,37 @@ class UserRepository implements IRepository{
         $time_utc = date('Y/m/d H:i:s e');
         $updated_at = "($time_brazil) - ($time_utc)";
 
-        $query->bindValue(':name',$user['name']);
-        $query->bindValue(':cpf',$user['cpf']);
-        $query->bindValue(':email',$user['email']);
-        $query->bindValue(':pwd',$user['pwd']);
-        $query->bindValue(':brtd',$user['brtd']);
-        $query->bindValue(':phone',$user['phone']);
-        $query->bindValue(':cep',$user['cep']);
-        $query->bindValue(':st',$user['st']);
-        $query->bindValue(':city',$user['city']);
-        $query->bindValue(':strt',$user['strt']);
-        $query->bindValue(':ngbh',$user['ngbh']);
-        $query->bindValue(':num',$user['num']);
-        $query->bindValue(':comp',$user['comp']);
-        $query->bindValue(':updated_at',$updated_at);
-        $query->bindValue(':id',$id);
-
+        $query->bindValue(":name",$product["name"]);
+        $query->bindValue(":desc",$product["desc"]);
+        $query->bindValue(":val",$product["val"]);
+        $query->bindValue(":cat",$product["cat"]);
+        $query->bindValue(":qtd",$product["qtd"]);
+        $query->bindValue(":tp",$product["tp"]);
+        $query->bindValue(":mod",$product["mod"]);
+        $query->bindValue(":brnd",$product["brnd"]);
+        $query->bindValue(":compst",$product["compst"]);
+        $query->bindValue(":comptb",$product["comptb"]);
+        $query->bindValue(":wght",$product["wght"]);
+        $query->bindValue(":hght",$product["hght"]);
+        $query->bindValue(":wdth",$product["wdth"]);
+        $query->bindValue(":lgth",$product["lgth"]);
+        $query->bindValue(":spec",$product["spec"]);
+        $query->bindValue(":i1",$product["i1"]);
+        $query->bindValue(":i2",$product["i2"]);
+        $query->bindValue(":i3",$product["i3"]);
+        $query->bindValue(":i4",$product["i4"]);
+        $query->bindValue(":updated_at",$updated_at);
+        $query->bindValue(":id",$id);
+        
+        
         if($query->execute()){
             return [
-                'data' => 'User updated successfully',
+                'data' => 'Product updated successfully',
                 'code' => 200
             ];
         }else{
             return [
-                'data' => 'Failed to update user.',
+                'data' => 'Failed to update product.',
                 'code' => 500
             ];
         }
@@ -244,7 +276,7 @@ class UserRepository implements IRepository{
     public static function SoftDelete($id){
         self::$DBContext = DBContext::GetInstance();
         $query = self::$DBContext->prepare("
-            SELECT * FROM clientes 
+            SELECT * FROM produtos 
             WHERE id = :id
         ");
         $query->bindValue(':id',$id);
@@ -254,7 +286,7 @@ class UserRepository implements IRepository{
 
             if(count($result) <= 0){
                 return [
-                    'data' => "User of id $id not found in database.",
+                    'data' => "Product of id $id not found in database.",
                     'code' => 200
                 ];
             }
@@ -266,7 +298,7 @@ class UserRepository implements IRepository{
             $deleted_at = "($time_brazil) - ($time_utc)";
 
             $query = self::$DBContext->prepare("
-                UPDATE clientes SET 
+                UPDATE produtos SET 
                 deleted_at = :deleted 
                 WHERE id = :id
             ");
@@ -275,12 +307,12 @@ class UserRepository implements IRepository{
 
             if($query->execute()){
                 return [
-                    'data' => 'User deactivated successfully',
+                    'data' => 'Product deactivated successfully',
                     'code' => 200
                 ];
             }else{
                 return [
-                    'data'=> 'Failed to soft delete user',
+                    'data'=> 'Failed to soft delete Product',
                     'code'=> 500,
                 ];
             }
@@ -289,7 +321,7 @@ class UserRepository implements IRepository{
     public static function HardDelete($id){
         self::$DBContext = DBContext::GetInstance();
         $query = self::$DBContext->prepare("
-            SELECT * FROM clientes 
+            SELECT * FROM produtos 
             WHERE id = :id
         ");
         $query->bindValue(":id",$id);
@@ -299,25 +331,25 @@ class UserRepository implements IRepository{
 
             if(count($result) <= 0){
                 return [
-                    'data' => "User of id $id not found in database",
+                    'data' => "Product of id $id not found in database",
                     'code' => 200
                 ];
             }
 
             $query = self::$DBContext->prepare("
-                DELETE FROM clientes
+                DELETE FROM produtos
                 WHERE id = :id
             ");
             $query->bindValue(":id",$id);
 
             if($query->execute()){
                 return [
-                    'data' => 'User deleted permanently.',
+                    'data' => 'Product deleted permanently.',
                     'code' => 200
                 ];
             }else{
                 return [
-                    'data'=> 'Failed to delete user',
+                    'data'=> 'Failed to delete Product',
                     'code'=> 500
                 ];
             }
@@ -329,12 +361,12 @@ class UserRepository implements IRepository{
         $search_id = self::GetById($id);
         if(!is_array($search_id['data'])){
             return [
-                'data' => "User of id $id not found in database.",
+                'data' => "Product of id $id not found in database.",
                 'code' => 200
             ];
         }   
         $query = self::$DBContext->prepare("
-            UPDATE clientes
+            UPDATE produtos
             SET $prop = '$value'
             WHERE id = $id
         ");

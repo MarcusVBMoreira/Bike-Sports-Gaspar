@@ -1,6 +1,6 @@
 <?php
 
-use Api\Private\Controllers\UserController;
+use Api\Private\Controllers\ProductController;
 use Api\Private\Utilities\Response;
 
 header('Access-Control-Allow-Origin: *');
@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
 
 $response = new Response($_SERVER['REQUEST_METHOD'],$id);
 
-$user = UserController::GetUserById($id);
+$user = ProductController::GetProductById($id);
 
 $response->AddToResponse('results', $user['data']);
 $response->Send($user['code']);
