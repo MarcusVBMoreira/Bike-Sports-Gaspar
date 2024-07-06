@@ -4,9 +4,9 @@ use Api\Private\Controllers\UserController;
 use Api\Private\Utilities\Response;
 
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: PUT');
+header('Access-Control-Allow-Methods: PATCH');
 
-if(strtoupper($_SERVER['REQUEST_METHOD']) != 'PUT'){
+if(strtoupper($_SERVER['REQUEST_METHOD']) != 'PATCH'){
     Response::RequestError(405,'Verify your request method.',null);
 }
 

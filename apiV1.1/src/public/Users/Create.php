@@ -29,8 +29,8 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
 }
 
 //VALIDATE REQUIRED FIELDS
-if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['pwd']) || !isset($_POST['brtd']) || !isset($_POST['phone'])) {
-    Response::RequestError(400,'In order to create an user please fill the fields on request body: name, email, pwd, brtd, phone',$_POST);
+if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['pwd']) || !isset($_POST['phone'])) {
+    Response::RequestError(400,'In order to create an user please fill the fields on request body: name, email, pwd, phone',$_POST);
 }
 if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
     Response::RequestError(400,"The 'email' field is not a valid email address.",$_POST);
@@ -41,7 +41,7 @@ $new_user = [
     'cpf' => isset($_POST['cpf']) ? $_POST['cpf'] : '',
     'email' => $_POST['email'],
     'pwd' => $_POST['pwd'],
-    'brtd' => $_POST['brtd'],
+    'brtd' => isset($_POST['brtd']) ? $_POST['brtd'] : '',
     'phone' => $_POST['phone'],
     'cep' => isset($_POST['cep']) ? $_POST['cep'] : '',
     'st' => isset($_POST['st']) ? $_POST['st'] : '',

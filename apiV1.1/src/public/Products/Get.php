@@ -3,6 +3,7 @@
 use Api\Private\Controllers\ProductController;
 use Api\Private\Utilities\Response;
 
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET');
 
