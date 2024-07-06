@@ -1,0 +1,115 @@
+:root{
+    --Preto-Cor: #000;
+    --Branco-Cor: #FFF;
+    --Cinza-Cor: #969696;
+    --CinzaClaro-Cor: #DFDFDF;
+    --Verde-Cor: #9CCC3C;
+    --Amarelo-Cor: #F2EA01;
+    --Vermelho-Cor: #E72526;
+    --Azul-Cor: #00C1EC;
+    --Laranja-Cor: #F24701;
+}
+
+.logo{
+    width: 120px;
+}
+.card-cadastro{
+    width: 60%;
+    margin: 30px auto;
+    background-color: var(--Branco-Cor);
+    padding: 4%;
+    border-radius: 10px;
+}
+.ttl h1{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-family: michroma;
+}
+.form{
+    display: flex;
+    width: 100%;
+    margin-top: 4%;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form label{
+    font-family: inter-regular;
+}
+.form select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Preto-Cor);
+    border-radius: 5px;
+    font-family: inter-regular;
+}
+.form h1{
+    color: var(--Preto-Cor);
+    font-size: 20px;
+    font: inter-bold;
+}
+.item_forms{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.container_cor1, .container_cor2.active, .container_cor3.active, .container_cor4.active,
+.container_cor1_PMGGG.active, .container_cor2_PMGGG.active, .container_cor3_PMGGG.active, .container_cor4_PMGGG.active{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container_cor2, .container_cor3, .container_cor4,
+.container_cor1_PMGGG, .container_cor2_PMGGG, .container_cor3_PMGGG, .container_cor4_PMGGG{
+    display: none;
+}
+.form input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Preto-Cor);
+    border-radius: 5px;
+    font-family: inter-regular;
+}
+.form input[type="text"].active{
+   border: 1px solid var(--Vermelho-Cor);
+}
+.form input[type="text"]:focus{
+    outline: none;
+}
+.form input[type="text"]::placeholder{
+    font-family: inter-regular;
+}
+.form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Preto-Cor);
+    border-radius: 5px;
+    font-family: inter-regular;
+}
+.btn_cadastrar{
+    padding: 2%;
+    color: var(--Branco-Cor);
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--Laranja-Cor);
+
+}
+.label_img1_opt2, .label_img2_opt2, .label_img3_opt2, .label_img4_opt2{
+    display: none;
+}
+#default, #tipo_bicicletas, #tipo_acessorios, #tipo_vestuario, #tipo_ferramentas, #tipo_componentes, #tipo_suplementos{
+    display: none;
+}
+#default.active, #tipo_bicicletas.active, #tipo_acessorios.active, #tipo_vestuario.active, #tipo_ferramentas.active, #tipo_componentes.active, #tipo_suplementos.active{
+    display: flex;
+}
+.div_img2.active, .div_img3.active, .div_img4.active{
+    display: flex;
+}
+.div_img2, .div_img3, .div_img4{
+    display: none;
+}

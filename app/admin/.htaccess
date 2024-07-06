@@ -3,6 +3,11 @@ AuthName "Painel de Controle"
 AuthUserFile c:/xampp/htdocs/bike-sports-gaspar/app/admin/assets/.htpasswd
 require valid-user
 
+<Files "index.php">
+    Require all granted
+</Files>
+
 RewriteEngine On
-RewriteRule ^(.*)$ index.php [NC,L]
-RewriteRule "(assets)" "-" [NC,F]
+RewriteRule (index.php) index.php [NC,L]
+RewriteRule (assets) "-" [NC,F]
+ 

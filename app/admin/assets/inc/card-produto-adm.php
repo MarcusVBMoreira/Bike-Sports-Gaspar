@@ -94,7 +94,7 @@
             <?php foreach($produtos as $p): ?>
                 <div class="produto_adm">
                     <div class="img_produto">
-                        <img src="../upload/<?= $p['img1'] ?>" alt="">
+                        <img src="../admin/assets/upload/<?= $p['img1'] ?>" alt="">
                     </div>
                     <div class="infos_produto">
                         <div class="top_infos">
