@@ -15,6 +15,7 @@
   <!-- Links CSS -->
   <link rel="stylesheet" href="assets/css/padrao.css">
   <link rel="stylesheet" href="assets/css/administracao.css">
+  <link rel="stylesheet" href="assets/css/card-produto-adm.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- !Favicon! -->
   <link rel="shortcut icon" alt="logo DKS" href="assets/img/logoBSG-branco-menor.ico" type="image/x-icon">

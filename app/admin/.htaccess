@@ -9,5 +9,4 @@ require valid-user
 
 RewriteEngine On
 RewriteRule (index.php) index.php [NC,L]
-RewriteRule (assets) "-" [NC,F]
- 
+
