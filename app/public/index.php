@@ -1,7 +1,11 @@
 <?php 
   require __DIR__ . '/inc/Request.php';
   $produtos = Request::Get();
-  $produtos = $produtos['results'];
+  if(!is_array($produtos['results'])){
+    $produtos = [];
+  }else{
+    $produtos = $produtos['results'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

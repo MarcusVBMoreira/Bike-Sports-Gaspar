@@ -26,7 +26,7 @@ class ProductRepository implements IRepository{
                 ];
             }else{
                 return [
-                    'data' => 'No users found in database.',
+                    'data' => 'No products found in database.',
                     'code' => 200
                 ];
             }
