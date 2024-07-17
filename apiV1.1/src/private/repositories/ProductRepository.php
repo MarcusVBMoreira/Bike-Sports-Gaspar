@@ -92,15 +92,14 @@ class ProductRepository implements IRepository{
                 valor,
                 categoria,
                 quantidade,
+                cor,
                 tipo,
                 modelo,
                 marca,
                 composicao,
                 compativel,
                 peso,
-                altura,
-                largura,
-                comprimento,
+                dimensoes,
                 especificacoes,
                 img1,
                 img2,
@@ -115,15 +114,14 @@ class ProductRepository implements IRepository{
                 :val,
                 :cat,
                 :qtd,
+                :col,
                 :tp,
                 :mod,
                 :brnd,
                 :compst,
                 :comptb,
                 :wght,
-                :hght,
-                :wdth,
-                :lgth,
+                :dim,
                 :spec,
                 :i1,
                 :i2,
@@ -138,15 +136,14 @@ class ProductRepository implements IRepository{
         $query->bindValue(":val",$product["val"]);
         $query->bindValue(":cat",$product["cat"]);
         $query->bindValue(":qtd",$product["qtd"]);
+        $query->bindValue(":col",$product["col"]);
         $query->bindValue(":tp",$product["tp"]);
         $query->bindValue(":mod",$product["mod"]);
         $query->bindValue(":brnd",$product["brnd"]);
         $query->bindValue(":compst",$product["compst"]);
         $query->bindValue(":comptb",$product["comptb"]);
         $query->bindValue(":wght",$product["wght"]);
-        $query->bindValue(":hght",$product["hght"]);
-        $query->bindValue(":wdth",$product["wdth"]);
-        $query->bindValue(":lgth",$product["lgth"]);
+        $query->bindValue(":dim",$product["dim"]);
         $query->bindValue(":spec",$product["spec"]);
         $query->bindValue(":i1",$product["i1"]);
         $query->bindValue(":i2",$product["i2"]);
