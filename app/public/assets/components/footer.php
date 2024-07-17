@@ -20,11 +20,6 @@
                             </a>
                             <a target="_blank" href="">
                                 <div class="icon-contact">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </div>
-                            </a>
-                            <a target="_blank" href="">
-                                <div class="icon-contact">
                                     <i class="fa-brands fa-facebook"></i>
                                 </div>
                             </a>

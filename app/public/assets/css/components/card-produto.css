@@ -19,7 +19,7 @@
     background-color: var(--Branco-Cor);
     margin-bottom: 2%;
     padding: 2%;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .img_produto{
     width: 100%;
@@ -61,7 +61,7 @@
     padding:  5%;
     text-align: center;
     background-color: orangered;
-    border-radius: 5px;
+    border-radius: 3    px;
     color: var(--Branco-Cor);
     font-size: 25px;
 }
