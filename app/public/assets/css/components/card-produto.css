@@ -12,28 +12,46 @@
 }
 
 .produto{
-    width: 100%;
-    height: 500px;
+    background-color: var(--Branco-Cor);
+    margin-bottom: 30px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: var(--Branco-Cor);
-    margin-bottom: 2%;
-    padding: 2%;
-    border-radius: 5px;
-}
-.img_produto{
-    width: 100%;
-    display: flex;
     align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 20%;
 }
-.nome_produto{
-    height: 20%;
+
+.produto-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
-.nome_produto p{
-    padding: 1%;
+
+.img_produto{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+
+}
+.img_produto a{
+    width: 90%;
+}
+.img_produto a img{
+    width: 100%;
+    height: 200px;
+}
+.nome_produto{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .nome_produto .bold{
     font-size: 18px;
@@ -42,12 +60,14 @@
     display: flex;
     align-items: center;
     height: 10%;
+    width: 90%;
 }
 .valor_produto .bold{
     font-size: 20px;
 }
 .botao_comprar{
-    width: 100%;
+    width: 90%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,9 +76,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2%;
-    width: 92%;
-    padding:  5%;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background-color: orangered;
     border-radius: 3    px;
@@ -78,6 +97,7 @@
 }
 .ver-mais{
     padding: 2%;
+    width: 90%;
 }
 .ver-mais p a{
     text-decoration: underline;
