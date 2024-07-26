@@ -61,9 +61,10 @@
 }
 .nome_produto{
     width: 100%;
+
     height: 15%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: var(--Preto-Cor);
     font-size: 1.5em;
@@ -73,6 +74,66 @@
     height: 10%;
     display: flex;
     align-items: center;
+}
+.cores{
+    display: flex;
+}
+#cor1, #cor2, #cor3, #cor4, #cor5{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cor1::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: var(--Preto-Cor);
+}
+#cor1:checked:focus, #cor2:checked:focus,
+#cor3:checked:focus, #cor4:checked:focus,
+#cor5:checked:focus{
+    border: #1edd05 2px solid;
+}
+#cor2::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: var(--Vermelho-Cor);
+}
+#cor3::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: var(--Azul-Cor);
+}
+#cor4::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: var(--Branco-Cor);
+}
+#cor5::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: var(--CinzaEscuro-Cor);
 }
 .cor_produto{
     width: 100%;
@@ -328,7 +389,8 @@
 }
 .img_produto{
     display: flex;
-    height: 70%;
+    width: 70%;
+    height: 75%;
 }
 .outras_img{
     display: flex;

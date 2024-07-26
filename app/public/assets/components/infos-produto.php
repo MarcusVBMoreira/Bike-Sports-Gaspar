@@ -84,19 +84,22 @@
                                 <h2 class="light">Cor:</h2>
                             </div>
                             <ul>
-                                <?php switch($produto['cor']): case 'preto': ?>
-                                    skibidi
-                                <?php break; case 'Vermelho': ?>
-                                    asdad
-                                <?php break; case 'Azul': ?>
-                                    asdasd
-                                <?php break; case 'Branco': ?>
-                                    asdasd
-                                <?php break; case 'Cinza': ?>
-                                    aaa
+                                <div class="cores">
+                                    <?php switch($produto['cor']): case 'preto': ?>
+                                        <input type="radio" name="" id="cor1">
+                                    <?php break; case 'Vermelho': ?>
+                                        <input type="radio" name="" id="cor2">
+                                    <?php break; case 'Azul': ?>
+                                        <input type="radio" name="" id="cor3">
+                                    <?php break; case 'Branco': ?>
+                                        <input type="radio" name="" id="cor4">
+                                    <?php break; case 'Cinza': ?>
+                                        <input type="radio" name="" id="cor5">
+                                </div>
                                 <?php break; default:  ?>
                                     cor nao encotrada
                                 <?php endswitch; ?>
+
                             </ul>
                         </div>
                         <div class="tamanho_produto">
