@@ -6,21 +6,19 @@
     <body>
         <?php if(isset($produto)){ 
             
-            $codigo = $produto['codigo'];
+            $codigo = $produto['id'];
             $nome = $produto['nome'];
             $descricao = $produto['descricao'];
             $valor = $produto['valor'];
             $categoria = $produto['categoria'];
-            $qnt_estoque = $produto['qnt_estoque'];
+            $qnt_estoque = $produto['quantidade'];
             $tipo = $produto['tipo'];
             $modelo = $produto['modelo'];
             $marca = $produto['marca'];
             $composicao = $produto['composicao'];
             $compativel = $produto['compativel'];
             $peso = $produto['peso'];
-            $altura = $produto['altura'];
-            $largura = $produto['largura'];
-            $comprimento = $produto['comprimento'];
+            $dimensoes = $produto['dimensoes'];
             $especificacoes = $produto['especificacoes'];
 
             $img1 = $produto['img1'];
@@ -28,37 +26,7 @@
             $img3 = $produto['img3'];
             $img4 = $produto['img4'];
 
-            $cor1 = $produto['cor1'];
-            $qnt_cor1 = $produto['qnt_cor1'];
-            $tamanho_cor1 = $produto['tamanho_cor1'];
-            $qnt_cor1_P = $produto['qnt_cor1_P'];
-            $qnt_cor1_M = $produto['qnt_cor1_M'];
-            $qnt_cor1_G = $produto['qnt_cor1_G'];
-            $qnt_cor1_GG = $produto['qnt_cor1_GG'];
-
-            $cor2 = $produto['cor2'];
-            $qnt_cor2 = $produto['qnt_cor2'];
-            $tamanho_cor2 = $produto['tamanho_cor2'];
-            $qnt_cor2_P = $produto['qnt_cor2_P'];
-            $qnt_cor2_M = $produto['qnt_cor2_M'];
-            $qnt_cor2_G = $produto['qnt_cor2_G'];
-            $qnt_cor2_GG = $produto['qnt_cor2_GG'];
-
-            $cor3 = $produto['cor3'];
-            $qnt_cor3 = $produto['qnt_cor3'];
-            $tamanho_cor3 = $produto['tamanho_cor3'];
-            $qnt_cor3_P = $produto['qnt_cor3_P'];
-            $qnt_cor3_M = $produto['qnt_cor3_M'];
-            $qnt_cor3_G = $produto['qnt_cor3_G'];
-            $qnt_cor3_GG = $produto['qnt_cor3_GG'];
-
-            $cor4 = $produto['cor4'];
-            $qnt_cor4 = $produto['qnt_cor4'];
-            $tamanho_cor4 = $produto['tamanho_cor4'];
-            $qnt_cor4_P = $produto['qnt_cor4_P'];
-            $qnt_cor4_M = $produto['qnt_cor4_M'];
-            $qnt_cor4_G = $produto['qnt_cor4_G'];
-            $qnt_cor4_GG = $produto['qnt_cor4_GG'];
+            $cor1 = $produto['cor'];
             
             
             ?>
@@ -116,156 +84,23 @@
                                 <h2 class="light">Cor:</h2>
                             </div>
                             <ul>
-                                <div>
-                                    <?php
-                                    
-                                        $tc1 = false;
-                                        
-                                        //!Verificando se tem a cor 1
-                                        if($cor1 != null && $qnt_cor1 != 0){
-
-                                            ?>
-                                                <li class="<?php echo($cor1); ?> ativo" onclick="funcao_cor1()" id="cor1"></li>
-                                            <?php
-
-                                            $qc1P = false;
-                                            $qc1M = false;
-                                            $qc1G = false;
-                                            $qc1GG = false;
-                                            
-                                            if($tamanho_cor1 != null){
-                                                $tc1 = true;
-                                            }
-
-                                            if($qnt_cor1_P > 0){
-                                                $qc1P = true;
-                                            }
-                                            if($qnt_cor1_M > 0){
-                                                $qc1M = true;
-                                            }
-                                            if($qnt_cor1_G > 0){
-                                                $qc1G = true;
-                                            }
-                                            if($qnt_cor1_GG > 0){
-                                                $qc1GG = true;
-                                            }
-                                            
-                                        }elseif($cor1 != null){
-                                            ?>
-                                                <li class="<?php echo($cor1); ?> inative"  id="cor1"></li>  
-                                            <?php
-                                        }
-
-                                        //!Verificando se tem a cor 2
-                                        if($cor2 != null && $qnt_cor2 != 0){
-
-                                            ?>
-                                                <li class="<?php echo($cor2); ?> ativo" onclick="funcao_cor2()" id="cor2"></li>
-                                            <?php
-
-                                            $tc2 = false;
-                                            $qc2P = false;
-                                            $qc2M = false;
-                                            $qc2G = false;
-                                            $qc2GG = false;
-
-                                            if($tamanho_cor2 != null){
-                                                $tc2 = true;
-                                            }
-
-                                            if($qnt_cor2_P > 0){
-                                                $qc2P = true;
-                                            }
-                                            if($qnt_cor2_M > 0){
-                                                $qc2M = true;
-                                            }
-                                            if($qnt_cor2_G > 0){
-                                                $qc2G = true;
-                                            }
-                                            if($qnt_cor2_GG > 0){
-                                                $qc2GG = true;
-                                            }
-                                        }elseif($cor2 != null){
-                                            ?>
-                                                <li class="<?php echo($cor2); ?> inative" id="cor2"></li>
-                                            <?php
-                                        }
-
-                                        //!Verificando se tem a cor 3
-                                        if($cor3 != null && $qnt_cor3 != 0){
-                                            ?>
-                                                <li class="<?php echo($cor3); ?> ativo" onclick="funcao_cor3()" id="cor3"></li>
-                                            <?php
-
-                                            $tc3 = false;
-                                            $qc3P = false;
-                                            $qc3M = false;
-                                            $qc3G = false;
-                                            $qc3GG = false;
-
-                                            if($tamanho_cor3 != null){
-                                                $tc3 = true;
-                                            }
-
-                                            if($qnt_cor3_P > 0){
-                                                $qc3P = true;
-                                            }
-                                            if($qnt_cor3_M > 0){
-                                                $qc3M = true;
-                                            }
-                                            if($qnt_cor3_G > 0){
-                                                $qc3G = true;
-                                            }
-                                            if($qnt_cor3_GG > 0){
-                                                $qc3GG = true;
-                                            }
-                                        }elseif($cor3 != null){
-                                            ?>
-                                                <li class="<?php echo($cor3); ?> inative" id="cor3"></li>
-                                            <?php
-                                        }
-
-                                        //!Verificando se tem a cor 4
-                                        if($cor4 != null && $qnt_cor4 != 0){
-                                            ?>
-                                                <li class="<?php echo($cor4); ?> ativo" onclick="funcao_cor4()" id="cor4"></li>
-                                            <?php
-
-                                            $tc4 = false;
-                                            $qc4P = false;
-                                            $qc4M = false;
-                                            $qc4G = false;
-                                            $qc4GG = false;
-
-                                            if($tamanho_cor4 != null){
-                                                $tc4 = true;
-                                            }
-
-                                            if($qnt_cor4_P > 0){
-                                                $qc4P = true;
-                                            }
-                                            if($qnt_cor4_M > 0){
-                                                $qc4M = true;
-                                            }
-                                            if($qnt_cor4_G > 0){
-                                                $qc4G = true;
-                                            }
-                                            if($qnt_cor4_GG > 0){
-                                                $qc4GG = true;
-                                            }
-                                        }elseif($cor4 != null){
-                                            ?>
-                                                <li class="<?php echo($cor4); ?> inative" id="cor4"></li>
-                                            <?php
-                                        }
-                                        ?>
-                                </div>
-                                <span class="regular span_cor" id="span_cor">Selecione uma cor disponível</span>
-                                <input type="none" class="input_none" id="cor" name="cor" value="none">
+                                <?php switch($produto['cor']): case 'preto': ?>
+                                    skibidi
+                                <?php break; case 'Vermelho': ?>
+                                    asdad
+                                <?php break; case 'Azul': ?>
+                                    asdasd
+                                <?php break; case 'Branco': ?>
+                                    asdasd
+                                <?php break; case 'Cinza': ?>
+                                    aaa
+                                <?php break; default:  ?>
+                                    cor nao encotrada
+                                <?php endswitch; ?>
                             </ul>
                         </div>
                         <div class="tamanho_produto">
-                            <ul>
+                            <!-- <ul>
                                 <div class="container_tamanho">
                                     <?php
                                     
@@ -511,7 +346,7 @@
                                 </div>
                                 <span class="span_tamanho regular" id="span_tamanho">Selecionar um tamanho</span>
                                 <input type="none" id="tamanho" class="input_none" name="tamanho" value="none">
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="valor_produto bold">
                             R$<?= $produto['valor'] ?>
