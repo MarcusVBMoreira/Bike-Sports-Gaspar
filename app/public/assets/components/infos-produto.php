@@ -25,8 +25,6 @@
             $img2 = $produto['img2'];
             $img3 = $produto['img3'];
             $img4 = $produto['img4'];
-
-            $cor1 = $produto['cor'];
             
             
             ?>
@@ -352,7 +350,7 @@
                             </ul> -->
                         </div>
                         <div class="valor_produto bold">
-                            R$<?= $produto['valor'] ?>
+                            R$<?= $valor ?>
                         </div>
                         <div class="botoes">
                             <div class="compra">
@@ -408,50 +406,12 @@
                                     <p class="regular compativel_p">Compatível: <?php echo($compativel) ?></p>
                                 <?php
                             }
-                            if($cor1 != null && ($cor2 != null or $cor3 != null or $cor4 != null)){
-                                ?>
-                                    <p class="regular cor_p">
-                                        <?php
-                                            echo('Cor: ' . $cor1);
-                                            if($cor2 != null){
-                                                echo(', ' . $cor2);
-                                            }
-                                            if($cor3 != null){
-                                                echo(', ' . $cor3);
-                                            }
-                                            if($cor4 != null){
-                                                echo(', ' . $cor4);
-                                            }
-                                        ?>
-                                    </p>
-                                <?php
-                            }
 
                         ?>
                     </div>
                     <div class="medidas" id="medidas">
-                    <?php
-                            if($peso != null){
-                                ?>
-                                    <p class="regular nome_p">Peso: <?php echo($peso);?></p>
-                                <?php
-                            }
-                            if($altura != null){
-                                ?>
-                                    <p class="regular nome_p">Altura: <?php echo($altura);?></p>
-                                <?php
-                            }
-                            if($largura != null){
-                                ?>
-                                    <p class="regular nome_p">Largura: <?php echo($largura);?></p>
-                                <?php
-                            }
-                            if($comprimento != null){
-                                ?>
-                                    <p class="regular nome_p">Comprimento: <?php echo($comprimento);?></p>
-                                <?php
-                            }
-                        ?>
+                        <p class="regular nome_p">Peso: <?= $peso ?></p>
+                        <p class="regular nome_p">Dimensões (CxAxL): <?= $dimensoes ?> cm</p>
                     </div>
                 </div>
             </div>
