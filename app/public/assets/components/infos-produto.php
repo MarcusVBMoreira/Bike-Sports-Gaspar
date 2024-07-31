@@ -83,7 +83,7 @@
                             </div>
                             <ul>
                                 <div class="cores">
-                                    <?php switch($produto['cor']): case 'preto': ?>
+                                    <?php switch($produto['cor']): case 'Preto': ?>
                                         <input type="radio" name="" id="cor1">
                                     <?php break; case 'Vermelho': ?>
                                         <input type="radio" name="" id="cor2">
@@ -377,41 +377,44 @@
                         <?php
                             if($nome != null){
                                 ?>
-                                    <p class="regular nome_p"><?php echo($nome);?></p>
+                                    <p class="regular nome_p" style="font-size:0.8em;"><?php echo($nome);?></p>
                                 <?php
                             }
                             if($descricao != null){
                                 ?>  
-                                    <p class="regular descricao_p">Descrição:</p>
-                                    <pre class="regular descricao_pre_p"><?php echo($descricao);?></pre>
+                                    <p class="regular descricao_p" style="font-size:0.8em;padding:1%;">Descrição: <?php echo($descricao)?></p>
                                 <?php
                             }
                             if($marca != null){
                                 ?>
-                                    <p class="regular marca_p">Marca: <?php echo($marca); ?></p>
+                                    <p class="regular marca_p" style="font-size:0.8em;line-height:1.2em">Marca: <?php echo($marca); ?></p>
                                 <?php
                             }
                             if($modelo != null){
                                 ?>
-                                    <p class="regular modelo_p">Modelo: <?php echo($modelo) ;?></p>
+                                    <p class="regular modelo_p" style="font-size:0.8em;line-height:1.2em">Modelo: <?php echo($modelo) ;?></p>
                                 <?php
                             }
                             if($composicao != null){
                                 ?>
-                                    <p class="regular compativel_p">Composição: <?php echo($composicao) ?></p>
+                                    <p class="regular compativel_p" style="font-size:0.8em;line-height:1.2em">Composição: <?php echo($composicao) ?></p>
                                 <?php
                             }
                             if($compativel != null){
                                 ?>
-                                    <p class="regular compativel_p">Compatível: <?php echo($compativel) ?></p>
+                                    <p class="regular compativel_p" style="font-size:0.8em;line-height:1.2em">Compatível com: <?php echo($compativel) ?></p>
                                 <?php
                             }
-
+                            if($especificacoes != null){
+                                ?>
+                                    <p class="regular compativel_p" style="font-size:0.8em;line-height:1.2em">Especificações: <?php echo $especificacoes ?></p>
+                                <?php
+                            }
                         ?>
                     </div>
                     <div class="medidas" id="medidas">
-                        <p class="regular nome_p">Peso: <?= $peso ?></p>
-                        <p class="regular nome_p">Dimensões (CxAxL): <?= $dimensoes ?> cm</p>
+                        <p class="regular nome_p" style="font-size:0.8em;line-height:1.2em">Peso: <?= $peso ?> g</p>
+                        <p class="regular nome_p" style="font-size:0.8em;line-height:1.2em">Dimensões (C x A x L): <?= $dimensoes ?> cm</p>
                     </div>
                 </div>
             </div>

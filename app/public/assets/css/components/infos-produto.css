@@ -351,6 +351,7 @@
 .nome_p, .marca_p, .modelo_p, .composicao_p, .compativel_p , .cor_p{
     color: var(--Branco-Cor);
     padding: 1%;
+    line-height: 5px;
 }
 .descricao pre{
     color: var(--Branco-Cor);
