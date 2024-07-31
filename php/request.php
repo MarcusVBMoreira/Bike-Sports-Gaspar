@@ -1,4 +1,5 @@
 <?php
+require_once 'vendor/autoload.php';
 MercadoPagoConfig::setAccessToken("ACCESS_TOKEN");
 
 $client = new PreferenceClient();
