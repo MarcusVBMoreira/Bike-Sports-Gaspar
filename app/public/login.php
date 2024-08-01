@@ -1,7 +1,4 @@
 <?php
-    require('inc/config.php');
-    require('inc/api_functions.php');
-    require('inc/functions.php');
 
 ?>
 <!DOCTYPE html>

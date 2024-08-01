@@ -28,7 +28,7 @@
                         <h1>Favoritos</h1>
                     </div>
                     <div class="container-favoritos">
-                        <div class="favorito">
+                        <!-- <div class="favorito">
                             <div class="img-fav">
                                 <img src="upload/produtos/3.png" alt="">
                             </div>
@@ -41,62 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="line"></div>
-                        <div class="favorito">
-                            <div class="img-fav">
-                                <img src="upload/produtos/3.png" alt="">
-                            </div>
-                            <div class="conteudo">
-                                <div class="nome-fav">
-                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
-                                </div>
-                                <div class="valor-fav">
-                                    <p>[Valor]</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div class="favorito">
-                            <div class="img-fav">
-                                <img src="upload/produtos/3.png" alt="">
-                            </div>
-                            <div class="conteudo">
-                                <div class="nome-fav">
-                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
-                                </div>
-                                <div class="valor-fav">
-                                    <p>[Valor]</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div class="favorito">
-                            <div class="img-fav">
-                                <img src="upload/produtos/3.png" alt="">
-                            </div>
-                            <div class="conteudo">
-                                <div class="nome-fav">
-                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
-                                </div>
-                                <div class="valor-fav">
-                                    <p>[Valor]</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line"></div>
-                        <div class="favorito">
-                            <div class="img-fav">
-                                <img src="upload/produtos/3.png" alt="">
-                            </div>
-                            <div class="conteudo">
-                                <div class="nome-fav">
-                                    <p class="txt-fav bold">Cambio Dianteiro Mtb Shimano Tz500 31.8 Puxa Por Baixo 42d</p>
-                                </div>
-                                <div class="valor-fav">
-                                    <p>[Valor]</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="line"></div> -->
                     </div>
                 </div>
             </div>
@@ -114,16 +59,26 @@
                                 <label for="addFoto">Adicionar foto</label>
                             </div>
                         </div>
+                        <?php if(isset($_SESSION['nome'])): ?>
                         <h3 class="bold">Nome:</h3>
                         <p class="inter-regular"><?= $_SESSION['nome'] ?></p>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['CPF'])): ?>
                         <h3 class="bold">CPF:</h3>
                         <p class="inter-regular"><?= $_SESSION['CPF'] ?></p>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['data_nascimento'])): ?>
                         <h3 class="bold">Data de Nascimento:</h3>
                         <p class="inter-regular"><?= $_SESSION['data_nascimento'] ?></p>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['telefone'])): ?>
                         <h3 class="bold">Telefone:</h3>
                         <p class="inter-regular"><?= $_SESSION['telefone'] ?></p>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['email'])): ?>
                         <h3 class="bold">Email:</h3>
                         <p class="inter-regular"><?= $_SESSION['email'] ?></p>
+                        <?php endif; ?>
                     </div>
                     <div class="btn-dados">
                         <input type="submit" value="Alterar Senha">

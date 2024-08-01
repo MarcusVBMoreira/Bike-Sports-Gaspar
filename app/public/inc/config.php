@@ -1,5 +1,4 @@
 <?php
-define("API_BASE_URL","http://localhost/bike-sports-gaspar/api/"); //LOCALHOST CONFIG FOR API PATH
 
 //SETTING SESSION SAFETY CONFIG
 ini_set('session.use_only_cookies', 1);
@@ -12,7 +11,6 @@ session_set_cookie_params([
     'secure' => true,
     'httponly' => true
 ]);
-
 if(!isset($_SESSION['ultimo_id'])){//REGENERATE SESSION ID EVERY 30 MINUTES
     session_regenerate_id(true);
     $_SESSION['ultimo_id'] = time();

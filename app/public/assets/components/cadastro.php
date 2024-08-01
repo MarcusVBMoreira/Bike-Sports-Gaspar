@@ -26,11 +26,11 @@
                             <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
                             <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
-                        <div class="item_forms">
+                        <!-- <div class="item_forms">
                             <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
                             <span class="regular" id="span_cpf">Informar seu CPF</span>
                             <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
-                        </div>
+                        </div> -->
                         <div class="item_forms">
                             <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>

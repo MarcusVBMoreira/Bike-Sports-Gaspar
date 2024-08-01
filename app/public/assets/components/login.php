@@ -1,16 +1,23 @@
 <?php
+    require __DIR__ . '/../../inc/Request.php';
+
     $is_invalid = false;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $result = api_request('get_client_by_email','GET',[
-            'email' => $_POST['email']
-        ]);
+        $result = Request::GetByEmailUser($_POST['email']);
+        $user = $result['results'];
         
-        $user = $result['data']['results']['0'];
-
         if(!empty($user)){
-            if(password_verify($_POST['senha'],$user['senha'])){
+            if(password_verify($_POST['senha'],$user['senha'])){    
+                require __DIR__ . '/../../inc/config.php';
                 session_start();
-                $_SESSION = $user;
+                $_SESSION = [
+                    'nome' => $user['nome'],
+                    'email' => $user['email'],
+                    'telefone' => $user['telefone'],
+                    'data_nascimento' => $user['data_nascimento'],
+                    'CPF' => $user['CPF'],
+                    'carrinho' => []
+                ];
                 header('Location: index.php');
             }else{
                 $is_invalid = true;

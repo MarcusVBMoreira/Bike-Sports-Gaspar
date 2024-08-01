@@ -55,6 +55,29 @@ class UserRepository implements IRepository{
             }
         }
     }
+    public static function GetByEmail($email){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
+            SELECT id,nome,CPF,email,senha,data_nascimento,telefone,CEP,estado,cidade,rua,bairro,numero,complemento FROM clientes WHERE email = :email
+        ");//FILTRAR
+        $query->bindValue(':email',$email);
+        
+        if($query->execute()){
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            if(count($result)>0){
+                return [
+                    'data' => $result[0],
+                    'code' => 200
+                ];
+            }else{
+                return [
+                    'data' => "User of email $email not found in database.",
+                    'code' => 200
+                ];
+            }
+        }
+    }
     public static function Create($user){
         self::$DBContext = DBContext::GetInstance();
         if(!is_array($user)){

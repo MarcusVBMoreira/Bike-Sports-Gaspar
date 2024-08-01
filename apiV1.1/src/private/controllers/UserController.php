@@ -8,6 +8,9 @@ class UserController{
     public static function GetUserById($id){
         return UserRepository::GetById($id);
     }
+    public static function GetUserByEmail($email){
+        return UserRepository::GetByEmail($email);
+    }
     public static function CreateUser($user){
         return UserRepository::Create($user);
     }

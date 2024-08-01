@@ -31,7 +31,7 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
 if (!isset($_POST['name']) || !isset($_POST['val']) || !isset($_POST['qtd'])) {
     Response::RequestError(400,'In order to create an user please fill the fields on request body: name, value, qtd',$_POST);
 }
-if(!filter_var($_POST['val'],FILTER_VALIDATE_FLOAT) || !filter_var($_POST['qtd'],FILTER_VALIDATE_INT)){
+if(!filter_var($_POST['val'],FILTER_VALIDATE_FLOAT) || !filter_var($_POST['qtd'],FILTER_VALIDATE_INT) && $_POST['qtd'] != 0){
     Response::RequestError(400,"The 'val' field must be a float value; 'qtd' field must be a integer value.",$_POST);
 }
 

@@ -1,6 +1,10 @@
 <?php 
+  session_start();
+  if(!isset($_SESSION['carrinho'])){
+    $_SESSION['carrinho'] = []; 
+  }
   require __DIR__ . '/inc/Request.php';
-  $produtos = Request::Get();
+  $produtos = Request::GetProd();
   if(!is_array($produtos['results'])){
     $produtos = [];
   }else{

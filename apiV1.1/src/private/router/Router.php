@@ -11,6 +11,7 @@ class Router{
             '/USERS/' => '\users\index.php',
             '/USERS/GET/' => '\users\get.php',
             '/USERS/GETBYID/' => '\users\getbyid.php',
+            '/USERS/GETBYEMAIL/' => '\users\getbyemail.php',
             '/PRODUCTS/' => '\products\index.php',
             '/PRODUCTS/GET/' => '\products\get.php',
             '/PRODUCTS/GETBYID/' => '\products\getbyid.php',

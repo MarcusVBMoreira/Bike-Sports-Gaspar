@@ -1,9 +1,5 @@
 <?php
-
-require('inc/config.php');
-require('inc/api_functions.php');
-require('inc/functions.php');
-
+require './inc/Request.php';
 echo '<pre>';
 //VALIDAÇÃO
 /*
@@ -36,19 +32,14 @@ if($_POST['user_senha'] !== $_POST['confirmar_senha']){
 
 $senha_hash = password_hash($_POST['user_senha'],PASSWORD_DEFAULT);
 
-$result = api_request('create_new_client','POST',[
-    'nome' => $_POST['user_nome'],
-    'cpf' => $_POST['user_cpf'],
-    'sobrenome' => $_POST['user_sobrenome'],
-    'telefone' => $_POST['user_telefone'],
-    /* 'data_nascimento' => $_POST['user_data_nascimento'], */
+$result = Request::CreateUser([
+    'name' => $_POST['user_nome'],
     'email' => $_POST['user_email'],
-    'senha' => $senha_hash
+    'phone' => $_POST['user_telefone'],
+    'pwd' => $senha_hash
+
 ]);
 
-if($result['data']['status'] == 'SUCCESS'){
-    
+if($result['response_code'] == 201){
     header('Location: login.php');
-}else{
-    echo $result['data']['message'];
 }
