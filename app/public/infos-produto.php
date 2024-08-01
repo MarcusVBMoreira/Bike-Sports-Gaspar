@@ -1,6 +1,6 @@
 <?php
   require __DIR__ . '/inc/Request.php';
-  $produto = Request::GetById($_GET['codigo']);
+  $produto = Request::GetByIdProd($_GET['codigo']);
   if(!is_array($produto['results'])){
     $produto = [];
   }else{

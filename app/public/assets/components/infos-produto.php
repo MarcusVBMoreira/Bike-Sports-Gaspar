@@ -26,7 +26,6 @@
             $img3 = $produto['img3'];
             $img4 = $produto['img4'];
             
-            
             ?>
             <div class="container">
                 <form action="" method="" class="produtos_geral" id="form_view_produto">
@@ -354,9 +353,9 @@
                         </div>
                         <div class="botoes">
                             <div class="compra">
-                                <button type="submit" class="btn_add_carrinho regular">
+                                <a href="adicionar_carrinho.php?id=<?= $codigo ?>" class="btn_add_carrinho regular">
                                     Adicionar ao carrinho <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
+                                </a>
                             </div>
                             <div class="frete">
                                 <div class="btn_frete">

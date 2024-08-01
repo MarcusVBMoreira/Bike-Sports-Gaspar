@@ -1,8 +1,4 @@
 <?php
-  require('inc/config.php');
-  require('inc/api_functions.php');
-  require('inc/functions.php');
-
   session_start();
 
   if(empty($_SESSION)){
@@ -13,7 +9,7 @@
   // consumer
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <?php
         require('assets/components/head.php');
@@ -35,6 +31,6 @@
     <?php
       require('assets/components/footer-responsivo.php');
     ?>
-    s
+    
 </body>
 </html>

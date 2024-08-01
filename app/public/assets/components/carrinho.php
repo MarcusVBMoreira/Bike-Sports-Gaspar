@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <html>
 <!DOCTYPE html>
 <head>
@@ -18,6 +15,12 @@
                 <a href="">Carrinho</a>
             </div>
         </div>
+        <?php 
+            
+        
+        
+        
+        ?>
         <div class="container-carrinho">
             <div class="pedido">
                 <div class="delete">
