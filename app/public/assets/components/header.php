@@ -226,9 +226,6 @@
                             <li><a href="view-produtos.php?tipo=Suplementos & categoria=Sache carbom" class="light">Sachê carbom</a></li>
                         </ul>
                     </li>
-                    <div class="categorias">
-                        <a href="">Bikes Magazines</a>
-                    </div>
                     <div class="icon-resp">
                         <a href=""><i class="fa-solid fa-user resp"></i></a>
                         <a href="#"><i class="fa-solid fa-heart resp"></i></a>            

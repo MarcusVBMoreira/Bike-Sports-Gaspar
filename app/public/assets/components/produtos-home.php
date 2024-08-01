@@ -6,10 +6,6 @@
     <body>
         <section id="produtos">
             <div class="produtos">
-                <div class="header-produtos">
-                    <h1 class="titulo">Produtos</h1>
-                    <div class="line-green"></div>
-                </div>
                 <div class="container-produtos">
                     <?php
                         require('assets/components/card-produto.php');

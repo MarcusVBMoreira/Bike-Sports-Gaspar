@@ -79,7 +79,7 @@ a, p,button{
 /* !HTML E BODY! */
 body{
     width: 100%;
-    background-color: var(--Preto-Cor);
+    background-color: #111117;
     overflow-y: scroll;
 }
 
