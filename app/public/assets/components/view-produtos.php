@@ -1,6 +1,8 @@
 <?php
     
     require __DIR__ . '/../../inc/Request.php';
+    $produtos = Request::GetProd();
+    print_r($produtos);
     foreach($produtos as $p){
         print_r($p);
         if($p['categoria'] == $categoria && $p['tipo'] == $tipo){
