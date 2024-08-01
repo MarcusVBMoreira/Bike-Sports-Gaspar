@@ -353,7 +353,7 @@
                         </div>
                         <div class="botoes">
                             <div class="compra">
-                                <a href="adicionar_carrinho.php?id=<?= $codigo ?>" class="btn_add_carrinho regular">
+                                <a href="adicionar_carrinho.php?id=<?php echo $codigo; ?>" class="btn_add_carrinho regular">
                                     Adicionar ao carrinho <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                             </div>

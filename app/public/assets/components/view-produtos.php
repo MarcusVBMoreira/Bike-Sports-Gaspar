@@ -1,3 +1,16 @@
+<?php
+    
+    require __DIR__ . '/../../inc/Request.php';
+    foreach($produtos as $p){
+        print_r($p);
+        if($p['categoria'] == $categoria && $p['tipo'] == $tipo){
+            $view_produtos += $p;
+            echo 'a';
+        }
+    }
+    print_r($view_produtos);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>

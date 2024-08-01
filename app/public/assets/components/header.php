@@ -38,71 +38,71 @@
                         </div>
                     <li>
                         <div class="nome-categoria">
-                            <a href="view-produtos.php?tipo=Bicicletas">Bicicletas</a>
+                            <a href="view-produtos.php?tipo=BICICLETAS">BICICLETAS</a>
                             <i class="fa-solid fa-angle-right" id="seta-bike" onclick="bike_dropdown()"></i>
                         </div>
                         <ul class="bike-dropdown" id="bike">
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 29" class="light">ARO 29</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 26" class="light">ARO 26</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 24" class="light">ARO 24</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 20" class="light">ARO 20</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 16" class="light">ARO 16</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Aro 12" class="light">ARO 12</a></li>
-                            <li><a href="view-produtos.php?tipo=Bicicletas & categoria=Bicicletinha de equilíbrio" class="light">Bicicletinha de Equilíbrio</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 29" class="light">ARO 29</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 26" class="light">ARO 26</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 24" class="light">ARO 24</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 20" class="light">ARO 20</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 16" class="light">ARO 16</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Aro 12" class="light">ARO 12</a></li>
+                            <li><a href="view-produtos.php?tipo=BICICLETAS & categoria=Bicicletinha de equilíbrio" class="light">Bicicletinha de Equilíbrio</a></li>
                         </ul> 
                     </li>
                     <li>
                         <div class="nome-categoria">
-                            <a href="view-produtos.php?tipo=Acessórios">Acessórios</a>
+                            <a href="view-produtos.php?tipo=ACESSORIOS">ACESSORIOS</a>
                             <i class="fa-solid fa-angle-right" id="seta-ace" onclick="ace_dropdown()"></i>
                         </div>
                         <ul class="container-ace-dropdown" id="ace">
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Adesivos" class="light">Adesivos</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Bar end" class="light">Bar end</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Bomda de ar" class="light">Bomba de Ar</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Bolsa" class="light">Bolsa</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Buzinas" class="light">Buzinas</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Adesivos" class="light">Adesivos</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Bar end" class="light">Bar end</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Bomda de ar" class="light">Bomba de Ar</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Bolsa" class="light">Bolsa</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Buzinas" class="light">Buzinas</a></li>
                             </ul>
                             <div class="line-ace"></div>
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Cadeado" class="light">Cadeado</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Cadeirinhas" class="light">Cadeirinhas</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Câmeras" class="light">Câmeras</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Capacetes" class="light">Capacetes</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Caramanhola" class="light">Caramanhola</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Cadeado" class="light">Cadeado</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Cadeirinhas" class="light">Cadeirinhas</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Câmeras" class="light">Câmeras</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Capacetes" class="light">Capacetes</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Caramanhola" class="light">Caramanhola</a></li>
                             </ul>
                             <div class="line-ace"></div>
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Co2" class="light">Co2</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Cestos" class="light">Cestos</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Descanso" class="light">Descanso</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Farol" class="light">Farol</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Lanterna" class="light">Lanterna</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Co2" class="light">Co2</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Cestos" class="light">Cestos</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Descanso" class="light">Descanso</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Farol" class="light">Farol</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Lanterna" class="light">Lanterna</a></li>
                             </ul>
                             <div class="line-ace"></div>
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Liquido tubless" class="light">Líquido tubeless</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Óculos" class="light">Óculos</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Paralamas" class="light">Paralamas</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Pneus" class="light">Pneus</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Porta celular" class="light">Porta celular</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Liquido tubless" class="light">Líquido tubeless</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Óculos" class="light">Óculos</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Paralamas" class="light">Paralamas</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Pneus" class="light">Pneus</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Porta celular" class="light">Porta celular</a></li>
                             </ul>
                             <div class="line-ace"></div>
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Remendos" class="light">Remendos</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Retrovisor" class="light">Retrovisor</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Roda lateral" class="light">Roda lateral</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte caramanhola" class="light">Suporte caramanhola</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte ciclo computador" class="light">Suporte ciclo computador</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Remendos" class="light">Remendos</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Retrovisor" class="light">Retrovisor</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Roda lateral" class="light">Roda lateral</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Suporte caramanhola" class="light">Suporte caramanhola</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Suporte ciclo computador" class="light">Suporte ciclo computador</a></li>
                             </ul>
                             <div class="line-ace"></div>
                             <ul class="ace-dropdown">
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte de farol" class="light">Suporte de farol</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte para bike" class="light">Suporte para bike</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte para carro" class="light">Suporte para carro</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Suporte de farol" class="light">Suporte de Farol</a></li>
-                                <li><a href="view-produtos.php?tipo=Acessórios & categoria=Válvula presta" class="light">Válvula presta </a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Suporte de farol" class="light">Suporte de farol</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=SUPORTE PARA BIKE" class="light">Suporte para bike</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Suporte para carro" class="light">Suporte para carro</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Suporte de farol" class="light">Suporte de Farol</a></li>
+                                <li><a href="view-produtos.php?tipo=ACESSORIOS & categoria=Válvula presta" class="light">Válvula presta </a></li>
                             </ul>
                         </ul> 
                     </li>
@@ -165,53 +165,53 @@
                     </li>
                     <li>
                         <div class="nome-categoria">
-                            <a href="view-produtos.php?tipo=Componentes">Componentes</a>
+                            <a href="view-produtos.php?tipo=COMPONENTES">COMPONENTES</a>
                             <i class="fa-solid fa-angle-right" id="seta-comp" onclick="comp_dropdown()"></i>
                         </div>
                         <ul class="container-comp-dropdown" id="comp">
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Abracadeiras" class="light">Abraçadeiras</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Aros" class="light">Aros</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Blocangens" class="light">Blocagens</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Caixa direcao" class="light">Caixa direção</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Cabo aço" class="light">Cabo aço</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Abracadeiras" class="light">Abraçadeiras</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Aros" class="light">Aros</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Blocangens" class="light">Blocagens</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Caixa direcao" class="light">Caixa direção</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Cabo aço" class="light">Cabo aço</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Cambio dianteiro" class="light">Cambio dianteiro</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Cambio traseiro" class="light">Cambio traseiro</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Canotes" class="light">Canotes</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Cassete" class="light">Cassete</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Conduites" class="light">Conduites</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Cambio dianteiro" class="light">Cambio dianteiro</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Cambio traseiro" class="light">Cambio traseiro</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Canotes" class="light">Canotes</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Cassete" class="light">Cassete</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Conduites" class="light">Conduites</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Coroas" class="light">Coroas</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Correntes" class="light">Corrente</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Cubos" class="light">Cubos</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Ezy fire" class="light">Ezy fire</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Fita guidão" class="light">Fita guidão</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Coroas" class="light">Coroas</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Correntes" class="light">Corrente</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Cubos" class="light">Cubos</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Ezy fire" class="light">Ezy fire</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Fita guidão" class="light">Fita guidão</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Garfo" class="light">Garfo</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Gancheira freios" class="light">Gancheira freios</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Guidão" class="light">Guidão</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Manetes" class="light">Manetes</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Garfo" class="light">Garfo</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Gancheira freios" class="light">Gancheira freios</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Guidão" class="light">Guidão</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Manetes" class="light">Manetes</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Moviento central" class="light">Movimento central</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Niples" class="light">Niples</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Pedivelas" class="light">Pedivelas </a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Rap fire" class="light">Rap fire</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Moviento central" class="light">Movimento central</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Niples" class="light">Niples</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Pedivelas" class="light">Pedivelas </a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Rap fire" class="light">Rap fire</a></li>
                             </ul>
                             <div class="line-comp"></div>
                             <ul class="comp-dropdown">
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Raios" class="light">Raios</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Rolamentos" class="light">Rolamentos</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Slim" class="light">Selim</a></li>
-                                <li><a href="view-produtos.php?tipo=Componentes & categoria=Suspensão" class="light">Suspensão</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Raios" class="light">Raios</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Rolamentos" class="light">Rolamentos</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=SELIM" class="light">Selim</a></li>
+                                <li><a href="view-produtos.php?tipo=COMPONENTES & categoria=Suspensão" class="light">Suspensão</a></li>
                             </ul>
                         </ul>
                     </li>
