@@ -55,6 +55,29 @@ class ProductRepository implements IRepository{
             }
         }
     }
+    public static function GetByCategory($cat){
+        self::$DBContext = DBContext::GetInstance();
+        $query = self::$DBContext->prepare("
+            SELECT * FROM produtos WHERE categoria = :cat
+        ");//FILTRAR
+        $query->bindValue(':cat',$cat);
+        
+        if($query->execute()){
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            if(count($result)>0){
+                return [
+                    'data' => $result,
+                    'code' => 200
+                ];
+            }else{
+                return [
+                    'data' => "Product of category $cat not found in database.",
+                    'code' => 200
+                ];
+            }
+        }
+    }
     public static function Create($product){
         self::$DBContext = DBContext::GetInstance();
         if(!is_array($product)){

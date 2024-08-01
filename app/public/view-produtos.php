@@ -1,11 +1,6 @@
 <?php 
   session_start();
-  if(isset($_GET['tipo'])){
-    $tipo = $_GET['tipo'];
-  }
-  if(isset($_GET['categoria'])){
-    $categoria = $_GET['categoria'];
-  }
+  
 
 ?>
 <!DOCTYPE html>

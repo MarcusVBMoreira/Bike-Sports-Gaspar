@@ -15,7 +15,6 @@
                         </div>
                         <div class="nome_produto">
                             <p class="bold"><?= $p['nome'] ?></p>
-                            <p class="regular">(cod. <?= $p['id'] ?>)</p>
                         </div>
                         <div class="valor_produto">
                             <p class="bold">R$ <?= $p['valor'] ?></p>

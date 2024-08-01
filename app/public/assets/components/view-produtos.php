@@ -1,16 +1,14 @@
 <?php
     
     require __DIR__ . '/../../inc/Request.php';
-    $produtos = Request::GetProd();
-    print_r($produtos);
+    $categoria = $_GET['categoria'];
+    $tipo = $_GET['tipo'];
+    $produtos = Request::GetByCategoryProd($categoria);
+    
     foreach($produtos as $p){
-        print_r($p);
-        if($p['categoria'] == $categoria && $p['tipo'] == $tipo){
-            $view_produtos += $p;
-            echo 'a';
-        }
+        print_r($p['nome']);
+        
     }
-    print_r($view_produtos);
 
 ?>
 <!DOCTYPE html>

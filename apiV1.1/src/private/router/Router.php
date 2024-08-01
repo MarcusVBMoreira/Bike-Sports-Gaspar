@@ -15,6 +15,7 @@ class Router{
             '/PRODUCTS/' => '\products\index.php',
             '/PRODUCTS/GET/' => '\products\get.php',
             '/PRODUCTS/GETBYID/' => '\products\getbyid.php',
+            '/PRODUCTS/GETBYCATEGORY/' => '\products\getbycategory.php',
         ],
         'POST' => [
             '/USERS/CREATE/' => '\users\create.php',

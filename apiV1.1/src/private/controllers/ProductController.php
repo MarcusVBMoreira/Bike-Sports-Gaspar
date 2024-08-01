@@ -8,6 +8,9 @@ class ProductController{
     public static function GetProductById($id){
         return ProductRepository::GetById($id);
     }
+    public static function GetProductByCategory($id){
+        return ProductRepository::GetByCategory($id);
+    }
     public static function CreateProduct($prod){
         return ProductRepository::Create($prod);
     }
