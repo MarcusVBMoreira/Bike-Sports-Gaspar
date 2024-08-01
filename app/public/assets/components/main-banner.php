@@ -27,8 +27,12 @@
     </div>
     <style>
       /* Banner Rotativo */ 
+      .main-banner{
+        width: 90%;
+        margin: 40px auto 0 auto;
+      }
       .carousel-item img{
-        width: 100%;
+        width: 80%;
         height: 450px;
         z-index: 0;
       }
