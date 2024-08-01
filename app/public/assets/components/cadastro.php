@@ -1,3 +1,50 @@
+<?php
+    require __DIR__ . '/../../inc/Request.php';
+    $is_invalid = false;
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $user = Request::GetByEmailUser($_POST['user_email']);
+        if(is_array($user['results'])){
+            $is_invalid = true;
+        }else{
+            echo '<pre>';
+            //VALIDAÇÃO
+            foreach($_POST as $key => $value){//VERIFICA SE TODOS OS CAMPOS OBRIGATÓRIOS FORAM PREENCHIDOS
+                if($key  !== "complemento"){
+                    if(empty($value)){
+                        die('Preencha todos os campos obrigatórios.');
+                    } 
+                }
+            }
+            
+            if(!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)){
+                die('Email inválido');
+            }
+
+            if(strlen($_POST['user_senha']) < 8){
+                die('Senha precisa conter pelo menos oito caracteres');
+            }
+
+            if($_POST['user_senha'] !== $_POST['confirmar_senha']){
+                die('Senhas precisam ser identicas');
+            }
+
+            $senha_hash = password_hash($_POST['user_senha'],PASSWORD_DEFAULT);
+
+            $result = Request::CreateUser([
+                'name' => $_POST['user_nome'] . ' ' . $_POST['user_sobrenome'],
+                'email' => $_POST['user_email'],
+                'phone' => $_POST['user_telefone'],
+                'pwd' => $senha_hash,
+                'cpf' => $_POST['user_cpf']
+            ]);
+
+            if($result['response_code'] == 201){
+                header('Location: login.php');
+            }
+        }
+    }
+
+?>
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -11,7 +58,7 @@
                         <img src="assets/img/logoNovo.png" alt="logo BSG">
                     </a>
                 </div>
-                <form action="processa_cadastro.php" method="POST" class="forms_login" id="forms_cadastro">
+                <form method="POST" class="forms_login" id="forms_cadastro">
                     <div class="components_forms">
                         <div class="titulo_login_cadastro">
                             <h1 class="titulo">Cadastro</h1>
@@ -26,11 +73,11 @@
                             <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
                             <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                         </div>
-                        <!-- <div class="item_forms">
+                        <div class="item_forms">
                             <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
                             <span class="regular" id="span_cpf">Informar seu CPF</span>
                             <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
-                        </div> -->
+                        </div>
                         <div class="item_forms">
                             <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
@@ -93,6 +140,9 @@
                             <input type="text" placeholder="Complemento(Opcional)" name="complemento" id="complemento" class="regular">
                         </div> -->
                     </div>
+                    <?php if($is_invalid): ?>
+                        <p style="color: red;">Já existe uma conta com este email.</p>
+                    <?php endif; ?>
                     <button type="submit" class="btn_entrar bold">Cadastrar</button>
                 </form>
                 <div class="cadastro_login">

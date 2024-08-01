@@ -59,19 +59,19 @@ class Request{
         return json_decode($response,true);
 
     }
-    public static function Create($data){
+    public static function CreateProd($data){
 
     }
-    public static function Update($data){
+    public static function UpdateProd($data){
 
     }
-    public static function UpdateProp($id,$prop,$value){
+    public static function UpdatePropProd($id,$prop,$value){
         
     }
-    public static function DeleteSoft($id){
+    public static function DeleteSoftProd($id){
 
     }
-    public static function DeleteHard($id){
+    public static function DeleteHardProd($id){
 
     }
     public static function GetUser(){
@@ -138,6 +138,7 @@ class Request{
         $email = $data['email'];
         $pwd = $data['pwd'];
         $phone = $data['phone'];
+        $cpf = $data['cpf'];
 
         $curl = curl_init();
 
@@ -150,7 +151,7 @@ class Request{
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => "name=$nome&email=$email&pwd=$pwd&phone=$phone",
+        CURLOPT_POSTFIELDS => "name=$nome&email=$email&pwd=$pwd&phone=$phone&cpf=$cpf",
         CURLOPT_HTTPHEADER => array(
             'Content-Type: application/x-www-form-urlencoded'
         ),
