@@ -37,23 +37,23 @@
                         <input type="text" id="especificacoes" name="especificacoes" placeholder="Digite as especificações do produto">
                     </div>
                     <div class="item_forms">
-                        <label for="valor_a_vista">Valor a vista</label>
-                        <input type="text" id="valor_a_vista" name="valor_a_vista" placeholder="Digite o valor do produto a vista">
+                        <label for="valor_a_vista">Valor a vista (Formato: 999.99)</label>
+                        <input type="text" id="valor_a_vista" name="valor" placeholder="Digite o valor do produto a vista">
                     </div>
                     <div class="item_forms">
-                        <label for="valor_parcelado">Digite o valor do produto parcelado</label>
+                        <label for="valor_parcelado">Digite o valor do produto parcelado (Formato: 999.99)</label>
                         <input type="text" id="valor_parcelado" name="valor_parcelado" placeholder="Valor parcelado">
                     </div>
                     <div class="item_forms">
                         <label for="tipo">Categoria de produto:</label>
                         <select id="categoria" name="categoira">
                             <option value="" id="default" class="default active">Selecione o tipo de produto</option>
-                            <option value="Bicicletas">Bicicletas</option>
-                            <option value="Acessórios">Acessórios</option>
-                            <option value="Vestuário">Vestuário</option>
-                            <option value="Ferramentas">Ferramentas</option>
-                            <option value="Componentes">Componentes</option>
-                            <option value="Suplementos">Suplementos</option>
+                            <option value="BICICLETAS">Bicicletas</option>
+                            <option value="ACESSORIOS">Acessórios</option>
+                            <option value="VESTUARIO">Vestuário</option>
+                            <option value="FERRAMENTAS">Ferramentas</option>
+                            <option value="COMPONENTES">Componentes</option>
+                            <option value="SUPLEMENTOS">Suplementos</option>
                         </select>
                     </div>
                     <div class="item_forms">
@@ -181,7 +181,7 @@
                     </div>
                     <div class="item_forms">
                         <label for="peso">Peso do produto</label>
-                        <input type="text" id="peso" name="peso" placeholder="Digite o preso do produto em KG">
+                        <input type="text" id="peso" name="peso" placeholder="Digite o preso do produto em gramas">
                     </div>
                     <div class="item_forms">
                         <label for="altura">Altura do produto</label>
