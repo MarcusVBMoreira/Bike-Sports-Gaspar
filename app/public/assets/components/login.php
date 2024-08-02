@@ -28,7 +28,7 @@
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="assets/css/components/login_cadastro.css">
+        <link rel="stylesheet" href="assets/css/components/login.css">
     </head>
     <body>
         <div class="container">

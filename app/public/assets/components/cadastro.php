@@ -48,7 +48,7 @@
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="assets/css/components/login_cadastro.css">
+        <link rel="stylesheet" href="assets/css/components/cadastro.css">
     </head>
     <body>
     <div class="container_cadastro">
@@ -64,7 +64,7 @@
         <div id="progres"></div>
         <div class="row">
             <div class="image-space">
-                <img src="assets/img/Cadastro/andandobike.webp" alt="">
+                <img src="assets/img/andandobike.webp" alt="">
             </div>
             <form action="processa_cadastro.php" method="POST" class="formulario-cadastro" id="forms_cadastro">
                 <div class="components_forms">
@@ -110,6 +110,9 @@
                         <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
                         <span class="regular" id="span_senha_diferente">A senha não é igual</span>
                     </div>
+                </div>
+                <button class="btn-proximo">Cadastrar</button>
+            </form>    
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <script src="assets/js/cadastro.js"></script>
