@@ -51,105 +51,65 @@
         <link rel="stylesheet" href="assets/css/components/login_cadastro.css">
     </head>
     <body>
-        <div class="container_cadastro">
-            <div class="cadastro_container">
-                <div class="header_login_cadastro">
-                    <a href="index.php" class="logo_login_cadastro">
-                        <img src="assets/img/logoNovo.png" alt="logo BSG">
-                    </a>
-                </div>
-                <form method="POST" class="forms_login" id="forms_cadastro">
-                    <div class="components_forms">
-                        <div class="titulo_login_cadastro">
-                            <h1 class="titulo">Cadastro</h1>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Nome" name="user_nome" id="nome" class="regular">
-                            <span class="regular" id="span_nome">Informar seu nome</span>
-                            <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Sobrenome" name="user_sobrenome" id="sobrenome" class="regular">
-                            <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
-                            <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
-                            <span class="regular" id="span_cpf">Informar seu CPF</span>
-                            <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
-                            <span class="regular" id="span_telefone">Informar seu telefone</span>
-                            <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
-                        </div>
-                        <!-- <div class="item_forms">
-                            <input type="text" placeholder="Data de nascimento" name="user_data_nascimento" id="data_nascimento" class="regular">
-                            <span class="regular" id="span_data">Informar sua data de nascimento</span>
-                        </div> -->
-                        <div class="item_forms">
-                            <input type="text" placeholder="E-mail" name="user_email" id="email" class="regular">
-                            <span class="regular" id="span_email">Informar seu e-mail</span>
-                            <span class="regular" id="span_email_valido">Informar um e-mail valido</span>
-                        </div>
-                        <div class="item_forms">
-                            <div class="senha_">
-                                <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
-                                <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
-                            </div>
-                            <span class="regular" id="span_senha">Informar sua senha</span>
-                            <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
-                            <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
-                        </div>
-                        <div class="item_forms">
-                            <div class="senha_">
-                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
-                                <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
-                            </div>
-                            <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
-                            <span class="regular" id="span_senha_diferente">A senha não é igual</span>
-                        </div>
-                        <!-- <div class="titulo_login_cadastro">
-                            <h1 class="titulo">Endereço</h1>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="CEP" name="CEP" id="CEP" class="regular">
-                            <span class="regular" id="span_CEP">Informar o CEP</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Estado" name="estado" id="estado" class="regular">
-                            <span class="regular" id="span_estado">Informar o estado</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Cidade" name="cidade" id="cidade" class="regular">
-                            <span class="regular" id="span_cidade">Informar a cidade</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Bairro" name="bairro" id="bairro" class="regular">
-                            <span class="regular" id="span_bairro">Informar o bairro</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Rua" name="rua" id="rua" class="regular">
-                            <span class="regular" id="span_rua">Informar a rua</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Número" name="numero" id="numero" class="regular">
-                            <span class="regular" id="span_numero">Informar o número</span>
-                        </div>
-                        <div class="item_forms">
-                            <input type="text" placeholder="Complemento(Opcional)" name="complemento" id="complemento" class="regular">
-                        </div> -->
-                    </div>
-                    <?php if($is_invalid): ?>
-                        <p style="color: red;">Já existe uma conta com este email.</p>
-                    <?php endif; ?>
-                    <button type="submit" class="btn_entrar bold">Cadastrar</button>
-                </form>
-                <div class="cadastro_login">
-                    <p class="regular">Já tem cadastro? <a href="login.php" class="bold">Entrar</a></p>
-                </div>
+    <div class="container_cadastro">
+
+<div class="content-logo">
+    <a href="index.php">
+        <img src="assets/img/logoBSG-branco" alt="">
+    </a>
+</div>
+<div class="content-cadastro">
+
+    <div class="cadastro_container">
+        <div id="progres"></div>
+        <div class="row">
+            <div class="image-space">
+                <img src="assets/img/Cadastro/andandobike.webp" alt="">
             </div>
-        </div>
+            <form action="processa_cadastro.php" method="POST" class="formulario-cadastro" id="forms_cadastro">
+                <div class="components_forms">
+                    <div class="item_forms">
+                        <input type="text" placeholder="Nome" name="user_nome" id="nome" class="regular">
+                        <span class="regular" id="span_nome">Informar seu nome</span>
+                        <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
+                    </div>
+                    <div class="item_forms">
+                        <input type="text" placeholder="Sobrenome" name="user_sobrenome" id="sobrenome" class="regular">
+                        <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
+                        <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
+                    </div>
+                    <!-- <div class="item_forms">
+                        <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
+                        <span class="regular" id="span_cpf">Informar seu CPF</span>
+                        <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
+                    </div> -->
+                    <div class="item_forms">
+                        <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
+                        <span class="regular" id="span_telefone">Informar seu telefone</span>
+                        <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
+                    </div>
+                    <div class="item_forms">
+                        <input type="text" placeholder="E-mail" name="user_email" id="email" class="regular">
+                        <span class="regular" id="span_email">Informar seu e-mail</span>
+                        <span class="regular" id="span_email_valido">Informar um e-mail valido</span>
+                    </div>
+                    <div class="item_forms">
+                        <div class="senha_">
+                            <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
+                            <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
+                        </div>
+                        <span class="regular" id="span_senha">Informar sua senha</span>
+                        <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
+                        <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
+                    </div>
+                    <div class="item_forms">
+                        <div class="senha_">
+                            <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                            <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
+                        </div>
+                        <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
+                        <span class="regular" id="span_senha_diferente">A senha não é igual</span>
+                    </div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <script src="assets/js/cadastro.js"></script>
