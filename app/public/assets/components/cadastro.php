@@ -69,14 +69,9 @@
             <form action="processa_cadastro.php" method="POST" class="formulario-cadastro" id="forms_cadastro">
                 <div class="components_forms">
                     <div class="item_forms">
-                        <input type="text" placeholder="Nome" name="user_nome" id="nome" class="regular">
+                        <input type="text" placeholder="Nome completo" name="user_nome" id="nome" class="regular">
                         <span class="regular" id="span_nome">Informar seu nome</span>
                         <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
-                    </div>
-                    <div class="item_forms">
-                        <input type="text" placeholder="Sobrenome" name="user_sobrenome" id="sobrenome" class="regular">
-                        <span class="regular" id="span_sobrenome">Informar seu Sobrenome</span>
-                        <span class="regular" id="span_sobrenome_errado">O Sobrenome deve ter mais de 3 letras</span>
                     </div>
                     <!-- <div class="item_forms">
                         <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
