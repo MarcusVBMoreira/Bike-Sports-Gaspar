@@ -59,9 +59,8 @@
     </a>
 </div>
 <div class="content-cadastro">
-
     <div class="cadastro_container">
-        <div id="progres"></div>
+        <h2>Cadastro</h2>
         <div class="row">
             <div class="image-space">
                 <img src="assets/img/andandobike.webp" alt="">
