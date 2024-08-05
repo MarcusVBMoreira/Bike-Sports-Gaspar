@@ -123,7 +123,7 @@ const img4 = document.querySelector("#img4");
 $('#categoria').blur(function(){
     var tipo_ = this.value;
 
-    if(tipo_ == "Bicicletas"){
+    if(tipo_ == "BICICLETAS"){
         for (var iB = 0; iB < list_tipo_biciletas.length; ++iB) {
         list_tipo_biciletas[iB].classList.add('active');
         }
@@ -153,7 +153,7 @@ $('#categoria').blur(function(){
         }
     }
 
-    if(tipo_ == "Acessórios"){
+    if(tipo_ == "ACESSORIOS"){
 
         for(var iA =0; iA < list_tipo_acessorios.length; ++iA){
             list_tipo_acessorios[iA].classList.add('active');
@@ -184,7 +184,7 @@ $('#categoria').blur(function(){
         }
     }
 
-    if(tipo_ == "Vestuário"){
+    if(tipo_ == "VESTUARIO"){
 
         for(var iV =0; iV < list_tipo_vestuario.length; ++iV){
             list_tipo_vestuario[iV].classList.add('active');
@@ -215,7 +215,7 @@ $('#categoria').blur(function(){
         }
     }
 
-    if(tipo_ == "Ferramentas"){
+    if(tipo_ == "FERRAMENTAS"){
 
         for(var iF =0; iF < list_tipo_ferramentas.length; ++iF){
             list_tipo_ferramentas[iF].classList.add('active');
@@ -246,7 +246,7 @@ $('#categoria').blur(function(){
         }
     }
 
-    if(tipo_ == "Componentes"){
+    if(tipo_ == "COMPONENTES"){
 
         for(var iC =0; iC < list_tipo_componentes.length; ++iC){
             list_tipo_componentes[iC].classList.add('active');
@@ -277,7 +277,7 @@ $('#categoria').blur(function(){
         }
     }
 
-    if(tipo_ == "Suplementos"){
+    if(tipo_ == "SUPLEMENTOS"){
 
         for(var iS =0; iS < list_tipo_suplementos.length; ++iS){
             list_tipo_suplementos[iS].classList.add('active');
