@@ -89,7 +89,7 @@
                         </div>
                         <div class="item_forms">
                             <div class="senha_">
-                                <input type="password" laceholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
                                 <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
                             </div>
                             <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
@@ -110,9 +110,15 @@
                     </div>
                 </div>
                 <button class="btn-proximo">Cadastrar</button>
+                <div class="cadastro_login">
+                    <p>Ainda já tem uma conta? <a href="login.php">Entre</a></p>
+                </div>
             </form>    
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-        <script src="assets/js/cadastro.js"></script>
-    </body>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="assets/js/cadastro.js"></script>
+</body>
 </html>

@@ -132,7 +132,28 @@ h2{
 }
 .item_forms input.active{
     border-color: var(--VermelhoEscuro-Cor);
-}   
+}  
+.cadastro_login{
+    display: flex;
+    justify-content: center;
+}
+.cadastro_login p{
+    font-family: "Jost", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.cadastro_login p a{
+    font-family: "Jost", sans-serif;
+    color: #FA6900;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-bottom: 1px solid #FA6900;
+}
 .senha_{
     width: 100%;
     display: flex;

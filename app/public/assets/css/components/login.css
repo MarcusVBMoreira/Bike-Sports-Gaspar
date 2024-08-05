@@ -1,39 +1,54 @@
-/* !CORES! */
-:root{
-    --Preto-Cor: #000;
-    --Branco-Cor: #FFF;
-    --CinzaClaro-Cor: #DFDFDF;
-    --CinzaEscuro-Cor: #949494;
-    --Verde-Cor: #9CCC3C;
-    --Amarelo-Cor: #F2EA01;
-    --Vermelho-Cor: #E72526;
-    --VermelhoEscuro-Cor: #ff0000;
-    --Azul-Cor: #00C1EC;
-    --Laranja-Cor: #F24701;
+h2{
+    font-family: "Jost", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.content-logo{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    justify-content: start;
 }
 
-.container{
+.content-logo a{
     display: flex;
-    width: 60%;
-    height: 100vh;
     align-items: center;
+    justify-content: start;
+    width: 30%;
+    height: 50%;
+}
+
+.content-logo a img{
+    width: 200px;
+}
+
+.content-login{
+    height: 78%;
+    width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: start;
 }
+
 .login_container{
-    width: 80%;
-}
-.cadastro_container{
-    width: 60%;
-}
-.login_container, .cadastro_container{
-    background-color: var(--Branco-Cor);
+    width: 35%;
+    height: 78%;
+    background-color: #202027;
     border-radius: 10px;
+    box-shadow: 0 1px 2px 2px #25252b;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%;
-    gap: 30px;
-    box-shadow: 0px 0px 5px var(--Branco-Cor);
+    justify-content: space-around;
 }
 .header_login_cadastro{
     width: 100%;
@@ -42,25 +57,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-.logo_login_cadastro{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo_login_cadastro img{
-    width: 100%;
-}
-.titulo_login_cadastro{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-}
-.titulo_login_cadastro h1{
-    font-size: 30px;
 }
 .forms_login{
     width: 80%;
@@ -79,7 +75,7 @@
     gap: 20px;
 }
 .item_forms{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,38 +84,33 @@
 }
 .item_forms input{
     width: 100%;
-    padding: 1.5%;
-    border: none;
-    border-bottom: 2px solid var(--Preto-Cor);
-    transition: .5s ease;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px #a5a5a5 solid;
+    border-radius: 6px;
+    color: #D4D4D4;
+    letter-spacing: 1px;
+    font-size: 15px;
+    transition: .5s
 }
 .item_forms input:focus{
     outline: none;
     border-color: var(--Laranja-Cor);
 }
 .forms_login button{
-    width: 200px;
+    width: 90%;
     color: var(--Branco-Cor);
     background-color: var(--Laranja-Cor);
     padding: 2%;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     box-shadow: 4px 4px 0px 0px var(--CinzaEscuro-Cor);
 }
 .forms_login button:active{
     box-shadow: 2px 2px 0px 0px var(--CinzaEscuro-Cor);
 }
-.cadastro_login{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-}
-.cadastro_login a{
-    text-decoration: underline;
-}
+
 .container_cadastro{
     width: 100%;
     display: flex;
@@ -128,12 +119,29 @@
     padding: 4%;
 }
 
+.cadastro_login p{
+    font-family: "Jost", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.cadastro_login p a{
+    font-family: "Jost", sans-serif;
+    color: #FA6900;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-bottom: 1px solid #FA6900;
+}
 .item_forms span{
     display: none;
 }
 .item_forms span.active{
     display: flex;
-    padding: 1%;
+    font-size: 12px;
     color: var(--Vermelho-Cor);
 }
 .item_forms input.active{
