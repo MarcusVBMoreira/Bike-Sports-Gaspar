@@ -59,9 +59,8 @@
     </a>
 </div>
 <div class="content-cadastro">
-
     <div class="cadastro_container">
-        <div id="progres"></div>
+        <h2>Cadastro</h2>
         <div class="row">
             <div class="image-space">
                 <img src="assets/img/andandobike.webp" alt="">
@@ -73,43 +72,53 @@
                         <span class="regular" id="span_nome">Informar seu nome</span>
                         <span class="regular" id="span_nome_errado">O nome deve ter mais de 3 letras</span>
                     </div>
-                    <!-- <div class="item_forms">
-                        <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
-                        <span class="regular" id="span_cpf">Informar seu CPF</span>
-                        <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
-                    </div> -->
-                    <div class="item_forms">
-                        <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
-                        <span class="regular" id="span_telefone">Informar seu telefone</span>
-                        <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
-                    </div>
                     <div class="item_forms">
                         <input type="text" placeholder="E-mail" name="user_email" id="email" class="regular">
                         <span class="regular" id="span_email">Informar seu e-mail</span>
                         <span class="regular" id="span_email_valido">Informar um e-mail valido</span>
                     </div>
-                    <div class="item_forms">
-                        <div class="senha_">
-                            <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
-                            <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
+                    <div class="row-input">
+                        <div class="item_forms">
+                            <div class="senha_">
+                                <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
+                                <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
+                            </div>
+                            <span class="regular" id="span_senha">Informar sua senha</span>
+                            <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
+                            <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
                         </div>
-                        <span class="regular" id="span_senha">Informar sua senha</span>
-                        <span class="regular" id="span_senha_valida">A senha deve ter ao menos 8 dígitos</span>
-                        <span class="regular" id="span_senha_segura">A senha deve ter ao menos uma letra maiúscula uma minuscula um numero e um caracter especial   </span>
+                        <div class="item_forms">
+                            <div class="senha_">
+                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                                <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
+                            </div>
+                            <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
+                            <span class="regular" id="span_senha_diferente">A senha não é igual</span>
+                        </div>
                     </div>
-                    <div class="item_forms">
-                        <div class="senha_">
-                            <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
-                            <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
+                    <div class="row-input">
+                        <div class="item_forms">
+                            <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
+                            <span class="regular" id="span_telefone">Informar seu telefone</span>
+                            <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
                         </div>
-                        <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
-                        <span class="regular" id="span_senha_diferente">A senha não é igual</span>
+                        <div class="item_forms">
+                            <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
+                            <span class="regular" id="span_cpf">Informar seu CPF</span>
+                            <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
+                        </div>
                     </div>
                 </div>
                 <button class="btn-proximo">Cadastrar</button>
+                <div class="cadastro_login">
+                    <p>Ainda já tem uma conta? <a href="login.php">Entre</a></p>
+                </div>
             </form>    
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-        <script src="assets/js/cadastro.js"></script>
-    </body>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="assets/js/cadastro.js"></script>
+</body>
 </html>
