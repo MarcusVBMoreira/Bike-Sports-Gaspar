@@ -45,123 +45,23 @@
                         <input type="text" id="valor_parcelado" name="valor_parcelado" placeholder="Valor parcelado">
                     </div>
                     <div class="item_forms">
-                        <label for="tipo">Categoria de produto:</label>
-                        <select id="categoria" name="categoira">
-                            <option value="" id="default" class="default active">Selecione o tipo de produto</option>
-                            <option value="BICICLETAS">Bicicletas</option>
-                            <option value="ACESSORIOS">Acessórios</option>
-                            <option value="VESTUARIO">Vestuário</option>
-                            <option value="FERRAMENTAS">Ferramentas</option>
-                            <option value="COMPONENTES">Componentes</option>
-                            <option value="SUPLEMENTOS">Suplementos</option>
-                        </select>
+                    <label for="categoria">Categoria:</label>
+    <select id="categoria" name="categoria">
+        <option value="" id="default" class="default active">Selecione a categoria de produto</option>
+        <option value="BICICLETAS">Bicicletas</option>
+        <option value="ACESSORIOS">Acessórios</option>
+        <option value="VESTUARIO">Vestuário</option>
+        <option value="FERRAMENTAS">Ferramentas</option>
+        <option value="COMPONENTES">Componentes</option>
+        <option value="SUPLEMENTOS">Suplementos</option>
+    </select>
                     </div>
                     <div class="item_forms">
-                        <label for="categoria">Tipo do produto:</label>
-                        <select id="categoria" name="categoria">
-                            <option value="" id="default" class="default active">Selecione primeiro um tipo de produto</option>
-                            <div id="tipo_bicicletas">
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 29">Aro 29</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 26">Aro 26</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 24">Aro 24</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 20">Aro 20</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 16">Aro 16</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Aro 12">Aro 12</option>
-                                <option id="tipo_bicicletas" class="tipo_bicicletas" value="Bicicletinha de equilíbrio">Bicicletinha de equilíbrio</option>
-                            </div>
-                            <div class="tipo_acessorios" id="tipo_acessorios">
-                                <option id="tipo_acessorios" value="Adesivos">Adesivos</option>
-                                <option id="tipo_acessorios" value="Bar end">Bar end</option>
-                                <option id="tipo_acessorios" value="Bomda de ar">Bomda de ar</option>
-                                <option id="tipo_acessorios" value="Bolsa">Bolsa</option>
-                                <option id="tipo_acessorios" value="Buzinas">Buzinas</option>
-                                <option id="tipo_acessorios" value="Cadeado">Cadeado</option>
-                                <option id="tipo_acessorios" value="Cadeirinhas">Cadeirinhas</option>
-                                <option id="tipo_acessorios" value="Câmeras">Câmeras</option>
-                                <option id="tipo_acessorios" value="Capacetes">Capacetes</option>
-                                <option id="tipo_acessorios" value="Caramanhola">Caramanhola</option>
-                                <option id="tipo_acessorios" value="Co2">Co2</option>
-                                <option id="tipo_acessorios" value="Cestos">Cestos</option>
-                                <option id="tipo_acessorios" value="Descanso">Descanso</option>
-                                <option id="tipo_acessorios" value="Farol">Farol</option>
-                                <option id="tipo_acessorios" value="Lanterna">Lanterna</option>
-                                <option id="tipo_acessorios" value="Liquido tubless">Liquido tubless</option>
-                                <option id="tipo_acessorios" value="Óculos">Óculos</option>
-                                <option id="tipo_acessorios" value="Paralamas">Paralamas</option>
-                                <option id="tipo_acessorios" value="Pneus">Pneus</option>
-                                <option id="tipo_acessorios" value="Porta celular">Porta celular</option>
-                                <option id="tipo_acessorios" value="Remendos">Remendos</option>
-                                <option id="tipo_acessorios" value="Retrovisor">Retrovisor</option>
-                                <option id="tipo_acessorios" value="Roda lateral">Roda lateral</option>
-                                <option id="tipo_acessorios" value="Suporte caramanhola">Suporte caramanhola</option>
-                                <option id="tipo_acessorios" value="Suporte ciclo computador">Suporte ciclo computador</option>
-                                <option id="tipo_acessorios" value="Suporte de farol">Suporte de farol</option>
-                                <option id="tipo_acessorios" value="Suporte para bike">Suporte para bike</option>
-                                <option id="tipo_acessorios" value="Suporte para carro">Suporte para carro</option>
-                                <option id="tipo_acessorios" value="Suporte de farol">Suporte de farol</option>
-                                <option id="tipo_acessorios" value="Válvula presta">Válvula presta</option>
-                            </div>
-                            <div class="tipo_vestuario" id="tipo_vestuario">
-                                <option id="tipo_vestuario" value="Bala clava">Bala clava</option>
-                                <option id="tipo_vestuario" value="Bota">Bota</option>
-                                <option id="tipo_vestuario" value="Bretelles">Bretelles</option>
-                                <option id="tipo_vestuario" value="Camisa">Camisa</option>
-                                <option id="tipo_vestuario" value="Luvas">Luvas</option>
-                                <option id="tipo_vestuario" value="Macaquinho">Macaquinho</option>
-                                <option id="tipo_vestuario" value="Manguito">Manguito</option>
-                                <option id="tipo_vestuario" value="Mochila hidratação">Mochila hidratação</option>
-                                <option id="tipo_vestuario" value="Meias">Meias</option>
-                                <option id="tipo_vestuario" value="Pernito">Pernito</option>
-                                <option id="tipo_vestuario" value="Sapatilhas">Sapatilhas</option>
-                                <option id="tipo_vestuario" value="Segunda pele">Segunda pele</option>
-                                <option id="tipo_vestuario" value="Shorts">Shorts</option>
-                            </div>
-                            <div class="tipo_ferramentas" id="tipo_ferramentas">
-                                <option id="tipo_ferramentas" value="Alicate de corte cabo de aço">Alicate de corte cabo de aço</option>
-                                <option id="tipo_ferramentas" value="Canivete">Canivete</option>
-                                <option id="tipo_ferramentas" value="Chave de corretne">Chave de corretne</option>
-                                <option id="tipo_ferramentas" value="Chave de pedal">Chave de pedal</option>
-                                <option id="tipo_ferramentas" value="Chava de raio">Chava de raio</option>
-                                <option id="tipo_ferramentas" value="Espátula">Espátula</option>
-                                <option id="tipo_ferramentas" value="Extrator cassete">Extrator cassete</option>
-                                <option id="tipo_ferramentas" value="Extrator mov. central">Extrator mov. central</option>
-                                <option id="tipo_ferramentas" value="Extrator pedivela">Extrator pedivela</option>
-                            </div>
-                            <div class="tipo_componentes" id="tipo_componentes">
-                                <option id="tipo_componentes" value="Abracadeiras">Abracadeiras</option>
-                                <option id="tipo_componentes" value="Aros">Aros</option>
-                                <option id="tipo_componentes" value="Blocangens">Blocangens</option>
-                                <option id="tipo_componentes" value="Caixa direcao">Caixa direcao</option>
-                                <option id="tipo_componentes" value="Cabo aço">Cabo aço</option>
-                                <option id="tipo_componentes" value="Cambio dianteiro">Cambio dianteiro</option>
-                                <option id="tipo_componentes" value="Cambio traseiro">Cambio traseiro</option>
-                                <option id="tipo_componentes" value="Canotes">Canotes</option>
-                                <option id="tipo_componentes" value="Cassete">Cassete</option>
-                                <option id="tipo_componentes" value="Conduites">Conduites</option>
-                                <option id="tipo_componentes" value="Coroas">Coroas</option>
-                                <option id="tipo_componentes" value="Correntes">Correntes</option>
-                                <option id="tipo_componentes"value="Cubos">Cubos</option>
-                                <option id="tipo_componentes" value="Ezy fire">Ezy fire</option>
-                                <option id="tipo_componentes" value="Fita guidão">Fita guidão</option>
-                                <option id="tipo_componentes" value="Garfo">Garfo</option>
-                                <option id="tipo_componentes" value="Gancheira freios">Gancheira freios</option>
-                                <option id="tipo_componentes" value="Guidão">Guidão</option>
-                                <option id="tipo_componentes" value="Manetes">Manetes</option>
-                                <option id="tipo_componentes" value="Moviento central">Moviento central</option>
-                                <option id="tipo_componentes" value="Niples">Niples</option>
-                                <option id="tipo_componentes" value="Pedivelas">Pedivelas</option>
-                                <option id="tipo_componentes" value="Rap fire">Rap fire</option>
-                                <option id="tipo_componentes" value="Raios">Raios</option>
-                                <option id="tipo_componentes" value="Rolamentos">Rolamentos</option>
-                                <option id="tipo_componentes" value="Slim">Slim</option>
-                                <option id="tipo_componentes" value="Suspensão">Suspensão</option>
-                            </div>
-                            <div class="tipo_suplementos" id="tipo_suplementos">
-                                <option id="tipo_suplementos" value="Creatina">Creatina</option>
-                                <option id="tipo_suplementos" value="Pré treino">Pré treino</option>
-                                <option id="tipo_suplementos" value="Sache carbom">Sache carbom</option>
-                            </div>                        
-                        </select>
+                        
+    <label for="tipo">Tipo do produto:</label>
+    <select id="tipo" name="tipo">
+        <option value="" id="default" class="default active">Selecione primeiro a categoria do produto</option>
+    </select>
                     </div>
                     <div class="item_forms">
                         <label for="modelo">Modelo do produto</label>
@@ -896,5 +796,127 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <script src="assets/js/cadastro-produto.js"></script>
+        <script>
+            const categorias = {
+            "BICICLETAS": [
+                {value: "Aro 29", text: "Aro 29"},
+                {value: "Aro 26", text: "Aro 26"},
+                {value: "Aro 24", text: "Aro 24"},
+                {value: "Aro 20", text: "Aro 20"},
+                {value: "Aro 16", text: "Aro 16"},
+                {value: "Aro 12", text: "Aro 12"},
+                {value: "Bicicletinha de equilíbrio", text: "Bicicletinha de equilíbrio"}
+            ],
+            "ACESSORIOS": [
+                {value: "Adesivos", text: "Adesivos"},
+                {value: "Bar end", text: "Bar end"},
+                {value: "Bomba de ar", text: "Bomba de ar"},
+                {value: "Bolsa", text: "Bolsa"},
+                {value: "Buzinas", text: "Buzinas"},
+                {value: "Cadeado", text: "Cadeado"},
+                {value: "Cadeirinhas", text: "Cadeirinhas"},
+                {value: "Câmeras", text: "Câmeras"},
+                {value: "Capacetes", text: "Capacetes"},
+                {value: "Caramanhola", text: "Caramanhola"},
+                {value: "Co2", text: "Co2"},
+                {value: "Cestos", text: "Cestos"},
+                {value: "Descanso", text: "Descanso"},
+                {value: "Farol", text: "Farol"},
+                {value: "Lanterna", text: "Lanterna"},
+                {value: "Líquido tubeless", text: "Líquido tubeless"},
+                {value: "Óculos", text: "Óculos"},
+                {value: "Paralamas", text: "Paralamas"},
+                {value: "Pneus", text: "Pneus"},
+                {value: "Porta celular", text: "Porta celular"},
+                {value: "Remendos", text: "Remendos"},
+                {value: "Retrovisor", text: "Retrovisor"},
+                {value: "Roda lateral", text: "Roda lateral"},
+                {value: "Suporte caramanhola", text: "Suporte caramanhola"},
+                {value: "Suporte ciclo computador", text: "Suporte ciclo computador"},
+                {value: "Suporte de farol", text: "Suporte de farol"},
+                {value: "Suporte para bike", text: "Suporte para bike"},
+                {value: "Suporte para carro", text: "Suporte para carro"},
+                {value: "Válvula presta", text: "Válvula presta"}
+            ],
+            "VESTUARIO": [
+                {value: "Bala clava", text: "Bala clava"},
+                {value: "Bota", text: "Bota"},
+                {value: "Bretelles", text: "Bretelles"},
+                {value: "Camisa", text: "Camisa"},
+                {value: "Luvas", text: "Luvas"},
+                {value: "Macaquinho", text: "Macaquinho"},
+                {value: "Manguito", text: "Manguito"},
+                {value: "Mochila hidratação", text: "Mochila hidratação"},
+                {value: "Meias", text: "Meias"},
+                {value: "Pernito", text: "Pernito"},
+                {value: "Sapatilhas", text: "Sapatilhas"},
+                {value: "Segunda pele", text: "Segunda pele"},
+                {value: "Shorts", text: "Shorts"}
+            ],
+            "FERRAMENTAS": [
+                {value: "Alicate de corte cabo de aço", text: "Alicate de corte cabo de aço"},
+                {value: "Canivete", text: "Canivete"},
+                {value: "Chave de corrente", text: "Chave de corrente"},
+                {value: "Chave de pedal", text: "Chave de pedal"},
+                {value: "Chave de raio", text: "Chave de raio"},
+                {value: "Espátula", text: "Espátula"},
+                {value: "Extrator cassete", text: "Extrator cassete"},
+                {value: "Extrator mov. central", text: "Extrator mov. central"},
+                {value: "Extrator pedivela", text: "Extrator pedivela"}
+            ],
+            "COMPONENTES": [
+                {value: "Abraçadeiras", text: "Abraçadeiras"},
+                {value: "Aros", text: "Aros"},
+                {value: "Blocagens", text: "Blocagens"},
+                {value: "Caixa direção", text: "Caixa direção"},
+                {value: "Cabo aço", text: "Cabo aço"},
+                {value: "Câmbio dianteiro", text: "Câmbio dianteiro"},
+                {value: "Câmbio traseiro", text: "Câmbio traseiro"},
+                {value: "Canotes", text: "Canotes"},
+                {value: "Cassete", text: "Cassete"},
+                {value: "Conduítes", text: "Conduítes"},
+                {value: "Coroas", text: "Coroas"},
+                {value: "Correntes", text: "Correntes"},
+                {value: "Cubos", text: "Cubos"},
+                {value: "EZY Fire", text: "EZY Fire"},
+                {value: "Fita guidão", text: "Fita guidão"},
+                {value: "Garfo", text: "Garfo"},
+                {value: "Gancheira freios", text: "Gancheira freios"},
+                {value: "Guidão", text: "Guidão"},
+                {value: "Manetes", text: "Manetes"},
+                {value: "Movimento central", text: "Movimento central"},
+                {value: "Niples", text: "Niples"},
+                {value: "Pedivelas", text: "Pedivelas"},
+                {value: "RAP Fire", text: "RAP Fire"},
+                {value: "Raios", text: "Raios"},
+                {value: "Rolamentos", text: "Rolamentos"},
+                {value: "SLIM", text: "SLIM"},
+                {value: "Suspensão", text: "Suspensão"}
+            ],
+            "SUPLEMENTOS": [
+                {value: "Creatina", text: "Creatina"},
+                {value: "Pré treino", text: "Pré treino"},
+                {value: "Sachê carbo", text: "Sachê carbo"}
+            ]
+        };
+
+        document.getElementById('categoria').addEventListener('change', function() {
+            const tipoSelect = document.getElementById('tipo');
+            const categoria = this.value;
+
+            // Limpar as opções anteriores
+            tipoSelect.innerHTML = '<option value="" id="default" class="default active">Selecione primeiro um tipo de produto</option>';
+
+            if (categorias[categoria]) {
+                categorias[categoria].forEach(function(tipo) {
+                    const option = document.createElement('option');
+                    option.value = tipo.value;
+                    option.text = tipo.text;
+                    tipoSelect.appendChild(option);
+                });
+            }
+        });
+    </script>
+        </script>
     </body>
 </html>
