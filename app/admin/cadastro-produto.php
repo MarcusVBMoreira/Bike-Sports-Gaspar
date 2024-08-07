@@ -1,3 +1,35 @@
+<?php
+    //UPLOAD
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $nenhum_arquivo = false;
+        $erro_upload = false;
+        if(empty($_FILES)){
+            $erro_upload = true;
+        }else{
+            $erros = 0;
+            foreach($_FILES as $file){
+                if($file['error'] !== UPLOAD_ERR_OK){
+                    $erros += 1;
+                }
+            }
+            if($erros >= 4){
+                $nenhum_arquivo = true;
+            }else{
+                foreach($_FILES as $file){
+                    if($file['error'] == UPLOAD_ERR_OK){
+                        $destino = __DIR__ . '/assets/upload/' . $file['name'];
+                        if(!move_uploaded_file($file['tmp_name'],$destino)){
+                            echo 'ERRO';
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,7 +57,12 @@
             <div class="ttl">
                 <h1>Cadastrar um produto</h1>
             </div>
-            <form method="post" action="assets/inc/cadastro.php" class="form" id="form_cadastro_produto" enctype="multipart/form-data">
+            <?php if($erro_upload): ?>
+                <p style="color:red;text-align:center;">Erro: não foi possível enviar os arquivos.</p>
+            <?php elseif($nenhum_arquivo): ?>
+                <p style="color:red;text-align:center;">Não foi enviado nenhum arquivo.</p>
+            <?php endif; ?>
+            <form method="post" class="form" id="form_cadastro_produto" enctype="multipart/form-data">
                 <div class="item_forms">
                     <label for="nome">Nome do produto:</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite o nome/título do produto">
@@ -130,6 +167,7 @@
                             <option value="cinza">Cinza</option>
                         </select>
                     </div>
+                <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
                     <div class="div_img1" id="div_img1">
                     <div class="item_forms">
                         <label for="img1" id="label_img1_opt1" class="label_img1_opt1">Imagem 1</label>
