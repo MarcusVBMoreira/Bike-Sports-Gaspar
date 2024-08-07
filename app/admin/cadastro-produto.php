@@ -1,10 +1,3 @@
-<?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        print_r($_POST);die();
-    }
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- !Favicon! -->
     <link rel="shortcut icon" alt="logo DKS" href="assets/img/logoBSG-branco-menor.ico" type="image/x-icon">
-    <title>Sport Gaspar</title>
+    <title>Bike Sport Gaspar</title>
 </head>
 
 <body>
@@ -32,7 +25,7 @@
             <div class="ttl">
                 <h1>Cadastrar um produto</h1>
             </div>
-            <form method="post" class="form" id="form_cadastro_produto">
+            <form method="post" action="assets/inc/cadastro.php" class="form" id="form_cadastro_produto" enctype="multipart/form-data">
                 <div class="item_forms">
                     <label for="nome">Nome do produto:</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite o nome/título do produto">
