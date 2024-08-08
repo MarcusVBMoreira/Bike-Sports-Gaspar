@@ -107,7 +107,7 @@
                             </div>
                             <div class="right_infos">
                                 <a href="editar-produto.php" class="btn_editar"><i class="fa-solid fa-pencil"></i></a>
-                                <a href="deletar-produto.php" class="btn_deletar"><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="deletar-produto.php?id=<?= $p['id']; ?>" class="btn_deletar"><i class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
                     </div>
