@@ -1,8 +1,9 @@
 <?php
+    require __DIR__ . '/assets/inc/Request.php';
+    $nenhum_arquivo = false;
+    $erro_upload = false;
     //UPLOAD
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $nenhum_arquivo = false;
-        $erro_upload = false;
         if(empty($_FILES)){
             $erro_upload = true;
         }else{
@@ -25,10 +26,33 @@
                 }
             }
         }
+        $produto = [
+            'name' => $_POST['nome'] ?? '',
+            'desc' => $_POST['descricao'] ?? '',
+            'val' => $_POST['valor'] ?? 0,
+            'cat' => $_POST['categoria'] ?? '',
+            'qtd' => $_POST['quantidade'] ?? 0,
+            'col' => $_POST['cor'] ?? '',
+            'tp' => $_POST['tipo'] ?? '',
+            'mod' => $_POST['modelo'] ?? '',
+            'brnd' => $_POST['marca'] ?? '',
+            'compst' => $_POST['composicao'] ?? '',
+            'comptb' => $_POST['compativel'] ?? '',
+            'wght' => $_POST['peso'] ?? 0,
+            'dim' => $_POST['comprimento'] . 'x' . $_POST['altura'] . 'x' . $_POST['largura'],
+            'spec' => $_POST['especificacoes'] ?? '',
+            'i1' => $_FILES['img1']['name'] ?? '',
+            'i2' => $_FILES['img2']['name'] ?? '',
+            'i3' => $_FILES['img3']['name'] ?? '',
+            'i4' => $_FILES['img4']['name'] ?? ''
+        ];
         
+        $result = Request::Create($produto);
+        echo '<pre>';
+        print_r($result);die();
     }
 
-
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -80,10 +104,10 @@
                     <label for="valor_a_vista">Valor a vista (Formato: 999.99)</label>
                     <input type="text" id="valor_a_vista" name="valor" placeholder="Digite o valor do produto a vista">
                 </div>
-                <div class="item_forms">
+                <!-- <div class="item_forms">
                     <label for="valor_parcelado">Digite o valor do produto parcelado (Formato: 999.99)</label>
                     <input type="text" id="valor_parcelado" name="valor_parcelado" placeholder="Valor parcelado">
-                </div>
+                </div> -->
                 <div class="item_forms">
                     <label for="categoria">Tipo:</label>
                     <select id="categoria" name="categoria">
@@ -127,16 +151,16 @@
                 </div>
                 <div class="item_forms">
                     <label for="altura">Altura do produto</label>
-                    <input type="text" id="altura" name="altura" placeholder="Digite a altura do produto em Metros">
+                    <input type="text" id="altura" name="altura" placeholder="Digite a altura do produto em centímetros">
                 </div>
                 <div class="item_forms">
                     <label for="largura">Largura do produto</label>
-                    <input type="text" id="largura" name="largura" placeholder="Digite a largura do produto em Metros">
+                    <input type="text" id="largura" name="largura" placeholder="Digite a largura do produto em centímetros">
                 </div>
                 <div class="item_forms">
                     <label for="comprimento">Comprimento do produto</label>
                     <input type="text" id="comprimento" name="comprimento"
-                        placeholder="Digite o comprimento do produto em Metros">
+                        placeholder="Digite o comprimento do produto em centímetros">
                 </div>
                 <!-- <div class="item_forms">
                         <label for="qnt_cores">Quantidade de cores do produto</label>
