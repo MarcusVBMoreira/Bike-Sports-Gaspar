@@ -28,21 +28,25 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
 }
 
 //VALIDATE REQUIRED FIELDS
-if (!isset($_POST['name']) || !isset($_POST['val']) || !isset($_POST['qtd'])) {
-    Response::RequestError(400,'In order to create an user please fill the fields on request body: name, value, qtd',$_POST);
-}
-if(!filter_var($_POST['val'],FILTER_VALIDATE_FLOAT) || !filter_var($_POST['qtd'],FILTER_VALIDATE_INT) && $_POST['qtd'] != 0){
-    Response::RequestError(400,"The 'val' field must be a float value; 'qtd' field must be a integer value.",$_POST);
-}
+// if (!isset($_POST['name']) || !isset($_POST['val']) || !isset($_POST['qtd'])) {
+//     Response::RequestError(400,'In order to create an user please fill the fields on request body: name, value, qtd',$_POST);
+// }
+// if(!filter_var($_POST['val'],FILTER_VALIDATE_FLOAT) || !filter_var($_POST['qtd'],FILTER_VALIDATE_INT) && $_POST['qtd'] != 0){
+//     Response::RequestError(400,"The 'val' field must be a float value; 'qtd' field must be a integer value.",$_POST);
+// }
 
-$val = floatval($_POST['val']);
+if(!isset($_POST['val'])){
+    $_POST['val'] = '';
+}else{
+    $val = floatval($_POST['val']);
+}
 
 $new_prod = [
-    'name' => $_POST['name'],
+    'name' => isset($_POST['name']) ? $_POST['name'] : '',
     'desc' => isset($_POST['desc']) ? $_POST['desc'] : '',
     'val' => $val,
     'cat' => isset($_POST['cat']) ? $_POST['cat'] : '',
-    'qtd' => $_POST['qtd'],
+    'qtd' => isset($_POST['qtd']) ? $_POST['qtd'] : '',
     'col' => $_POST['col'] ?? '',
     'tp' => isset($_POST['tp']) ? $_POST['tp'] : '',
     'mod' => isset($_POST['mod']) ? $_POST['mod'] : '',
