@@ -48,8 +48,7 @@
         ];
         
         $result = Request::Create($produto);
-        echo '<pre>';
-        print_r($result);die();
+        
     }
 
     
