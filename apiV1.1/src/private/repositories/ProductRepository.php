@@ -85,22 +85,22 @@ class ProductRepository implements IRepository{
         }
 
         //LOOK FOR DUPLICATE RECORDS
-        $query = self::$DBContext->prepare("
-            SELECT * FROM produtos 
-            WHERE nome = :name 
-        ");
-        $query->bindValue(":name",$product["name"]);
+        // $query = self::$DBContext->prepare("
+        //     SELECT * FROM produtos 
+        //     WHERE nome = :name 
+        // ");
+        // $query->bindValue(":name",$product["name"]);
 
-        if($query->execute()){
-            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        // if($query->execute()){
+        //     $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            if(count($result)> 0){
-                return [
-                    'data' => 'There is already a product with the same name',
-                    'code' => 200
-                ];
-            }
-        }
+        //     if(count($result)> 0){
+        //         return [
+        //             'data' => 'There is already a product with the same name',
+        //             'code' => 200
+        //         ];
+        //     }
+        // }
 
         date_default_timezone_set('America/Bahia');
         $time_brazil = date('Y/m/d H:i:s e');

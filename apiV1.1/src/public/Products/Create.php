@@ -36,7 +36,7 @@ if(strtoupper($_SERVER['REQUEST_METHOD']) != 'POST'){
 // }
 
 if(!isset($_POST['val'])){
-    $_POST['val'] = '';
+    $val = '';
 }else{
     $val = floatval($_POST['val']);
 }
