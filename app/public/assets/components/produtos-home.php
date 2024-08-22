@@ -70,7 +70,7 @@
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-color: rgba(0, 0, 0, 0.411);
+                background-color: rgba(0, 0, 0, 0.550);
                 border-radius: 5px;
                 display: flex;
                 justify-content: end;
