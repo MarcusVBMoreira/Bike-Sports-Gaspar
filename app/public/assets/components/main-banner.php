@@ -28,12 +28,12 @@
     <style>
       /* Banner Rotativo */ 
       .main-banner{
-        width: 90%;
-        margin: 40px auto 0 auto;
+        width: 100%;
+        margin: 0 auto;
       }
       .carousel-item img{
         width: 80%;
-        height: 450px;
+        height: 400px;
         z-index: 0;
       }
       .carousel{

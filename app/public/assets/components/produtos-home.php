@@ -63,7 +63,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 19%;
-                height: 80%;
+                height: 70%;
                 background-color: #000;
             }
             .overlay{
