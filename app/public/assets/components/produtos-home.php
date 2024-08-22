@@ -42,9 +42,6 @@
                             <img src="assets/img/Categories/suplementos.webp" alt="">
                         </a>
                     </div>
-                    <?php
-                        require('assets/components/card-produto.php');
-                    ?>
                 </div>
             </div>
         </section>
