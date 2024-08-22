@@ -29,12 +29,12 @@
                     </div>
                 </div>
             <?php endforeach; ?>
-            
         <?php endif ?>
     </body>
     <style>
         .nao-tem{
             color: #fff;
+            margin-bottom: 1%;
         }
     </style>
 </html>
