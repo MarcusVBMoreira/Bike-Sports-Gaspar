@@ -10,7 +10,7 @@
                     <nav class="nav-homeProd">
                         <div class="navigation">
                             <a href="#produtos">Em alta</a>
-                            <a href="">Promoção</a>
+                            <a href="">Promoções</a>
                             <a href="#container-servicos">Serviços locais</a>
                         </div>
                     </nav>
