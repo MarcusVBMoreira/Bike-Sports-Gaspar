@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="content">
-        <i class="fa-solid fa-angle-left" onclick="direcao(1)"></i>
+      <i class="fa-solid fa-angle-left" onclick="direcao(1)"></i>
       <div id="container-cardProduto">
       <?php if(count($produtos)==0): ?>
       <p>Não há clientes registrados</p>
@@ -99,17 +99,17 @@
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        background-color: rgb(14, 14, 14);
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
-        min-width: 290px;
-        max-width: 300px;
-        border-radius: 2px;
+        min-width: 280px;
+        max-width: 290px;
         transition: 0.5s ease;
+        border-radius: 5px;
+        background-color: #050611;
       }
       .cardProduto:hover {
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 12px 12px  rgba(0, 0, 0, .3) ;
       }
       .content-cart {
         width: 85%;
@@ -123,7 +123,7 @@
       }
       .content-img {
         width: 85%;
-        height: 45%;
+        height: 43%;
         background-color: #fff;
       }
       .content-img img {
@@ -197,6 +197,7 @@
             text-align: left;
         }
         .content-button{
+            user-select: none;
             display: flex;
             justify-content: center;
             align-items: center;

@@ -13,7 +13,7 @@
                 <div class="colunm">
                     <div class="container-contact">
                         <div class="contacts">
-                            <a target="_blank" href="">
+                            <a target="_blank" href="https://www.instagram.com/ebbi.kes/">
                                 <div class="icon-contact">
                                     <i class="fa-brands fa-instagram"></i>
                                 </div>

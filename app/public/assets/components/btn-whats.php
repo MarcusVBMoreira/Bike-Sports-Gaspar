@@ -5,11 +5,6 @@
     </head>
     <body>
         <div class="contatos">
-            <div class="leo">
-                <a href="servicos.php" class="pop-up">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>                
-                </a>
-            </div>
             <div class="ettore">
                 <a target="_blank" href="https://wa.me/5511940080872" class="pop-up">
                     <i class="fa-brands fa-whatsapp"></i>
