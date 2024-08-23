@@ -319,6 +319,7 @@
                 { value: "Movimento central", text: "Movimento central" },
                 { value: "Niples", text: "Niples" },
                 { value: "Pedivelas", text: "Pedivelas" },
+                { value: "Quadros", text: "Quadros" },
                 { value: "RAP Fire", text: "RAP Fire" },
                 { value: "Raios", text: "Raios" },
                 { value: "Rolamentos", text: "Rolamentos" },
