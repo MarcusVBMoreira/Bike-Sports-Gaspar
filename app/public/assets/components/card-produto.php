@@ -40,7 +40,7 @@
               R$
               <?= $p['valor']; ?>
             </p>
-            <p class="parcelado">12x sem juros</p>
+            <p class="parcelado">12x de R$ <?= number_format($p['valor'] / 12, 2, ',', '.'); ?> sem juros</p>
           </div>
           <div class="content-button">
             <a href="infos-produto.php?codigo=<?= $p['id'] ?>" class="ver-produto">Ver Produto</a>
