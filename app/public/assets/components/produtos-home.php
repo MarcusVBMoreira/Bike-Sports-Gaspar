@@ -18,31 +18,31 @@
                         require('assets/components/card-produto.php');
                     ?>
                     <div class="container-categories">
-                        <a href="">
+                        <a href="view-produtos.php?tipo=Ferramentas">
                             <div class="overlay">
                                 <p>Ferramentas</p>   
                             </div>
                             <img src="assets/img/Categories/ferramentas.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a href="view-produtos.php?tipo=COMPONENTES">
                             <div class="overlay">
                                 <p>Componentes</p>   
                             </div>
                             <img src="assets/img/Categories/componentes.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a href="view-produtos.php?tipo=Vestuário">
                             <div class="overlay">
                                 <p>Vestuário</p>   
                             </div>
                             <img src="assets/img/Categories/vestuario.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a href="view-produtos.php?tipo=ACESSORIOS">
                             <div class="overlay">
                                 <p>Acessórios</p>   
                             </div>
                             <img src="assets/img/Categories/acessorios.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a href="view-produtos.php?tipo=Suplementos">
                             <div class="overlay">
                                 <p>Suplementos</p>   
                             </div>
