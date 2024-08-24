@@ -36,16 +36,20 @@
     }
 
     .accordion-item{
-        background-color: var(--CinzaClaro-Cor);
+        background-color: #050611 ;
+    }
+
+    .accordion-item button{
+        color: #fff;
     }
     .accordion-header{
-        background-color: var(--CinzaClaro-Cor);
+        background-color: #050611 ;
     }
     .accordion-button{
-        background-color: var(--CinzaClaro-Cor);
+        background-color: #050611;
     }
     .accordion-button:focus{
-        background-color: var(--CinzaClaro-Cor);
+        background-color: #050611 ;
         border: none;
     }
     .line-2{

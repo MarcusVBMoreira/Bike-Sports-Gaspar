@@ -252,40 +252,44 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 .btn_add_carrinho{
-    padding: 2.5%;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 4px;
     background-color: var(--Laranja-Cor);
     color: var(--Branco-Cor);
     font-size: 18px;
     border: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: cent;
 }
 .frete{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 .btn_frete{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:s;
 }
 .input_frete{
     padding: 4%;
     height: 40px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 5px;
     border-right: none;
+    width: 50%;  
 }
 .input_calcular{
-    padding: 2%;
+    padding: 10px;  
     height: 40px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: var(--Preto-Cor);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #141417;
     color: var(--Branco-Cor);
     font-size: 18px;
 }
@@ -393,8 +397,8 @@
 }
 .img_produto{
     display: flex;
-    width: 70%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
 }
 .img_produto img{
@@ -403,13 +407,13 @@
 .outras_img{
     display: flex;
     height: 30%;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     gap: 5px;
 }
 .quadrado_img{
-    width: 25%;
-    height: 65%;
+    width: 23%;
+    height: 70%;
     display: flex;
     padding: 1%;
     border: 1px #fff solid;
@@ -419,6 +423,24 @@
 }
 .bottom-image{
     cursor: pointer;
+}
+.corpo_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+.valor-e-parcela{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.parcelas-produto p{
+    color: #FFF;
 }
 
 @media screen and (max-width: 800px){

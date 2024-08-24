@@ -348,18 +348,23 @@
                                 <input type="none" id="tamanho" class="input_none" name="tamanho" value="none">
                             </ul> -->
                         </div>
-                        <div class="valor_produto bold">
-                            R$<?= $valor ?>
+                        <div class="valor-e-parcela">
+                            <div class="valor_produto bold">
+                                R$<?= $valor ?>
+                            </div>
+                            <div class="parcelas-produto">
+                                <p>12x de R$ <?= number_format($valor / 10, 2, ',', '.'); ?> sem juros</p>
+                            </div>
                         </div>
                         <div class="botoes">
                             <div class="compra">
                                 <a href="adicionar_carrinho.php?id=<?php echo $codigo; ?>" class="btn_add_carrinho regular">
-                                    Adicionar ao carrinho <i class="fa-solid fa-cart-shopping"></i>
+                                    Adicionar ao carrinho
                                 </a>
                             </div>
                             <div class="frete">
                                 <div class="btn_frete">
-                                    <input type="txt" class="input_frete regular" name="calcular_frete" id="calcular_frete" placeholder="Calcule seu frete">
+                                    <input maxlength="9" type="txt" class="input_frete regular" name="calcular_frete" id="calcular_frete" placeholder="Calcule seu frete">
                                     <button class="input_calcular bold" value="">Calcular</button>
                                 </div>
                             </div>

@@ -98,15 +98,17 @@
                 width: 95%;
                 height: 30vh;
                 display: flex;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: center;
                 align-items: center;
+                gap: 20px;
             }
             .container-categories a{
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 19%;
+                width: 240px;
                 height: 70%;
                 background-color: #000;
             }
@@ -138,16 +140,17 @@
                 width: 95%;
                 height: 30vh;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                gap: 15px;
+                gap: 20px;
             }
             #container-servicos a{
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 25%;
+                width: 240px;
                 height: 70%;
                 background-color: #000;
             }
@@ -173,6 +176,40 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 5px;
+            }
+            @media screen and (max-width: 1416px){
+                .container-categories{
+                    margin-bottom: 100px;
+                }
+            }
+            @media screen and (max-width: 912px){
+                .navigation{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 842px){
+                .container-categories{
+                    margin-bottom: 300px;
+                }
+                #container-servicos{
+                    margin-bottom: 150px;
+                }
+            }
+            @media screen and (max-width: 554px){
+                .container-categories{
+                    margin-bottom: 650px;
+                }
+                #container-servicos{
+                    margin-bottom: 350px;
+                }
+                .navigation a{
+                    font-size: .9rem;
+                }
+            }
+            @media screen and (max-width: 412px){
+                .navigation a{
+                    font-size: .8rem;
+                }
             }
         </style>
     </body>
