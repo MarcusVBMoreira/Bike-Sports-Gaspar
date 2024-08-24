@@ -1,5 +1,5 @@
 :root{
-    --Preto-Cor: #000;
+    --Preto-Cor: #111117;
     --Branco-Cor: #FFF;
     --Cinza-Cor: #969696;
     --CinzaClaro-Cor: #DFDFDF;
@@ -9,7 +9,6 @@
     --Azul-Cor: #00C1EC;
     --Laranja-Cor: #F24701;
 }
-
 .logo{
     width: 120px;
 }
