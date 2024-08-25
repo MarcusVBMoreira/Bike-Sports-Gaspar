@@ -200,10 +200,24 @@
                     margin-bottom: 650px;
                 }
                 #container-servicos{
-                    margin-bottom: 350px;
+                    margin-bottom: 250px;
                 }
                 .navigation a{
                     font-size: .9rem;
+                }
+            }
+            @media screen and (max-width: 440px){
+                .container-categories{
+                    margin-bottom: 500px;
+                }
+                .container-categories a{
+                    height: 50%;
+                }
+                .navigation a{
+                    font-size: .8rem;
+                }
+                #container-servicos a{
+                    height: 50%;
                 }
             }
             @media screen and (max-width: 412px){
