@@ -80,7 +80,7 @@
                     <div class="row-input">
                         <div class="item_forms">
                             <div class="senha_">
-                                <input type="password" placeholder="Senha" name="user_senha" id="senha" class="regular">
+                                <input type="password" placeholder="Senha" name="user_senha" id="senha">
                                 <i id="olho" class="fa-solid fa-eye-slash" onclick="versenha()"></i>
                             </div>
                             <span class="regular" id="span_senha">Informar sua senha</span>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="item_forms">
                             <div class="senha_">
-                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha" class="regular">
+                                <input type="password" placeholder="Confirmar senha" name="confirmar_senha" id="confirmar_senha">
                                 <i id="olhoconfirmar" class="fa-solid fa-eye-slash" onclick="verconfirmarsenha()"></i>
                             </div>
                             <span class="regular" id="span_confirmar_senha">Confirmar senha</span>
@@ -98,12 +98,12 @@
                     </div>
                     <div class="row-input">
                         <div class="item_forms">
-                            <input type="text" placeholder="Telefone" name="user_telefone" id="telefone" class="regular">
+                            <input type="text" placeholder="Telefone" name="user_telefone" id="telefone">
                             <span class="regular" id="span_telefone">Informar seu telefone</span>
                             <span class="regular" id="span_telefone_errado">Seu telefone deve conter o DDD mais os 9 dígitos</span>
                         </div>
                         <div class="item_forms">
-                            <input type="text" placeholder="CPF" name="user_cpf" id="CPF" class="regular">
+                            <input type="text" placeholder="CPF" name="user_cpf" id="CPF">
                             <span class="regular" id="span_cpf">Informar seu CPF</span>
                             <span class="regular" id="span_cpf_errado">O CPF só deve ter numeros</span>
                         </div>

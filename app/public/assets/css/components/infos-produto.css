@@ -238,7 +238,7 @@
     display: flex;
     align-items: center;
     font-size: 30px;
-    color: var(--Verde-Cor);
+    color: #fff;
 }
 .botoes{
     width: 100%;

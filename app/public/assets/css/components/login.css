@@ -163,27 +163,21 @@ h2{
 }
 
 
-@media screen and (max-width: 800px) {
-    .container{
-        width: 90%;
+@media screen and (max-width: 1400px) {
+    .login_container{
+        width: 40%;
     }
-    .logo_login_cadastro{
-        width: 30%;
+}
+@media screen and (max-width: 1200px) {
+    .login_container{
+        width: 60%;
     }
-    .titulo_login_cadastro h1{
-        font-size: 22px;
+}
+@media screen and (max-width: 600px) {
+    .login_container{
+        width: 100%;
     }
-    .item_forms{
-        width: 90%;
-    }
-    .item_forms label{
-        font-size: 15px;
-    }
-    .forms_login button{
-        width: 150px;
-        font-size: 18px;
-    }
-    .cadastro_login p, .cadastro_login p a{
-        font-size: 12px;
+    .regular{
+        text-align: center;
     }
 }

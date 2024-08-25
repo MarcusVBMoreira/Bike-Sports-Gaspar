@@ -39,7 +39,9 @@
                                         <p class="bold"><?= $p['nome'] ?></p>
                                     </div>
                                     <div class="valor">
-                                        <p>R$<?= $p['valor'] ?></p>
+                                        <p>Total produto: R$ <?= $p['valor'] ?></p>
+                                        <p>Total Frete: R$ </p>
+                                        <p>Total: R$</p>
                                     </div>
                                 </div>
                             </div>
