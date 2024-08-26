@@ -197,7 +197,6 @@
             text-align: left;
         }
         .content-button{
-            user-select: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -206,6 +205,13 @@
             background-color: #ec5615;
             border-radius: 2px;
             margin-bottom: 5px;
+        }
+        .content-button a{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
     </style>
   </body>
