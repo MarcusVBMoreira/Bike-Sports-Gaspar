@@ -1,3 +1,7 @@
 <?php
 
-print_r($_GET);
+include('assets/inc/Request.php');
+
+$result = Request::DeleteHard($_GET['id']);
+
+header('Location: index.php');

@@ -18,7 +18,7 @@
             }else{
                 foreach($_FILES as $file){
                     if($file['error'] == UPLOAD_ERR_OK){
-                        $destino = __DIR__ . '/assets/upload/' . $file['name'];
+                        $destino = __DIR__ . '/../public/upload/produtos/' . $file['name'];
                         if(!move_uploaded_file($file['tmp_name'],$destino)){
                             echo 'ERRO';
                         }

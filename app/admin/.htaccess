@@ -1,7 +1,4 @@
-AuthType Basic 
-AuthName "Painel de Controle"
-AuthUserFile c:/xampp/htdocs/bike-sports-gaspar/app/admin/assets/.htpasswd
-require valid-user
+
 
 <Files "index.php">
     Require all granted

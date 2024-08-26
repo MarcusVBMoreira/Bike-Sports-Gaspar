@@ -94,7 +94,7 @@
             <?php foreach($produtos as $p): ?>
                 <div class="produto_adm">
                     <div class="img_produto">
-                        <img src="../admin/assets/upload/<?= $p['img1'] ?>" alt="">
+                        <img src="../public/upload/produtos/<?= $p['img1'] ?>" alt="">
                     </div>
                     <div class="infos_produto">
                         <div class="top_infos">
@@ -106,7 +106,7 @@
                                 <div class="cod_produto regular">Cód. <?= $p['id']; ?></div>
                             </div>
                             <div class="right_infos">
-                                <a href="editar-produto.php" class="btn_editar"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="editar-produto.php?id=<?= $p['id'] ?>" class="btn_editar"><i class="fa-solid fa-pencil"></i></a>
                                 <a href="deletar-produto.php?id=<?= $p['id']; ?>" class="btn_deletar"><i class="fa-solid fa-trash-can"></i></a>
                             </div>
                         </div>
