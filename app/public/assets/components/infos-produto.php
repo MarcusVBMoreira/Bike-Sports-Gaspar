@@ -362,12 +362,12 @@
                                     Adicionar ao carrinho
                                 </a>
                             </div>
-                            <div class="frete">
+                            <!-- <div class="frete">
                                 <div class="btn_frete">
                                     <input maxlength="9" type="txt" class="input_frete regular" name="calcular_frete" id="calcular_frete" placeholder="Calcule seu frete">
                                     <button class="input_calcular bold" value="">Calcular</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </form>
