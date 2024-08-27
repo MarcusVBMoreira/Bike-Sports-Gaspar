@@ -177,6 +177,11 @@
                 height: 100%;
                 border-radius: 5px;
             }
+            @media screen and (max-width: 1920px) {
+                .container-categories a{
+                    width: 300px;
+                }
+            }
             @media screen and (max-width: 1416px){
                 .container-categories{
                     margin-bottom: 100px;
