@@ -1,3 +1,7 @@
+<?php
+    $total_produtos = 0;
+    $frete = 20;
+?>
 <html>
 <!DOCTYPE html>
 <head>
@@ -50,11 +54,16 @@
                         </div>
                     </div>
                 <?php 
+                    $total_produtos += $p['valor'];
                 }
             ?>
             <div class="content-compra">
                 <div class="compra">
-                    <p>Valor dos produtos: R$</p>
+                    <div class="valores">
+                        <p>Valor do frete: R$<?= $frete ?></p>
+                        <p>Valor dos produtos: R$<?= $total_produtos ?></p>
+                        <p>Valor total da compra: R$<?php $total = $frete + $total_produtos; echo $total ?></p>
+                    </div>
                     <button>Comprar</button>
                 </div>
                 <div class="line-compra"></div>
@@ -62,7 +71,7 @@
             <style>
                 .content-compra{
                     width: 80%;
-                    height: 15vh;
+                    height: 20vh;
                 }
                 .compra{
                     display: flex;
@@ -70,6 +79,12 @@
                     align-items: center;
                     width: 100%;
                     height: 50%;
+                }
+                .valores{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 100%;
                 }
                 .compra button{
                     border-radius: 5px;

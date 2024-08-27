@@ -181,6 +181,9 @@
                 .container-categories a{
                     width: 300px;
                 }
+                #container-servicos a{
+                    width: 300px;
+                }
             }
             @media screen and (max-width: 1416px){
                 .container-categories{
