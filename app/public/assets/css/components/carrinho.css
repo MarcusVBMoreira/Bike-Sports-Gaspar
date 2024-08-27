@@ -54,6 +54,7 @@ p{
     flex-direction: column;
     align-items: center;
     width: 80%;
+    height: 25vh;
     padding: 10px;
     border-radius: 5px;
     background-color: #202027;
@@ -61,7 +62,7 @@ p{
 .delete{
     display: flex;
     width: 100%;
-    padding-bottom: 10px;
+    height: 10%;
     justify-content: end;
     align-items: center;
 }
@@ -69,32 +70,43 @@ p{
     color: #fff;
 }
 .produto{
-    width: 90%;
+    width: 95%;
+    height: 90%;
     display: flex;
     justify-content: space-between;
 }
-.produto img{
-    width: 200px;
-    height: 100px;
+.content-img{
+    display: flex;
+    align-items: center;
+    width: 28%;
+    height: 100%;
+}
+.content-img img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
 }
 .desc{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 70%;
+    height: 100%;
 }
 .valor{
     display: flex;
-    flex-direction: column;
     width: 100%;
-    height: 70%;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: end;
+    align-items: flex-end;
+    border-bottom: 1px solid #fff;
+}
+.valor p{
+    margin-bottom: 1%;
 }
 .line{
     width: 95%;
     height: 2px;
     background-color: var(--Branco-Cor);
-    margin-top: 1%;
 }
 
 @media screen and (max-width: 630px){
