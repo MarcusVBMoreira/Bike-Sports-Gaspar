@@ -82,7 +82,48 @@ class Request{
         return json_decode($response);
 
     }
-    public static function Update($data){
+    public static function Update($data){ // finalizar
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost/bike-sports-gaspar/mp_teste/api/products/update/',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'PUT',
+            CURLOPT_POSTFIELDS =>'{
+                "id":"134",
+                "name":"prod api",
+                "desc":"a",
+                "val":12.123,
+                "cat":"asasfasf",
+                "qtd":1010,
+                "col":"PRETO",
+                "tp":"as",
+                "mod":"amama",
+                "brnd":"aa",
+                "compst":"aaa",
+                "comptb":"aa",
+                "wght":40,
+                "dim":"aal",
+                "spec":"ababa",
+                "i1":"a",
+                "i2":"a",
+                "i3":"a",
+                "i4":"a"
+            }',
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json'
+            ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        echo $response;
 
     }
     public static function UpdateProp($id,$prop,$value){

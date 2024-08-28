@@ -178,16 +178,16 @@
                         <label for="cor">Cor do produto</label>
                         <select id="cor1" name="cor">
                             <option value="">Selecione a cor do produto</option>
-                            <option value="preto">Preto</option>
-                            <option value="vermelho">Vermelho</option>
-                            <option value="vermelho">Amarelo</option>
-                            <option value="azul">Azul</option>
-                            <option value="laranja">Laranja</option>
-                            <option value="Verde">Verde</option>
-                            <option value="rosa">Rosa</option>
-                            <option value="roxo">Roxo</option>
-                            <option value="branco">Branco</option>
-                            <option value="cinza">Cinza</option>
+                            <option value="PRETO">Preto</option>
+                            <option value="VERMELHO">Vermelho</option>
+                            <option value="AMARELO">Amarelo</option>
+                            <option value="AZUL">Azul</option>
+                            <option value="LARANJA">Laranja</option>
+                            <option value="VERDE">Verde</option>
+                            <option value="ROSA">Rosa</option>
+                            <option value="ROXO">Roxo</option>
+                            <option value="BRANCO">Branco</option>
+                            <option value="CINZA">Cinza</option>
                         </select>
                     </div>
                 <input type="hidden" name="MAX_FILE_SIZE" value="1048576">

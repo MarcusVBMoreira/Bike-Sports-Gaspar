@@ -3,7 +3,11 @@
 
     $produto = Request::GetById($_GET['id']);
     $produto = $produto['results'];
-    // print_r($produto);die();
+
+    $dimensoes = explode('x',$produto['dimensoes']);
+    $comprimento = $dimensoes[0];
+    $altura = $dimensoes[1];
+    $largura = $dimensoes[2];
     $nenhum_arquivo = false;
     $erro_upload = false;
 
@@ -134,37 +138,37 @@
                 </div>
                 <div class="item_forms">
                     <label for="modelo">Modelo do produto</label>
-                    <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo do produto">
+                    <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo do produto" value="<?= $produto['modelo'] ?>">
                 </div>
                 <div class="item_forms">
                     <label for="marca">Marca do produto:</label>
-                    <input type="text" id="marca" name="marca" placeholder="Digite a marda do produto">
+                    <input type="text" id="marca" name="marca" placeholder="Digite a marda do produto" value="<?= $produto['marca'] ?>">
                 </div>
                 <div class="item_forms">
                     <label for="composicao">Composição do produto</label>
-                    <input type="text" id="composicao" name="composicao" placeholder="Digite a composição do produto">
+                    <input type="text" id="composicao" name="composicao" placeholder="Digite a composição do produto" value="<?= $produto['composicao'] ?>">
                 </div>
                 <div class="item_forms">
                     <label for="compativel">Compatibilidade do produto</label>
                     <input type="text" id="compativel" name="compativel"
-                        placeholder="Digite com quais outras coisas o produto é compatível">
+                        placeholder="Digite com quais outras coisas o produto é compatível" value="<?= $produto['compativel'] ?>">
                 </div>
                 <div class="item_forms">
                     <label for="peso">Peso do produto</label>
-                    <input type="text" id="peso" name="peso" placeholder="Digite o preso do produto em gramas">
+                    <input type="text" id="peso" name="peso" placeholder="Digite o preso do produto em gramas" value="<?= $produto['peso'] ?>">
                 </div>
                 <div class="item_forms">
                     <label for="altura">Altura do produto</label>
-                    <input type="text" id="altura" name="altura" placeholder="Digite a altura do produto em centímetros">
+                    <input type="text" id="altura" name="altura" placeholder="Digite a altura do produto em centímetros" value="<?= $altura ?>">
                 </div>
                 <div class="item_forms">
                     <label for="largura">Largura do produto</label>
-                    <input type="text" id="largura" name="largura" placeholder="Digite a largura do produto em centímetros">
+                    <input type="text" id="largura" name="largura" placeholder="Digite a largura do produto em centímetros" value="<?= $largura ?>">
                 </div>
                 <div class="item_forms">
                     <label for="comprimento">Comprimento do produto</label>
                     <input type="text" id="comprimento" name="comprimento"
-                        placeholder="Digite o comprimento do produto em centímetros">
+                        placeholder="Digite o comprimento do produto em centímetros" value="<?= $comprimento ?>">
                 </div>
                 <!-- <div class="item_forms">
                         <label for="qnt_cores">Quantidade de cores do produto</label>
@@ -183,16 +187,16 @@
                         <label for="cor">Cor do produto</label>
                         <select id="cor1" name="cor">
                             <option value="">Selecione a cor do produto</option>
-                            <option value="preto">Preto</option>
-                            <option value="vermelho">Vermelho</option>
-                            <option value="vermelho">Amarelo</option>
-                            <option value="azul">Azul</option>
-                            <option value="laranja">Laranja</option>
-                            <option value="Verde">Verde</option>
-                            <option value="rosa">Rosa</option>
-                            <option value="roxo">Roxo</option>
-                            <option value="branco">Branco</option>
-                            <option value="cinza">Cinza</option>
+                            <option value="PRETO" <?php if($produto['cor'] == 'PRETO'): ?> selected <?php endif; ?>>Preto</option>
+                            <option value="VERMELHO" <?php if($produto['cor'] == 'VERMELHO'): ?> selected <?php endif; ?>>Vermelho</option>
+                            <option value="AMARELO" <?php if($produto['cor'] == 'AMARELO'): ?> selected <?php endif; ?>>Amarelo</option>
+                            <option value="AZUL" <?php if($produto['cor'] == 'AZUL'): ?> selected <?php endif; ?>>Azul</option>
+                            <option value="LARANJA" <?php if($produto['cor'] == 'LARANJA'): ?> selected <?php endif; ?>>Laranja</option>
+                            <option value="VERDE" <?php if($produto['cor'] == 'VERDE'): ?> selected <?php endif; ?>>Verde</option>
+                            <option value="ROSA" <?php if($produto['cor'] == 'ROSA'): ?> selected <?php endif; ?>>Rosa</option>
+                            <option value="ROXO" <?php if($produto['cor'] == 'ROXO'): ?> selected <?php endif; ?>>Roxo</option>
+                            <option value="BRANCO" <?php if($produto['cor'] == 'BRANCO'): ?> selected <?php endif; ?>>Branco</option>
+                            <option value="CINZA" <?php if($produto['cor'] == 'CINZA'): ?> selected <?php endif; ?>>Cinza</option>
                         </select>
                     </div>
                 <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
@@ -200,14 +204,14 @@
                     <div class="item_forms">
                         <label for="img1" id="label_img1_opt1" class="label_img1_opt1">Imagem 1</label>
                         <label for="img1" id="label_img1_opt2" class="label_img1_opt2">Imagem 1 </label>
-                        <input type="file" name="img1" id="img1">
+                        <input type="file" name="img1" id="img1" value="<?= $produto['img1'] ?>">
                     </div>
                 </div>
                 <div class="div_img2 active" id="div_img2">
                     <div class="item_forms">
                         <label for="img2" id="label_img2_opt1" class="label_img2_opt1">Imagem 2</label>
                         <label for="img2" id="label_img2_opt2" class="label_img2_opt2">Imagem 2 </label>
-                        <input type="file" name="img2" id="img2">
+                        <input type="file" name="img2" id="img2" value="<?= $produto['img2'] ?>">
                     </div>
                 </div>
                 <div class="div_img3 active" id="div_img3">
@@ -215,7 +219,7 @@
                         <label for="img3" id="label_img3_opt1" class="label_img4_opt1">Imagem 3</label>
                         <label for="img3" id="label_img3_opt2" class="label_img4_opt2">Imagem 3 da cor3 do
                             produto</label>
-                        <input type="file" name="img3" id="img3">
+                        <input type="file" name="img3" id="img3" value="<?= $produto['img3'] ?>">
                     </div>
                 </div>
                 <div class="div_img4 active" id="div_img4">
@@ -223,7 +227,7 @@
                         <label for="img4" id="label_img4_opt1" class="label_img4_opt1">Imagem 4</label>
                         <label for="img4" id="label_img4_opt2" class="label_img4_opt2">Imagem 4 da cor4 do
                             produto</label>
-                        <input type="file" name="img4" id="img4">
+                        <input type="file" name="img4" id="img4" value="<?= $produto['img4'] ?>">
                     </div>
                 </div>
                 <button type="submit" class="btn_cadastrar">Cadastrar</button>
