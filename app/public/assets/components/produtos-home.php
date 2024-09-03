@@ -10,7 +10,6 @@
                     <nav class="nav-homeProd">
                         <div class="navigation">
                             <a href="#produtos">Em alta</a>
-                            <a href="">Promoções</a>
                             <a href="#container-servicos">Serviços locais</a>
                         </div>
                     </nav>
@@ -185,10 +184,22 @@
                     width: 300px;
                 }
             }
+            
+            @media screen and (max-width: 1750px) {
+                .container-categories{
+                    margin-bottom: 150px;
+                }
+                .container-categories a{
+                    width: 300px;
+                }
+            }
+
             @media screen and (max-width: 1416px){
                 .container-categories{
                     margin-bottom: 100px;
+                    background-color: aqua;
                 }
+                
             }
             @media screen and (max-width: 912px){
                 .navigation{
