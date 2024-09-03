@@ -13,9 +13,17 @@
                     $erros += 1;
                 }
             }
-            if($erros >= 4){
+            if($erros >= 11){
                 $nenhum_arquivo = true;
             }else{
+                if(isset($_FILES['video'])){
+                    $video = $_FILES['video'];
+                    unset($_FILES['video']);
+                    $destino = __DIR__ . '/../public/upload/produtos/videos/' . $video['name'];
+                    if(!move_uploaded_file($video['tmp_name'],$destino)){
+                        echo 'ERRO';
+                    }    
+                }
                 foreach($_FILES as $file){
                     if($file['error'] == UPLOAD_ERR_OK){
                         $destino = __DIR__ . '/../public/upload/produtos/' . $file['name'];
@@ -41,14 +49,11 @@
             'wght' => $_POST['peso'] ?? 0,
             'dim' => $_POST['comprimento'] . 'x' . $_POST['altura'] . 'x' . $_POST['largura'],
             'spec' => $_POST['especificacoes'] ?? '',
-            'i1' => $_FILES['img1']['name'] ?? '',
-            'i2' => $_FILES['img2']['name'] ?? '',
-            'i3' => $_FILES['img3']['name'] ?? '',
-            'i4' => $_FILES['img4']['name'] ?? ''
+            'video' => $video['name'] ?? '',
+            'imgs' => $_FILES['img1']['name'] ?? ''. '|' . $_FILES['img2']['name'] ?? '' . '|' . $_FILES['img3']['name'] ?? '' . '|' . $_FILES['img4']['name'] ?? '' . '|' . $_FILES['img5']['name'] ?? '' . '|' . $_FILES['img6']['name'] ?? '' . '|' . $_FILES['img7']['name'] ?? '' . '|' . $_FILES['img8']['name'] ?? '' . '|' . $_FILES['img9']['name'] ?? '' . '|' . $_FILES['img10']['name'] ?? ''
         ];
-        
         $result = Request::Create($produto);
-        
+        header('Location: index.php');
     }
 
     
@@ -190,8 +195,11 @@
                             <option value="CINZA">Cinza</option>
                         </select>
                     </div>
-                <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
-                    <div class="div_img1" id="div_img1">
+                <div>
+                    <label for="video">Video:</label><br>
+                    <input type="file" name="video" id="video">
+                </div>
+                <div class="div_img1" id="div_img1">
                     <div class="item_forms">
                         <label for="img1" id="label_img1_opt1" class="label_img1_opt1">Imagem 1</label>
                         <label for="img1" id="label_img1_opt2" class="label_img1_opt2">Imagem 1 </label>
@@ -219,6 +227,42 @@
                         <label for="img4" id="label_img4_opt2" class="label_img4_opt2">Imagem 4 da cor4 do
                             produto</label>
                         <input type="file" name="img4" id="img4">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 5</label>
+                        <input type="file" name="img5" id="img5" >
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 6</label>
+                        <input type="file" name="img6" id="img5" >
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 7</label>
+                        <input type="file" name="img7" id="img5" >
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 8</label>
+                        <input type="file" name="img8" id="img5">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 9</label>
+                        <input type="file" name="img9" id="img5" >
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 10</label>
+                        <input type="file" name="img10" id="img5">
                     </div>
                 </div>
                 <button type="submit" class="btn_cadastrar">Cadastrar</button>

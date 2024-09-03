@@ -124,10 +124,8 @@ class ProductRepository implements IRepository{
                 peso,
                 dimensoes,
                 especificacoes,
-                img1,
-                img2,
-                img3,
-                img4,
+                video,
+                imgs,   
                 created_at,
                 updated_at
             )
@@ -146,10 +144,8 @@ class ProductRepository implements IRepository{
                 :wght,
                 :dim,
                 :spec,
-                :i1,
-                :i2,
-                :i3,
-                :i4,
+                :video,
+                :imgs,
                 :created_at,
                 :updated_at
             )
@@ -168,10 +164,8 @@ class ProductRepository implements IRepository{
         $query->bindValue(":wght",$product["wght"]);
         $query->bindValue(":dim",$product["dim"]);
         $query->bindValue(":spec",$product["spec"]);
-        $query->bindValue(":i1",$product["i1"]);
-        $query->bindValue(":i2",$product["i2"]);
-        $query->bindValue(":i3",$product["i3"]);
-        $query->bindValue(":i4",$product["i4"]);
+        $query->bindValue(":video",$product["video"]);
+        $query->bindValue(":imgs",$product["imgs"]);
         $query->bindValue(":created_at",$created_at);
         $query->bindValue(":updated_at",$created_at);
 
@@ -205,81 +199,132 @@ class ProductRepository implements IRepository{
         }
 
         //LOOK FOR DUPLICATE EMAIL ON DIFFERENT RECORD
-        $query = self::$DBContext->prepare("
-            SELECT * FROM produtos 
-            WHERE nome = :name AND 
-            id <> :id
-        ");
-        $query->bindValue(":name",$product["name"]);
-        $query->bindValue(":id",$id);
+        // $query = self::$DBContext->prepare("
+        //     SELECT * FROM produtos 
+        //     WHERE nome = :name AND 
+        //     id <> :id
+        // ");
+        // $query->bindValue(":name",$product["name"]);
+        // $query->bindValue(":id",$id);
 
-        if($query->execute()){
-            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        // if($query->execute()){
+        //     $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            if(count($result)> 0){
-                return [
-                    'data' => 'There is already a product with the same name',
-                    'code' => 200
-                ];
-            }
+        //     if(count($result)> 0){
+        //         return [
+        //             'data' => 'There is already a product with the same name',
+        //             'code' => 200
+        //         ];
+        //     }
+        // }
+
+        $query = "UPDATE produtos SET ";
+        if(isset($product['name'])){
+            $query .= 'nome = :name,';
+        }
+        if(isset($product['desc'])){
+            $query .= 'descricao = :desc,';
+        }
+        if(isset($product['val'])){
+            $query .= 'valor = :val,';
+        }
+        if(isset($product['cat'])){
+            $query .= 'categoria = :cat,';
+        }
+        if(isset($product['qtd'])){
+            $query .= 'quantidade = :qtd,';
+        }
+        if(isset($product['tp'])){
+            $query .= 'tipo = :tp,';
+        }
+        if(isset($product['mod'])){
+            $query .= 'modelo = :mod,';
+        }
+        if(isset($product['brnd'])){
+            $query .= 'marca = :brnd,';
+        }
+        if(isset($product['compst'])){
+            $query .= 'composicao = :compst,';
+        }
+        if(isset($product['comptb'])){
+            $query .= 'compativel = :comptb,';
+        }
+        if(isset($product['wght'])){
+            $query .= 'peso = :wght,';
+        }
+        if(isset($product['dim'])){
+            $query .= 'dimensoes = :dim,';
+        }
+        if(isset($product['spec'])){
+            $query .= 'especificacoes = :spec,';
+        }
+        if(isset($product['video'])){
+            $query .= 'video = :video,';
+        }
+        if(isset($product['imgs'])){
+            $query .= 'imgs = :imgs,';
         }
 
-        $query = self::$DBContext->prepare("
-            UPDATE produtos SET
-            nome = :name,
-            descricao = :desc,
-            valor = :val,
-            categoria = :cat,
-            quantidade = :qtd,
-            tipo = :tp,
-            modelo = :mod,
-            marca = :brnd,
-            composicao = :compst,
-            compativel = :comptb,
-            peso = :wght,
-            altura = :hght,
-            largura = :wdth,
-            comprimento = :lgth,
-            especificacoes = :spec,
-            img1 = :i1,
-            img2 = :i2,
-            img3 = :i3,
-            img4 = :i4,
-            updated_at = :updated_at
-            WHERE
-            id = :id
-        ");
-
+        $query .= "updated_at = :updated_at WHERE id = :id";
+        
+        $sql = self::$DBContext->prepare($query);
+        
         date_default_timezone_set('America/Bahia');
         $time_brazil = date('Y/m/d H:i:s e');
         date_default_timezone_set('UTC');
         $time_utc = date('Y/m/d H:i:s e');
         $updated_at = "($time_brazil) - ($time_utc)";
 
-        $query->bindValue(":name",$product["name"]);
-        $query->bindValue(":desc",$product["desc"]);
-        $query->bindValue(":val",$product["val"]);
-        $query->bindValue(":cat",$product["cat"]);
-        $query->bindValue(":qtd",$product["qtd"]);
-        $query->bindValue(":tp",$product["tp"]);
-        $query->bindValue(":mod",$product["mod"]);
-        $query->bindValue(":brnd",$product["brnd"]);
-        $query->bindValue(":compst",$product["compst"]);
-        $query->bindValue(":comptb",$product["comptb"]);
-        $query->bindValue(":wght",$product["wght"]);
-        $query->bindValue(":hght",$product["hght"]);
-        $query->bindValue(":wdth",$product["wdth"]);
-        $query->bindValue(":lgth",$product["lgth"]);
-        $query->bindValue(":spec",$product["spec"]);
-        $query->bindValue(":i1",$product["i1"]);
-        $query->bindValue(":i2",$product["i2"]);
-        $query->bindValue(":i3",$product["i3"]);
-        $query->bindValue(":i4",$product["i4"]);
-        $query->bindValue(":updated_at",$updated_at);
-        $query->bindValue(":id",$id);
+        if(isset($product['name'])){
+            $sql->bindValue(":name",$product["name"]);
+        }
+        if(isset($product['desc'])){
+            $sql->bindValue(":desc",$product["desc"]);
+        }
+        if(isset($product['val'])){
+            $sql->bindValue(":val",$product["val"]);
+        }
+        if(isset($product['cat'])){
+            $sql->bindValue(":cat",$product["cat"]);
+        }
+        if(isset($product['qtd'])){
+            $sql->bindValue(":qtd",$product["qtd"]);
+        }
+        if(isset($product['tp'])){
+            $sql->bindValue(":tp",$product["tp"]);
+        }
+        if(isset($product['mod'])){
+            $sql->bindValue(":mod",$product["mod"]);
+        }
+        if(isset($product['brnd'])){
+            $sql->bindValue(":brnd",$product["brnd"]);
+        }
+        if(isset($product['compst'])){
+            $sql->bindValue(":compst",$product["compst"]);
+        }
+        if(isset($product['comptb'])){
+            $sql->bindValue(":comptb",$product["comptb"]);
+        }
+        if(isset($product['wght'])){
+            $sql->bindValue(":wght",$product["wght"]);
+        }
+        if(isset($product['dim'])){
+            $sql->bindValue(":dim",$product["dim"]);
+        }
+        if(isset($product['spec'])){
+            $sql->bindValue(":spec",$product["spec"]);
+        }
+        if(isset($product['video'])){
+            $sql->bindValue(":video",$product["video"]);
+        }
+        if(isset($product['imgs'])){
+            $sql->bindValue(":imgs",$product["imgs"]);
+        }
+        $sql->bindValue(":updated_at",$updated_at);
+        $sql->bindValue(":id",$id);
         
         
-        if($query->execute()){
+        if($sql->execute()){
             return [
                 'data' => 'Product updated successfully',
                 'code' => 200

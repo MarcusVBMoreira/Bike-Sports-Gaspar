@@ -1,13 +1,16 @@
 <?php
     require __DIR__ . '/assets/inc/Request.php';
-
-    $produto = Request::GetById($_GET['id']);
+    $id_produto = $_GET['id'];
+    $produto = Request::GetById($id_produto);
     $produto = $produto['results'];
+
+    $imgs = explode('|',$produto['imgs']);
 
     $dimensoes = explode('x',$produto['dimensoes']);
     $comprimento = $dimensoes[0];
     $altura = $dimensoes[1];
     $largura = $dimensoes[2];
+
     $nenhum_arquivo = false;
     $erro_upload = false;
 
@@ -36,27 +39,26 @@
             }
         }
         $produto = [
-            'name' => $_POST['nome'] ?? '',
-            'desc' => $_POST['descricao'] ?? '',
+            'id'=>$id_produto,
+            'name' => $_POST['nome'] ?? null,
+            'desc' => $_POST['descricao'] ?? null,
             'val' => $_POST['valor'] ?? 0,
-            'cat' => $_POST['categoria'] ?? '',
+            'cat' => $_POST['categoria'] ?? null,
             'qtd' => $_POST['quantidade'] ?? 0,
-            'col' => $_POST['cor'] ?? '',
-            'tp' => $_POST['tipo'] ?? '',
-            'mod' => $_POST['modelo'] ?? '',
-            'brnd' => $_POST['marca'] ?? '',
-            'compst' => $_POST['composicao'] ?? '',
-            'comptb' => $_POST['compativel'] ?? '',
-            'wght' => $_POST['peso'] ?? 0,
+            'col' => $_POST['cor'] ?? null,
+            'tp' => $_POST['tipo'] ?? null,
+            'mod' => $_POST['modelo'] ?? null,
+            'brnd' => $_POST['marca'] ?? null,
+            'compst' => $_POST['composicao'] ?? null,
+            'comptb' => $_POST['compativel'] ?? null,
+            'wght' => $_POST['peso'] ?? null,
             'dim' => $_POST['comprimento'] . 'x' . $_POST['altura'] . 'x' . $_POST['largura'],
-            'spec' => $_POST['especificacoes'] ?? '',
-            'i1' => $_FILES['img1']['name'] ?? '',
-            'i2' => $_FILES['img2']['name'] ?? '',
-            'i3' => $_FILES['img3']['name'] ?? '',
-            'i4' => $_FILES['img4']['name'] ?? ''
+            'spec' => $_POST['especificacoes'] ?? null,
+            'video' => $_POST['video'] ?? null,
+            'imgs' => $_FILES['img1']['name'] ?? ''. '|' . $_FILES['img2']['name'] ?? '' . '|' . $_FILES['img3']['name'] ?? '' . '|' . $_FILES['img4']['name'] ?? '' . '|' . $_FILES['img5']['name'] ?? '' . '|' . $_FILES['img6']['name'] ?? '' . '|' . $_FILES['img7']['name'] ?? '' . '|' . $_FILES['img8']['name'] ?? '' . '|' . $_FILES['img9']['name'] ?? '' . '|' . $_FILES['img10']['name'] ?? ''
         ];
         
-        $result = Request::Create($produto);
+        $result = Request::Update($produto);
         
     }
 
@@ -87,7 +89,7 @@
         <img class="logo" src="assets/img/logoBSG-branco-menor.png" alt="">
         <div class="card-cadastro">
             <div class="ttl">
-                <h1>Cadastrar um produto</h1>
+                <h1>Editar um produto</h1>
             </div>
             <?php if($erro_upload): ?>
                 <p style="color:red;text-align:center;">Erro: não foi possível enviar os arquivos.</p>
@@ -199,37 +201,67 @@
                             <option value="CINZA" <?php if($produto['cor'] == 'CINZA'): ?> selected <?php endif; ?>>Cinza</option>
                         </select>
                     </div>
-                <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+                <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
                     <div class="div_img1" id="div_img1">
                     <div class="item_forms">
                         <label for="img1" id="label_img1_opt1" class="label_img1_opt1">Imagem 1</label>
-                        <label for="img1" id="label_img1_opt2" class="label_img1_opt2">Imagem 1 </label>
-                        <input type="file" name="img1" id="img1" value="<?= $produto['img1'] ?>">
+                        <input type="file" name="img1" id="img1" value="<?= $imgs[0] ?> ">
                     </div>
                 </div>
                 <div class="div_img2 active" id="div_img2">
                     <div class="item_forms">
                         <label for="img2" id="label_img2_opt1" class="label_img2_opt1">Imagem 2</label>
-                        <label for="img2" id="label_img2_opt2" class="label_img2_opt2">Imagem 2 </label>
-                        <input type="file" name="img2" id="img2" value="<?= $produto['img2'] ?>">
+                        <input type="file" name="img2" id="img2" value="<?= $imgs[1] ?>">
                     </div>
                 </div>
                 <div class="div_img3 active" id="div_img3">
                     <div class="item_forms">
                         <label for="img3" id="label_img3_opt1" class="label_img4_opt1">Imagem 3</label>
-                        <label for="img3" id="label_img3_opt2" class="label_img4_opt2">Imagem 3 da cor3 do
-                            produto</label>
-                        <input type="file" name="img3" id="img3" value="<?= $produto['img3'] ?>">
+                        <input type="file" name="img3" id="img3" value="<?= $imgs[2] ?>">
                     </div>
                 </div>
                 <div class="div_img4 active" id="div_img4">
                     <div class="item_forms">
                         <label for="img4" id="label_img4_opt1" class="label_img4_opt1">Imagem 4</label>
-                        <label for="img4" id="label_img4_opt2" class="label_img4_opt2">Imagem 4 da cor4 do
-                            produto</label>
-                        <input type="file" name="img4" id="img4" value="<?= $produto['img4'] ?>">
+                        <input type="file" name="img4" id="img4" value="<?= $imgs[3] ?>">
                     </div>
                 </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 5</label>
+                        <input type="file" name="img5" id="img5" value="<?= $imgs[4] ?>">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 6</label>
+                        <input type="file" name="img6" id="img5" value="<?= $imgs[5] ?>">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 7</label>
+                        <input type="file" name="img7" id="img5" value="<?= $imgs[6] ?>">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 8</label>
+                        <input type="file" name="img8" id="img5" value="<?= $imgs[7] ?>">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 9</label>
+                        <input type="file" name="img9" id="img5" value="<?= $imgs[8] ?>">
+                    </div>
+                </div>
+                <div class="div_img4 active" id="div_img4">
+                    <div class="item_forms">
+                        <label for="img5" id="label_img4_opt1" class="label_img4_opt1">Imagem 10</label>
+                        <input type="file" name="img10" id="img5" value="<?= $imgs[9] ?>">
+                    </div>
+                </div> -->
                 <button type="submit" class="btn_cadastrar">Cadastrar</button>
             </form>
         </div>

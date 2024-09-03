@@ -91,10 +91,12 @@
             <p>Não há clientes registrados</p>
         <?php else: ?>
             
-            <?php foreach($produtos as $p): ?>
+            <?php foreach($produtos as $p): 
+                $imgs = explode('|',$p['imgs']);
+            ?>
                 <div class="produto_adm">
                     <div class="img_produto">
-                        <img src="../public/upload/produtos/<?= $p['img1'] ?>" alt="">
+                        <img src="../public/upload/produtos/<?= $imgs[0] ?>" alt="">
                     </div>
                     <div class="infos_produto">
                         <div class="top_infos">

@@ -56,10 +56,8 @@ $new_prod = [
     'wght' => isset($_POST['wght']) ? $_POST['wght'] : '',
     'dim' => $_POST['dim'] ?? '',
     'spec' => isset($_POST['spec']) ? $_POST['spec'] : '',
-    'i1' => isset($_POST['i1']) ? $_POST['i1'] : '',
-    'i2' => isset($_POST['i2']) ? $_POST['i2'] : '',
-    'i3' => isset($_POST['i3']) ? $_POST['i3'] : '',
-    'i4' => isset($_POST['i4']) ? $_POST['i4'] : '',
+    'video' => isset($_POST['video']) ? $_POST['video'] : '',
+    'imgs' => $_POST['imgs'] ?? ''
 ];
 
 $created = ProductController::CreateProduct($new_prod);

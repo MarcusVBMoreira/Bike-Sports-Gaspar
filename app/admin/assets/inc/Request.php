@@ -55,10 +55,8 @@ class Request{
         $peso = $data['wght'];
         $dimensao = $data['dim'];
         $especificacao = $data['spec'];
-        $img1 = $data['i1'];
-        $img2 = $data['i2'];
-        $img3 = $data['i3'];
-        $img4 = $data['i4'];
+        $video = $data['video'];
+        $imgs = $data['imgs'];
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -70,7 +68,7 @@ class Request{
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => "name=$nome&val=$valor&qtd=$quantidade&dim=$dimensao&col=$cor&i1=$img1&i2=$img2&i3=$img3&i4=$img4&desc=$descricao&brnd=$marca&mod=$modelo&spec=$especificacao&cat=$categoria&tp=$tipo&wght=$peso&compst=$composicao&comptb=$compatibilidade",
+        CURLOPT_POSTFIELDS => "name=$nome&val=$valor&qtd=$quantidade&dim=$dimensao&col=$cor&imgs=$imgs&desc=$descricao&brnd=$marca&mod=$modelo&spec=$especificacao&cat=$categoria&tp=$tipo&wght=$peso&compst=$composicao&comptb=$compatibilidade&video=$video",
         CURLOPT_HTTPHEADER => array(
             'Content-Type: application/x-www-form-urlencoded'
         ),
@@ -85,8 +83,28 @@ class Request{
     public static function Update($data){ // finalizar
         $curl = curl_init();
 
+        $updating =  json_encode([
+            'id'=>$data['id'],
+            'name' => $data['name'],
+            'desc' => $data['desc'],
+            'val' => $data['val'],
+            'cat' => $data['cat'],
+            'qtd' => $data['qtd'],
+            'col' => $data['col'],
+            'tp' => $data['tp'],
+            'mod' => $data['mod'],
+            'brnd' => $data['brnd'],
+            'compst' => $data['compst'],
+            'comptb' => $data['comptb'],
+            'wght' => $data['wght'],
+            'dim' => $data['dim'],
+            'spec' => $data['spec'],
+            'video' => $data['video'],
+            'imgs' => $data['imgs'],
+        ]);
+
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost/bike-sports-gaspar/mp_teste/api/products/update/',
+            CURLOPT_URL => 'http://localhost/bike-sports-gaspar/apiv1.1/products/update/',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -94,27 +112,7 @@ class Request{
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'PUT',
-            CURLOPT_POSTFIELDS =>'{
-                "id":"134",
-                "name":"prod api",
-                "desc":"a",
-                "val":12.123,
-                "cat":"asasfasf",
-                "qtd":1010,
-                "col":"PRETO",
-                "tp":"as",
-                "mod":"amama",
-                "brnd":"aa",
-                "compst":"aaa",
-                "comptb":"aa",
-                "wght":40,
-                "dim":"aal",
-                "spec":"ababa",
-                "i1":"a",
-                "i2":"a",
-                "i3":"a",
-                "i4":"a"
-            }',
+            CURLOPT_POSTFIELDS => $updating,
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json'
             ),
@@ -123,7 +121,7 @@ class Request{
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo $response;
+        return json_decode($response);
 
     }
     public static function UpdateProp($id,$prop,$value){
