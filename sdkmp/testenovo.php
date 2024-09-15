@@ -1,5 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
+use MercadoPago\MercadoPagoConfig;
+use MercadoPago\Client\Preference\PreferenceClient;
 MercadoPagoConfig::setAccessToken("ACCESS_TOKEN");
 
 $client = new PreferenceClient();
@@ -92,5 +93,5 @@ $preference = $client->create([
 "statement_descriptor" => "Test Store",
 ]);
 
-echo implode($preference);
+
 ?>

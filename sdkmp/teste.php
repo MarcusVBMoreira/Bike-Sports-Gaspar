@@ -8,11 +8,66 @@
     use MercadoPago\Exceptions\MPApiException;
     use MercadoPago\MercadoPagoConfig;
 
+    $file = parse_ini_file('.env');
+    $access_token = $file['mercado_pago_access_token'];
     // Step 2: Set production or sandbox access token
-    MercadoPagoConfig::setAccessToken("TEST-5363700393572476-060316-edab4e04e075b026dd741082c78591d9-1309497727");
+    MercadoPagoConfig::setAccessToken($access_token);
     // Step 2.1 (optional - default is SERVER): Set your runtime enviroment from MercadoPagoConfig::RUNTIME_ENVIROMENTS
     // In case you want to test in your local machine first, set runtime enviroment to LOCAL
     MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);
+    
+    // $data = $_POST;
+    $data = [
+        'products' => [
+            ['id' => 1123,
+            'nome' => 'teste',
+            'img' => 'aaa',
+            'quantidade' => 12,
+            'valor' => 2.00]
+        ],
+        'user' => [
+            "name" => "APRO",
+            "surname" => "User",
+            "email" => "testeemail@email.com",
+            "phone" => array(
+                "area_code" => "11",
+                "number" => "4444-4444"
+            ),
+            "identification" => array(
+                "type" => "CPF",
+                "number" => "12345678909"
+            ),
+            "address" => array(
+                "zip_code" => "06233200",
+                "street_name" => "Street",
+                "street_number" => "123"
+            )
+        ]
+    ];
+
+    $items = array();
+    foreach($data['products'] as $p){
+        $product_mp = [
+            "id" => $p['id'],
+            "title" => $p['nome'],
+            "description" => $p['descricao'] ?? '',
+            "picture_url" => $p['img'],
+            "category_id" => $p['categoria'] ?? '',
+            "quantity" => $p['quantidade'],
+            "currency_id" => "BRL",
+            "unit_price" => $p['valor']
+        ];
+        array_push($items, $product_mp);
+    }
+
+    $user = $data['user'];
+
+    date_default_timezone_set('America/Sao_Paulo');
+    $now = date("Y-m-d\TH:i:s.000P");
+
+    $expire_hour = date('H:i:s',time() + 60*60);
+    $expire_date = date("Y-m-d\T$expire_hour.000P");
+
 
     // Step 3: Initialize the API client
     $client = new PreferenceClient();
@@ -26,50 +81,20 @@
                 "failure" => "http://test.com/failure",
                 "pending" => "http://test.com/pending"
             ),
-            "differential_pricing" => array(
-                "id" => 1,
-            ),
-            "expires" => false,
-            "items" => array(
-                array(
-                    "id" => "1234",
-                    "title" => "bike teste",
-                    "description" => "Dummy description",
-                    "picture_url" => "http://www.myapp.com/myimage.jpg",
-                    "category_id" => "car_electronics",
-                    "quantity" => 2,
-                    "currency_id" => "BRL",
-                    "unit_price" => 100
-                )
-            ),
+            "expiration_date_from" => $now,
+            "expiration_date_to" => $expire_date,
+            "expires" => true,
+            "items" => $items,
             "marketplace_fee" => 0,
-            "payer" => array(
-                "name" => "APRO",
-                "surname" => "User",
-                "email" => "testeemail@email.com",
-                "phone" => array(
-                    "area_code" => "11",
-                    "number" => "4444-4444"
-                ),
-                "identification" => array(
-                    "type" => "CPF",
-                    "number" => "12345678909"
-                ),
-                "address" => array(
-                    "zip_code" => "06233200",
-                    "street_name" => "Street",
-                    "street_number" => "123"
-                )
-            ),
-            "additional_info" => "Discount: 12.00",
+            "payer" => $user,
+            // "additional_info" => "Discount: 12.00",
             "auto_return" => "all",
             "binary_mode" => true,
-            "external_reference" => "1643827245",
             "marketplace" => "none",
             "notification_url" => "http://notificationurl.com",
             "operation_type" => "regular_payment",
             "payment_methods" => array(
-                "default_payment_method_id" => "master",
+                "default_payment_method_id" => "",
                 "excluded_payment_types" => array(
                     array(
                         "id" => "visa"
@@ -83,8 +108,8 @@
                 "installments" => 5,
                 "default_installments" => 1
             ),
-            "shipments" >= array(
-                "mode" => "custom",
+            "shipments" => array(
+                "mode" => "not_specified",
                 "local_pickup" => false,
                 "default_shipping_method" => null,
                 "free_methods" => array(
@@ -106,7 +131,7 @@
                     "country_name" => "Brasil"
                 )
             ),
-            "statement_descriptor" => "Test Store",
+            "statement_descriptor" => "BSG Bikes",
         ];
         
 
